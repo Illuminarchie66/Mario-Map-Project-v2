@@ -17,7 +17,11 @@ abstract class _Map {
 class LeafletMap extends _Map {
     map: L.Map;
 
-    constructor(config: MapConfig, center?: [number, number], zoom?: number) {
+    constructor({ config, center, zoom }: {
+        config: MapConfig;
+        center?: [number, number];
+        zoom?: number;
+    }) {
         if (center) 
             config.options.center = center;
 
