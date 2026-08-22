@@ -36,15 +36,6 @@ class MapConfig {
         this.bounds = data.bounds;
     }
 
-    static fromJSON(jsonString: string): MapConfig {
-        try {
-            const parsedData = JSON.parse(jsonString);
-            return new MapConfig(parsedData);
-        } catch (error: any) {
-            throw new Error(`Error parsing JSON string: ${error.message}`); 
-        }
-    }
-
     static create(data: any): MapConfig {
         if (data.tilePath) return new TileMapConfig(data);
         if (data.imagePath) return new ImageMapConfig(data);

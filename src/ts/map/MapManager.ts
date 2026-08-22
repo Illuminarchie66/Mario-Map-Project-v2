@@ -2,13 +2,16 @@ import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
 import { _Map, LeafletMap } from './Map';
 import { MapRegistry } from './MapRegistry';
+import { WaypointManager } from './Waypoints/WaypointManager';
 
 class MapManager {
     map: _Map | null = null;
-    registry: MapRegistry;
+    mapRegistry: MapRegistry;
+    waypointManager: WaypointManager;
 
     constructor() {
-        this.registry = new MapRegistry();
+        this.mapRegistry = new MapRegistry();
+        this.waypointManager = new WaypointManager();
     }
 
     loadMap({ config, center, zoom }: {
@@ -24,6 +27,8 @@ class MapManager {
             this.map = new LeafletMap({config: config, center: center, zoom: zoom});
         }
 
+        this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
+
     }
 
     loadMapById({ id, center, zoom }: {
@@ -31,13 +36,14 @@ class MapManager {
         center?: [number, number];
         zoom?: number;
     }): void {
-        this.registry.getById(id)
+        this.mapRegistry.getById(id)
             .then(config => this.loadMap({config: config, center: center, zoom: zoom}))
-            .catch(err => console.error(err));
+            .catch(error => console.error(error));
     }
 
     reset(): void {
         this.map = null;
+        this.waypointManager.reset();
     }
 }
 
