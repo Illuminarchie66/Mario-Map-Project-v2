@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Map Project | Interactive Mario World Map</title>
+    <meta name="description" content="Mario Map Project">
+	<meta name="keywords" content="super mario bros, mario, map, mapping, fantasy map, geography, interactive">
+	<meta name="author" content="Archie Harrodine">
+    <meta name="robots" content="index, follow">
+    <meta property="og:site_name" content="Mario Map Project">
+    <meta name="theme-color" content="#e52521">
+
+    <!-- Canonical Url -->
+	<link rel="canonical" href="https://www.archie-harrodine.com/projects/mario-map-project/app">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/globe-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/globe-16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/globe-apple.png">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Mario Map Project | Interactive Mario World Map">
+	<meta property="og:description" content="Interactive map of the Mario Universe, with kingdoms, levels, landmarks and locations from across over 100 Mario Games.">
+	<meta property="og:image" content="https://www.archie-harrodine.com/projects/mario-map-project/app/assets/images/globe.png">
+	<meta property="og:url" content="https://www.archie-harrodine.com/projects/mario-map-project/app/">
+	<meta property="og:type" content="website">
+	<meta property="og:image:width" content="256">
+	<meta property="og:image:height" content="256">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Mario Map Project | Interactive Mario World Map">
+	<meta name="twitter:description" content="Interactive map of the Mario Universe">
+	<meta name="twitter:image" content="https://www.archie-harrodine.com/projects/mario-map-project/app/assets/images/globe.png">
+
+	<!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "name": "Mario Map Project",
+            "url": "https://www.archie-harrodine.com/projects/mario-map-project/app/",
+            "description": "Interactive map of the Mario Universe",
+            "author": {
+                "@type": "Person",
+                "name": "Archie Harrodine"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "WebApplication",
+            "name": "Mario Map Project",
+            "url": "https://www.archie-harrodine.com/projects/mario-map-project/app/",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "description": "An interactive Leaflet-powered map for exploring the Mario world, regions, kingdoms, and locations.",
+            "image": "https://www.archie-harrodine.com/projects/mario-map-project/app/assets/images/globe.png",
+            "author": {
+                "@type": "Person",
+                "name": "Archie Harrodine"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "Archie Harrodine"
+            },
+            "keywords": [
+                "Mario",
+                "Super Mario Bros",
+                "interactive map",
+                "Leaflet",
+                "fantasy geography",
+                "video game map",
+                "Mario world"
+            ],
+            "genre": [
+                "Fantasy",
+                "Gaming",
+                "Interactive Map"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+            }
+        }
+    ]
+    }
+    </script>
+
+    <!-- Loaders -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/json5@2/dist/index.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- CSS -->
+
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #mapContainer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mapContainer"></div>
+
+    <!-- Entry point -->
+    <script type="module" src="/src/ts/main.ts"></script>
+
+</body>
+</html>

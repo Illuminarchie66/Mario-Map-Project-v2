@@ -1,0 +1,28 @@
+{
+	id: "globe",
+	type: "leaflet",
+
+	options: {
+		crs: "simple",
+		minZoom: 2.5,
+		maxZoom: 4,
+		zoom: 5,
+		center: [-45, 135],
+		zoomDelta: 0.5,
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+	tilePath: "/data/maps/globe/tiles",
+	waypointPath: "/data/maps/globe/waypoints.json5",
+
+	bounds: [
+		[0, 999999],
+		[-86.75, -999999],
+	],
+
+	features: {
+		usesTiles: true,
+		wrapX: true,
+	},
+}
