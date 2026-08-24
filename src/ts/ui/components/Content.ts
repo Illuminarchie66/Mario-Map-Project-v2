@@ -5,8 +5,7 @@ import { AppearedTableBlockSchema } from "./AppearedTable";
 import { TextBlockSchema } from "./Text";
 import { ListBlockSchema } from "./List";
 import { ImageBlockSchema } from "./ImageSingle";
-import { ImageRightBlockSchema } from "./ImageRight";
-import { ImageLeftBlockSchema } from "./ImageLeft";
+import { ImageLeftBlockSchema, ImageRightBlockSchema } from "./ImageText";
 import { HorizontalRuleBlockSchema } from "./HorizontalRule";
 import { CarouselBlockSchema } from "./Carousel";
 import { SpacerBlockSchema } from "./Spacer";
@@ -27,7 +26,7 @@ const ContentBlockSchema = z.discriminatedUnion("type", [
     ImageBottomBlockSchema
 ]);
 
-type ContentBlock = z.infer<typeof ContentBlockSchema>;
+export type ContentBlock = z.infer<typeof ContentBlockSchema>;
 
 export const PamphletContentSchema = z.object({
     left: z.array(ContentBlockSchema),

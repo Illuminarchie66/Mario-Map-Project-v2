@@ -7,5 +7,5 @@ export const GameRefSchema = z.object({
 });
 export type GameRef = z.infer<typeof GameRefSchema>;
 
-export const AlignSchema = z.enum(["left", "center", "right"]);
+export const AlignSchema = z.enum(["left", "center", "right", "top", "bottom"]);
 export type Align = z.infer<typeof AlignSchema>;

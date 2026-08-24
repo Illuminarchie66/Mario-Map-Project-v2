@@ -3,6 +3,7 @@ import { MapConfig } from './MapConfig';
 import { _Map, LeafletMap } from './Map';
 import { MapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
+import { eventBus } from '../core/EventBus';
 
 class MapManager {
     map: _Map | null = null;
@@ -12,6 +13,13 @@ class MapManager {
     constructor() {
         this.mapRegistry = new MapRegistry();
         this.waypointManager = new WaypointManager();
+
+        eventBus.on("map:load-request", (payload) => {
+            const { id, center, zoom } = payload;
+            this.loadMapById({ id, center, zoom }).catch(error => {
+                console.error(`Failed to load map: "${id}": `, error);
+            });
+        });
     }
 
     async loadMap({ config, center, zoom }: {
@@ -39,12 +47,15 @@ class MapManager {
         center?: [number, number];
         zoom?: number;
     }): Promise<void> {
-        await this.mapRegistry.getById(id)
-            .then(config => this.loadMap({config: config, center: center, zoom: zoom}))
-            .catch(error => console.error(error));
+        const config = await this.mapRegistry.getById(id)
+        await this.loadMap({config: config, center: center, zoom: zoom})
     }
 
     reset(): void {
+        if (this.map instanceof LeafletMap) {
+            this.map.destroy();
+        }
+
         this.map = null;
         this.waypointManager.reset();
     }

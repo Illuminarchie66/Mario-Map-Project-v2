@@ -169,6 +169,10 @@ class LeafletMap extends _Map {
             return L.marker(waypoint.coords, options).addTo(this.map);
         }
     }
+
+    destroy(): void {
+        this.map.remove();
+    }
 }
 
 export { _Map, LeafletMap }
