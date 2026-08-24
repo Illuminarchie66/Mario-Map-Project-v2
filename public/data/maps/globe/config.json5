@@ -1,13 +1,13 @@
 {
 	id: "globe",
-	type: "leaflet",
+	type: "tiles",
 
 	options: {
 		crs: "simple",
 		minZoom: 2.5,
 		maxZoom: 4,
 		zoom: 5,
-		center: [-45, 135],
+		center: [-53, 136.75],
 		zoomDelta: 0.5,
 		zoomSnap: 0.5,
 		attributionControl: false,

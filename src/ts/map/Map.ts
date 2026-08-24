@@ -1,5 +1,8 @@
-import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
 import * as L from 'leaflet';
+
+import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
+import { Waypoint } from "./Waypoints/WaypointManager";
+import { IconIdentifier, IconRegistry } from "./Waypoints/IconRegistry";
 
 abstract class _Map {
     containerId: string = "mapContainer";
@@ -36,13 +39,31 @@ class LeafletMap extends _Map {
         if (mapContainer) 
             mapContainer.style.backgroundColor = backgroundColor;
 
-        if (this.config.features.usesTiles) {
-            const tileConfig = this.config as TileMapConfig;
-            this.addTileLayer(tileConfig);
-        } else {
-            const imageConfig = this.config as ImageMapConfig;
-            this.addImageLayer(imageConfig);
+        switch (this.config.type) {
+            case "tiles":
+                this.addTileLayer(this.config as TileMapConfig);
+                break;
+            case "image":
+                this.addImageLayer(this.config as ImageMapConfig);
+                break;
+            case "model":
+                // not implemented
+                // will use three.js
+                break;
+            default:
+                throw new Error(`Unsupported map type: ${this.config.type}`);
         }
+
+    }
+
+    on(type: string, fn: L.LeafletEventHandlerFn, context?: any): this {
+        this.map.on(type, fn, context);
+        return this;
+    }
+
+    off(type: string, fn?: L.LeafletEventHandlerFn, context?: any): this {
+        this.map.off(type, fn, context);
+        return this;
     }
 
     addTileLayer(config: TileMapConfig): void {
@@ -60,7 +81,6 @@ class LeafletMap extends _Map {
                 if (config.features.wrapY) {
                     y = ((y % n) + n) % n; 
                 }
-                console.log(`${config.tilePath}/${coords.z}/${x}/${y}.${fileType}`)
                 return `${config.tilePath}/${coords.z}/${x}/${y}.${fileType}`;
             }
         });
@@ -121,6 +141,33 @@ class LeafletMap extends _Map {
 
     getCenter(): { lat: number, lng: number } {
         return this.map.getCenter();
+    }
+
+    addMarker(waypoint: Waypoint, icon: IconIdentifier): L.ImageOverlay | L.Marker {
+        if (icon.static) {
+            // we use an image overlay for static icons, which do not scale with zoom
+            const [lat, lng] = waypoint.coords;
+            const scale = icon.staticScale || 1;
+            const halfHeight = (icon.iconSize[1] / 2) * scale;
+            const halfWidth = (icon.iconSize[0] / 2) * scale;
+
+            const bounds: L.LatLngBoundsExpression = [
+                [lat - halfHeight, lng - halfWidth],
+                [lat + halfHeight, lng + halfWidth]
+            ]
+
+            return L.imageOverlay(
+                icon.iconPath, bounds,
+                { interactive: true, zIndex: 1000 }
+            ).addTo(this.map);
+            
+        } else {
+            const options: L.MarkerOptions = {
+                icon: IconRegistry.createIcon(icon)
+            }
+
+            return L.marker(waypoint.coords, options).addTo(this.map);
+        }
     }
 }
 
