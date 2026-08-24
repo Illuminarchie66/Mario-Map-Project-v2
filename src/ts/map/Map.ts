@@ -1,7 +1,8 @@
+import * as L from 'leaflet';
+
 import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
 import { Waypoint } from "./Waypoints/WaypointManager";
 import { IconIdentifier, IconRegistry } from "./Waypoints/IconRegistry";
-import * as L from 'leaflet';
 
 abstract class _Map {
     containerId: string = "mapContainer";
@@ -38,13 +39,21 @@ class LeafletMap extends _Map {
         if (mapContainer) 
             mapContainer.style.backgroundColor = backgroundColor;
 
-        if (this.config.features.usesTiles) {
-            const tileConfig = this.config as TileMapConfig;
-            this.addTileLayer(tileConfig);
-        } else {
-            const imageConfig = this.config as ImageMapConfig;
-            this.addImageLayer(imageConfig);
+        switch (this.config.type) {
+            case "tiles":
+                this.addTileLayer(this.config as TileMapConfig);
+                break;
+            case "image":
+                this.addImageLayer(this.config as ImageMapConfig);
+                break;
+            case "model":
+                // not implemented
+                // will use three.js
+                break;
+            default:
+                throw new Error(`Unsupported map type: ${this.config.type}`);
         }
+
     }
 
     on(type: string, fn: L.LeafletEventHandlerFn, context?: any): this {

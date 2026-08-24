@@ -3,4 +3,4 @@ import 'leaflet/dist/leaflet.css';
 import { MapManager } from "./map/MapManager";
 
 const mapManager = new MapManager();
-mapManager.loadMapById({ id: "globe"});
+await mapManager.loadMapById({ id: "globe"});

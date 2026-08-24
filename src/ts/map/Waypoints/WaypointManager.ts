@@ -1,29 +1,10 @@
 import * as L from "leaflet";
 
+import { Waypoint } from "./Waypoint";
 import { _Map, LeafletMap } from "../Map";
 import { Loader } from "../../core/Loader";
 import { IconRegistry } from "./IconRegistry";
-
-class Waypoint {
-    id: string;
-    coords: [number, number];
-    
-    assetPath?: string;
-    label?: string;
-    icon?: string;
-    
-    constructor(data: Waypoint) {
-        this.id = data.id;
-        this.coords = data.coords;
-        this.assetPath = data.assetPath;
-        this.label = data.label;
-        this.icon = data.icon;
-    }
-
-    static create(data: any): Waypoint {
-        return new Waypoint(data);
-    }
-}
+import { eventBus } from "../../core/EventBus";
 
 class WaypointManager {
     waypoints: Waypoint[] = [];
@@ -43,6 +24,7 @@ class WaypointManager {
         if (waypointPath) {
             await this.loadWaypointsByPath(waypointPath);
             this.attachToMap(map);
+            console.log(this.waypoints);
         }
     }
 
@@ -63,7 +45,7 @@ class WaypointManager {
 
             marker.on("click", (e) => {
                 L.DomEvent.stopPropagation(e);
-                console.log(`Waypoint clicked: ${waypoint.id}`);
+                this.handleWaypointClick(waypoint, marker);
             });
             this.markers.push(marker);
         })
@@ -87,6 +69,11 @@ class WaypointManager {
             map.on("move", this._wrapHandler);
             this._wrapHandler();
         }
+    }
+
+    handleWaypointClick(waypoint: Waypoint, marker: L.Marker | L.ImageOverlay): void {
+        console.log(`Waypoint clicked: ${waypoint.id}`);
+        eventBus.emit("waypoint:click", waypoint);
     }
 
     reset(): void {

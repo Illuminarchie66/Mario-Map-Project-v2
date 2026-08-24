@@ -1,6 +1,6 @@
 {
 	id: "globe",
-	type: "leaflet",
+	type: "tiles",
 
 	options: {
 		crs: "simple",

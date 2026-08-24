@@ -2,5 +2,108 @@
     {
         id: "mushroom-continent",
 		coords: [-53, 136.75],
+        
+        label: "Mushroom Continent",
+        icon: "default",
+        assetPath: "data/maps/globe/assets/waypoints/mushroom-continent",
+
+        displayType: "pamphlet",
+
+        content: {
+            left: [
+				{
+					type: "header",
+					title: "Mushroom Continent",
+					tagline: "Where it all began",
+					image: "peach_castle.jpg",
+					link: "https://www.mariowiki.com/Mushroom_Kingdom_(Super_Mario_Odyssey)",
+				},
+				{
+					type: "explore-button",
+					target: "mushroom-continent",
+				},
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario Bros.",
+						year: 1985,
+						link: "https://www.mariowiki.com/Super_Mario_Bros."
+					},
+					lastAppeared: {
+						game: "Super Mario Odyssey",
+						year: 2017,
+						link: "https://www.mariowiki.com/Super_Mario_Odyssey"
+					}
+				},
+				{
+					type: "image",
+					image: "shiver_region.png",
+					caption: "Shiver Region",
+					zoomable: true,
+					imageWidth: "300px",
+					imageHeight: "220px",
+					alignCaption: "left",
+				}
+			],
+			right: [
+				{
+					type: "text",
+					title: "Overview",
+					titleColor: "#b18f01",
+					alignTitle: "left",
+					content: "The Mushroom Continent is the primary recurring location between Mario games. It is a large mushroom shaped landmass that features various biomes and serves as the hub world for the game. The continent is home to many familiar locations from previous Mario games, such as Peach's Castle, Bob-omb Battlefield, and more.",
+					alignContent: "left",
+				},
+				{
+					type: "image-right",
+					title: "Wish Magic",
+					titleColor: "#b18f01",
+					alignImage: "center",
+					image: "shooting_star_summit.jpg",
+					imageHeight: "220px",
+					content: "The Mushroom Continent is also the location of the Shooting Star Summit, where Mario can use Wish Magic to make wishes that affect the world around him. This adds an extra layer of interactivity and exploration to the game, as players can experiment with different wishes to see their effects on the environment.",
+					caption: "Shooting Star Summit"
+				},
+				{
+					type: "image-left",
+					alignImage: "top",
+					image: "nsmbu_world_map.webp",
+					imageWidth: "250px",
+					content: "The continent is home to a large number of biomes, from mushroom plains, to dry deserts, to sparkling waters and candy mountains. It truly has it all.",
+					caption: "NSMBU World Map",
+					zoomable: true,
+				},
+				{
+					type: "horizontal-rule",
+					align: "center",
+					color: "#b18f01"
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "bowser_castle.png",
+							caption: "Bowser's Castle"
+						},
+						{
+							image: "diamond_city.jpg",
+							caption: "Diamond City"
+						},
+						{
+							image: "dry_dry_desert.webp",
+							caption: "Dry Dry Desert"
+						}
+					]
+				},
+				{
+					type: "spacer"
+				},
+				{
+					type: "image-bottom",
+					image: "nsmb_hills.jpg",
+					height: "150px"
+				}
+			]
+		},
     }
 ]

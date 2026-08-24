@@ -14,29 +14,32 @@ class MapManager {
         this.waypointManager = new WaypointManager();
     }
 
-    loadMap({ config, center, zoom }: {
+    async loadMap({ config, center, zoom }: {
         config: MapConfig;
         center?: [number, number];
         zoom?: number;
-    }): void {
+    }): Promise<void> {
         if (this.map) {
             this.reset();
         }
     
-        if (config.type === "leaflet") {
+        if (config.type === "tiles" || config.type === "image") {
             this.map = new LeafletMap({config: config, center: center, zoom: zoom});
+        } else if (config.type === "model") {
+            // not implemented
+            // will use three.js
+            throw new Error("Model maps are not yet supported.");
         }
 
-        this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
-
+        await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
     }
 
-    loadMapById({ id, center, zoom }: {
+    async loadMapById({ id, center, zoom }: {
         id: string;
         center?: [number, number];
         zoom?: number;
-    }): void {
-        this.mapRegistry.getById(id)
+    }): Promise<void> {
+        await this.mapRegistry.getById(id)
             .then(config => this.loadMap({config: config, center: center, zoom: zoom}))
             .catch(error => console.error(error));
     }

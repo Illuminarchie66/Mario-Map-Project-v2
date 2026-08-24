@@ -1,5 +1,7 @@
-type EventMap = {
+import { Waypoint } from "../map/Waypoints/Waypoint";
 
+type EventMap = {
+    "waypoint:click": Waypoint;
 };
 
 // https://dev.to/mohsenfallahnjd/javascript-event-bus-js-typescript-17jp
@@ -29,4 +31,6 @@ class EventBus<E extends Record<string, any>> {
     }
 }
 
-export { EventBus, EventMap };
+const eventBus = new EventBus<EventMap>();
+
+export { eventBus, EventBus, EventMap };
