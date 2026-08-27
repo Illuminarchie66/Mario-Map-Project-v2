@@ -5,7 +5,7 @@
         
         label: "Mushroom Continent",
         icon: "default",
-        assetPath: "data/maps/globe/assets/waypoints/mushroom-continent",
+        path: "data/maps/globe/assets/waypoints/mushroom-continent",
 
         displayType: "pamphlet",
 

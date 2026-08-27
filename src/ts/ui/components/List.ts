@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 export const ListBlockSchema = z.object({
     type: z.literal("list"),

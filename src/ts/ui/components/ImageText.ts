@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 const ImageTextBlockSchema = z.object({
     title: z.string().optional(),
@@ -29,11 +29,7 @@ export type ImageTextBlock = z.infer<typeof ImageTextBlockSchema>;
 export type ImageLeftBlock = z.infer<typeof ImageLeftBlockSchema>;
 export type ImageRightBlock = z.infer<typeof ImageRightBlockSchema>;
 
-export class ImageTextComponent extends Component<ImageLeftBlock | ImageRightBlock> {
-    constructor(data: ImageLeftBlock | ImageRightBlock, path?: string) {
-        super(data, path);
-    }
-
+export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRightBlock> extends Component<T> {
     render(): HTMLElement {
         const left = this.data.type === "image-left";
 
@@ -114,3 +110,6 @@ export class ImageTextComponent extends Component<ImageLeftBlock | ImageRightBlo
 
     }
 }
+
+export class ImageLeftComponent extends ImageTextComponentBase<ImageLeftBlock> {}
+export class ImageRightComponent extends ImageTextComponentBase<ImageRightBlock> {}

@@ -1,17 +1,15 @@
 import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
 import { _Map, LeafletMap } from './Map';
-import { MapRegistry } from './MapRegistry';
+import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
 
 class MapManager {
     map: _Map | null = null;
-    mapRegistry: MapRegistry;
     waypointManager: WaypointManager;
 
     constructor() {
-        this.mapRegistry = new MapRegistry();
         this.waypointManager = new WaypointManager();
 
         eventBus.on("map:load-request", (payload) => {
@@ -47,7 +45,7 @@ class MapManager {
         center?: [number, number];
         zoom?: number;
     }): Promise<void> {
-        const config = await this.mapRegistry.getById(id)
+        const config = await mapRegistry.getById(id)
         await this.loadMap({config: config, center: center, zoom: zoom})
     }
 

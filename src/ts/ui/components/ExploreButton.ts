@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 import { eventBus } from "../../core/EventBus";
 
 export const ExploreButtonBlockSchema = z.object({

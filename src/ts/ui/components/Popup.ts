@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { BaseComponent } from "./BaseComponent";
 
 export const PopupContentSchema = z.object({
     title: z.string().optional(),
@@ -9,15 +10,7 @@ export const PopupContentSchema = z.object({
 
 export type PopupContent = z.infer<typeof PopupContentSchema>;
 
-export class PopupComponent {
-    data: PopupContent;
-    path: string;
-
-    constructor(data: PopupContent, path?: string) {
-        this.data = data;
-        this.path = path || "";
-    }
-
+export class PopupComponent extends BaseComponent<PopupContent> {
     render(): HTMLElement {
         const wrapper = document.createElement("div");
         wrapper.className = "map-popup__wrapper";

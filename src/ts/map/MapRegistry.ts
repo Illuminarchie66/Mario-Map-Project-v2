@@ -9,17 +9,13 @@ interface MapIdentifier {
 }
 
 class MapRegistry {
-    maps: { [key: string]: MapIdentifier } = {};
-
-    constructor() {
-        this.maps = {
-            "globe": {
-                id: "globe",
-                label: "Globe",
-                configPath: "/data/maps/globe/config.json5" 
-            }
+    private readonly maps: Record<string, MapIdentifier> = {
+        "globe": {
+            id: "globe",
+            label: "Globe",
+            configPath: "/data/maps/globe/config.json5" 
         }
-    }
+    };
 
     async getById(id: string): Promise<MapConfig> {
         const identifier = this.maps[id];
@@ -38,4 +34,4 @@ class MapRegistry {
     }
 }
 
-export { MapRegistry }
+export const mapRegistry = new MapRegistry();

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 export const ImageBlockSchema = z.object({
     type: z.literal("image"),

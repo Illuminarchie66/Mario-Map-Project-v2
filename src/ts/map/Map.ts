@@ -2,7 +2,7 @@ import * as L from 'leaflet';
 
 import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
 import { Waypoint } from "./Waypoints/WaypointManager";
-import { IconIdentifier, IconRegistry } from "./Waypoints/IconRegistry";
+import { iconRegistry, IconIdentifier } from "./Waypoints/IconRegistry";
 
 abstract class _Map {
     containerId: string = "mapContainer";
@@ -163,7 +163,7 @@ class LeafletMap extends _Map {
             
         } else {
             const options: L.MarkerOptions = {
-                icon: IconRegistry.createIcon(icon)
+                icon: iconRegistry.createIcon(icon)
             }
 
             return L.marker(waypoint.coords, options).addTo(this.map);

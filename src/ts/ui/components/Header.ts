@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 export const HeaderBlockSchema = z.object({
     type: z.literal("header"),

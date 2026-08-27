@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 export const ImageBottomBlockSchema = z.object({
     type: z.literal("image-bottom"),

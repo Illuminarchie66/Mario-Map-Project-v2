@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 import $ from 'jquery';
 import 'slick-carousel';
 

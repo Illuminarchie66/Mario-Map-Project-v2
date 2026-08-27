@@ -1,8 +1,12 @@
-import { ContentBlock } from "./Content";
+export interface RenderableComponent {
+    path: string;
+    render(): HTMLElement;
+}
 
-export abstract class Component<T extends ContentBlock = ContentBlock> {
+export abstract class BaseComponent<T> implements RenderableComponent {
     path: string;
     data: T;
+
     constructor(data: T, path?: string) {
         this.data = data;
         this.path = path || "";

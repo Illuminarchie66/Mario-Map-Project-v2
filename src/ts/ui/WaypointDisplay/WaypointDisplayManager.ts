@@ -3,6 +3,7 @@ import { Waypoint } from "../../map/Waypoints/Waypoint";
 import { DocManager } from "./DocManager";
 import { PamphletManager } from "./PamphletManager";
 import { PopupManager } from "./PopupManager";
+import { PamphletWaypoint, DocWaypoint, PopupWaypoint } from "../../map/Waypoints/Waypoint";
 
 export class WaypointDisplayManager {
     pamphletManager: PamphletManager;
@@ -22,11 +23,11 @@ export class WaypointDisplayManager {
     displayWaypoint(waypoint: Waypoint): void {
         switch (waypoint.displayType) {
             case "pamphlet":
-                this.pamphletManager.show(waypoint);
+                this.pamphletManager.show(waypoint as PamphletWaypoint);
             case "doc":
-                this.docManager.show(waypoint);
+                this.docManager.show(waypoint as DocWaypoint);
             case "popup":
-                this.popupManager.show(waypoint);
+                this.popupManager.show(waypoint as PopupWaypoint);
         }
     }
 }

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { GameRefSchema } from "./Generics";
-import { Component } from "./BaseComponent";
+import { Component } from "./Component";
 
 export const AppearedTableBlockSchema = z.object({
     type: z.literal("appeared-table"),
