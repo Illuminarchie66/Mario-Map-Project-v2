@@ -22,7 +22,7 @@ export class HeaderComponent extends Component<HeaderBlock> {
 
         if (this.data.image) {
             const img = document.createElement("img");
-            img.src = this.path + this.data.image;
+            img.src = this.path + "/" + this.data.image;
             img.alt = this.data.title || "";
             img.className = "c-header__image";
             container.appendChild(img);

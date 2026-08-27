@@ -25,7 +25,7 @@ export class PopupComponent extends BaseComponent<PopupContent> {
 
             const img = document.createElement("img");
             img.className = "map-popup__image";
-            img.src = this.path + this.data.image;
+            img.src = this.path + "/" + this.data.image;
             img.alt = this.data.caption || "";
 
             // const finalImage = (data.zoomable !== false)

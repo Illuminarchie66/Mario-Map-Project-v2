@@ -30,7 +30,7 @@ export class ImageComponent extends Component<ImageBlock> {
             imageWrapper.style.width = this.data.imageWidth;
 
         const img = document.createElement("img");
-        img.src = this.path + this.data.image;
+        img.src = this.path + "/" + this.data.image;
         img.alt = this.data.caption || "";
         img.className = "c-image-single__img";
 
