@@ -7,7 +7,7 @@ interface WaypointBase {
     id: string;
     coords: [number, number];
     
-    assetPath?: string;
+    path?: string;
     label?: string;
     icon?: string;
 }
@@ -15,40 +15,30 @@ interface WaypointBase {
 const WaypointBaseSchema = z.object({
     id: z.string(),
     coords: z.tuple([z.number(), z.number()]),
-    assetPath: z.string().optional(),
+    path: z.string().optional(),
     label: z.string().optional(),
     icon: z.string().optional()
 });
-
-interface PamphletWaypoint extends WaypointBase {
-    displayType: "pamphlet";
-    content: PamphletContent;
-}
 
 const PamphletWaypointSchema = WaypointBaseSchema.extend({
     displayType: z.literal("pamphlet"),
     content: PamphletContentSchema
 });
 
-interface PopupWaypoint extends WaypointBase {
-    displayType: "popup";
-    content: PopupContent;
-}
-
 const PopupWaypointSchema = WaypointBaseSchema.extend({
     displayType: z.literal("popup"),
-    content: PopupContentSchema
+    content: PopupContentSchema,
+    markerCoords: z.tuple([z.number(), z.number()]).optional()
 });
-
-interface DocWaypoint extends WaypointBase {
-    displayType: "doc";
-    content: DocContent;
-}
 
 const DocWaypointSchema = WaypointBaseSchema.extend({
     displayType: z.literal("doc"),
     content: DocContentSchema
 });
+
+export type PamphletWaypoint = z.infer<typeof PamphletWaypointSchema>;
+export type PopupWaypoint = z.infer<typeof PopupWaypointSchema>;
+export type DocWaypoint = z.infer<typeof DocWaypointSchema>;
 
 const WaypointSchema = z.discriminatedUnion("displayType", [
     PamphletWaypointSchema,

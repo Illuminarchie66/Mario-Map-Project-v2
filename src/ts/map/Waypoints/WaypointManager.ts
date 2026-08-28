@@ -3,18 +3,16 @@ import * as L from "leaflet";
 import { Waypoint } from "./Waypoint";
 import { _Map, LeafletMap } from "../Map";
 import { Loader } from "../../core/Loader";
-import { IconRegistry } from "./IconRegistry";
+import { iconRegistry } from "./IconRegistry";
 import { eventBus } from "../../core/EventBus";
 
 class WaypointManager {
     waypoints: Waypoint[] = [];
     markers: (L.Marker | L.ImageOverlay)[] = [];
-    iconRegistry: IconRegistry;
 
     _wrapHandler: (() => void) | null = null;
 
     constructor() {
-        this.iconRegistry = new IconRegistry();
     }
 
     async loadWaypointsByMap(map: LeafletMap): Promise<void> {
@@ -40,12 +38,15 @@ class WaypointManager {
 
     attachToMap(map: LeafletMap): void {
         this.waypoints.forEach(waypoint => {
-            const icon = this.iconRegistry.getById(waypoint.icon || "default");
+            const icon = iconRegistry.getById(waypoint.icon);
             const marker = map.addMarker(waypoint, icon)
 
-            marker.on("click", (e) => {
-                L.DomEvent.stopPropagation(e);
-                this.handleWaypointClick(waypoint, marker);
+            marker.on("click", (event) => {
+                L.DomEvent.stopPropagation(event);
+                if (waypoint.displayType === "popup" && marker instanceof L.Marker) {
+                    waypoint.markerCoords = [marker.getLatLng().lat, marker.getLatLng().lng];
+                }
+                this.handleWaypointClick(waypoint, event);
             });
             this.markers.push(marker);
         })
@@ -71,9 +72,10 @@ class WaypointManager {
         }
     }
 
-    handleWaypointClick(waypoint: Waypoint, marker: L.Marker | L.ImageOverlay): void {
+    handleWaypointClick(waypoint: Waypoint, event: L.LeafletMouseEvent): void {
         console.log(`Waypoint clicked: ${waypoint.id}`);
         eventBus.emit("waypoint:click", waypoint);
+        event.originalEvent?.stopPropagation();
     }
 
     reset(): void {

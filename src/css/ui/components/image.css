@@ -1,0 +1,123 @@
+.c-media-block {
+  display: flex;
+  gap: 10px;
+}
+
+.c-media-block__container {
+  padding: 0.5rem;
+}
+
+.c-media-block--left {
+  flex-direction: row;
+}
+.c-media-block--top { align-items: flex-start; }
+.c-media-block--center { align-items: center; }
+.c-media-block--bottom { align-items: flex-end; }
+
+.c-media-block--right {
+  flex-direction: row;
+}
+
+.c-media-block__image {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.c-media-block__main-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.c-media-block__title {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.3rem 0;
+}
+
+.c-media-block__title--left { text-align: left; }
+.c-media-block__title--center { text-align: center; }
+.c-media-block__title--right { text-align: right; }
+
+.c-media-block__content {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+  color: #333333
+}
+
+.c-media-block__content--left { text-align: left; }
+.c-media-block__content--center { text-align: center; }
+.c-media-block__content--right { text-align: right; }
+
+.c-media-block__caption {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+}
+.c-media-block__caption--left { text-align: left; }
+.c-media-block__caption--center { text-align: center; }
+.c-media-block__caption--right { text-align: right; }
+
+.c-image-single {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.c-image-single__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.c-image-single__img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.c-image-single__caption {
+  font-family: 'Brandon Text', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.25rem;
+  width: 100%;
+}
+
+.c-image-single__caption--left { text-align: left; }
+.c-image-single__caption--center { text-align: center; }
+.c-image-single__caption--right { text-align: right; }
+
+.c-image-bottom {
+    width: 100%;
+    overflow: hidden;
+}
+
+.c-image-bottom__img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+}
+
+.doc-viewer .c-image-single {
+    margin: 1rem 0;
+}
+
+.doc-viewer .c-media-block {
+    padding: 0.75rem 0;
+    gap: 16px;
+}

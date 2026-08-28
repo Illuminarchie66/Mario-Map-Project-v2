@@ -1,11 +1,12 @@
 [
+	// Mushroom Continent
     {
         id: "mushroom-continent",
 		coords: [-53, 136.75],
         
         label: "Mushroom Continent",
         icon: "default",
-        assetPath: "data/maps/globe/assets/waypoints/mushroom-continent",
+        path: "data/maps/globe/assets/waypoints/mushroom-continent",
 
         displayType: "pamphlet",
 
@@ -105,5 +106,2205 @@
 				}
 			]
 		},
-    }
+    },
+
+	{
+		id: "mushroom-kingdom",
+		coords: [-54.7, -117],
+
+		label: "Mushroom Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "peach_castle.jpg",
+			title: "Mushroom Kingdom", 
+			description: "Where Princess Peach rules over the Toads over the vast and varied kingdom!",
+			caption: "Princess Peach's Castle"
+		}
+	},
+
+	{
+		id: "koopa-kingdom",
+		coords: [-53.9, 139.5],
+
+		label: "Koopa Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "bowser_castle.png",
+			title: "Koopa Kingdom", 
+			description: "The volcanic and fiery domain of Bowser and his Koopa Troop.",
+			caption: "Bowser's Castle"
+		}
+	},
+
+	{
+		id: "flower-kingdom",
+		coords: [-51.5, 140.35],
+
+		label: "Flower Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "flower_kingdom.webp",
+			title: "Flower Kingdom", 
+			description: "Ruled by Prince Florian, the Flower Kingdom is a beautiful land of wonder!",
+			caption: "Flower Kingdom Map"
+		}
+	},
+
+	{
+		id: "diamond-city",
+		coords: [-50, 133.75],
+
+		label: "Diamond City",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "diamond_city.jpg",
+			title: "Diamond City", 
+			description: "Home to Wario and co, Diamond City is a wacky and chaotic city of excitement!",
+			caption: "Diamond City"
+		}
+	},
+
+	{
+		id: "mushroom-world",
+		coords: [-54.3, 141.5],
+
+		label: "Mushroom World",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "mushroom_world.webp",
+			title: "Mushroom World", 
+			description: "To the East of the Mushroom Kingdom lies the 8 territories of the Mushroom World - each ruled by a different King.",
+			caption: "Mushroom World Map"
+		}
+	},
+
+	{
+		id: "fever-island",
+		coords: [-50.5, 141.5],
+
+		label: "Fever Island",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "fever_island.jpg",
+			title: "Fever Island", 
+			description: "Hiding the magical golden fruit tree, King Scuttlebug rules over this enigmatic island.",
+			caption: "Fever Island Map"
+		}
+	},
+
+	{
+		id: "kingdom-of-bask",
+		coords: [-55, 141],
+
+		label: "Kingdom of Bask",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "bask_kingdom.jpg",
+			title: "Kingdom of Bask", 
+			description: "The Kingdom of Bask is a small island off the coast of Dry Dry Desert, once ruled by King Bask until Lucien attacked.",
+			caption: "Fever Island Map"
+		}
+	},
+
+	// Super Mario Odyssey Kingdoms
+	{
+		id: "cap-kingdom",
+		coords: [-39.5, -92.5],
+
+		label: "Cap Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/cap-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "cap_kingdom.jpg",
+			title: "Cap Kingdom", 
+			description: "Thick fog surrounds the city of Bonneton; where the moonlight shines on the hat-shaped airships that peruse the skies.",
+			caption: "Ice Ice Outpost"
+		}
+
+	},
+
+	{
+		id: "cascade-kingdom",
+		coords: [-44.5, -85],
+		
+		label: "Cascade Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/cascade-kingdom/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Cascade Kingdom",
+					tagline: "Home of Prehistory",
+					image: "header.png",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario World",
+						year: 2001,
+						link: "https://www.mariowiki.com/Super_Mario_World:_Super_Mario_Advance_2"
+					},
+					lastAppeared: {
+						game: "Paper Mario: The Thousand-Year Door (Nintendo Switch)",
+						year: 2024,
+						link: "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door_(Nintendo_Switch)"
+					}
+				},
+				{
+					type: "text",
+					content: "Vibrant greens! Rushing streams! Giant dinosaurs! Cascade Kingdom is an idyllic paradise of the past, with a slew of  prehistoric reptiles roaming the fields. Adorning the grassy mountains are fossilised remains of those that once resided here and vast rushing rivers and waterfalls. Whether you visit the imposing Fossil Falls, the mystical Aldegara Waterfall, the enchanting Fairy Forest, or just chill with the Yoshis, you will remember this trip for life.",
+					alignContent: "left",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "image-right",
+					title: "Fossil Falls",
+					titleColor: "#b18f01",
+					titleOnTop: true,
+					image: "fossil_falls_concept.jpg",
+					caption: "Fossil Falls Concept Art",
+					content: "The central landmark of the triceratops-shaped landmass, is an impressive display of the enormity of the Kingdom. Connected to the Cap Kingdom by a spark pylon, the kingdom has strange ruins of airships Bonneters once flew. One of these ruins becomes the iconic ship The Odyssey. Here you can find the intimidating T-Rexes snoozing in the sun."
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "fossil_falls.webp",
+					caption: "Fossil Falls",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Awazon River Basin",
+					titleColor: "#b18f01",
+					content: "A large central river that flows through the jungles of Cascade Kingdom. Wario visited here for the events of Virtual Boy Wario Land, taking a vacation before the Aldegara Waterfall. Deep underground there are many masked creatures hoarding treasures, and hiding the Realm of the Demon Head.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "awazon_river.png",
+					caption: "Wario looking at the Aldegara Waterfall",
+					alignCaption: "center",
+				},
+			],
+
+			right: [
+				{
+					type: "text",
+					title: "Dinosaur Land",
+					titleColor: "#b18f01",
+					content: "Off the coast of the main continent is a small archipelago inhabited by many dinosaurs, most famously Yoshi! Here you will find a host of creatures including Blarggs, dino-Rhinos, Dino-Torches, Eeries, Rexes and Reznors. In Super Mario World, this is the vacation spot of Mario and his friends.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "dinosaur_land.webp",
+					caption: "Dinosaur Land Map",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Fairy Forest",
+					titleColor: "#b18f01",
+					titleOnTop: false,
+					image: "wanda.png",
+					imageWidth: "250px",
+					caption: "Wanda the Fairy",
+					content: "Deep within the forest depths, not too far from the Sprixie Kingdom, lies the magical Fairy Forest. Here  Wanda resides, and helps Mario against Wario's escapades. "
+				},
+				{
+					type: "text",
+					content: "Wanda joins them on their adventures across the Cascade Kingdom. This includes Yos Lake, the rumored to be the origin of Yoshis. There is also Cloud-Catching Mountain, the Ice and Flame Caverns, and the Cheep Cheep Sea.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "fairy_forest.png",
+							caption: "Fairy Forest"
+						},
+						{
+							image: "yos_lake.png",
+							caption: "Yos Lake"
+						},
+						{
+							image: "cloudcatching.png",
+							caption: "Cloud Catching Mountain"
+						},
+						{
+							image: "ice_cavern.png",
+							caption: "Ice Caverns"
+						},
+						{
+							image: "fire_cavern.png",
+							caption: "Fire Caverns"
+						},
+						{
+							image: "cheep_cheep_sea.png",
+							caption: "Cheep Cheep Sea"
+						}
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Keelhaul Key",
+					titleColor: "#b18f01",
+					titleOnTop: true,
+					image: "keelhaul.jpg",
+					caption: "Keelhaul Key",
+					content: "A tropical jungle island to the South of Rogueport, off the coast of the Cascade Kingdom. The isle is said to be deserted and cursed. A small shantytown has been built by pirates searching for treasure just outside of the dense jungle. If you search hard enough, you might just find the Pirate's Grotto, and Cortez's legendary ship: the Black Skull. "
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "lake-kingdom",
+		coords: [-24, 221],
+
+		label: "Lake Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/lake-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "lake.jpg",
+			title: "Lake Kingdom", 
+			description: "The home of the beautiful Lake Lamode and the gorgeous Lochlady Dress.",
+			caption: "Water Plaza in Lake Lamode"
+		}
+	},
+
+	{
+		id: "lost-kingdom",
+		coords: [-42.4, 246.5],
+
+		label: "Lost Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/lost-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "lost.jpg",
+			title: "Lost Kingdom", 
+			description: "A paradise in poison, inhabited by the colorful Tropical Wigglers!",
+			caption: "Tropical Wiggler in Lost Kingdom"
+		}
+	},
+
+	{
+		id: "luncheon-kingdom",
+		coords: [-41, 73],
+
+		label: "Luncheon Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/luncheon-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "luncheon.webp",
+			title: "Luncheon Kingdom", 
+			description: "Stock up on food in the Old Town and Peronza Plaza - Then visit the volcanic Mount Volbono!",
+			caption: "The big stewing pot above Mount Volbono"
+		}
+	},
+
+	{
+		id: "ruined-kingdom",
+		coords: [-31.5, 91.3],
+
+		label: "Ruined Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/ruined-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "ruined.jpg",
+			title: "Ruined Kingdom", 
+			description: "The giant stone spires make up Crumbleden; the destroyed domain of the Lord of Lightning.",
+			caption: "The Lord of Lightning perched on his tower"
+		}
+	},
+
+	{
+		id: "metro-kingdom",
+		coords: [-40.3, 23],
+
+		label: "Metro Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/metro-kingdom/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Metro Kingdom",
+					tagline: "The Big Banana",
+					image: "header.png",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Donkey Kong",
+						year: 1981,
+						link: "https://www.mariowiki.com/Donkey_Kong_(game)"
+					},
+					lastAppeared: {
+						game: "Donkey Kong Bananza",
+						year: 2025,
+						link: "https://www.mariowiki.com/Donkey_Kong_Bananza"
+					}
+				},
+				{
+					type: "text",
+					content: "The modern commerce center and urban playground, the Metro Kingdom is a vast and bustling web of cities and skyscrapers. Its most famous location, New Donk City, is the home of the famous rivalry between Mario and Donkey Kong; now governed by Mayor Pauline. It is constantly under construction, with the iconic red girders scaling every street! ",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "new_donk.jpg",
+					caption: "New Donk City",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Retro Beginnings",
+					content: "This here is where Mario took up his first jobs! As a carpenter Mario fought Donkey Kong; then he and Luigi worked in a bottling plant; before proceeding to work in a Cement Factory; next serving in the military; a brief stint as part of a Wrecking Crew; until eventually settling in his role as a plumber - cleaning the pipes of the city.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "dk_arcade.png",
+							caption: "Donkey Kong Arcade"
+						},
+						{
+							image: "mario_bros_gw.jpg",
+							caption: "Mario Bros. Game & Watch"
+						},
+						{
+							image: "cement_factory.jpg",
+							caption: "Cement Factory"
+						},
+						{
+							image: "bombs_away.gif",
+							caption: "Bombs Away"
+						},
+						{
+							image: "wrecking_crew.png",
+							caption: "Wrecking Crew"
+						},
+						{
+							image: "mario_arcade.png",
+							caption: "Mario Bros."
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "New Donk City",
+					content: "The City that never Leaps! This is the urban center, notarized by the New Donk City Hall - the tallest skyscraper in the city. This is a hub of tourism with the original Crazy Cap store, its musical culture and the wondrous festival and accompanying lightshow. The city is powered with an underground power plant below the city, using the energy of moons. Here are some of the various streets and attractions in New Donk City:",
+					alignContent: "left",
+				},
+				{
+					type: "list",
+					content: [
+						"Diddy's Mart",
+						"Dixie Street",
+						"Dixie Theater",
+						"Tiny's Piroshkis",
+						"Cranky Avenue",
+						"K. Rool Avenue",
+						"Squawks Park",
+						"Expresso Street",
+						"Expresso Espresso",
+						"Candy's Cafe",
+						"Rattley Street",
+						"Rambi Street",
+						"Banana Bagels",
+					]
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "city_hall.jpg",
+							caption: "Mayor Pauline outside New Donk City Hall"
+						},
+						{
+							image: "crazy_cap.webp",
+							caption: "Crazy Cap Store"
+						},
+						{
+							image: "power_plant.png",
+							caption: "New Donk City Power Plant"
+						},
+					]
+				},
+			],
+
+			right: [
+				{
+					type: "image-left",
+					image: "forest.png",
+					imageWidth: "230px",
+					caption: "Forest",
+					title: "Big City",
+					titleColor: "#b18f01",
+					content: "We see more of the various skyscrapers and apartments in Donkey Kong for the Game Boy! We also see the large forest just outside the city."
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "big_city.png",
+					imageWidth: "300px",
+					caption: "Big City",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					image: "neon_heights.png",
+					imageWidth: "200px",
+					caption: "Neon Heights",
+					title: "Neon Heights",
+					titleOnTop: true,
+					titleColor: "#b18f01",
+					content: "Beyond New Donk City we find the the bright lights of Neon Heights! Atop of these skyscrapers has its own theatre district, a movie set, a space center and a baseball diamond! Not to mention the large Mario of Liberty statue!"
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "DK Summit",
+					titleColor: "#b18f01",
+					content: "Looming over the metropolis is the snow covered peaks of a Donkey Kong themed ski resort! With frozen lakes, and tight icy corners, it makes for a perilous racetrack and vacation spot for New Donkers. ",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "snowy_mountain.png",
+							caption: "Snowy Mountain from Donkey Konga 2"
+						},
+						{
+							image: "rumbly_mountain.png",
+							caption: "Rumbly Peak from Donkey Konga 2"
+						},
+						{
+							image: "dk_summit.png",
+							caption: "DK Summit"
+						},
+						{
+							image: "dk_pass.png",
+							caption: "DK Pass"
+						},
+					]
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "wooded-kingdom",
+		coords: [-58, -38],
+
+		label: "Wooded Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/wooded-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "wood.jpg",
+			title: "Wooded Kingdom", 
+			description: "In the forested mountains, deep in the woods, lies the mechanical green house, the Steam Gardens.",
+			caption: "Sky Garden Tower in Wooded Kingdom"
+		}
+	},
+
+	{
+		id: "sand-kingdom",
+		coords: [-39.5, 190],
+
+		label: "Sand Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/sand-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "sand.jpg",
+			title: "Sand Kingdom", 
+			description: "Below the inverted pyramid ruins lies the colorful desert town Tostarena!",
+			caption: "Tostarena Town before the Great Inverted Pyramid"
+		}
+	},
+
+	{
+		id: "seaside-kingdom",
+		coords: [-44.25, 55.75],
+
+		label: "Seaside Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/seaside-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "seaside.webp",
+			title: "Seaside Kingdom", 
+			description: "Where the Sea meets the Sun; at this relaxing resort by the Carbonated Sea.",
+			caption: "Mario in boxer shorts, in front of the Glass Tower"
+		}
+
+	},
+
+	{
+		id: "snow-kingdom",
+		coords: [-18.25, 50.75],
+
+		label: "Snow Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "brrr.webp",
+			title: "Snow Kingdom", 
+			description: "Home to the Shiverians, the warmest community in the coldest land.",
+			caption: "Mario freezing in a Snow Kingdom blizzard"
+		}
+
+	},
+
+	// Sarasaland Locations
+	{
+		id: "sarasaland",
+		coords: [-67.8, 62.5],
+
+		label: "Sarasaland",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/sarasaland/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Sarasaland",
+					tagline: "Land of 4 Kingdoms",
+					image: "header.jpg",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario Land",
+						year: 1989,
+						link: "https://www.mariowiki.com/Super_Mario_Land"
+					},
+					lastAppeared: {
+						game: "WarioWare: Get It Together!",
+						year: 2021,
+						link: "https://www.mariowiki.com/WarioWare:_Get_It_Together"
+					}
+				},
+				{
+					type: "text",
+					content: "This land is a country ruled by Princess Daisy and consists of four different kingdoms: Birabuto, Muda, Easton and Chai. Each is inspired by real-life locations. Primarily appearing in Super Mario Land, the kingdoms are taken over by an alien known as Tatanga, who hypnotizes the inhabitants to take control of Sarasaland.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "sarasaland_cover.png",
+					caption: "Cover of Super Mario Land",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Birabuto Kingdom",
+					titleColor: "#b18f01",
+					content: "A large expanse of desert based on ancient Egypt. Ruled by King Totomesu, the sands are filled with vast pyramids and palm trees. Their main inhabitants are the Gao, fire-breathing sphinx creatures.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "birabuto.png",
+					imageWidth: "300px",
+					caption: "Birabuto Kingdom",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Muda Kingdom",
+					titleColor: "#b18f01",
+					content: "Set in an ocean, this kingdom takes place over various round hills and cliffs, and vast stretches of water and ocean. Their main inhabitants are the Yurarin, cute striped seahorses that serve the ruler of the Muda Kingdom: Dragonzamasu. On the coast of the Muda Kingdom also sits the famous Daisy Circuit, where Princess Daisy has arranged the large statue of her and Luigi. Daisy Circuit appears to be where Daisy Cruiser makes port, before venturing to the Sunshine Isles.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "muda.png",
+							caption: "Muda Kingdom"
+						},
+						{
+							image: "daisy_circuit.jpg",
+							caption: "Daisy Circuit"
+						},
+						{
+							image: "daisy_cruiser.webp",
+							caption: "Daisy Cruiser"
+						},
+					]
+				},
+
+			],
+
+			right: [
+				{
+					type: "image-right",
+					image: "easton.png",
+					caption: "Easton Kingdom",
+					title: "Easton Kingdom",
+					titleColor: "#b18f01",
+					content: "Based on Easter Island, this kingdom is a series of isles and caves filled with large moai stone statues in the background. The primary inhabitants are similar looking Batadons and Tokotokos, ruled by Hiyoihoi (an evolved Tokotoko). "
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "hiyoihoi.png",
+					caption: "Hiyoihoi",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Chai Kingdom",
+					titleColor: "#b18f01",
+					content: " Inspired by the mythical feudal China, the Chai Kingdom appears to be the centre of Sarasaland. There are vast bamboo forests and ornate brick cities across the mountain ranges. Pionpis and Nyololins are the main inhabitants of the Chai Kingdom, and are ruled by Biokinton - who is very shy so he constantly hides in his cloud.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "chai.jpg",
+					caption: "Chai Kingdom",
+					alignCaption: "center",
+				},
+				{
+					type: "text",
+					content: "Both Dragon Driftway and the Dragon Palace seem to be glamorous buildings built in the Chai Kingdom, depicting variations of Gobblegut - deep in the tower karst valleys. Standing above the rest is Pagoda Peak, a 4000 year old mountain, inhabited by Kung Fu Koopas and the Koopa Master in his floating pagoda.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "dragon_driftway.png",
+							caption: "Dragon Driftway"
+						},
+						{
+							image: "dragon_palace.webp",
+							caption: "Dragon Palace"
+						},
+						{
+							image: "pagoda_peak.png",
+							caption: "Pagoda Peak"
+						},
+					]
+				},
+			],
+		}
+
+	},
+
+	{
+		id: "birabuto-kingdom",
+		coords: [-75.5, -197],
+
+		label: "Birabuto Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/birabuto-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "birabuto.png",
+			title: "Birabuto Kingdom", 
+			description: "The desert kingdom of Sarasaland, ruled by King Totomesu.",
+			caption: "World 1-1 of Super Mario Land"
+		}
+	},
+
+	{
+		id: "muda-kingdom",
+		coords: [-56.5, -195.25],
+
+		label: "Muda Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/muda-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "muda.jpg",
+			title: "Muda Kingdom", 
+			description: "The watery coastal kingdom of Sarasaland, inhabited by the Yurarin and ruled by Dragonzamasu.",
+			caption: "Daisy Circuit on the Muda Kingdom coast"
+		}
+	},
+
+	{
+		id: "easton-kingdom",
+		coords: [-62, -211.6],
+
+		label: "Easton Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/easton-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "easton.jpg",
+			title: "Easton Kingdom", 
+			description: "The isles of Sarasaland, covered in large moai stone statues, inhabited by the similar looking Batadons and Tokotoko enemies.",
+			caption: "Depiction of the Easton Kingdom"
+		}
+	},
+
+	{
+		id: "chai-kingdom",
+		coords: [-64, -198.5],
+
+		label: "Chai Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/chai-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "chai.webp",
+			title: "Chai Kingdom", 
+			description: "The ornate heartland of Sarasaland, home to vast bamboo forests, deep karst valleys and ornate palaces.",
+			caption: "Dragon Palace in the Chai Kingdom"
+		}
+	},
+
+	// Miscellaneous Locations
+	{
+		id: "baseball-kingdom",
+		coords: [-50.5, -125],
+
+		label: "Baseball Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/baseball-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "baseball.jpg",
+			title: "Baseball Kingdom", 
+			description: "An island resort built by Princess Peach for her and her friends to play baseball together.",
+			caption: "Baseball Kingdom"
+		}
+	},
+
+	{
+		id: "kitchen-island",
+		coords: [-49.5, -122.75],
+
+		label: "Kitchen Island",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/kitchen-island/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "kitchen_island.jpg",
+			title: "Kitchen Island", 
+			description: "The skull shaped island that is the homebase for Captain Syrup and the Brown Sugar Pirates.",
+			caption: "Kitchen Island Map"
+		}
+	},
+
+	{
+		id: "mario-land",
+		coords: [-52.8, 129.5],
+
+		label: "Mario Land",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mario-land/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "mario_land.png",
+			title: "Mario Land", 
+			description: "Mario's personal island getaway he won in Mario Party 2. It features a giant tortoise, a huge tree, a giant jack-o-lantern and even a massive mechanical Mario!",
+			caption: "Mario Land Map"
+		}
+	},
+
+	{
+		id: "keelhaul-key",
+		coords: [-34.6, -83.6],
+
+		label: "Keelhaul Key",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/keelhaul-key/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "jungle.jpg",
+			title: "Keelhaul Key", 
+			description: "Deserted and cursed, this is the location of the legend of Cortez and his immeasurable treasure.",
+			caption: "Deep jungle in Keelhaul Key"
+		}
+	},
+
+	{
+		id: "northern-kremisphere",
+		coords: [-47, 33],
+
+		label: "Northern Kremisphere",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/northern-kremisphere/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "northern_kremisphere.jpg",
+			title: "Northern Kremisphere", 
+			description: "A broad region with a temperate to frigid climate, consisting of many lakes and waterfalls. It is being industrialized by the Kremlings.",
+			caption: "Northern Kremisphere Map"
+		}
+	},
+
+	{
+		id: "ice-ice-outpost",
+		coords: [-17, 66.8],
+
+		label: "Ice Ice Outpost",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "ice_ice_outpost.png",
+			title: "Ice Ice Outpost", 
+			description: "A cold outpost surrounded by large icebergs and glacier cliffs - a green and yellow road runs through it.",
+			caption: "Ice Ice Outpost"
+		}
+	},
+
+	{
+		id: "sunshine-archipelago",
+		coords: [-48, -126],
+
+		label: "Sunshine Archipelago",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/sunshine-archipelago/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Sunshine Archipelago",
+					tagline: "Tropical Paradise",
+					image: "mario_sunshine_map.jpg",
+				},
+				{
+					type: "explore-button",
+					target: "sunshine-archipelago",
+				},
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario Sunshine.",
+						year: 2002,
+						link: "https://www.mariowiki.com/Super_Mario_Sunshine"
+					},
+					lastAppeared: {
+						game: "Super Mario 3D All-Stars",
+						year: 2020,
+						link: "https://www.mariowiki.com/Super_Mario_3D_All-Stars"
+					}
+				},
+				{
+					type: "text",
+					content: "The Sunshine Archipelago is the home of the Piantas, a series of warm sunny isles shaped like animals. North East of the Mushroom Kingdom, it has become a resort and a getaway for many. Its coastal breeze, idyllic shores and shimmering waters is the perfect place to relax.",
+					alignContent: "left",
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "carousel",
+					title: "Isle Delfino",
+					titleColor: "#000",
+					images: [
+						{
+							image: "isle_delfino.jpg",
+							caption: "Isle Delfino"
+						},
+						{
+							image: "delfino_plaza.avif",
+							caption: "Delfino Plaza"
+						},
+						{
+							image: "pinna_park.png",
+							caption: "Pinna Park"
+						},
+						{
+							image: "bianco_hills.avif",
+							caption: "Bianco Hills"
+						},
+					]
+				},
+				{
+					type: "text",
+					content: "Isle Delfino is the sun-drenched natural resort with the world's fiest resort facilities, a spectacular amusement park, and succulent seafood. The isle resemles a dolphin, and consists of many stunning locations. The main hub of the island is Delfino Plaza, located at the foot of Corona Mountain, has the iconic Shine Gate at its center.",
+					alignContent: "left",
+				},
+			],
+			right: [
+				{
+					type: "image-left",
+					alignImage: "top",
+					image: "booty_boardwalk.png",
+					imageWidth: "250px",
+					title: "Isle Mordorena",
+					titleColor: "#b18f01",
+					content: "A series of islands shaped like an eel. Dolphins take you from isle to isle and Captain Goomba awaits you at the head.",
+					caption: "Goomba's Booty Boardwalk",
+					alignCaption: "left",
+					zoomable: true,
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Isle Granchio",
+					titleColor: "#b18f01",
+					content: "The crab-shaped home of bustling tourism, full of racing! With key tracks like Peach Beach and Coconut Mall - and hidden gems like Mario Beach.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "peach_beach.png",
+							caption: "Peach Beach"
+						},
+						{
+							image: "coconut_mall.jpg",
+							caption: "Coconut Mall"
+						},
+						{
+							image: "mario_beach.png",
+							caption: "Mario Beach"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					alignImage: "center",
+					image: "delfino_pier.webp",
+					content: "Across the isles are many settlements large and small. Delfino Pier is a hub of trade and commerce. Grand Canal is a lovely town of waterways and gondolas! While you visit the various isles, keep your eyes peeled for Daisy Cruiser on the waves!",
+					caption: "Delfino Pier",
+					alignCaption: "left",
+					zoomable: true,
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "grand_canal.jpg",
+					caption: "Grand Canal",
+					imageWidth: "300px",
+					alignCaption: "left",
+				},
+				{
+					type: "spacer"
+				},
+				{
+					type: "image-bottom",
+					image: "gelato_beach.jpg",
+					height: "100px"
+				}
+			]
+		},
+	},
+
+	{
+		id: "prism-island",
+		coords: [-56.4, -100],
+
+		label: "Prism Island",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/prism-island/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Prism Island",
+					tagline: "Fountain of Color",
+					image: "prism_island.jpg",
+				},
+				{
+					type: "explore-button",
+					target: "prism-island",
+					center: [242,453],
+					zoom: 0
+				},		
+				{
+					type: "appeared-table",
+					appeared: {
+						game: "Paper Mario: Color Splash",
+						year: 2016,
+						link: "https://www.mariowiki.com/Paper_Mario:_Color_Splash"
+					},
+				},
+				{
+					type: "text",
+					content: "Prism Island is a small island located in the middle of the sea, and is the location of the vibrant tourist attraction: the Prisma Fountain. Prism Island is shaped like a giant paint brush, and is broken up into several distinct sections by color: Red, Yellow, Blue, Purple, Orange and Green. ",
+					alignContent: "left",
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "image-left",
+					alignImage: "center",
+					image: "prisma_fountain_night.png",
+					imageWidth: "200px",
+					title: "Port Prisma",
+					titleColor: "#b18f01",
+					content: "The hub of Prism Island, is split into four districts: blue, red, yellow and the harbor district. At its center is the Prisma Fountain, where the 6 Big Paint Stars are used to create Rainbow Road and restore color to the isle.",
+					caption: "Prisma Fountain at night",
+					alignCaption: "left",
+				},		
+				{
+					type: "text",
+					content: "You can explore the various shops and landmarks of Port Prisma such as Prisma Cardware and the Prisma Cafe in the blue district. In the yellow district you can find the impressive Prisma Museum - which documents the art and culture of the island. The red district leads out to Ruddy Road and eventually to the pretty Cherry Lake. ",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "port_prisma.jpg",
+							caption: "Port Prisma"
+						},
+						{
+							image: "port_prisma_concept.png",
+							caption: "Port Prisma Concept Art"
+						},
+						{
+							image: "prima_fountain.png",
+							caption: "Prisma Fountain"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "text",
+					title: "Roshambo Temples",
+					titleColor: "#b18f01",
+					content: "Across the island are 8 temples dedicated to the game of Super Roshambo. Each temple acts as an arena for Roshambo warriors to battle it out for supremacy. Each temple has a Rock Paper Wizard who must be defeated to become the true champion of Roshambo.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "roshambo_temple.png",
+					caption: "Roshambo Temple",
+					imageWidth: "330px",
+					alignCaption: "center",
+				},
+			],
+
+			right: [
+				{
+					type: "text",
+					title: "Red Region",
+					titleColor: "#b18f01",
+					content: "Just beyond Cherry Lake lies the Redpepper Volcano. A huge lava filled crater, home to a mighty Draggadon. Additionally, just beyond the crater is the Crimson Tower - a tall spire of red brick. ",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "crimson_tower.png",
+					caption: "Crimson Tower",
+					imageWidth: "300px",
+					alignCaption: "left",
+				},
+				{
+					type: "image-left",
+					image: "marmalade_valley.png",
+					imageWidth: "220px",
+					caption: "Marmalade Valley",
+					title: "Orange Region",
+					titleColor: "#b18f01",
+					content: "Primarily covered by Marmalade Valley, the region is an arid sunset badlands - with the Sunset Express running between the landmarks.",
+					alignContent: "left",
+				},
+				{
+					type: "image-right",
+					image: "golden_coliseum.jpg",
+					imageWidth: "250px",
+					caption: "The Golden Coliseum",
+					title: "Yellow Region",
+					titleColor: "#b18f01",
+					content: "Pleasant lush hills of Daffodil Peak and Sunglow Ridge surround the imposing Golden Coliseum.",
+					alignContent: "left",
+				},
+				{
+					type: "image-left",
+					image: "mondo_woods.png",
+					caption: "Mondo Woods",
+					title: "Green Region",
+					titleColor: "#b18f01",
+					content: "A deep forest known as Mondo Woods, enlarged by the magics of Kamek. Eventually you may stumble upon the Emerald Circus.",
+					alignContent: "left",
+				},
+				{
+					type: "text",
+					title: "Blue Region",
+					titleColor: "#b18f01",
+					content: "A quaint coastal beach celebrating Oceanfest! ",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "bloo_bay.webp",
+					caption: "Bloo Bay Beach",
+					alignCaption: "left",
+				},
+				{
+					type: "image-right",
+					image: "violet_passage.jpg",
+					imageWidth: "250px",
+					caption: "The Violet Passage",
+					title: "Purple Region",
+					titleColor: "#b18f01",
+					content: "The Violet Ocean passage of dangerous waters and locations such as Lighthouse Island, Vortex Island and the enigmatic Fortune Island.",
+					alignContent: "left",
+				},
+			]
+
+		}
+
+	},
+
+	{
+		id: "mario-kart-world",
+		coords: [-62.5, -143.5],
+
+		label: "Mario Kart World",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mario-kart-world/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Mario Kart World",
+					tagline: "The place to race",
+					image: "crown_city.webp",
+				},
+				{
+					type: "explore-button",
+					target: "mario-kart-world",
+				},		
+				{
+					type: "appeared-table",
+					appeared: {
+						game: "Mario Kart World",
+						year: 2025,
+						link: "https://www.mariowiki.com/Mario_Kart_World"
+					},
+				},
+				{
+					type: "text",
+					content: "Not to be confused with Circuit Break Island, Mario Kart World is a continent dedicated to racing! It is a large interconnected hub of different biomes and race tracks, pulling from Mario's long history of Go-Karting.  Across the isle you will find sunny shores, beautiful fall forests, lush savannahs, dandelion winds, glistening peaks, wild west badlands, volcanic castles and Moo-Moo filled plains. Behind the racing is a fully functioning world too, with the varied inhabitants coexisting in this karting paradise.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "sunny_shores.png",
+							caption: "Peach Beach"
+						},
+						{
+							image: "fall_forests.png",
+							caption: "Cheep Cheep Lake"
+						},
+						{
+							image: "lush_savannah.png",
+							caption: "Faraway Oasis"
+						},
+						{
+							image: "dandelion_winds.jpg",
+							caption: "Dandelion Depths"
+						},
+						{
+							image: "snow_peaks.jpg",
+							caption: "DK Pass"
+						},
+						{
+							image: "badlands.png",
+							caption: "Mario Circuit"
+						},
+						{
+							image: "volcanic_castles.jpg",
+							caption: "Dry Bones Burnout"
+						},
+						{
+							image: "moo_moo.jpeg",
+							caption: "Moo Moo Meadows"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "text",
+					content: "Across the continent is over 202 unique intermission tracks, and 30 specialised routes for racing! They consist of spectacular new locations like the DK Spaceport and Acorn Heights; as well as recreations of classic locations such as Moo Moo meadows, Shy Guy Bazaar and Peach Beach. Scattered across the world are 394 P Switches,  150 ?-Panels and 200 Peach Medallions to collect!",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "world_map.avif",
+					caption: "World Map",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "text",
+					title: "Crown City",
+					titleColor: "#b18f01",
+					content: "See the sights and structures of Crown City. You can even soar in style down main street. There are many wonderful landmarks to enjoy! There is the large trophy-shaped statue with a crowned tire on top that serves as the highest point in the city and what it was named after. The large suspension bridge “Crown Bridge” connects the city to the Faraway Oasis. There are many brands and shops to visit:",
+					alignContent: "left",
+				},
+				{
+					type: "list",
+					content: [
+						"Bank Coin Coffer",
+						"Birdo Jewelry",
+						"Boo Cinema",
+						"Business Hotel",
+						"Dash",
+						"Billboard Construction",
+						"Koopa Hotel",
+						"Pipeline Hotel",
+						"Warp Plaza Shopping Complex",
+						"Yoshi's Food Factory",
+					]
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "crown_city1.png",
+							caption: "Crown City during the day"
+						},
+						{
+							image: "crown_city3.jpg",
+							caption: "Crown City construction"
+						},
+						{
+							image: "crown_city5.webp",
+							caption: "Crown Bridge"
+						},
+						{
+							image: "crown_city4.png",
+							caption: "Crown City at night"
+						},
+					]
+				},
+			],
+
+			right: [
+				{
+					type: "text",
+					title: "Whistlestop Summit",
+					titleColor: "#b18f01",
+					content: "In the Mesa is a giant mountain themed after steam trains! A huge locomotive chimney extends from its centre, filling the sky with steam, as you race between the trains and the rails. The trains are a part of the Sunshine Railway brand, and Whistlestop Summit is the base station that connects the rest of the island - known as Wilderness coast Station!",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "whistlestop_summit.png",
+					caption: "Whistlestop Summit",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Great ?-Block Ruins",
+					titleColor: "#b18f01",
+					image: "great_question_block_ruins.png",
+					imageWidth: "180px",
+					caption: "Great ?-Block Ruins",
+					content: "High in the sky is a series of floating ruins, featuring a large hollowed out structure designed after a giant version of a ?-Block. The architecture depicts Lakitus on their clouds, and many strange symbols that suggest a deeper history."
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Peach Stadium",
+					titleColor: "#b18f01",
+					content: "At the center of the continent is the grand Peach Stadium! An elaborate pink and white castle resembling Peach's home in Toad Town, is the hub of racing, with pretty gardens and a beautiful star shaped lake. It has a train and bus station with a sign labeled Peach Stadium Terminal, located directly underneath the main track.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "peach_stadium_night.jpg",
+							caption: "Peach Stadium"
+						},
+						{
+							image: "peach_stadium.jpg",
+							caption: "Peach Stadium"
+						},
+						{
+							image: "peach_stadium_terminal.jpg",
+							caption: "Peach Stadium Terminal"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-left",
+					title: "Salty Salty Speedway",
+					titleColor: "#b18f01",
+					image: "lagoon_city.png",
+					caption: "Lagoon City",
+					content: "Drift along the rapid waterways of Salty Salty Speedway and make a splash around the city's canals! This track takes place in the gorgeous town Lagoon City, featuring a statue of Birdo as a mermaid. "
+				},
+				{
+					type: "text",
+					content: "Have a beverage from Muncher Coffee Roaster and drift down the canals to the sea - where you will catch a  glimpse of the stunning Peach Beach sunset.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "muncher.jpg",
+					caption: "Muncher Coffee Roaster",
+					alignCaption: "center",
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "sprixie-kingdom",
+		coords: [-42.7, -90.8],
+
+		label: "Sprixie Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/sprixie-kingdom/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Sprixie Kingdom",
+					tagline: "Meow",
+					image: "world1.png",
+				},
+				{
+					type: "explore-button",
+					target: "sprixie-kingdom",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario 3D World",
+						year: 2013,
+						link: "https://www.mariowiki.com/Super_Mario_3D_World"
+					},
+					lastAppeared: {
+						game: "Super Mario 3D World + Bowser's Fury",
+						year: 2021,
+						link: "https://www.mariowiki.com/Super_Mario_3D_World_%2B_Bowser%27s_Fury"
+					}
+				},
+				{
+					type: "text",
+					content: "The Sprixie Kingdom is a series of islands between two larger landmasses, inhabited by the Sprixies and ruled by the Sprixie Princesses. This fairy kingdom is connected to the Mushroom continent by a sparkling clear pipe - which cover the land! Additionally these islands are the home of the Cat Bell and the Double Cherry, unique power-ups that shape the culture and life of the region.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "SM3DW_Map.png",
+					caption: "Sprixie Kingdom Map",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule"
+				},
+				{
+					type: "text",
+					title: "Worlds",
+					titleColor: "#b18f01",
+					content: "There are 6 core islands that make up the Sprixie Kingdom, which have a rough theme but can vary drastically in their contents. There is a green grassy isle, a yellow desert, a blue snowy world, an orange canyon realm, purple beaches and a cyan island of clouds. They are ruled by the colorful Sprixie princesses!",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "world1.png",
+							caption: "World 1"
+						},
+						{
+							image: "world2.png",
+							caption: "World 2"
+						},
+						{
+							image: "world3.jpg",
+							caption: "World 3"
+						},
+						{
+							image: "world4.avif",
+							caption: "World 4"
+						},
+						{
+							image: "world5.jpg",
+							caption: "World 5"
+						},
+						{
+							image: "world6.jpg",
+							caption: "World 6"
+						},
+						{
+							image: "sprixie_princesses.png",
+							caption: "Sprixie Princesses"
+						}
+					]
+				},
+				{
+					type: "text",
+					content: "There is still much variety found in each world, from vibrant circuses and pink plazas to lost cities and castles of cake! The kingdom is vast and diverse, and no two locations are quite the same. ",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "switch_scramble_circus.webp",
+							caption: "Switch Scramble Circus"
+						},
+						{
+							image: "pretty_plaza_panic.png",
+							caption: "Pretty Plaza Panic"
+						},
+						{
+							image: "spike_lost_city.png",
+							caption: "Spike's Lost City"
+						},
+						{
+							image: "cakewalk_flip.png",
+							caption: "Cakewalk Flip"
+						}
+					]
+				},
+			],
+			right: [
+				{
+					type: "image-left",
+					title: "Power-Ups",
+					titleColor: "#b18f01",
+					image: "bell.png",
+					caption: "The Cat Bell",
+					content: "The Cat Bell and the Lucky Bell are special power-ups that let whoever consumes it gain the powers of a cat! This seems to be from the Land of Cats, where the Giga Bell can be found."
+				},
+				{
+					type: "image-right",
+					image: "cherry.png",
+					imageWidth: "230px",
+					caption: "The Double Cherry",
+					content: "The double cherry also takes center stage, creating a perfect clone of yourself! Things can quickly get hectic with too many of them."
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Plessie",
+					titleColor: "#b18f01",
+					content: "A large and friendly dinosaur that appears throughout the Sprixie Kingdom. Similar to a large Yoshi and Dorrie, Plessie carries Mario and his friends through plunging waterfalls and diving dunes.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "plessie.png",
+					caption: "Plessie",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Lake Lapcat",
+					titleColor: "#b18f01",
+					content: "In an archipelago known as the Land of Cats, just off the coast of Cascade Kingdom, is this collection of cat themed islands. There are twelve islands, each with their own challenges to overcome:",
+					alignContent: "left",
+				},
+				{
+					type: "list",
+					content: [
+						"Fur Step Island",
+						"Scamper Shores",
+						"Pounce Bounce Isle",
+						"Fort Flaptrap",
+						"Slipskate Slope",
+						"Clawswipe colosseum",
+						"Trickity Tower",
+						"Crisp Climb Castle",
+						"Risky Whisker Island",
+						"Pipe Path Tower",
+						"Roiling Roller Isle",
+						"Mount Magmeow",
+					]
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "lake_lapcat.jpg",
+							caption: "Lake Lapcat"
+						},
+						{
+							image: "scamper_shores.png",
+							caption: "Scamper Shores"
+						},
+						{
+							image: "clawswipe_colosseum.png",
+							caption: "Clawswipe Colosseum"
+						},
+						{
+							image: "roiling_roller_isle.png",
+							caption: "Roiling Roller Isle"
+						}
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Royals",
+					titleColor: "#b18f01",
+					image: "hisstocrat.jpg",
+					imageWidth: "230px",
+					caption: "Hisstocrat",
+					content: "The Sprixie Princesses aren't the only monarchs about; the Hisstocrats rule from their carnival in World 3, and King Ka-Thunk retains authority in his castle of World 5."
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "dinosaur-land",
+		coords: [-50.5, -88.3],
+
+		label: "Dinosaur Land",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/dinosaur-land/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Dinosaur Land",
+					tagline: "A Jurassic Paradise",
+					image: "header.png",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario World",
+						year: 2001,
+						link: "https://www.mariowiki.com/Super_Mario_World:_Super_Mario_Advance_2"
+					},
+					lastAppeared: {
+						game: "Super Mario RPG",
+						year: 2023,
+						link: "https://www.mariowiki.com/Super_Mario_RPG_(Nintendo_Switch)"
+					}
+				},
+				{
+					type: "text",
+					content: "Off the coast of the Cascade Kingdom is the small archipelago of dino-filled isles that make up Dinosaur Land! While most know for Yoshi's Island, there are many locations to be found along these lively shores. Here you will find a host of creatures including Blarggs, dino-Rhinos, Dino-Torches, Eeries, Rexes and Reznors as well as Dolphins, Swoopers - and you can't forget Yoshis!",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "dinosaur_land.webp",
+					caption: "Dinosaur Land Map",
+					alignCaption: "center",
+				},
+				{
+					type: "text",
+					title: "Mainland",
+					titleColor: "#b18f01",
+					content: "The central part of the archipelago consists of 6 main landmasses circling the Valley of Bowser. Connecting to Yoshi's Island is Donut Plains, bubbly grasslands perfect to go-kart in. From there you may stumble into the the Vanilla Dome caves, or go along the Twin Bridges to Cookie Mountain. Don't get lost in the Forest of Illusion - and do NOT eat the rocks on Chocolate Island.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "donut_plains.png",
+							caption: "Donut Plains"
+						},
+						{
+							image: "vanilla_dome.png",
+							caption: "Vanilla Dome"
+						},
+						{
+							image: "twin_bridges.png",
+							caption: "Twin Bridges"
+						},
+						{
+							image: "forest_of_illusion.png",
+							caption: "Forest of Illusion"
+						},
+						{
+							image: "chocolate_island.png",
+							caption: "Chocolate Island"
+						}
+					]
+				},
+				{
+					type: "image-right",
+					image: "choco_mountain.webp",
+					caption: "Choco Mountain",
+					content: "After Mario's visit in Super Mario World, he and his friends returned often for Go-Karting, Tennis, and a multitude of other sports! You will find many race tracks and battle courses set here. Keep an eye out for the swirly hills of Donut Plains, and the rocky cliffs of Choco Mountain."
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "donut_plains.webp",
+					caption: "Donut Plains 3",
+					alignCaption: "center",
+				},
+			],
+
+			right: [
+				{
+					type: "text",
+					title: "Yoshi's Island",
+					titleColor: "#b18f01",
+					content: "Where Yoshi was first discovered, and first aided the Mario Bros. home, it is full of vast and varied biomes. There are grassy hills, mountainous peaks, primaeval jungles, icy cliffs, gorgeous beaches and arid badlands. Giant fruit and flora cover the isle, with the Super Happy Tree as the source of their food and happiness. The isle has taken many forms in its history, but none will deny the comfort that it brings.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "yoshi_gif.gif",
+							caption: "Yoshi's Island from the Original"
+						},
+						{
+							image: "yoshi_ds.png",
+							caption: "Yoshi's Island from the DS"
+						},
+						{
+							image: "yoshi_rpg.png",
+							caption: "Yoshi's Island from Super Mario RPG"
+						},
+						{
+							image: "happy_tree.webp",
+							caption: "Super Happy Tree"
+						},
+						{
+							image: "yoshi_8.webp",
+							caption: "Yoshi's Island from Mario Kart Tour"
+						}
+					]
+				},
+				{
+					type: "image-left",
+					image: "egg_island.png",
+					imageWidth: "230px",
+					caption: "Egg Island",
+					title: "Egg Island",
+					titleColor: "#b18f01",
+					content: "An island that rests atop of a giant floating sphere of sea! A floating paradise that acts as a second home for the Yoshi Clan. "
+				},
+				{
+					type: "text",
+					title: "Fruit Archipelago",
+					titleColor: "#b18f01",
+					content: "Giant fruits are prevalent throughout many of the isles, with some exceptionally large ones forming a collection of islands, such as the Megafruit Paradise, and the Watermelon and Cantaloupe Islands.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "megafruit_paradise.webp",
+							caption: "Megafruit Paradise"
+						},
+						{
+							image: "tropical_island.webp",
+							caption: "Yoshi's Tropical Island"
+						},
+						{
+							image: "yoshi_golf.png",
+							caption: "Fruit Islands from Mario Golf"
+						}
+					]
+				},
+				{
+					type: "image-right",
+					image: "shy_guy_beach.png",
+					imageWidth: "260px",
+					caption: "Shy Guy Beach",
+					title: "Pirate's Ahoy!",
+					titleColor: "#b18f01",
+					content: "Shy Guy Pirates rule these waves, with their Galleons bombarding ships and beaches alike!"
+				},
+			]
+		}
+
+	},
+	
+	{
+		id: "rogueport",
+		coords: [-28.2, -80.55],
+
+		label: "Rogueport",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/rogueport/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Rogueport",
+					tagline: "Gateway to Shadow",
+					image: "header.webp",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Paper Mario: The Thousand-Year Door",
+						year: 2004,
+						link: "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door"
+					},
+					lastAppeared: {
+						game: "Paper Mario: The Thousand-Year Door (Nintendo Switch)",
+						year: 2024,
+						link: "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door_(Nintendo_Switch)"
+					}
+				},
+				{
+					type: "text",
+					content: "The shady run-down port town that hides more than just a criminal underworld. After the battle between the Four Heroes and the Shadow Queen, the people built Rogueport over the old city and the Thousand-Year Door. The port town now is a hub of danger in the Mushroom Kingdom; with the Robbos lurking about the East, and the Pianta Syndicate controlling the West - entering a back alley may result in a robbery or worse.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "plaza.jpg",
+					caption: "Rogueport Plaza",
+					alignCaption: "center",
+				},
+				{
+					type: "text",
+					content: "Rogueport connects to many interesting locals nearby, many of them accessible from Rogueport Station. You can hop aboard intercity trains or blimps here!",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "rogueport_map.jpg",
+					caption: "Map of Rogueport and surrounding areas",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Luigi and the Marvelous Compass",
+					titleColor: "#b18f01",
+					content: "During The Thousand-Year Door saga, Luigi finds himself on his own grand quest: to rescue Princess Eclair of the Waffle Kingdom! This sends him to a slew of locations near Rogueport such as: ",
+					alignContent: "left",
+				},
+				{
+					type: "list",
+					content: [
+						"Waffle Kingdom",
+						"Rumblebump Volcano",
+						"Plumpbelly Village",
+						"Pudding Continent",
+						"Circuit Break Island",
+						"Jazzafrazz Town",
+						"Strudel Continent",
+						"Grimble Forest",
+						"Rapturous Ruins",
+						"Hatesong Tower"
+					]
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Petal Meadows",
+					titleColor: "#b18f01",
+					content: "A pleasant plateau surrounded by hills to the East of Rogueport.  Here you can stop in one of the adorable Koopa towns such as Petalburg or Windmillville! Just on the horizon you will make out the dreaded Hooktail Castle.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "petal_meadows.webp",
+							caption: "Petal Meadows"
+						},
+						{
+							image: "petalburg.png",
+							caption: "Petalburg"
+						},
+						{
+							image: "windmillville.png",
+							caption: "Windmillville"
+						},
+						{
+							image: "hooktail_castle.jpg",
+							caption: "Hooktail Castle"
+						}
+					]
+				},
+			],
+
+			right: [
+				{
+					type: "image-right",
+					image: "boggly_woods.jpg",
+					imageWidth: "250px",
+					caption: "Boggly Woods",
+					title: "Boggly Woods",
+					titleColor: "#b18f01",
+					content: "Tranquil and eerie woods with a prismatic glow - inhabited by the Punies! In the center stands the Great Boggly Tree."
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-left",
+					image: "glitzville.jpg",
+					imageWidth: "250px",
+					caption: "Glitzville",
+					title: "Glitzville",
+					titleColor: "#b18f01",
+					content: "A city atop of an artificial floating island with an exotic atmosphere. The main attraction is the Glitz Pit where fighters duke it out!"
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					image: "creepy_steeple.jpg",
+					imageWidth: "250px",
+					caption: "Twilight Town",
+					title: "Twilight Town",
+					titleColor: "#b18f01",
+					content: "A creeper town perpetually at dusk. The Twilight Trail connects to the ancient Creepy Steeple."
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "Poshley Heights",
+					titleColor: "#b18f01",
+					content: "A posh village accessed via the Excess Express. It emanates grandeur and affluence."
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "excess_express.jpg",
+							caption: "Excess Express"
+						},
+						{
+							image: "poshley_heights.jpg",
+							caption: "Poshley Heights"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-left",
+					image: "fahr_outpost.jpg",
+					caption: "Fahr Outpost",
+					title: "Fahr Outpost",
+					titleColor: "#b18f01",
+					content: "An icy mountainous village that is home to many Bob-Ombs and an enormous cannon in its center. This same cannon will launch you to the moon!"
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "dk-archipelago",
+		coords: [-50.5, 25.8],
+
+		label: "DK Archipelago",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/dk-archipelago/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [],
+			right: []
+		}
+
+	},
+
+	{
+		id: "piillo-island",
+		coords: [-51.85, -105],
+
+		label: "Piillo Island",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/piillo-island/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [],
+			right: []
+		}
+
+	},
+
+	{
+		id: "ttyd-waters",
+		coords: [-34, 175],
+
+		label: "Rogue Coast",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/ttyd-waters/",
+
+		displayType: "doc",
+
+		content: {
+			title: "Rogue Coast",
+			content: [
+				{
+					type: "text",
+					content: "Rogueport, and the surrounding areas (Petal Meadows, Boggly Woods, the Waffle Kingdom, etc.) are North of the Cascade Kingdom, East of the Mushroom Kingdom, and West of the Sand Kingdom continent. This area links to Cascade Kingdom, Cap Kingdom, Dinosaur Land, the Sprixie Kingdoms and more."
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image",
+					image: "ttyd.jpg",
+					caption: "Paper Mario: The Thousand Year Door",
+					alignCaption: "center"
+				},
+				{
+					type: "text",
+					title: "Thousand Year Door",
+					titleColor: "#b18f01",
+					content: "Why do we put Rogueport up here? Boats appear to arrive from the West when going from Rogueport to the Mushroom Kingdom. Likewise, they face westward when returning to the Mushroom Kingdom, thus suggesting Rogueport is to the East of the Mushroom Kingdom. Additionally, species indegenous to the Mushroom continent, (Goombas, Toads, Koopa Troopas, etc.) are common in Rogueport and the surrounding areas."
+				},
+				{
+					type: "text",
+					content: "A Yoshi egg is brought to Glitzville from a location south of Glitzville. This egg likely came from an island in or around the Cascade Kingdom, which is home of dinosaurs, with locations such as Dinosaur Land and Yoshi island."
+				},
+				{
+					type: "text",
+					content: "Furthermore, what appear to be Tostarenan Skulls can be seen around the Rogueport Area, much like the ones seen on Yoshi's Island and in the Sand Kingdom, which are both nearby according to this map."
+				},
+				{
+					type: "image",
+					image: "map_route.png",
+					caption: "A possible route between Rogueport and the Mushroom Kingdom",
+					alignCaption: "left",
+				}
+			]
+		}
+
+	}
 ]

@@ -2,7 +2,8 @@ import * as L from 'leaflet';
 
 import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
 import { Waypoint } from "./Waypoints/WaypointManager";
-import { IconIdentifier, IconRegistry } from "./Waypoints/IconRegistry";
+import { iconRegistry, IconIdentifier } from "./Waypoints/IconRegistry";
+import { eventBus } from '../core/EventBus';
 
 abstract class _Map {
     containerId: string = "mapContainer";
@@ -53,6 +54,16 @@ class LeafletMap extends _Map {
             default:
                 throw new Error(`Unsupported map type: ${this.config.type}`);
         }
+
+        eventBus.on("popup:show", (popup) => {
+            this.openPopup(popup);
+        });
+
+        eventBus.on("popup:hide", (popup) => {
+            this.closePopup(popup);
+        });
+
+        this.on("click", () => eventBus.emit("map:click", {}));
 
     }
 
@@ -163,11 +174,23 @@ class LeafletMap extends _Map {
             
         } else {
             const options: L.MarkerOptions = {
-                icon: IconRegistry.createIcon(icon)
+                icon: iconRegistry.createIcon(icon)
             }
 
             return L.marker(waypoint.coords, options).addTo(this.map);
         }
+    }
+
+    destroy(): void {
+        this.map.remove();
+    }
+
+    openPopup(popup: L.Popup): void {
+        popup.openOn(this.map);
+    }
+
+    closePopup(popup: L.Popup): void {
+        this.map.closePopup(popup);
     }
 }
 

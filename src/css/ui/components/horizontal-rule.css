@@ -1,0 +1,16 @@
+.c-horizontal-rule {
+    border: none;
+    width: 75%;
+    border-top: 2px solid #ccc;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.c-horizontal-rule--center { margin: 0.5rem auto; }
+.c-horizontal-rule--left { margin: 0.5rem 0.5rem; }
+.c-horizontal-rule--right { margin: 0.5rem 0.5rem 0.5rem auto; }
+
+.doc-viewer .horizontal-rule {
+    width: 100%;
+    margin: 1rem 0;
+}
