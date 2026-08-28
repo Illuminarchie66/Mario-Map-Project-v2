@@ -1,6 +1,10 @@
+import '../../../css/ui/components/image.css';
+
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
+
+import { imageViewer } from "../ImageViewer";
 
 const ImageTextBlockSchema = z.object({
     title: z.string().optional(),
@@ -8,6 +12,7 @@ const ImageTextBlockSchema = z.object({
     titleColor: z.string().optional(),
     titleOnTop: z.boolean().optional(),
     image: z.string(),
+    zoomable: z.boolean().optional(),
     alignImage: AlignSchema.optional(),
     imageWidth: z.string().optional(),
     imageHeight: z.string().optional(),
@@ -64,10 +69,9 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
         img.className = "c-media-block__main-image";
         img.style.height = this.data.imageHeight || "200px";
         
-        // const finalImage = (data.zoomable !== false)
-        //     ? makeZoomableImage(img, data, services.imageViewer)
-        //     : img;
-        const finalImage = img; 
+        const finalImage = (this.data.zoomable !== false)
+            ? imageViewer.makeZoomableImage(img, this.data.caption)
+            : img;
 
         imageWrapper.appendChild(finalImage);
 
@@ -101,9 +105,15 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
             c-media-block__content--${this.data.alignContent || "left"}`;
         text.textContent = this.data.content;
         textWrapper.appendChild(text);
-
-        block.appendChild(imageWrapper);
-        block.appendChild(textWrapper);
+        
+        if (left) {
+            block.appendChild(imageWrapper);
+            block.appendChild(textWrapper);
+        } else {
+            block.appendChild(textWrapper);
+            block.appendChild(imageWrapper);
+        }
+        
         container.appendChild(block);
 
         return container;

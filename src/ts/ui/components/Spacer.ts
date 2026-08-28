@@ -1,3 +1,5 @@
+import '../../../css/ui/components/spacer.css';
+
 import { z } from "zod";
 import { Component } from "./Component";
 

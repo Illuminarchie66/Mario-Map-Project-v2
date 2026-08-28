@@ -3,6 +3,9 @@ import { Waypoint } from "../map/Waypoints/Waypoint";
 type EventMap = {
     "waypoint:click": Waypoint;
     "map:load-request": { id: string, center?: [number, number], zoom?: number };
+    "map:click": {};
+    "popup:show": L.Popup;
+    "popup:hide": L.Popup;
 };
 
 // https://dev.to/mohsenfallahnjd/javascript-event-bus-js-typescript-17jp

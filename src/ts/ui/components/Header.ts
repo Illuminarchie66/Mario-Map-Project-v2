@@ -1,3 +1,5 @@
+import '../../../css/ui/components/header.css';
+
 import { z } from "zod";
 import { Component } from "./Component";
 

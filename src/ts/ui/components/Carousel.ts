@@ -1,5 +1,9 @@
+import '../../../css/ui/components/carousel.css';
+
 import { z } from "zod";
 import { Component } from "./Component";
+import { imageViewer } from "../ImageViewer";
+
 import $ from 'jquery';
 import 'slick-carousel';
 
@@ -56,10 +60,9 @@ export class CarouselComponent extends Component<CarouselBlock> {
             img.alt = imgData.caption || "";
             img.className = "c-carousel__main-image";
 
-            // const finalImage = (imgData.zoomable !== false)
-            //     ? makeZoomableImage(img, imgData, services.imageViewer)
-            //     : img;
-            const finalImage = img;
+            const finalImage = (imgData.zoomable !== false)
+                ? imageViewer.makeZoomableImage(img, imgData.caption)
+                : img;
 
             imgWrap.appendChild(finalImage);
             slide.appendChild(imgWrap);

@@ -27,7 +27,8 @@ const PamphletWaypointSchema = WaypointBaseSchema.extend({
 
 const PopupWaypointSchema = WaypointBaseSchema.extend({
     displayType: z.literal("popup"),
-    content: PopupContentSchema
+    content: PopupContentSchema,
+    markerCoords: z.tuple([z.number(), z.number()]).optional()
 });
 
 const DocWaypointSchema = WaypointBaseSchema.extend({

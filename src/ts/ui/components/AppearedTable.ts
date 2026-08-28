@@ -1,3 +1,5 @@
+import '../../../css/ui/components/appeared-table.css';
+
 import { z } from "zod";
 import { GameRefSchema } from "./Generics";
 import { Component } from "./Component";
@@ -63,7 +65,7 @@ export class AppearedTableComponent extends Component<AppearedTableBlock> {
         if (this.data.lastAppeared) {
             const la = this.data.lastAppeared;
             const row = this.addRow(
-                "First Appeared",
+                "Last Appeared",
                 `${la.game} (${la.year})`,
                 la.link
             );

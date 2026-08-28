@@ -1,5 +1,8 @@
+import '../../../css/ui/components/popup.css';
+
 import { z } from "zod";
 import { BaseComponent } from "./BaseComponent";
+import { imageViewer } from "../ImageViewer";
 
 export const PopupContentSchema = z.object({
     title: z.string().optional(),
@@ -28,11 +31,7 @@ export class PopupComponent extends BaseComponent<PopupContent> {
             img.src = this.path + "/" + this.data.image;
             img.alt = this.data.caption || "";
 
-            // const finalImage = (data.zoomable !== false)
-            //     ? makeZoomableImage(img, data, services.imageViewer)
-            //     : img;
-
-            const finalImage = img;
+            const finalImage = imageViewer.makeZoomableImage(img, this.data.caption)
 
             imageBlock.appendChild(finalImage);
 

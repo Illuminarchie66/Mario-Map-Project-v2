@@ -1,3 +1,5 @@
+import '../../../css/ui/components/explore-button.css';
+
 import { z } from "zod";
 import { Component } from "./Component";
 import { eventBus } from "../../core/EventBus";

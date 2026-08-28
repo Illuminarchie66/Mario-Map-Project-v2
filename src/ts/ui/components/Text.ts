@@ -1,3 +1,5 @@
+import '../../../css/ui/components/text.css';
+
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";

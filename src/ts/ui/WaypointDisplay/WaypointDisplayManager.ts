@@ -18,16 +18,29 @@ export class WaypointDisplayManager {
         eventBus.on("waypoint:click", (waypoint) => {
             this.displayWaypoint(waypoint);
         });
+
+        eventBus.on("map:click", () => {
+            this.hideAll();
+        });
     }
 
     displayWaypoint(waypoint: Waypoint): void {
         switch (waypoint.displayType) {
             case "pamphlet":
                 this.pamphletManager.show(waypoint as PamphletWaypoint);
+                break;
             case "doc":
                 this.docManager.show(waypoint as DocWaypoint);
+                break;
             case "popup":
                 this.popupManager.show(waypoint as PopupWaypoint);
+                break;
         }
+    }
+
+    hideAll(): void {
+        this.pamphletManager.hide();
+        this.popupManager.hide();
+        this.docManager.hide();
     }
 }

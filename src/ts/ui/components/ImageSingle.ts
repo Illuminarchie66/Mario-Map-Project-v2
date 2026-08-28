@@ -1,6 +1,10 @@
+import '../../../css/ui/components/image.css';
+
 import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
+
+import { imageViewer } from "../ImageViewer";
 
 export const ImageBlockSchema = z.object({
     type: z.literal("image"),
@@ -37,11 +41,9 @@ export class ImageComponent extends Component<ImageBlock> {
         if (this.data.imageHeight) 
             img.style.height = this.data.imageHeight;
 
-        // const finalImage = (data.zoomable !== false)
-        //     ? makeZoomableImage(img, data, services.imageViewer)
-        //     : img;
-
-        const finalImage = img;
+        const finalImage = (this.data.zoomable !== false)
+            ? imageViewer.makeZoomableImage(img, this.data.caption)
+            : img;
 
         imageWrapper.appendChild(finalImage);
 

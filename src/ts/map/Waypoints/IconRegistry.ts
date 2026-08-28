@@ -29,7 +29,8 @@ class IconRegistry {
         }
     };
 
-    getById(id: string): IconIdentifier {
+    getById(id?: string): IconIdentifier {
+        if (!id) id = "default";
         const icon = this.icons[id];
         if (!icon) 
             throw new Error(`Icon with id "${id}" not found in registry.`);

@@ -1,0 +1,155 @@
+.map-popup__carousel-btn--prev { left: 8px; }
+.map-popup__carousel-btn--next { right: 8px; }
+
+.map-popup-custom .leaflet-popup-content-wrapper {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.map-popup-custom .leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+}
+
+.map-popup-custom .leaflet-popup-tip-container {
+    display: none;
+}
+
+.leaflet-popup-content p {
+    margin: 0;
+}
+
+.map-popup__wrapper {
+    position: relative;
+    background: #ffffff;
+    border: 3px solid #b18f01;
+    border-radius: 14px;
+    overflow: visible;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.map-popup__wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid #b18f01;
+}
+
+.map-popup__wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 11px solid #ffffff;
+    z-index: 1;
+}
+
+.map-popup__inner {
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.map-popup__image-block {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.map-popup__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.map-popup__image-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    pointer-events: none;
+}
+
+.map-popup__body {
+    padding: 10px 16px 14px;
+}
+
+.map-popup__title {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #1a1a1a;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.map-popup__rule {
+    border: none;
+    width: 75%;
+    height: 2px;
+    background-color: #b18f01;
+    margin: 0 auto 8px 0;
+    opacity: 0.6;
+}
+
+.map-popup__description {
+    font-family: 'Brandon Text', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.map-popup__close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 1.5rem;
+    color: #b18f01;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: none;
+}
+
+.map-popup__close:hover {
+    color: white;
+}
+
+.map-popup__image-block .image-zoom {
+    width: 100%;
+    height: 100%;
+}
+
+.map-popup__image-block .image-zoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
