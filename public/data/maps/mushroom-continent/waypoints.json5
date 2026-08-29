@@ -1,0 +1,401 @@
+[
+    {
+		id: "aerial-road",
+		coords: [-88, 48],
+
+        label: "Aerial Road",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Aerial Road", 
+			description: "",
+		}
+	},
+
+    {
+		id: "bean-bean-castle",
+		coords: [-118, 116.5],
+
+        label: "Bean Bean Castle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Bean Bean Kingdom", 
+			description: "",
+		}
+	},
+
+    {
+		id: "bloopers-secret-lair",
+		coords: [62, -84],
+
+        label: "Bloopers Secret Lair",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Bloopers Secret Lair", 
+			description: "",
+		}
+	},
+
+    {
+		id: "booster-tower",
+		coords: [-90, 112],
+
+        label: "Booster Tower",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Booster Tower", 
+			description: "",
+		}
+	},
+
+    {
+		id: "forest-maze",
+		coords: [-4.5, 175.5],
+
+        label: "Forest Maze",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Forest Maze", 
+			description: "",
+		}
+	},
+
+    {
+		id: "fuzzy-clifftop",
+		coords: [-84, 173],
+
+        label: "Fuzzy Clifftop",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Fuzzy Clifftop", 
+			description: "",
+		}
+	},
+
+    {
+		id: "great-acorn-tree",
+		coords: [-84, 12],
+
+        label: "Great Acorn Tree",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Great Acorn Tree", 
+			description: "",
+		}
+	},
+
+    {
+		id: "haunted-shipwreck",
+		coords: [-63.5, 62],
+
+        label: "Haunted Shipwreck",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Haunted Shipwreck", 
+			description: "",
+		}
+	},
+
+    {
+		id: "ludwigs-clockwork-castle",
+		coords: [-13, 172.75],
+
+        label: "Ludwig's Clockwork Castle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Ludwig's Clockwork Castle", 
+			description: "",
+		}
+	},
+
+    {
+		id: "magma-mine",
+		coords: [-44.5, 177.5],
+
+        label: "Magma Mine",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Magma Mine", 
+			description: "",
+		}
+	},
+
+    {
+		id: "marrymore-chapel",
+		coords: [-100, 103.5],
+
+        label: "Marrymore Chapel",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Marrymore Chapel", 
+			description: "",
+		}
+	},
+
+    {
+		id: "mole-mines",
+		coords: [-55, 153.5],
+
+        label: "Mole Mines",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Mole Mines", 
+			description: "",
+		}
+	},
+
+    {
+		id: "nimbus-castle",
+		coords: [-75, 75],
+
+        label: "Nimbus Castle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Nimbus Land", 
+			description: "",
+		}
+	},
+
+    {
+		id: "rose-town",
+		coords: [-15, 199],
+
+        label: "Rose Town",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Rose Town", 
+			description: "",
+		}
+	},
+
+    {
+		id: "rudys-castle",
+		coords: [-30.5, 170.5],
+
+        label: "Rudy's Castle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Rudy's Castle", 
+			description: "",
+		}
+	},
+
+    {
+		id: "seaside-town",
+		coords: [-117.5, 86.5],
+
+        label: "Seaside Town",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Seaside Town", 
+			description: "",
+		}
+	},
+
+    {
+		id: "sky-high-coaster",
+		coords: [-18.5, 155],
+
+        label: "Sky High Coaster",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Sky High Coaster", 
+			description: "",
+		}
+	},
+
+    {
+		id: "skyward-stalk",
+		coords: [-63, 103],
+
+        label: "Skyward Stalk",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Skyward Stalk", 
+			description: "",
+		}
+	},
+
+    {
+		id: "spikes-sprouting-sands",
+		coords: [-35, 17],
+
+        label: "Spike's Sprouting Sands",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Spike's Sprouting Sands", 
+			description: "",
+		}
+	},
+
+    {
+		id: "spinning-star-sky",
+		coords: [-10, 85],
+
+        label: "Spinning Star Sky",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Spinning Star Sky", 
+			description: "",
+		}
+	},
+
+    {
+		id: "sunshine-airport",
+		coords: [-7, 223.5],
+
+        label: "Sunshine Airport",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Sunshine Airport", 
+			description: "",
+		}
+	},
+
+    {
+		id: "whimsical-waters",
+		coords: [-65, 215],
+
+        label: "Whimsical Waters",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Whimsical Waters", 
+			description: "",
+		}
+	},
+
+    {
+		id: "world-1-4-3d-land",
+		coords: [-32.5, 198],
+
+        label: "World 1-4 3D Land",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "World 1-4 3D Land", 
+			description: "",
+		}
+	},
+
+    {
+		id: "world-3-1-3d-land",
+		coords: [-3.75, 158],
+
+        label: "World 3-1 3D Land",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "World 3-1 3D Land", 
+			description: "",
+		}
+	},
+
+    {
+		id: "yoshi-park",
+		coords: [-16.25, 232.5],
+
+        label: "Yoshi Park",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "",
+            caption: "",
+			title: "Yoshi Park", 
+			description: "",
+		}
+	},
+]

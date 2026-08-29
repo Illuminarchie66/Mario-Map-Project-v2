@@ -1,0 +1,437 @@
+[
+    {
+		id: "peach-stadium",
+		coords: [-190, 1],
+
+        label: "Peach Stadium",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/5/5e/MKW_PS.jpg/1600px-MKW_PS.jpg",
+            caption: "Chain Chomps outside Peach Stadium",
+			title: "Peach Stadium", 
+			description: "",
+		}
+	},
+    {
+		id: "cheep-cheep-falls",
+		coords: [-50, 315],
+
+        label: "Cheep Cheep Falls",
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/a4/MKWorld_Cheep_Cheep_Falls_View_1.webp/1600px-MKWorld_Cheep_Cheep_Falls_View_1.webp.png",
+            caption: "Cheep Cheep Falls",
+			title: "Cheep Cheep Falls", 
+			description: "",
+		}
+	},
+    {
+		id: "acorn-heights",
+		coords: [870, 5],
+
+        label: "Acorn Heights",
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/ac/MKW_AcornHeights.jpg/1600px-MKW_AcornHeights.jpg",
+            caption: "Great Tree of Acorn Heights",
+			title: "Acorn Heights", 
+			description: "",
+		}
+	},
+    {
+		id: "airship-fortress",
+		coords: [425, -956],
+
+        label: "Airship Fortress",
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/ab/MKWorldAirshipFortress.png/1600px-MKWorldAirshipFortress.png",
+            caption: "Banzai Bill cannons firing from the Airship Fortress",
+			title: "Airship Fortress", 
+			description: "",
+		}
+	},
+    {
+		id: "boo-cinema",
+		coords: [755, 349],
+
+        label: "Boo Cinema",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/5/52/MKW_BC_BC.jpg/1600px-MKW_BC_BC.jpg",
+            caption: "Boo Cinema",
+			title: "Boo Cinema", 
+			description: "",
+		}
+	},
+    {
+		id: "bowsers-castle",
+		coords: [704, -620],
+		
+        label: "Bowser's Castle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/aa/MKWorld_Bowsers_Castle_View_1.webp/1600px-MKWorld_Bowsers_Castle_View_1.webp.png",
+            caption: "Bowser's Castle with Bowser breathing fire",
+			title: "Bowser's Castle", 
+			description: "",
+		}
+	},
+    {
+		id: "choco-mountain",
+		coords: [-45, -335],
+		
+        label: "Choco Mountain",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/8/8b/MKWorldChocoMountain.png/1600px-MKWorldChocoMountain.png",
+            caption: "Choco Mountain",
+			title: "Choco Mountain", 
+			description: "",
+		}
+	},
+    {
+		id: "crown-city",
+		coords: [-475, -330],
+		
+        label: "Crown City",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/e/e7/MKWorld-CrownCity-Night.jpg/1600px-MKWorld-CrownCity-Night.jpg",
+            caption: "Crown City at night",
+			title: "Crown City", 
+			description: "",
+		}
+	},
+    {
+		id: "dandelion-depths",
+		coords: [310, 310],
+		
+        label: "Dandelion Depths",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/9/9e/MKWorld_Dandelion_Depths_View_1.webp/1600px-MKWorld_Dandelion_Depths_View_1.webp.png",
+            caption: "Dandelion Depths",
+			title: "Dandelion Depths", 
+			description: "",
+		}
+	},
+    {
+		id: "desert-hills",
+		coords: [-465, -1022],
+
+        label: "Desert Hills",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/7/74/MKWorldDesertHills.png/1600px-MKWorldDesertHills.png",
+            caption: "Batadons in Desert Hills",
+			title: "Desert Hills", 
+			description: "",
+		}
+	},
+    {
+		id: "dino-dino-jungle",
+		coords: [-860, 380],
+		
+        label: "Dino Dino Jungle",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/9/91/MKWorld_Dino_Dino_Jungle_View_1.webp/1600px-MKWorld_Dino_Dino_Jungle_View_1.webp.png",
+            caption: "Dino Dino Jungle Laboratory",
+			title: "Dino Dino Jungle", 
+			description: "",
+		}
+	},
+    {
+		id: "dk-pass",
+		coords: [160, 595],
+		
+        label: "DK Pass",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/6/60/MKWorldDKPass.png/1600px-MKWorldDKPass.png",
+            caption: "Ski Jump at DK Pass",
+			title: "DK Pass", 
+			description: "",
+		}
+	},
+    {
+		id: "dk-space-port",
+		coords: [-805, -285],
+		
+        label: "DK Space Port",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/9/91/MKWorld_DKSpaceport.png",
+            caption: "DK Space Port with RoboDK throwing barrels",
+			title: "DK Space Port", 
+			description: "",
+		}
+	},
+    {
+		id: "dry-bones-burnout",
+		coords: [745, -330],
+		
+        label: "Dry Bones Burnout",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/f/ff/MKW_DBB_View.jpg/1600px-MKW_DBB_View.jpg",
+            caption: "Dry Bones Burnout",
+			title: "Dry Bones Burnout", 
+			description: "",
+		}
+	},
+    {
+		id: "faraway-oasis",
+		coords: [-455, 275],
+		
+        label: "Faraway Oasis",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/9/90/MKW_Faraway_View.png/1600px-MKW_Faraway_View.png",
+            caption: "The Big Jump at Faraway Oasis",
+			title: "Faraway Oasis", 
+			description: "",
+		}
+	},
+    {
+		id: "great-question-block-ruins",
+		coords: [-720, 700],
+		
+        label: "Great Question Block Ruins",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/5/5e/MKWorld_Great_Q_Block_Ruins_View_1.webp/1600px-MKWorld_Great_Q_Block_Ruins_View_1.webp.png",
+            caption: "Great Question Block Ruins",
+			title: "Great Question Block Ruins", 
+			description: "",
+		}
+	},
+    {
+		id: "koopa-troopa-beach",
+		coords: [-720, -1],
+		
+        label: "Koopa Troopa Beach",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/d/d7/MKWorld_Koopa_Troopa_Beach_View_1.webp/1600px-MKWorld_Koopa_Troopa_Beach_View_1.webp.png",
+            caption: "Koopa Troopa Beach",
+			title: "Koopa Troopa Beach", 
+			description: "",
+		}
+	},
+    {
+		id: "mario-bros-circuit",
+		coords: [-240, -740],
+
+        label: "Mario Bros. Circuit",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/f/ff/MKWorld_Mario_Bros_Circuit_View_1.webp/1600px-MKWorld_Mario_Bros_Circuit_View_1.webp.png",
+            caption: "Mario Bros. Circuit",
+			title: "Mario Bros. Circuit", 
+			description: "",
+		}
+	},
+    {
+		id: "mario-circuit",
+		coords: [510, 15],
+		
+        label: "Mario Circuit",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/d/d3/MKW_MC_View.jpg/1600px-MKW_MC_View.jpg",
+            caption: "Mario Circuit",
+			title: "Mario Circuit", 
+			description: "",
+		}
+	},
+    {
+		id: "moo-moo-meadows",
+		coords: [170, -2],
+		
+        label: "Moo Moo Meadows",
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/3/37/MKWMooMoo.jpg/1600px-MKWMooMoo.jpg",
+            caption: "Moo Moo driving through the windmills of Moo Moo Meadows",
+			title: "Moo Moo Meadows", 
+			description: "The peaceful grassy vistas. The meandering trails. The whimsical fence line. The... HEY! Who left the gate open? Take a drive through Moo Moo Meadows to see rustic farms and spinning windmills ... but watch out for the cows!",
+		}
+	},
+    {
+		id: "peach-beach",
+		coords: [-460, 930],
+		
+        label: "Peach Beach",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/4/47/MKWorldPeachBeach.png/1600px-MKWorldPeachBeach.png",
+            caption: "Cataquacks along Peach Beach",
+			title: "Peach Beach", 
+			description: "",
+		}
+	},
+    {
+		id: "salty-salty-speedway",
+		coords: [-260, 660],
+		
+        label: "Salty Salty Speedway",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/4/49/MKWorld_Salty_Salty_Speedway_View_1.webp/1600px-MKWorld_Salty_Salty_Speedway_View_1.webp.png",
+            caption: "Lagoon City",
+			title: "Salty Salty Speedway", 
+			description: "",
+		}
+	},
+    {
+		id: "shy-guy-bazaar",
+		coords: [0, -1030],
+		
+        label: "Shy Guy Bazaar",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/a5/MKWorld_Shy_Guy_Bazaar_View_1.webp/1600px-MKWorld_Shy_Guy_Bazaar_View_1.webp.png",
+            caption: "Shy Guy Bazaar",
+			title: "Shy Guy Bazaar", 
+			description: "",
+		}
+	},
+    {
+		id: "sky-high-sundae",
+		coords: [330, 930],
+		
+        label: "Sky-High Sundae",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/a/a5/MKW_SHS_Cone.jpg/1600px-MKW_SHS_Cone.jpg",
+            caption: "Sky High Sundae",
+			title: "Sky-High Sundae", 
+			description: "",
+		}
+	},
+    {
+		id: "starview-peak",
+		coords: [570, 630],
+		
+        label: "Starview Peak",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/3/32/MKWorld_Starview_Peak_View_1.webp/1600px-MKWorld_Starview_Peak_View_1.webp.png",
+            caption: "Starview Peak",
+			title: "Starview Peak", 
+			description: "",
+		}
+	},
+    {
+		id: "toads-factory",
+		coords: [360, -310],
+		
+        label: "Toad's Factory",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/8/81/MKWorld_Toads_Factory_View_1.webp/1600px-MKWorld_Toads_Factory_View_1.webp.png",
+            caption: "Toad's Factory at night",
+			title: "Toad's Factory", 
+			description: "",
+		}
+	},
+    {
+		id: "wario-shipyard",
+		coords: [-100, 950],
+		
+        label: "Wario Shipyard",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/0/04/MKWorld_Wario_Shipyard_View_1.webp/1600px-MKWorld_Wario_Shipyard_View_1.webp.png",
+            caption: "Wario's Shipyard",
+			title: "Wario Shipyard", 
+			description: "",
+		}
+	},
+    {
+		id: "wario-stadium",
+		coords: [150, -640],
+		
+        label: "Wario Stadium",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/thumb/e/e5/MKWorldWarioStadium.png/1600px-MKWorldWarioStadium.png",
+            caption: "Gates to Wario Stadium",
+			title: "Wario Stadium", 
+			description: "",
+		}
+	},
+    {
+		id: "whistlestop-summit",
+		coords: [-680, -700],
+    
+        label: "Whistlestop Summit",
+		displayType: "popup",
+		
+		content: {
+			type: "popup",
+			image: "https://mario.wiki.gallery/images/7/70/MKWorld_Whistlestop_View.png",
+            caption: "The train climbing up the steamy slopes of Whistlestop Summit",
+			title: "Whistlestop Summit", 
+			description: "",
+		}
+	},
+]

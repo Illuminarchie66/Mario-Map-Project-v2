@@ -1,0 +1,32 @@
+{
+    id: "sunshine-archipelago",
+    type: "image",
+
+    label: "Sunshine Archipelago",
+    mapPreview: "/data/maps/sunshine-archipelago/preview.webp",
+
+    options: {
+		crs: "simple",
+		minZoom: 0,
+		maxZoom: 2,
+		zoom: 0,
+		zoomDelta: 0.5,
+        center: [0, 0],
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+    imagePath: "/data/maps/sunshine-archipelago/sunshine-archipelago.webp",
+
+    features: {
+        wrapX: false,
+    },
+
+    attribution: {
+        creator: "Lady Sophie",
+        source: "https://www.reddit.com/r/Marioverse/comments/htjg2o/the_sunshine_archipelago/",
+        links: [
+            "https://x.com/Lady_Sophie17/"
+        ]
+    }
+}

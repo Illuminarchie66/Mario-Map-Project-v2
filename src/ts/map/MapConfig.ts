@@ -21,6 +21,14 @@ const MapFeaturesSchema = z.object({
 });
 type MapFeatures = z.infer<typeof MapFeaturesSchema>;
 
+const MapAttributionSchema = z.object({
+    creator: z.string().optional(),
+    source: z.string().optional(),
+    links: z.array(z.string()).optional(),
+    license: z.string().optional()
+});
+type MapAttribution = z.infer<typeof MapAttributionSchema>;
+
 const MapTypeSchema = z.enum(["tiles", "image", "model"]);
 type MapType = z.infer<typeof MapTypeSchema>;
 
@@ -29,8 +37,11 @@ const MapConfigBaseSchema = z.object({
     type: MapTypeSchema,
     options: MapOptionsSchema,
     features: MapFeaturesSchema,
+    label: z.string().optional(),
+    attribution: MapAttributionSchema.optional(),
     waypointPath: z.string().optional(),
-    bounds: z.array(z.tuple([z.number(), z.number()])).optional()
+    bounds: z.array(z.tuple([z.number(), z.number()])).optional(),
+    mapPreview: z.string().optional()
 });
 type MapConfigData = z.infer<typeof MapConfigBaseSchema>;
 
@@ -67,23 +78,32 @@ abstract class MapConfig {
     options: MapOptions;
     features: MapFeatures;
 
+    label?: string;
+    attribution?: MapAttribution;
     waypointPath?: string;
     bounds?: [number, number][];
+    mapPreview?: string;
 
     constructor(data: {
         id: string;
         type: MapType;
         options: MapOptions;
         features: MapFeatures;
+        label?: string;
+        attribution?: MapAttribution;
         waypointPath?: string;
         bounds?: [number, number][];
+        mapPreview?: string;
     }) {
         this.id = data.id;
         this.type = data.type;
         this.options = data.options;
         this.features = data.features;
+        this.label = data.label;
+        this.attribution = data.attribution;
         this.waypointPath = data.waypointPath;
         this.bounds = data.bounds;
+        this.mapPreview = data.mapPreview;
     }
 
     static create(data: unknown): MapConfig {

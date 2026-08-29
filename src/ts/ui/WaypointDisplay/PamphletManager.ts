@@ -1,15 +1,25 @@
 import '../../../css/ui/pamphlet.css';
 
-import { Waypoint } from "../../map/Waypoints/Waypoint";
 import { PamphletWaypoint } from "../../map/Waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
 
 export class PamphletManager {
-    left: HTMLElement = document.getElementById("leftPanel")!;
-    right: HTMLElement = document.getElementById("rightPanel")!;
+    left: HTMLElement;
+    right: HTMLElement;
     currentId: string | null = null;
 
     constructor() {
+        this.left = document.createElement("div");
+        this.left.id = "leftPanel";
+        this.left.className = "panel left";
+
+        this.right = document.createElement("div");
+        this.right.id = "rightPanel";
+        this.right.className = "panel right";
+
+        document.body.appendChild(this.left);
+        document.body.appendChild(this.right);
+
         document.addEventListener("keydown", (e) => { if (e.key === "Escape") this.hide(); });
     }
 

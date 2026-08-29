@@ -2,8 +2,10 @@ import { Waypoint } from "../map/Waypoints/Waypoint";
 
 type EventMap = {
     "waypoint:click": Waypoint;
-    "map:load-request": { id: string, center?: [number, number], zoom?: number };
+    "map:load": { id: string, center?: [number, number], zoom?: number };
     "map:click": {};
+    "map:mousemove": { lat: number, lng: number };
+    "map:zoom": { zoom: number };
     "popup:show": L.Popup;
     "popup:hide": L.Popup;
 };

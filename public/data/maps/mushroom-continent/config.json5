@@ -1,0 +1,39 @@
+{
+    id: "mushroom-continent",
+    type: "tiles",
+
+    label: "Mushroom Continent",
+    mapPreview: "/data/maps/mushroom-continent/preview.png",
+
+    options: {
+		crs: "simple",
+		minZoom: 3,
+		maxZoom: 6,
+		zoom: 4,
+		center: [-45, 135],
+		zoomDelta: 0.5,
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+    bounds: [
+		[-128, 0],
+		[0, 256],
+	],
+
+    tilePath: "/data/maps/mushroom-continent/tiles",
+    tileFileType: "png",
+    waypointPath: "/data/maps/mushroom-continent/waypoints.json5",
+
+    features: {
+        wrapX: false,
+    },
+
+    attribution: {
+        creator: "Merridoodles",
+        links: [
+            "https://bsky.app/profile/merrideer.bsky.social",
+            "https://x.com/uncerfvert"
+        ]
+    }
+}

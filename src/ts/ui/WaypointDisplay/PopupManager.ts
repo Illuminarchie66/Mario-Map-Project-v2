@@ -17,7 +17,7 @@ export class PopupManager {
 
     show(waypoint: PopupWaypoint) {
         const popup = new PopupComponent(waypoint.content, waypoint.path);
-        const icon = iconRegistry.getById(waypoint.icon);
+        const icon = iconRegistry.getById(waypoint.icon ?? waypoint.id);
         const popupAnchor = icon?.popupAnchor ?? [0, 0];
 
         this.popup = L.popup({
@@ -32,7 +32,6 @@ export class PopupManager {
         })
 
         this.popup.setLatLng(waypoint.markerCoords ?? waypoint.coords).setContent(popup.render());
-
         eventBus.emit("popup:show", this.popup);
 
     }

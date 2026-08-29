@@ -1,0 +1,32 @@
+{
+    id: "isle-delfino",
+    type: "image",
+
+    label: "Isle Delfino",
+    mapPreview: "/data/maps/isle-delfino/preview.png",
+
+    options: {
+		crs: "simple",
+		minZoom: -2,
+		maxZoom: 1,
+		zoom: 0,
+		zoomDelta: 0.5,
+        center: [0, 0],
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+    imagePath: "/data/maps/isle-delfino/isle-delfino.png",
+
+    features: {
+        wrapX: false,
+    },
+
+    attribution: {
+        creator: "Lady Sophie",
+        source: "https://x.com/Lady_Sophie17/status/1321780785733656577",
+        links: [
+            "https://x.com/Lady_Sophie17/"
+        ]
+    }
+}

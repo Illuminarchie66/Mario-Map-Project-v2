@@ -1,0 +1,30 @@
+.coord-display {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 800;
+
+    font-family: 'Pop Joy', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(177, 143, 1, 0.4);
+    border-radius: 8px;
+    padding: 5px 12px;
+
+    pointer-events: none;
+    user-select: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    display:none;
+}
+
+.coord-display.open {
+    opacity: 1;
+    display:block;
+}

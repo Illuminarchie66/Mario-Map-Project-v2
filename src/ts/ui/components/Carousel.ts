@@ -56,7 +56,11 @@ export class CarouselComponent extends Component<CarouselBlock> {
             imgWrap.className = "c-carousel__image";
 
             const img = document.createElement("img");
-            img.src = this.path + "/" + imgData.image;
+            let imagePath = imgData.image;
+            if (this.path)
+                imagePath = this.path + "/" + imagePath;
+
+            img.src = imagePath;
             img.alt = imgData.caption || "";
             img.className = "c-carousel__main-image";
 

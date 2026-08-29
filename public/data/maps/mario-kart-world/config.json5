@@ -1,0 +1,26 @@
+{
+    id: "mario-kart-world",
+    type: "image",
+
+    label: "Mario Kart World",
+    mapPreview: "/data/maps/mario-kart-world/preview.webp",
+
+    options: {
+		crs: "simple",
+		minZoom: -2,
+		maxZoom: 0.5,
+		zoom: 0,
+		zoomDelta: 0.5,
+        center: [50, 0],
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+    imagePath: "/data/maps/mario-kart-world/mk_world.webp",
+	waypointPath: "/data/maps/mario-kart-world/waypoints.json5",
+
+    features: {
+        wrapX: false,
+        backgroundColor: "#3D7CB6",
+    }
+}

@@ -21,7 +21,10 @@ export class ImageBottomComponent extends Component<ImageBottomBlock> {
         container.className = "c-image-bottom";
 
         const img = document.createElement("img");
-        img.src = this.path + "/" + this.data.image;
+        let imagePath = this.data.image;
+        if (this.path)
+            imagePath = this.path + "/" + imagePath;
+        img.src = imagePath;
         img.className = "c-image-bottom__img";
 
         if (this.data.height) {

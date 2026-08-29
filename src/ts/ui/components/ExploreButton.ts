@@ -40,7 +40,7 @@ export class ExploreButtonComponent extends Component<ExploreButtonBlock> {
             };
 
             button.addEventListener("click", () => {
-                eventBus.emit("map:load-request", payload)
+                eventBus.emit("map:load", payload)
             });
         }
 
