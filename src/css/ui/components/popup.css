@@ -103,6 +103,15 @@
     margin: 0 0 6px;
 }
 
+.map-popup__title a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.map-popup__title a:hover {
+    text-decoration: underline;
+}
+
 .map-popup__rule {
     border: none;
     width: 75%;
@@ -152,4 +161,74 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.map-popup__carousel-container {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.map-popup__carousel {
+
+}
+
+.map-popup__carousel-slide {
+    padding: 0;
+}
+
+.map-popup__carousel-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-popup__carousel-image .image-zoom {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.map-popup__carousel-image .image-zoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.map-popup__carousel-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.map-popup__carousel .slick-prev, 
+.map-popup__carousel .slick-next {
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+
+.map-popup__carousel .slick-prev:before, 
+.map-popup__carousel .slick-next:before {
+    font-size: 30px;
+} 
+
+.map-popup__carousel .slick-prev {
+  left: 5px;
+  transform: translateY(5px);
+}
+
+.map-popup__carousel .slick-next {
+  right: 5px;
+  transform: translateY(5px);
+}
+
+.map-popup__body .c-explore-button {
+    display: flex;
+    width: 100%;
 }

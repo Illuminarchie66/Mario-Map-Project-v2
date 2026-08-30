@@ -13,10 +13,33 @@
 
         content: {
             "type": "popup",
-            "image": "peachcastle1.jpg",
+            "images": [
+                {
+                    image: "peachcastle1.jpg",
+                    caption: "Peach's Castle from Super Mario Odyssey"
+                },
+                {
+                    image: "peachcastle2.webp",
+                    caption: "Another angle of Peach's Castle from Super Mario Odyssey"
+                },
+                {
+                    image: "peachcastle3.webp",
+                    caption: "Peach's Castle from Super Mario 64"
+                },
+                {
+                    image: "peachcastle4.png",
+                    caption: "Peach's Castle from Paper Mario: The Origami King"
+                },
+            ],
             "title": "Peach's Castle",
+            "link": "https://www.mariowiki.com/Peach%27s_Castle",
             "description": "Princess Peach's home and castle seen in most Mario games, where she rules the Mushroom Kingdom.",
-            "caption": "Peach's Castle"
+            "caption": "Peach's Castle",
+            "exploreButton": {
+                type: "explore-button",
+                target: "mushroom-continent",
+                label: "Peach's Castle"
+            }
         }
     },
     {
