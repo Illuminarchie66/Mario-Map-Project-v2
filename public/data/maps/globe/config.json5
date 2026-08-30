@@ -2,6 +2,9 @@
 	id: "globe",
 	type: "tiles",
 
+	label: "Odyssey Globe",
+	mapPreview: "/data/maps/globe/preview.png",
+
 	options: {
 		crs: "simple",
 		minZoom: 2.5,
@@ -14,6 +17,7 @@
 	},
 
 	tilePath: "/data/maps/globe/tiles",
+	tileFileType: "png",
 	waypointPath: "/data/maps/globe/waypoints.json5",
 
 	bounds: [
@@ -22,7 +26,6 @@
 	],
 
 	features: {
-		usesTiles: true,
 		wrapX: true,
 	},
 }

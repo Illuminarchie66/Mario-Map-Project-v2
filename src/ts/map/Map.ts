@@ -20,6 +20,9 @@ abstract class _Map {
 
 class LeafletMap extends _Map {
     map: L.Map;
+    private handlePopupShow = (popup: L.Popup) => this.openPopup(popup);
+    private handlePopupHide = (popup: L.Popup) => this.closePopup(popup);
+
 
     constructor({ config, center, zoom }: {
         config: MapConfig;
@@ -55,24 +58,19 @@ class LeafletMap extends _Map {
                 throw new Error(`Unsupported map type: ${this.config.type}`);
         }
 
-        eventBus.on("popup:show", (popup) => {
-            this.openPopup(popup);
-        });
-
-        eventBus.on("popup:hide", (popup) => {
-            this.closePopup(popup);
-        });
+        eventBus.on("popup:show", this.handlePopupShow);
+        eventBus.on("popup:hide", this.handlePopupHide);
 
         this.on("click", () => eventBus.emit("map:click", {}));
 
     }
 
-    on(type: string, fn: L.LeafletEventHandlerFn, context?: any): this {
+    on(type: string, fn: (e: any) => void, context?: any): this {
         this.map.on(type, fn, context);
         return this;
     }
 
-    off(type: string, fn?: L.LeafletEventHandlerFn, context?: any): this {
+    off(type: string, fn?: (e: any) => void, context?: any): this {
         this.map.off(type, fn, context);
         return this;
     }
@@ -117,6 +115,7 @@ class LeafletMap extends _Map {
                 [-fallbackHeight / 2, -fallbackWidth / 2],
                 [fallbackHeight / 2, fallbackWidth / 2]
             );
+
             const overlay = L.imageOverlay(config.imagePath, bounds).addTo(this.map);
             
             overlay.on('load', (event: any) => {
@@ -167,10 +166,12 @@ class LeafletMap extends _Map {
                 [lat + halfHeight, lng + halfWidth]
             ]
 
-            return L.imageOverlay(
+            const overlay = L.imageOverlay(
                 icon.iconPath, bounds,
                 { interactive: true, zIndex: 1000 }
             ).addTo(this.map);
+
+            return overlay;
             
         } else {
             const options: L.MarkerOptions = {
@@ -182,6 +183,8 @@ class LeafletMap extends _Map {
     }
 
     destroy(): void {
+        eventBus.off("popup:show", this.handlePopupShow);
+        eventBus.off("popup:hide", this.handlePopupHide);
         this.map.remove();
     }
 

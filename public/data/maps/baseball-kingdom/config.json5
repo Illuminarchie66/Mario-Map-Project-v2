@@ -1,0 +1,32 @@
+{
+    id: "baseball-kingdom",
+    type: "image",
+
+    label: "Baseball Kingdom",
+    mapPreview: "/data/maps/baseball-kingdom/preview.webp",
+
+    options: {
+        crs: "simple",
+        minZoom: 0,
+        maxZoom: 1.5,
+        zoom: 1,
+        zoomDelta: 0.5,
+        zoomSnap: 0.5,
+        center: [1200, -1200],
+        attributionControl: false,
+    },
+
+    imagePath: "/data/maps/baseball-kingdom/baseball-kingdom.webp",
+
+    features: {
+        wrapX: false,
+    },
+
+    attribution: {
+        creator: "Super Mario Wiki",
+        source: "https://mario.wiki.gallery/images/thumb/c/c9/MSS_Baseball_Kingdom.jpg/1200px-MSS_Baseball_Kingdom.jpg",
+        links: [
+            "https://www.mariowiki.com/Baseball_Kingdom"
+        ]
+    }
+}

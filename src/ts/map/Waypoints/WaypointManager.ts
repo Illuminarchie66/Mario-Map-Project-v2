@@ -22,7 +22,6 @@ class WaypointManager {
         if (waypointPath) {
             await this.loadWaypointsByPath(waypointPath);
             this.attachToMap(map);
-            console.log(this.waypoints);
         }
     }
 
@@ -38,7 +37,7 @@ class WaypointManager {
 
     attachToMap(map: LeafletMap): void {
         this.waypoints.forEach(waypoint => {
-            const icon = iconRegistry.getById(waypoint.icon);
+            const icon = iconRegistry.getById(waypoint.icon ?? waypoint.id);
             const marker = map.addMarker(waypoint, icon)
 
             marker.on("click", (event) => {
@@ -73,7 +72,6 @@ class WaypointManager {
     }
 
     handleWaypointClick(waypoint: Waypoint, event: L.LeafletMouseEvent): void {
-        console.log(`Waypoint clicked: ${waypoint.id}`);
         eventBus.emit("waypoint:click", waypoint);
         event.originalEvent?.stopPropagation();
     }

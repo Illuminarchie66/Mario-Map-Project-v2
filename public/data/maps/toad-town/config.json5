@@ -1,0 +1,31 @@
+{
+    id: "toad-town",
+    type: "tiles",
+
+	label: "Toad Town",
+	mapPreview: "/data/maps/toad-town/preview.webp",
+
+	options: {
+		crs: "simple",
+		minZoom: 0,
+		maxZoom: 7,
+		zoom: 6,
+		center: [-69, 80],
+		zoomDelta: 0.5,
+		zoomSnap: 0.5,
+		attributionControl: false,
+	},
+
+    tilePath: "/data/maps/toad-town/tiles",
+    tileFileType: "webp",
+    waypointPath: "/data/maps/toad-town/waypoints.json5",
+
+    bounds: [
+		[-191, 1],
+		[-1, 179],
+	],
+
+    features: {
+        wrapX: false,
+    }
+}

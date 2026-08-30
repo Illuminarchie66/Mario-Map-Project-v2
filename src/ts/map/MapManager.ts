@@ -9,15 +9,21 @@ class MapManager {
     map: _Map | null = null;
     waypointManager: WaypointManager;
 
-    constructor() {
+    constructor(initialMapId?: string) {
         this.waypointManager = new WaypointManager();
 
-        eventBus.on("map:load-request", (payload) => {
+        eventBus.on("map:load", (payload) => {
             const { id, center, zoom } = payload;
             this.loadMapById({ id, center, zoom }).catch(error => {
                 console.error(`Failed to load map: "${id}": `, error);
             });
         });
+
+        if (initialMapId) {
+            this.loadMapById({ id: initialMapId }).catch(error => {
+                console.error(`Failed to load initial map: "${initialMapId}": `, error);
+            });
+        }
     }
 
     async loadMap({ config, center, zoom }: {
@@ -25,6 +31,8 @@ class MapManager {
         center?: [number, number];
         zoom?: number;
     }): Promise<void> {
+        if (this.map?.config.id === config.id) return;
+
         if (this.map) {
             this.reset();
         }
@@ -38,6 +46,27 @@ class MapManager {
         }
 
         await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
+
+        if (this.map instanceof LeafletMap) {
+            this.map.on("mousemove", (e: L.LeafletMouseEvent) => {
+                eventBus.emit("map:mousemove", {
+                    lat: e.latlng.lat,
+                    lng: e.latlng.lng,
+                });
+            });
+
+            const map = this.map;
+            map.on("zoomend", () => {
+                eventBus.emit("map:zoom", {
+                    zoom: map.getZoom(),
+                });
+            });
+
+            eventBus.emit("map:zoom", {
+                zoom: map.getZoom(),
+            });
+        }
+        
     }
 
     async loadMapById({ id, center, zoom }: {

@@ -1,0 +1,2686 @@
+[
+    {
+        id: "peachs-castle",
+        coords: [
+            -68.95, 
+            80.35
+        ],
+        icon: "peach",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+
+        tag: "landmark",
+
+        content: {
+            "type": "popup",
+            "image": "peachcastle1.jpg",
+            "title": "Peach's Castle",
+            "description": "Princess Peach's home and castle seen in most Mario games, where she rules the Mushroom Kingdom.",
+            "caption": "Peach's Castle"
+        }
+    },
+    {
+        id: "golf-gardens",
+        coords: [
+            -72.535,
+            80.35
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MGATGardens.jpg",
+            "title": "Golf Gardens",
+            "description": "The gardens found directly outside of Peach's castle. ",
+            "caption": "Golf Gardens"
+        }
+    },
+    {
+        id: "courtyard",
+        coords: [
+            -66.68,
+            80.355
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "M64Courtyard.jpg",
+            "title": "Courtyard",
+            "description": "A small courtyard containing the 'L is real 2401' star statue, and the stages Big Boo's Haunt and Battle Fort.",
+            "caption": "Courtyard"
+        }
+    },
+    {
+        id: "superstar-gardens",
+        coords: [
+            -65.185,
+            80.355
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MLSSGardens.png",
+            "title": "Superstar Gardens",
+            "description": "Cute gardens found outside of Peach's Castle. Here the Mario Bros set off on their adventure to the Bean Bean Kingdom.",
+            "caption": "Superstar Gardens"
+        }
+    },
+    {
+        id: "baseball-gardens",
+        coords: [
+            -58.84,
+            80.355
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MSSBGarden.png",
+            "title": "Baseball Gardens",
+            "description": "A baseball court outside of Peach's Castle. Surrounded by a stadium with a large portrait of Princess Peach.",
+            "caption": "Baseball Gardens"
+        }
+    },
+    {
+        id: "peach-manor",
+        coords: [
+            -54.15,
+            80.355
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MK8DManor.webp",
+            "title": "Peach Manor",
+            "description": "A large pink and white manor with cute gardens outside of it.",
+            "caption": "Peach Manor"
+        }
+    },
+    {
+        id: "peach-gardens",
+        coords: [
+            -47.95,
+            80.355
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MK8DGardens.jpg",
+            "title": "Peach Gardens",
+            "description": "Large flowery gardens with shrubbery of those closest to Peach. There are also small gazebos for tea and cooking.",
+            "caption": "Peach Gardens"
+        }
+    },
+    {
+        id: "hole-16",
+        coords: [
+            -53.0,
+            92.0
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MGTTHole16.webp",
+            "title": "Hole 16",
+            "description": "A star themed course dotted with fallen stars. With one large mushroom in the center, a gentle river flows through the course.",
+            "caption": "Hole 16"
+        }
+    },
+    {
+        id: "goomba-woods",
+        coords: [
+            -63.0,
+            86.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MOWoods.jpg",
+            "title": "Goomba Woods",
+            "description": "A small grove of trees inhabited by a pocket of Goombas. A castle spire stands in the center. ",
+            "caption": "Goomba Woods"
+        }
+    },
+    {
+        id: "castle-walls",
+        coords: [
+            -75.535,
+            80.35
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMTOKWalls.png",
+            "title": "Castle Walls",
+            "description": "Castle walls surrounded by a moat. ",
+            "caption": "Castle Walls"
+        }
+    },
+    {
+        id: "crank-the-rank",
+        coords: [
+            -76.45,
+            79.4
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MP8Crank.png",
+            "title": "Crank the Rank",
+            "description": "A minigame outside of Peach's Castle where players race to raise their flag.",
+            "caption": "Crank the Rank"
+        }
+    },
+    {
+        id: "64-gardens",
+        coords: [
+            -78.3,
+            76.3
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "M64Gardens.png",
+            "title": "64 Gardens",
+            "description": "The bushes and shrubbery outside of Peach's Castle. Here the player can chase bunnies in the garden.",
+            "caption": "64 Gardens"
+        }
+    },
+    {
+        id: "hole-1-",
+        coords: [
+            -70.5,
+            72.75
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MGTTHole1.webp",
+            "title": "Hole 1 ",
+            "description": "A course outside of Peach's Castle, with a small river and fountains decorating the waters.",
+            "caption": "Hole 1 "
+        }
+    },
+    {
+        id: "mushroom-pond",
+        coords: [
+            -81.8,
+            72.8
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MOPond.webp",
+            "title": "Mushroom Pond",
+            "description": "A pond in the shape of a mushroom outside of Peach's Castle where Dorrie resides.",
+            "caption": "Mushroom Pond"
+        }
+    },
+    {
+        id: "tail-tree",
+        coords: [
+            -80.25,
+            73.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "3DLTree.webp",
+            "title": "Tail Tree",
+            "description": "A special tree that bears Super Leaves on its branches, granting Tanooki powers.",
+            "caption": "Tail Tree"
+        }
+    },
+    {
+        id: "odyssey-hill",
+        coords: [
+            -84.56,
+            91.53
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MOFountain.png",
+            "title": "Odyssey Hill",
+            "description": "A hillside where a beautiful fountain resides, surrounded by flowers. ",
+            "caption": "Odyssey Hill"
+        }
+    },
+    {
+        id: "mini-star-telescope",
+        coords: [
+            -90.4,
+            84.24
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MP9Telescope.png",
+            "title": "Mini Star Telescope",
+            "description": "A large telescope on a stargazing hill, where Mario and his friends go to watch the Mini Stars. ",
+            "caption": "Mini Star Telescope"
+        }
+    },
+    {
+        id: "rosalina's-hill",
+        coords: [
+            -90.38,
+            82.17
+        ],
+        icon: "star",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "landmark",
+        content: {
+            "type": "popup",
+            "image": "MGStorybook.webp",
+            "title": "Rosalina's Hill",
+            "description": "A grassy hill dotted with flowers with a large tree, where Rosalina went to go stargazing.",
+            "caption": "Rosalina's Hill"
+        }
+    },
+    {
+        id: "castle-town",
+        coords: [
+            -84.83,
+            81.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MGTown.webp",
+            "title": "Castle Town",
+            "description": "A small castle town, where the Toads are found celebrating the star festival.",
+            "caption": "Castle Town"
+        }
+    },
+    {
+        id: "odyssey-well",
+        coords: [
+            -66.7,
+            70.8
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MOWell.jpg",
+            "title": "Odyssey Well",
+            "description": "A small well that leads to a difficult 2D section with a moon at the end.",
+            "caption": "Odyssey Well"
+        }
+    },
+    {
+        id: "hedge-garden",
+        coords: [
+            -71.8,
+            89.75
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MOHedge.webp",
+            "title": "Hedge Garden",
+            "description": "A series of hedge bshes tended to by a Toad. ",
+            "caption": "Hedge Garden"
+        }
+    },
+    {
+        id: "shooting-star-summit",
+        coords: [
+            -64.925,
+            92.46
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMStarhill.webp",
+            "title": "Shooting Star Summit",
+            "description": "Otherwise known as Star Hill, this summit is described as the closest place to Star Haven. It is the place where wishes come true.",
+            "caption": "Shooting Star Summit"
+        }
+    },
+    {
+        id: "merluvlee's-place",
+        coords: [
+            -68.9,
+            93.475
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMMerluvlee.webp",
+            "title": "Merluvlee's Place",
+            "description": "Home of the fortune teller Merluvlee, here Mario can learn the locations of Star Pieces, Badges and Super Blocks.",
+            "caption": "Merluvlee's Place"
+        }
+    },
+    {
+        id: "party-museum",
+        coords: [
+            -70.18,
+            99.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MP9Museum.png",
+            "title": "Party Museum",
+            "description": "Here Mario can spend Party Points to display treasures from his parties. He can also return Mini Star constellations to the sky.",
+            "caption": "Party Museum"
+        }
+    },
+    {
+        id: "minigame-pipe",
+        coords: [
+            -73.82,
+            100.17
+        ],
+        icon: "pipe",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MP9Pipe.png",
+            "title": "Minigame Pipe",
+            "description": "From here you can go to play the various minigames of Mario Party 9, or to places like the Step It Up Tree, Boss Rush Hall and more.",
+            "caption": "Minigame Pipe"
+        }
+    },
+    {
+        id: "fuzzy-woods",
+        coords: [
+            -80.3,
+            103.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMFuzzywoods.png",
+            "title": "Fuzzy Woods",
+            "description": "Woods nearby Koopa Village where a small colony of fuzzies reside. ",
+            "caption": "Fuzzy Woods"
+        }
+    },
+    {
+        id: "star-ship",
+        coords: [
+            -65.1,
+            94.82
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "PMStarship.webp",
+            "title": "Star Ship",
+            "description": "A ship built by the star spirits to travel to Bowser's Castle.",
+            "caption": "Star Ship"
+        }
+    },
+    {
+        id: "toad-express",
+        coords: [
+            -77.24,
+            117.38
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "SToadexpress.jpg",
+            "title": "Toad Express",
+            "description": "Peach's private airplane which has taken her and special guests around the world. ",
+            "caption": "Toad Express"
+        }
+    },
+    {
+        id: "sunbeam-plains",
+        coords: [
+            -64.36,
+            127.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PJSunbeam.png",
+            "title": "Sunbeam Plains",
+            "description": "Grassland to the East of Peach's Castle, where Mario started his journey with his paper counterpart.",
+            "caption": "Sunbeam Plains"
+        }
+    },
+    {
+        id: "lakitu-info-center",
+        coords: [
+            -67.7,
+            118.94
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJLakitucenter.webp",
+            "title": "Lakitu Info Center",
+            "description": "A hub of Lakitu where Mario can participate in Toad Rescue Missions, and play in their arcade.",
+            "caption": "Lakitu Info Center"
+        }
+    },
+    {
+        id: "hole-15",
+        coords: [
+            -83.85,
+            133.875
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole15.webp",
+            "title": "Hole 15",
+            "description": "An island in a large body of water with large growing mushrooms around it.",
+            "caption": "Hole 15"
+        }
+    },
+    {
+        id: "sunbeam-dock",
+        coords: [
+            -68.25,
+            149.92
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJSunbeamdocks.png",
+            "title": "Sunbeam Dock",
+            "description": "The small dock on the river that Mario returns from with rescued Toads from Twinsy Tropics.",
+            "caption": "Sunbeam Dock"
+        }
+    },
+    {
+        id: "sunbeam-town",
+        coords: [
+            -47.12,
+            161.43
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PJPapertown.png",
+            "title": "Sunbeam Town",
+            "description": "This is the first town found in the Paper Jam adventure, where Mario saves the Toads from the Megacrinkle Goomba.",
+            "caption": "Sunbeam Town"
+        }
+    },
+    {
+        id: "know-it-all-toad-house",
+        coords: [
+            -45.55,
+            158.75
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJKnowitall.png",
+            "title": "Know-It-All Toad House",
+            "description": "A house belonging to one of the five Know-It-All Toads.",
+            "caption": "Know-It-All Toad House"
+        }
+    },
+    {
+        id: "item-shop",
+        coords: [
+            -45.8,
+            160.31
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJItemshop2.png",
+            "title": "Item Shop",
+            "description": "An item shop selling items like mushrooms, syrups and nuts.",
+            "caption": "Item Shop"
+        }
+    },
+    {
+        id: "gear-shop",
+        coords: [
+            -45.0,
+            162.148
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJGearshop.png",
+            "title": "Gear Shop",
+            "description": "A gear shop selling hammers, boots, gloves and overalls. Everything a plumber needs to save the Mushroom Kingdom!",
+            "caption": "Gear Shop"
+        }
+    },
+    {
+        id: "lakitu-info-center",
+        coords: [
+            -45.45,
+            163.78
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PJLakitucenter.webp",
+            "title": "Lakitu Info Center",
+            "description": "A hub of Lakitu where Mario can participate in Toad Rescue Missions, and play in their arcade.",
+            "caption": "Lakitu Info Center"
+        }
+    },
+    {
+        id: "earth-vellumental-temple",
+        coords: [
+            -47.75,
+            120.4
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKTemple.webp",
+            "title": "Earth Vellumental Temple",
+            "description": "The home of the Earth Vellumental, which can only be accessed with the Shell Stones. Koopa Troopas venerate him via pilgrimage and gifts.",
+            "caption": "Earth Vellumental Temple"
+        }
+    },
+    {
+        id: "picnic-market",
+        coords: [
+            -48.81,
+            121.25
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKPicnicshop.webp",
+            "title": "Picnic Market",
+            "description": "An item shop outside the Earth Vellumental Temple. Sells the Shellvation idols for the museum, as well as shiny hammers and boots.",
+            "caption": "Picnic Market"
+        }
+    },
+    {
+        id: "picnic-road",
+        coords: [
+            -44.3,
+            115.8
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKPicnic.webp",
+            "title": "Picnic Road",
+            "description": "A gentle mountainous path leading from Peach's Castle to Overlook Mountain. ",
+            "caption": "Picnic Road"
+        }
+    },
+    {
+        id: "sensor-lab-headquaters",
+        coords: [
+            -37.95,
+            118.85
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKSensor.webp",
+            "title": "Sensor Lab Headquaters",
+            "description": "A laboratory famous for the invention of Fax Travel, the Toad Radar and many more technologies.",
+            "caption": "Sensor Lab Headquaters"
+        }
+    },
+    {
+        id: "overlook-mountain",
+        coords: [
+            -41.85,
+            141.42
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKOverlook.webp",
+            "title": "Overlook Mountain",
+            "description": "A serene mountain with gentle river and beautiful views. The red streamer summoned by King Olly wrapped around the very top of this mountain. ",
+            "caption": "Overlook Mountain"
+        }
+    },
+    {
+        id: "toad-tram",
+        coords: [
+            -46.16,
+            149.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKToadtram.webp",
+            "title": "Toad Tram",
+            "description": "A cable car that goes all the way from Toad Town to the Autumn Region, passing by Overlook Mountain as a stop.",
+            "caption": "Toad Tram"
+        }
+    },
+    {
+        id: "overlook-tower",
+        coords: [
+            -39.5,
+            145.15
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKTower.webp",
+            "title": "Overlook Tower",
+            "description": "A tall tower on the top of Overlook Mountain, famous for its gift shop and \"million-coin\" nighttime view. ",
+            "caption": "Overlook Tower"
+        }
+    },
+    {
+        id: "overlook-sports-park",
+        coords: [
+            -33.2,
+            138.42
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKSports.jpg",
+            "title": "Overlook Sports Park",
+            "description": "A large field which acts as a sports play area. Mario fights Macho Shy Guys here. ",
+            "caption": "Overlook Sports Park"
+        }
+    },
+    {
+        id: "the-peach-dome",
+        coords: [
+            -16.31,
+            146.5
+        ],
+        icon: "tennis",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "landmark",
+        content: {
+            "type": "popup",
+            "image": "Peachdome.jpg",
+            "title": "The Peach Dome",
+            "description": "A large stadium owned by Princess Peach with seats for thousands of fans. Many tennis tournaments are hosted here.",
+            "caption": "The Peach Dome"
+        }
+    },
+    {
+        id: "peach's-castle-cannon",
+        coords: [
+            -77.68,
+            81.2
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "64cannon.png",
+            "title": "Peach's Castle Cannon",
+            "description": "A cannon outside of Peach's Castle which is unlocked upon collecting 120 (or 150) stars.",
+            "caption": "Peach's Castle Cannon"
+        }
+    },
+    {
+        id: "koopa-cruiser",
+        coords: [
+            -60.64,
+            70.47
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Koopacruiser.png",
+            "title": "Koopa Cruiser",
+            "description": "Bowser's personal airship used to bring Mario and Bowser to the Beanbean Kingdom. It was also used to fight in the skies during the Shroob invasion.",
+            "caption": "Koopa Cruiser"
+        }
+    },
+    {
+        id: "peach's-castle-court",
+        coords: [
+            -50.92,
+            67.95
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MSMCourt.webp",
+            "title": "Peach's Castle Court",
+            "description": "A grassy court full of tranquil sprinklers and water fountains. Here you can play dodgeball, basketball, hockey and volleyball!",
+            "caption": "Peach's Castle Court"
+        }
+    },
+    {
+        id: "yoshi's-house",
+        coords: [
+            -89.3,
+            73.21
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MOYoshi.jpg",
+            "title": "Yoshi's House",
+            "description": "A series of trees decorated with berries, next to a bed of flowers and a fireplace.This seems to be an imitation of Yoshi's home back in Dinosaur Land.",
+            "caption": "Yoshi's House"
+        }
+    },
+    {
+        id: "pleasant-path",
+        coords: [
+            -94.5,
+            99.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMPleasant.jpg",
+            "title": "Pleasant Path",
+            "description": "A peaceful series of islands covered in trees and candy pops. Koopas love it around here because there is a lot of water to lounge in. ",
+            "caption": "Pleasant Path"
+        }
+    },
+    {
+        id: "koopa-village",
+        coords: [
+            -90.9,
+            111.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMKoopavillage.webp",
+            "title": "Koopa Village",
+            "description": "A small village home to Koopas and Bob-ombs. This is where Kooper joins Mario on his adventure!",
+            "caption": "Koopa Village"
+        }
+    },
+    {
+        id: "toad-house",
+        coords: [
+            -91.66,
+            109.53
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMMortT.webp",
+            "title": "Toad House",
+            "description": "A Toad House run by Mort. T, where you can \"rest your body and soul\"! Here Mario can rest and heal between adventures.",
+            "caption": "Toad House"
+        }
+    },
+    {
+        id: "koopa's-shop",
+        coords: [
+            -90.45,
+            109.33
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMKoopashop.webp",
+            "title": "Koopa's Shop",
+            "description": "A quaint shop which sells various power-ups, such as Mushrooms, Fire Flowers, POW Blocks, etc.",
+            "caption": "Koopa's Shop"
+        }
+    },
+    {
+        id: "beach-house",
+        coords: [
+            -89.64,
+            110.41
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMBeachhouse.png",
+            "title": "Beach House",
+            "description": "A very casual Koopa listens to their music on the radio here.",
+            "caption": "Beach House"
+        }
+    },
+    {
+        id: "kolorado's-home",
+        coords: [
+            -88.63,
+            111.28
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMKolorado.png",
+            "title": "Kolorado's Home",
+            "description": "The home of Kolorado and his wife. Kolorado is hardly home, going on adventures and quests for ancient artifacts. Kolorado was once the student of Professor Frankly.",
+            "caption": "Kolorado's Home"
+        }
+    },
+    {
+        id: "kooper's-home",
+        coords: [
+            -87.83,
+            111.72
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMKooper.png",
+            "title": "Kooper's Home",
+            "description": "The home of Kooper, a bold adventurous Koopa who joins Mario on his adventure. His house leads to a path to Fuzzy Woods.",
+            "caption": "Kooper's Home"
+        }
+    },
+    {
+        id: "koopa-koot's-home",
+        coords: [
+            -87.38,
+            112.64
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMKoot.webp",
+            "title": "Koopa Koot's Home",
+            "description": "The home of Koopa Koot, the oldest Koopa in Koopa Village. He used to be a well known adventurer, with Goompa and Bootler, but now is old and makes other do his errands.",
+            "caption": "Koopa Koot's Home"
+        }
+    },
+    {
+        id: "koopa-bros.-fortress",
+        coords: [
+            -96.85,
+            118.31
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMfort.webp",
+            "title": "Koopa Bros. Fortress",
+            "description": "Originally ruled by the Bob-ombs, the Koopa Bros took it over before the start of Paper Mario. The fortress was actually built before the Bob-ombs, but it is unknown who made it.",
+            "caption": "Koopa Bros. Fortress"
+        }
+    },
+    {
+        id: "odyssey",
+        coords: [
+            -85.3,
+            90.1
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "odyssey.webp",
+            "title": "Odyssey",
+            "description": "The airship used by Mario and Cappy. It is an older model of Bonneton airships that broke down in the Cascade Kingdom, and is powered by Moons.",
+            "caption": "Odyssey"
+        }
+    },
+    {
+        id: "starshroom",
+        coords: [
+            -83.84,
+            92.61
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "starshroom.webp",
+            "title": "Starshroom",
+            "description": "A mushroom shaped starship the Toad Brigade uses to aid Mario. Rosalina originally left with the Luma on a repaired Starshroom.",
+            "caption": "Starshroom"
+        }
+    },
+    {
+        id: "royal-raceway",
+        coords: [
+            -113.97,
+            101.78
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MKRaceway.webp",
+            "title": "Royal Raceway",
+            "description": "Otherwise known as Peach Circuit, the blossom-lined roads of Royal Raceway drive around a beautiful lake before Peach's Castle, where hundreds of fans watch in the stands.",
+            "caption": "Royal Raceway"
+        }
+    },
+    {
+        id: "goomba-king's-fortress",
+        coords: [
+            -99.23,
+            64.34
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMGoombafort.webp",
+            "title": "Goomba King's Fortress",
+            "description": "A small castle between Toad Town and Goomba Village. After Bowser used the Star Rod on a Goomba, they became the Goomba King, and they took over this castle.",
+            "caption": "Goomba King's Fortress"
+        }
+    },
+    {
+        id: "goomba-road",
+        coords: [
+            -90.36,
+            57.1
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMGoombaroad.webp",
+            "title": "Goomba Road",
+            "description": "The forested road between Goomba Village and Toad Town. Both good Goombas and bad Goombas reside in these woods.",
+            "caption": "Goomba Road"
+        }
+    },
+    {
+        id: "goomba-village",
+        coords: [
+            -81.0,
+            54.22
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMGoombavillage.webp",
+            "title": "Goomba Village",
+            "description": "A small village populated by a single family of Goombas. This is where Goombario joins Mario's adventure.",
+            "caption": "Goomba Village"
+        }
+    },
+    {
+        id: "goomba-house",
+        coords: [
+            -80.57,
+            55.68
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMGoombahouse.png",
+            "title": "Goomba House",
+            "description": "The Goomba family house, hanging on the edge of a cliff, with a balcony out the back.",
+            "caption": "Goomba House"
+        }
+    },
+    {
+        id: "toad-house",
+        coords: [
+            -79.35,
+            54.52
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMToadhouse.webp",
+            "title": "Toad House",
+            "description": "A Toad House run by just a regular Toad. Here Mario can rest and heal between adventures.",
+            "caption": "Toad House"
+        }
+    },
+    {
+        id: "crash-landing-clearing",
+        coords: [
+            -81.65,
+            47.875
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMClearing.webp",
+            "title": "Crash Landing Clearing",
+            "description": "Where Mario crash landed after Bowser attacked in Paper Mario. Something about this clearing feels weird.",
+            "caption": "Crash Landing Clearing"
+        }
+    },
+    {
+        id: "jr.-playground",
+        coords: [
+            -78.375,
+            58.56
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMPlayground.jpg",
+            "title": "Jr. Playground",
+            "description": "This is where the local bully Jr. Koopa resides. He freaks out if you explore here. He needs to chill out.",
+            "caption": "Jr. Playground"
+        }
+    },
+    {
+        id: "hole-2",
+        coords: [
+            -67.9,
+            43.18
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole2.webp",
+            "title": "Hole 2",
+            "description": "A forested area inhabited by Chain Chomps. There is a large mushroom and pond in the middle. It is par 4.",
+            "caption": "Hole 2"
+        }
+    },
+    {
+        id: "hole-12",
+        coords: [
+            -68.1,
+            24.74
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole12.webp",
+            "title": "Hole 12",
+            "description": "An expansive forested area inhabited by Chain Chomps. It is par 5.",
+            "caption": "Hole 12"
+        }
+    },
+    {
+        id: "hole-6",
+        coords: [
+            -86.4,
+            40.14
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole6.webp",
+            "title": "Hole 6",
+            "description": "A mushroom filled clearing in a forested area. There is a small lake in the center with a mushroom shaped island. It is par 3.",
+            "caption": "Hole 6"
+        }
+    },
+    {
+        id: "hole-7",
+        coords: [
+            -93.8,
+            50.62
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole7.webp",
+            "title": "Hole 7",
+            "description": "A clearing along a hill with two ponds surrounded by mushrooms. Each pond has a small island in the center, connected by a loose bridge. It is par 4.",
+            "caption": "Hole 7"
+        }
+    },
+    {
+        id: "toadsworth-statue",
+        coords: [
+            -95.56,
+            51.43
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TTToadsworth.png",
+            "title": "Toadsworth Statue",
+            "description": "A statue celebrating Princess Peach's longtime steward, Toadsworth.",
+            "caption": "Toadsworth Statue"
+        }
+    },
+    {
+        id: "farmland",
+        coords: [
+            -111.58,
+            46.9
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKFarm.png",
+            "title": "Farmland",
+            "description": "Land out West of Toad Town where denizens of the Mushroom Kingdom work and reside in their Mushroom houses.",
+            "caption": "Farmland"
+        }
+    },
+    {
+        id: "toadette's-house",
+        coords: [
+            -114.03,
+            50.28
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MRToadette2.webp",
+            "title": "Toadette's House",
+            "description": "The house where Toadette lives! It is shaped to look like her head.",
+            "caption": "Toadette's House"
+        }
+    },
+    {
+        id: "posh-toad-house",
+        coords: [
+            -103.58,
+            55.63
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MRPosh.webp",
+            "title": "Posh Toad House",
+            "description": "An upscale home with a nice garden, even more perfect for Toads.",
+            "caption": "Posh Toad House"
+        }
+    },
+    {
+        id: "classy-toad-house",
+        coords: [
+            -107.33,
+            23.69
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "MRClassy.webp",
+            "title": "Classy Toad House",
+            "description": "A large extravagent home designed exclusively for Toads.",
+            "caption": "Classy Toad House"
+        }
+    },
+    {
+        id: "hole-5",
+        coords: [
+            -123.4,
+            23.75
+        ],
+        icon: "golf",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TTHole5.webp",
+            "title": "Hole 5",
+            "description": "A series of small islands and mushrooms connected by bridges. Cheep Cheeps jump out around these islands. It is par 4.",
+            "caption": "Hole 5"
+        }
+    },
+    {
+        id: "ss-brass",
+        coords: [
+            -135.4,
+            36.4
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "ssbrass.png",
+            "title": "SS Brass",
+            "description": "An airship comprised of musical instruments, used by Mario and Toad to track down the Music Keys. The airship has the ability to also work underwater, like a submarine.",
+            "caption": "SS Brass"
+        }
+    },
+    {
+        id: "whispering-hill",
+        coords: [
+            -159.5,
+            33.32
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKHill.png",
+            "title": "Whispering Hill",
+            "description": "A hillside in the woods where you can see Peach's Castle!",
+            "caption": "Whispering Hill"
+        }
+    },
+    {
+        id: "whispering-woods",
+        coords: [
+            -165.25,
+            47.3
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKWoods.webp",
+            "title": "Whispering Woods",
+            "description": "A lush green forest full of sentient trees atop of some small mountains. This is where Mario crash lands upon King Olly's attack. ",
+            "caption": "Whispering Woods"
+        }
+    },
+    {
+        id: "whispering-spring",
+        coords: [
+            -158.375,
+            52.38
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKSpring.jpg",
+            "title": "Whispering Spring",
+            "description": "A serene blue lake in the forest. It seems to revive withered and crumpled people and things.",
+            "caption": "Whispering Spring"
+        }
+    },
+    {
+        id: "sweet-sap-loggins",
+        coords: [
+            -153.5,
+            52.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKSap.webp",
+            "title": "Sweet Sap Loggins",
+            "description": "A large old sentient tree that was cut down by Toads. Mario and Olivia revived him with a Soul Seed and a song.",
+            "caption": "Sweet Sap Loggins"
+        }
+    },
+    {
+        id: "toad's-bbq-food-eatery",
+        coords: [
+            -140.78,
+            66.77
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKEatery.webp",
+            "title": "Toad's BBQ Food Eatery",
+            "description": "A small eatery and place to relax before Toad Town. All wood used is from the sentient trees around here, including the wood that is burnt (ouch)",
+            "caption": "Toad's BBQ Food Eatery"
+        }
+    },
+    {
+        id: "distant-waterfall",
+        coords: [
+            -140.85,
+            25.1
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKWaterfall.png",
+            "title": "Distant Waterfall",
+            "description": "A beautiful waterfall running through Whispering Woods into the Toad Town river.",
+            "caption": "Distant Waterfall"
+        }
+    },
+    {
+        id: "logger-heads",
+        coords: [
+            -141.53,
+            93.39
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MP9Logger.jpg",
+            "title": "Logger Heads",
+            "description": "Small huts built with the logs of a nearby forest. The minigame has players race to chop a piece of wood.",
+            "caption": "Logger Heads"
+        }
+    },
+    {
+        id: "oink-oink-farm",
+        coords: [
+            -147.32,
+            96.45
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMOink.png",
+            "title": "Oink Oink Farm",
+            "description": "A farm for Li'l Oinks! There are a variety of Li'l Oink colors, each with a chance to drop an item.",
+            "caption": "Oink Oink Farm"
+        }
+    },
+    {
+        id: "toad-town-station",
+        coords: [
+            -149.45,
+            92.1
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMStation.webp",
+            "title": "Toad Town Station",
+            "description": "A train station which is an end of the Dry Dry Railroad. Here Mario can get the K64 to Mt. Rugged.",
+            "caption": "Toad Town Station"
+        }
+    },
+    {
+        id: "k64",
+        coords: [
+            -149.43,
+            100.4
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "K64.webp",
+            "title": "K64",
+            "description": "A steam train that runs along the Dry Dry Railroad. The train can be ridden for free!",
+            "caption": "K64"
+        }
+    },
+    {
+        id: "mushroom-way",
+        coords: [
+            -159.9,
+            86.21
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "RPGWay.webp",
+            "title": "Mushroom Way",
+            "description": "A short path extending from Mario's pad to Toad Town.",
+            "caption": "Mushroom Way"
+        }
+    },
+    {
+        id: "mario's-pad",
+        coords: [
+            -166.828,
+            69.54
+        ],
+        icon: "mario",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "landmark",
+        content: {
+            "type": "popup",
+            "image": "MariosPad.jpg",
+            "title": "Mario's Pad",
+            "description": "This is the modest cosy home of the Mario Brothers, a short walk away from Toad Town, with Peach's Castle in the distance.",
+            "caption": "Mario's Pad"
+        }
+    },
+    {
+        id: "broque-madame's-house",
+        coords: [
+            -161.89,
+            91.25
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISBroque.webp",
+            "title": "Broque Madame's House",
+            "description": "This is the house that Broque Madame resides in. Her house is the brawl attack challenge mode for Blubble Lake.",
+            "caption": "Broque Madame's House"
+        }
+    },
+    {
+        id: "blubble-lake",
+        coords: [
+            -171.8,
+            121.1
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "BISBlubble.webp",
+            "title": "Blubble Lake",
+            "description": "A large rocky lake South of Toad Town. In the lake lies the Tower of Yikk, a large autonomous mechanical tower.",
+            "caption": "Blubble Lake"
+        }
+    },
+    {
+        id: "forever-forest",
+        coords: [
+            -145.13,
+            133.4
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMForever.webp",
+            "title": "Forever Forest",
+            "description": "A dark purple wood near Toad Town, where you can get lost for days. Gloomy trees seem to go on forever in this place.",
+            "caption": "Forever Forest"
+        }
+    },
+    {
+        id: "boo's-mansion",
+        coords: [
+            -144.3,
+            152.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMBoo.webp",
+            "title": "Boo's Mansion",
+            "description": "A magnificent mansion filled with Boos. It is ruled by Lady Bow, which has been passed through her ancestors. ",
+            "caption": "Boo's Mansion"
+        }
+    },
+    {
+        id: "world-1-1",
+        coords: [
+            -136.0,
+            112.2
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "3D1.png",
+            "title": "World 1-1",
+            "description": "A grass plain with gentle streams and colorful boxes alongside the river.",
+            "caption": "World 1-1"
+        }
+    },
+    {
+        id: "world-1-1",
+        coords: [
+            -104.875,
+            152.0
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "DS1.png",
+            "title": "World 1-1",
+            "description": "A grassy path inhabited with Goombas and Koopas; filled with floating blocks, pipes and pits to avoid.",
+            "caption": "World 1-1"
+        }
+    },
+    {
+        id: "world-1-1",
+        coords: [
+            -99.5,
+            157.1
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "WII1.webp",
+            "title": "World 1-1",
+            "description": "A path of literal rolling fields, inhabited by Goombas and Koopas; filled with floating blocks, pipes and pits to avoid.",
+            "caption": "World 1-1"
+        }
+    },
+    {
+        id: "world-1-1",
+        coords: [
+            -93.8,
+            153.3
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "21.png",
+            "title": "World 1-1",
+            "description": "A path of musical note blocks, and colorful boxes, inhabited by Goombas and Koopas.",
+            "caption": "World 1-1"
+        }
+    },
+    {
+        id: "splash-boat",
+        coords: [
+            -127.57,
+            133.0
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Splash.png",
+            "title": "Splash Boat",
+            "description": "The boat that Mario and Peach take to Port Prisma.",
+            "caption": "Splash Boat"
+        }
+    },
+    {
+        id: "origami-boat",
+        coords: [
+            -127.92,
+            100.34
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Origami.webp",
+            "title": "Origami Boat",
+            "description": "The boat that Mario and Olivia use to explore the Great Sea. It is manned by Sea Captain Toad.",
+            "caption": "Origami Boat"
+        }
+    },
+    {
+        id: "standard-kart",
+        coords: [
+            -115.65,
+            97.57
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Kart.webp",
+            "title": "Standard Kart",
+            "description": "The standard kart that Mario and his friends use to race each other on tracks across the Mushroom Kingdom.",
+            "caption": "Standard Kart"
+        }
+    },
+    {
+        id: "thousand-boat",
+        coords: [
+            -121.52,
+            78.54
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Thousand.jpg",
+            "title": "Thousand Boat",
+            "description": "The boat that Mario takes to Rogueport.",
+            "caption": "Thousand Boat"
+        }
+    },
+    {
+        id: "battle-lab",
+        coords: [
+            -127.5,
+            92.39
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKLab.webp",
+            "title": "Battle Lab",
+            "description": "A training area where Mario can practice necessary skills for his journey.",
+            "caption": "Battle Lab"
+        }
+    },
+    {
+        id: "musee-champignon",
+        coords: [
+            -127.75,
+            93.95
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKMuseum.webp",
+            "title": "Musee Champignon",
+            "description": "A museum containing art, origami and treasures that Mario collected on his journey.",
+            "caption": "Musee Champignon"
+        }
+    },
+    {
+        id: "weapon-and-item-shop",
+        coords: [
+            -128.5,
+            95.5
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKShop.webp",
+            "title": "Weapon and Item Shop",
+            "description": "An item shop on the harbour which sells Mushrooms, Fire Flowers,  Ice Flowers, POW Blocks and more.",
+            "caption": "Weapon and Item Shop"
+        }
+    },
+    {
+        id: "harbour-warehouses",
+        coords: [
+            -126.85,
+            98.2
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKWarehouse.webp",
+            "title": "Harbour Warehouses",
+            "description": "A red warehouse full of boxes and crates. Here Mario can find the Manhole Hook to open up Graffiti Town.",
+            "caption": "Harbour Warehouses"
+        }
+    },
+    {
+        id: "toad-tram",
+        coords: [
+            -124.8,
+            97.5
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKTram.png",
+            "title": "Toad Tram",
+            "description": "A cable car that goes all the way from Toad Town to the Autumn Region, passing by Overlook Mountain as a stop.",
+            "caption": "Toad Tram"
+        }
+    },
+    {
+        id: "coffee-shop",
+        coords: [
+            -123.85,
+            92.95
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKTea.jpg",
+            "title": "Coffee Shop",
+            "description": "A stall which sells Turtle Tea and Rabbit Espresso, which can increase Mario's speed.",
+            "caption": "Coffee Shop"
+        }
+    },
+    {
+        id: "toad-town-mansion",
+        coords: [
+            -123.75,
+            90.9
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKMansion.png",
+            "title": "Toad Town Mansion",
+            "description": "A large house owned by a rich Yellow Toad. On the roof there is a confetti shop too.",
+            "caption": "Toad Town Mansion"
+        }
+    },
+    {
+        id: "the-water-wheel",
+        coords: [
+            -123.4,
+            85.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKWater.webp",
+            "title": "The Water Wheel",
+            "description": "The house of the running water wheel outside of Toad Town. Here is the entrance to the Graffiti Sewers.",
+            "caption": "The Water Wheel"
+        }
+    },
+    {
+        id: "fun,-funky-and-functional",
+        coords: [
+            -128.2,
+            87.41
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "TOKFun.webp",
+            "title": "Fun, Funky and Functional",
+            "description": "An accessory shop which is a part of a chain of vendors, selling accessories like Heart or Guard Plus.",
+            "caption": "Fun, Funky and Functional"
+        }
+    },
+    {
+        id: "harbour-town",
+        coords: [
+            -129.3,
+            90.9
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "TOKHarbour.jpg",
+            "title": "Harbour Town",
+            "description": "An island port resting on the river that passes through Toad Town. ",
+            "caption": "Harbour Town"
+        }
+    },
+    {
+        id: "toad-town-docks",
+        coords: [
+            -119.75,
+            77.68
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMHarbour.png",
+            "title": "Toad Town Docks",
+            "description": "The docks in the South of Toad Town, where Mario is taken by a Whale to Lavalava Island.",
+            "caption": "Toad Town Docks"
+        }
+    },
+    {
+        id: "club-64",
+        coords: [
+            -118.5,
+            78.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMClub64.webp",
+            "title": "Club 64",
+            "description": "A club along the docks,doubling as a cafe and a restaurant. The bartender 'plays a mean guitar'.",
+            "caption": "Club 64"
+        }
+    },
+    {
+        id: "crazy-cap",
+        coords: [
+            -118.55,
+            81.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "SMOCap.png",
+            "title": "Crazy Cap",
+            "description": "A franchise of clothes and cap shops which has recently opened in the Mushroom Kingdom.",
+            "caption": "Crazy Cap"
+        }
+    },
+    {
+        id: "mario-motors",
+        coords: [
+            -116.75,
+            79.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "IRLMotor.jpg",
+            "title": "Mario Motors",
+            "description": "A gift shop selling merchandise surrounding Mario's karting adventures.",
+            "caption": "Mario Motors"
+        }
+    },
+    {
+        id: "shy-guy's-toy-box",
+        coords: [
+            -115.1,
+            81.64
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMShy.webp",
+            "title": "Shy Guy's Toy Box",
+            "description": "An empty building housing Shy Guy's Toy Box. It seems to be a playroom for Shy Guys, answering to no one here.",
+            "caption": "Shy Guy's Toy Box"
+        }
+    },
+    {
+        id: "harry's-shop",
+        coords: [
+            -114.6,
+            84.1
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMHarry.webp",
+            "title": "Harry's Shop",
+            "description": "A shop run by Harry in the Residential Area. He buys, sells and checks items. If Mario helps him, he is allowed to take anything he likes from Harry's store room.",
+            "caption": "Harry's Shop"
+        }
+    },
+    {
+        id: "tayce-t.'s-kitchen",
+        coords: [
+            -115.03,
+            86.8
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMTayce.webp",
+            "title": "Tayce T.'s Kitchen",
+            "description": "Home of the best cook around. Here Mario can give Tayce T ingredients and she will make him dishes to aid on his adventure.",
+            "caption": "Tayce T.'s Kitchen"
+        }
+    },
+    {
+        id: "southern-toad-town",
+        coords: [
+            -116.75,
+            84.08
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMSouthern.png",
+            "title": "Southern Toad Town",
+            "description": "A residential area of Toad Town that is close to the docks.",
+            "caption": "Southern Toad Town"
+        }
+    },
+    {
+        id: "toadley-clinic",
+        coords: [
+            -109.05,
+            82.65
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISClinic.webp",
+            "title": "Toadley Clinic",
+            "description": "A hospital owned by Dr Toadley, who claims to know everything of the Mushroom Kingdom. During the Blorb epidemic, he creates the Miracle Cure.",
+            "caption": "Toadley Clinic"
+        }
+    },
+    {
+        id: "item-shop",
+        coords: [
+            -111.86,
+            84.21
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISItem.png",
+            "title": "Item Shop",
+            "description": "An item shop selling Mushrooms, Syrups and Nuts. You may also use a Scratch Card, to make back some of the coins you spend here.",
+            "caption": "Item Shop"
+        }
+    },
+    {
+        id: "badge-shop",
+        coords: [
+            -111.86,
+            82.3
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISBadge.png",
+            "title": "Badge Shop",
+            "description": "A shop selling useful badges to the Mario Bros, improving their performance in battle.",
+            "caption": "Badge Shop"
+        }
+    },
+    {
+        id: "star-shop",
+        coords: [
+            -109.0,
+            78.95
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISStar.png",
+            "title": "Star Shop",
+            "description": "An equipment shop selling the best gear. They also provide complimentary Royal Mushroom Tea, massages and mustache shaves.",
+            "caption": "Star Shop"
+        }
+    },
+    {
+        id: "gear-shop",
+        coords: [
+            -111.86,
+            79.2
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISGear.png",
+            "title": "Gear Shop",
+            "description": "A standard equipment shop where you can purchase different overalls, socks, gloves and accessories.",
+            "caption": "Gear Shop"
+        }
+    },
+    {
+        id: "toadles-boutique",
+        coords: [
+            -110.8,
+            77.3
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISToadles.png",
+            "title": "Toadles Boutique",
+            "description": "A distinguished equipment shop selling more refined overalls, socks, gloves and accessories.",
+            "caption": "Toadles Boutique"
+        }
+    },
+    {
+        id: "tea-kiosk",
+        coords: [
+            -111.89,
+            76.36
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISTea.png",
+            "title": "Tea Kiosk",
+            "description": "A quaint tea shop selling different varieties of Mushroom Tea.",
+            "caption": "Tea Kiosk"
+        }
+    },
+    {
+        id: "toad-town-mall",
+        coords: [
+            -111.25,
+            80.7
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "BISMall.png",
+            "title": "Toad Town Mall",
+            "description": "The shopping hub of Toad Town. Two gentle streams flow through it, with many wonderful stores to explore.",
+            "caption": "Toad Town Mall"
+        }
+    },
+    {
+        id: "minh-t.'s-flower-garden",
+        coords: [
+            -106.22,
+            88.56
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMGarden.jpg",
+            "title": "Minh T.'s flower garden",
+            "description": "A magical garden made by Minh T. The archway is used as a door to Flower Fields.",
+            "caption": "Minh T.'s flower garden"
+        }
+    },
+    {
+        id: "merlon's-house",
+        coords: [
+            -103.87,
+            86.5
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMMerlon.webp",
+            "title": "Merlon's House",
+            "description": "Home of the Wizard Merlon, able to read the future with his crystal ball.",
+            "caption": "Merlon's House"
+        }
+    },
+    {
+        id: "post-office",
+        coords: [
+            -103.55,
+            88.57
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMPost.webp",
+            "title": "Post Office",
+            "description": "Run by the Postmaster, here Paratroopa's like Parakarry deliver mail across the Mushroom Kingdom.",
+            "caption": "Post Office"
+        }
+    },
+    {
+        id: "toad-house",
+        coords: [
+            -104.38,
+            89.35
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMToadhouse2.webp",
+            "title": "Toad House",
+            "description": "A Toad House run by just a regular Toad. Here Mario can rest and heal between adventures.",
+            "caption": "Toad House"
+        }
+    },
+    {
+        id: "peach-fountain",
+        coords: [
+            -105.0,
+            87.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "BISFountain.png",
+            "title": "Peach Fountain",
+            "description": "A serene fountain in the center of Toad Town. It depicts Princess Peach and her love for her Kingdom.",
+            "caption": "Peach Fountain"
+        }
+    },
+    {
+        id: "dojo",
+        coords: [
+            -103.5,
+            84.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMDojo.webp",
+            "title": "Dojo",
+            "description": "Here Mario can train and hone his skills against Chan, Lee and the Toad martial artist, The Master.",
+            "caption": "Dojo"
+        }
+    },
+    {
+        id: "shroom-grocery",
+        coords: [
+            -104.075,
+            84.15
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMShroom.webp",
+            "title": "Shroom Grocery",
+            "description": "A quaint shop which sells various power-ups, such as Mushrooms, Fire Flowers, POW Blocks, etc.",
+            "caption": "Shroom Grocery"
+        }
+    },
+    {
+        id: "russ-t.'s-house",
+        coords: [
+            -103.15,
+            82.9
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PMRuss.png",
+            "title": "Russ T.'s House",
+            "description": "The home of the wise Toad Russ T. He can teach Mario useful information about battle or about legends.",
+            "caption": "Russ T.'s House"
+        }
+    },
+    {
+        id: "toad-town-plaza",
+        coords: [
+            -104.23,
+            82.68
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PMPlaza.webp",
+            "title": "Toad Town Plaza",
+            "description": "The central hub of Toad Town. Outside of Peach's Castle, this is where the town is busiest.",
+            "caption": "Toad Town Plaza"
+        }
+    },
+    {
+        id: "residential-area",
+        coords: [
+            -105.1,
+            76.0
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "BISTown.webp",
+            "title": "Residential Area",
+            "description": "A small square of houses where Toad's reside, with a tranquil fountain at its center.",
+            "caption": "Residential Area"
+        }
+    },
+    {
+        id: "old-town",
+        coords: [
+            -99.0,
+            77.5
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "PITOld.png",
+            "title": "Old Town",
+            "description": "The Toad Town depicted in the past of the Mushroom Kingdom. A large forested area with mushroom-like houses.",
+            "caption": "Old Town"
+        }
+    },
+    {
+        id: "gramma's-place",
+        coords: [
+            -93.45,
+            77.95
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "PITGramma.jpg",
+            "title": "Gramma's Place",
+            "description": "A small local shop owned by Gramma Green and Gramma Red.",
+            "caption": "Gramma's Place"
+        }
+    },
+    {
+        id: "toadstool-cafe",
+        coords: [
+            -95.46,
+            83.17
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "IRLCafe.webp",
+            "title": "Toadstool Cafe",
+            "description": "A restaurant run by Chef Toad, serving various dishes like Mario's Bacon Cheeseburger and the ? Block Tiramisu.",
+            "caption": "Toadstool Cafe"
+        }
+    },
+    {
+        id: "inn",
+        coords: [
+            -95.66,
+            89.0
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "RPGInn.png",
+            "title": "Inn",
+            "description": "A cute inn where Mario can rest and heal.",
+            "caption": "Inn"
+        }
+    },
+    {
+        id: "raz-&-raini's-house",
+        coords: [
+            -98.34,
+            89.75
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "RPGRaz.png",
+            "title": "Raz & Raini's House",
+            "description": "The house of two lovebirds who get married in Marrymore.",
+            "caption": "Raz & Raini's House"
+        }
+    },
+    {
+        id: "item-shop",
+        coords: [
+            -96.1,
+            90.6
+        ],
+        icon: "flower",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "location",
+        content: {
+            "type": "popup",
+            "image": "RPGItem.png",
+            "title": "Item Shop",
+            "description": "A standard item store selling Mushrooms and Juices. Mario also learns about Hidden Treasures from here.",
+            "caption": "Item Shop"
+        }
+    },
+    {
+        id: "mario-circuit",
+        coords: [
+            -100.34,
+            87.6
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "MKWii.webp",
+            "title": "Mario Circuit",
+            "description": "A nice course to drive through the houses of Toad Town in front of Peach's Castle.",
+            "caption": "Mario Circuit"
+        }
+    },
+    {
+        id: "sky-pop",
+        coords: [
+            -164.3,
+            66.7
+        ],
+        icon: "vehicle",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "vehicle",
+        content: {
+            "type": "popup",
+            "image": "Skypop.webp",
+            "title": "Sky Pop",
+            "description": "A yellow airplane used by Mario to save Princess Daisy from Tatanga.",
+            "caption": "Sky Pop"
+        }
+    },
+    {
+        id: "castle-pier",
+        coords: [
+            -85.25,
+            87.0
+        ],
+        icon: "mushroom",
+        displayType: "popup",
+        path: "data/maps/toad-town/assets/images/",
+        tag: "area",
+        content: {
+            "type": "popup",
+            "image": "Galaxy.png",
+            "title": "Castle Pier",
+            "description": "A small peaceful platform to look out and see the Castle during the Star Festival.",
+            "caption": "Castle Pier"
+        }
+    },
+]

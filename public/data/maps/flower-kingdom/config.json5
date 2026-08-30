@@ -1,0 +1,32 @@
+{
+    id: "flower-kingdom",
+    type: "image",
+
+    label: "Flower Kingdom",
+    mapPreview: "/data/maps/flower-kingdom/preview.jpg",
+
+    options: {
+        crs: "simple",
+        minZoom: 0,
+        maxZoom: 2,
+        zoom: 1,
+        zoomDelta: 0.5,
+        zoomSnap: 0.5,
+        center: [0, 0],
+        attributionControl: false,
+    },
+
+    imagePath: "/data/maps/flower-kingdom/flower-kingdom.jpg",
+
+    features: {
+        wrapX: false,
+    },
+
+    attribution: {
+        creator: "Super Mario Wiki",
+        source: "https://mario.wiki.gallery/images/thumb/7/7c/SMBW_Flower_Kingdom_Map.jpg/1600px-SMBW_Flower_Kingdom_Map.jpg",
+        links: [
+            "https://www.mariowiki.com/Flower_Kingdom"
+        ]
+    }
+}
