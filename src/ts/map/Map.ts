@@ -1,139 +1,60 @@
 import * as L from 'leaflet';
 
-import { MapConfig, TileMapConfig, ImageMapConfig } from "./MapConfig";
+import { MapConfig, LeafletMapConfig, TileMapConfig, ImageMapConfig, PlanMapConfig, ModelMapConfig } from "./MapConfig";
 import { Waypoint } from "./Waypoints/WaypointManager";
 import { iconRegistry, IconIdentifier } from "./Waypoints/IconRegistry";
 import { eventBus } from '../core/EventBus';
 
-abstract class _Map {
-    containerId: string = "mapContainer";
-    config: MapConfig;
+export type MapView = { center?: [number, number]; zoom?: number };
 
-    constructor(config: MapConfig) {
+export abstract class _Map<TConfig extends MapConfig = MapConfig> {
+    containerId: string = "mapContainer";
+    config: TConfig;
+
+    constructor(config: TConfig) {
         this.config = config;
     }
 
     abstract getZoom(): number 
-
     abstract getCenter(): { lat: number, lng: number }
+    abstract destroy(): void
 }
 
-class LeafletMap extends _Map {
+export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapConfig> extends _Map<TConfig> {
+    
     map: L.Map;
     private handlePopupShow = (popup: L.Popup) => this.openPopup(popup);
     private handlePopupHide = (popup: L.Popup) => this.closePopup(popup);
 
-
-    constructor({ config, center, zoom }: {
-        config: MapConfig;
-        center?: [number, number];
-        zoom?: number;
-    }) {
-        if (center) 
-            config.options.center = center;
-
-        if (zoom)
-            config.options.zoom = zoom;
-
+    constructor(config: TConfig, view ?: MapView) {
         super(config);
-        this.map = L.map(this.containerId, this.config.leafletOptions);
 
+        const leafletOptions = this.config.leafletOptions;
+        if (view?.center) {
+            leafletOptions.center = L.latLng(view.center[0], view.center[1]);
+        }
+
+        if (view?.zoom) {
+            leafletOptions.zoom = view.zoom;
+        }
+        
+        this.map = L.map(this.containerId, this.config.leafletOptions);
+        this.applyBackground();
+
+        this.addLayers();
+
+        eventBus.on("popup:show", this.handlePopupShow);
+        eventBus.on("popup:hide", this.handlePopupHide);
+        this.on("click", () => eventBus.emit("map:click", {}));
+    }
+
+    abstract addLayers(): void;
+
+    applyBackground(): void {
         const mapContainer = document.getElementById(this.containerId);
         const backgroundColor = this.config.features.backgroundColor || "#e8e8e8";
         if (mapContainer) 
             mapContainer.style.backgroundColor = backgroundColor;
-
-        switch (this.config.type) {
-            case "tiles":
-                this.addTileLayer(this.config as TileMapConfig);
-                break;
-            case "image":
-                this.addImageLayer(this.config as ImageMapConfig);
-                break;
-            case "model":
-                // not implemented
-                // will use three.js
-                break;
-            default:
-                throw new Error(`Unsupported map type: ${this.config.type}`);
-        }
-
-        eventBus.on("popup:show", this.handlePopupShow);
-        eventBus.on("popup:hide", this.handlePopupHide);
-
-        this.on("click", () => eventBus.emit("map:click", {}));
-
-    }
-
-    on(type: string, fn: (e: any) => void, context?: any): this {
-        this.map.on(type, fn, context);
-        return this;
-    }
-
-    off(type: string, fn?: (e: any) => void, context?: any): this {
-        this.map.off(type, fn, context);
-        return this;
-    }
-
-    addTileLayer(config: TileMapConfig): void {
-        const fileType = config.tileFileType || 'png';
-        const TileLayer = L.TileLayer.extend({
-            getTileUrl: function(coords: L.Coords) {
-                const n = Math.pow(2, coords.z);
-                let x = coords.x; 
-                let y = coords.y;
-
-                if (config.features.wrapX) {
-                    x = ((x % n) + n) % n; 
-                }
-
-                if (config.features.wrapY) {
-                    y = ((y % n) + n) % n; 
-                }
-                return `${config.tilePath}/${coords.z}/${x}/${y}.${fileType}`;
-            }
-        });
-
-        new TileLayer().addTo(this.map);
-
-        if (this.config.bounds) {
-            this.handleBounds(L.latLngBounds(this.config.bounds));
-        }
-    }
-
-    addImageLayer(config: ImageMapConfig): void {
-        let bounds: L.LatLngBounds;
-
-        if (this.config.bounds) {
-            bounds = L.latLngBounds(this.config.bounds);
-            const overlay = L.imageOverlay(config.imagePath, bounds).addTo(this.map);
-            this.handleBounds(bounds);
-        } else {
-            const fallbackWidth = config.width || 1000;
-            const fallbackHeight = config.height || 1000;
-            bounds = L.latLngBounds(
-                [-fallbackHeight / 2, -fallbackWidth / 2],
-                [fallbackHeight / 2, fallbackWidth / 2]
-            );
-
-            const overlay = L.imageOverlay(config.imagePath, bounds).addTo(this.map);
-            
-            overlay.on('load', (event: any) => {
-                const img = event.target._image;
-                if (img) {
-                    const width = img.naturalWidth;
-                    const height = img.naturalHeight;
-                    
-                    const newBounds = L.latLngBounds(
-                        [-height / 2, -width / 2],
-                        [height / 2, width / 2]
-                    );
-
-                    overlay.setBounds(newBounds);
-                    this.handleBounds(newBounds);
-                }
-            });
-        }
     }
 
     handleBounds(bounds: L.LatLngBounds): void {
@@ -151,6 +72,16 @@ class LeafletMap extends _Map {
 
     getCenter(): { lat: number, lng: number } {
         return this.map.getCenter();
+    }
+
+    on(type: string, fn: (e: any) => void, context?: any): this {
+        this.map.on(type, fn, context);
+        return this;
+    }
+
+    off(type: string, fn?: (e: any) => void, context?: any): this {
+        this.map.off(type, fn, context);
+        return this;
     }
 
     addMarker(waypoint: Waypoint, icon: IconIdentifier): L.ImageOverlay | L.Marker {
@@ -182,12 +113,6 @@ class LeafletMap extends _Map {
         }
     }
 
-    destroy(): void {
-        eventBus.off("popup:show", this.handlePopupShow);
-        eventBus.off("popup:hide", this.handlePopupHide);
-        this.map.remove();
-    }
-
     openPopup(popup: L.Popup): void {
         popup.openOn(this.map);
     }
@@ -195,6 +120,149 @@ class LeafletMap extends _Map {
     closePopup(popup: L.Popup): void {
         this.map.closePopup(popup);
     }
+
+    destroy(): void {
+        eventBus.off("popup:show", this.handlePopupShow);
+        eventBus.off("popup:hide", this.handlePopupHide);
+        this.map.remove();
+    }
 }
 
-export { _Map, LeafletMap }
+export class TileMap extends LeafletMap<TileMapConfig> {
+    addLayers(): void {
+        const { tilePath, features } = this.config;
+        const fileType = this.config.tileFileType || 'png';
+
+        const CustomTileLayer = L.TileLayer.extend({
+            getTileUrl: function(coords: L.Coords) {
+                const n = Math.pow(2, coords.z);
+                let x = coords.x; 
+                let y = coords.y;
+
+                if (features.wrapX) {
+                    x = ((x % n) + n) % n; 
+                }
+
+                if (features.wrapY) {
+                    y = ((y % n) + n) % n; 
+                }
+                return `${tilePath}/${coords.z}/${x}/${y}.${fileType}`;
+            }
+        });
+
+        new CustomTileLayer().addTo(this.map);
+
+        if (this.config.bounds) {
+            this.handleBounds(L.latLngBounds(this.config.bounds));
+        }
+    }
+}
+
+abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConfig> extends LeafletMap<TConfig> {
+    abstract addLayers(): void;
+
+    loadImageDimensions(imagePath: string): Promise<{ width: number; height: number }> {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+            img.onerror = reject;
+            img.src = imagePath;
+        });
+    }
+
+    createBounds(width: number, height: number): L.LatLngBounds {
+        return L.latLngBounds(
+            [-height / 2, -width / 2],
+            [height / 2, width / 2]
+        )
+    }
+
+    async computeBounds(): Promise<L.LatLngBounds> {
+        if (this.config.bounds) {
+            return L.latLngBounds(this.config.bounds);
+        }
+        
+        if (this.config.width && this.config.height) {
+            return this.createBounds(this.config.width, this.config.height);
+        }
+
+        let imagePath: string;
+        if (this.config instanceof ImageMapConfig) {
+            imagePath = this.config.imagePath;
+        } else if (this.config instanceof PlanMapConfig) {
+            imagePath = this.config.plans[0].imagePath;
+        } else {
+            throw new Error("Unsupported map config type for computing bounds.");
+        }
+
+        const { width, height } = await this.loadImageDimensions(imagePath).catch(() => {
+            console.warn(`Failed to load image dimensions for ${imagePath}. Using fallback dimensions.`);
+            return { width: 1000, height: 1000 };
+        })
+
+        return this.createBounds(width, height);
+    }
+}
+
+export class ImageMap extends ImageBasedMap<ImageMapConfig> {
+    
+    addLayers(): void {
+        this.computeBounds().then(bounds => {
+            const overlay = L.imageOverlay(this.config.imagePath, bounds).addTo(this.map);
+            this.handleBounds(bounds);
+        });
+    }
+}
+
+export class PlanMap extends ImageBasedMap<PlanMapConfig> {
+    private layers: Record<string, L.LayerGroup> = {};
+    private control: L.Control.Layers | null = null;
+
+    async addLayers(): Promise<void> {
+
+        // for now assume all plans have the same dimensions
+        this.computeBounds().then(bounds => {
+            for (const plan of this.config.plans) {
+                const overlay = L.imageOverlay(plan.imagePath, bounds);
+                const group = L.layerGroup([overlay]);
+                this.layers[plan.label ?? plan.imagePath] = group;
+                group.addTo(this.map);
+            }
+
+            this.control = L.control.layers(this.layers, {}, { collapsed: false }).addTo(this.map);
+            this.handleBounds(bounds);
+        });
+
+    }
+
+}
+
+export class ModelMap extends _Map<ModelMapConfig> {
+    constructor(config: ModelMapConfig) {
+        super(config);
+        // Not Implemented: init three.js scene/camera/renderer using this.config.modelPath
+    }
+ 
+    getZoom(): number {
+        // Not Implemented: map to camera distance/fov once three.js scene exists
+        return 0;
+    }
+ 
+    getCenter(): { lat: number, lng: number } {
+        // Not Implemented: map to camera target once three.js scene exists
+        return { lat: 0, lng: 0 };
+    }
+ 
+    destroy(): void {
+        // Not Implemented: dispose three.js scene/renderer
+    }
+}
+
+export function createMap(config: MapConfig, view?: MapView): _Map {
+    if (config instanceof TileMapConfig) return new TileMap(config, view);
+    if (config instanceof ImageMapConfig) return new ImageMap(config, view);
+    if (config instanceof PlanMapConfig) return new PlanMap(config, view);
+    if (config instanceof ModelMapConfig) return new ModelMap(config);
+ 
+    throw new Error(`Unsupported map type: ${config.type}`);
+}

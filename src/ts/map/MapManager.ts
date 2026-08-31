@@ -1,9 +1,10 @@
 import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
-import { _Map, LeafletMap } from './Map';
+import { _Map, LeafletMap, createMap } from './Map';
 import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
+import { MapView } from './Map';
 
 class MapManager {
     map: _Map | null = null;
@@ -13,8 +14,8 @@ class MapManager {
         this.waypointManager = new WaypointManager();
 
         eventBus.on("map:load", (payload) => {
-            const { id, center, zoom } = payload;
-            this.loadMapById({ id, center, zoom }).catch(error => {
+            const { id, view } = payload;
+            this.loadMapById({ id, view }).catch(error => {
                 console.error(`Failed to load map: "${id}": `, error);
             });
         });
@@ -26,10 +27,9 @@ class MapManager {
         }
     }
 
-    async loadMap({ config, center, zoom }: {
+    async loadMap({ config, view }: {
         config: MapConfig;
-        center?: [number, number];
-        zoom?: number;
+        view?: MapView;
     }): Promise<void> {
         if (this.map?.config.id === config.id) return;
 
@@ -37,8 +37,8 @@ class MapManager {
             this.reset();
         }
     
-        if (config.type === "tiles" || config.type === "image") {
-            this.map = new LeafletMap({config: config, center: center, zoom: zoom});
+        if (config.type === "tiles" || config.type === "image" || config.type === "plan") {
+            this.map = createMap(config, view);
         } else if (config.type === "model") {
             // not implemented
             // will use three.js
@@ -69,13 +69,12 @@ class MapManager {
         
     }
 
-    async loadMapById({ id, center, zoom }: {
+    async loadMapById({ id, view }: {
         id: string;
-        center?: [number, number];
-        zoom?: number;
+        view?: MapView;
     }): Promise<void> {
-        const config = await mapRegistry.getById(id)
-        await this.loadMap({config: config, center: center, zoom: zoom})
+        const config = await mapRegistry.getById(id);
+        await this.loadMap({config: config, view: view});
     }
 
     reset(): void {

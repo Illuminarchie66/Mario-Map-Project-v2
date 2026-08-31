@@ -18,11 +18,11 @@ class WaypointManager {
     async loadWaypointsByMap(map: LeafletMap): Promise<void> {
         this.reset();
         const waypointPath = map.config.waypointPath;
+        if (!waypointPath) return;
 
-        if (waypointPath) {
-            await this.loadWaypointsByPath(waypointPath);
-            this.attachToMap(map);
-        }
+        await this.loadWaypointsByPath(waypointPath);
+        this.attachToMap(map);
+
     }
 
     async loadWaypointsByPath(path: string): Promise<void> {

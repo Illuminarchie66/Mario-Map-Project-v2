@@ -37,7 +37,7 @@
             "caption": "Peach's Castle",
             "exploreButton": {
                 type: "explore-button",
-                target: "mushroom-continent",
+                target: "peachs-castle",
                 label: "Peach's Castle"
             }
         }

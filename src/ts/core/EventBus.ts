@@ -1,8 +1,9 @@
 import { Waypoint } from "../map/Waypoints/Waypoint";
+import { MapView } from "../map/Map";
 
 type EventMap = {
     "waypoint:click": Waypoint;
-    "map:load": { id: string, center?: [number, number], zoom?: number };
+    "map:load": { id: string, view?: MapView };
     "map:click": {};
     "map:mousemove": { lat: number, lng: number };
     "map:zoom": { zoom: number };

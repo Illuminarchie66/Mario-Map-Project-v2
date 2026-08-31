@@ -1,0 +1,55 @@
+{
+    id: "peachs-castle",
+    type: "plan",
+
+    label: "Peach's Castle",
+    mapPreview: "/data/maps/peachs-castle/preview.jpg",
+
+    options: {
+        crs: "simple",
+        minZoom: -3,
+        maxZoom: 3,
+        zoom: 2,
+        center: [-650, 0],
+        zoomDelta: 0.5,
+        zoomSnap: 0.5,
+        attributionControl: false,
+    },
+
+    plans: [
+        {
+            imagePath: "/data/maps/peachs-castle/basement.png",
+            label: "Basement",
+        },
+        {
+            imagePath: "/data/maps/peachs-castle/ground-floor.png",
+            label: "Ground Floor",
+        },
+        {
+            imagePath: "/data/maps/peachs-castle/first-floor.png",
+            label: "First Floor",
+        },
+        {
+            imagePath: "/data/maps/peachs-castle/second-floor.png",
+            label: "Second Floor",
+        },
+        {
+            imagePath: "/data/maps/peachs-castle/third-floor.png",
+            label: "Third Floor",
+        },
+        {
+            imagePath: "/data/maps/peachs-castle/fourth-and-fifth-floor.png",
+            label: "Fourth and Fifth Floor",
+        }
+    ],
+
+    features: {},
+
+    attribution: {
+        creator: "DefinitelyNotSascha",
+        source: "https://www.deviantart.com/definitelynotsascha/art/Ultimate-Peach-s-Castle-Map-labelled-version-1079118973",
+        links: [
+            "https://www.deviantart.com/definitelynotsascha",
+        ]
+    }
+}

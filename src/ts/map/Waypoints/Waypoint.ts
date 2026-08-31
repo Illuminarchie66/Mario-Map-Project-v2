@@ -17,7 +17,8 @@ const WaypointBaseSchema = z.object({
     coords: z.tuple([z.number(), z.number()]),
     path: z.string().optional(),
     label: z.string().optional(),
-    icon: z.string().optional()
+    icon: z.string().optional(),
+    layerId: z.string().optional()
 });
 
 const PamphletWaypointSchema = WaypointBaseSchema.extend({

@@ -29,6 +29,12 @@ class MapRegistry {
                     configPath: "/data/maps/toad-town/config.json5"
                 },
 
+                    "peachs-castle": {
+                        id: "peachs-castle",
+                        label: "Peach's Castle",
+                        configPath: "/data/maps/peachs-castle/config.json5"
+                    },
+
                 "toad-town-sophie": {
                     id: "toad-town-sophie",
                     label: "Toad Town (Lady Sophie)",
@@ -95,8 +101,6 @@ class MapRegistry {
                 console.error(`Failed to load map config for id "${id}":`, error);
             }
         }
-
-        console.log("Map registry cache filled:", this.cache);
     }
 
     async getAll(): Promise<MapConfig[]> {

@@ -1,21 +1,16 @@
 import * as L from 'leaflet';
 import z from 'zod';
 
-const MapOptionsSchema = z.object({
-    crs: z.string().optional(),
-    minZoom: z.number().optional(),
-    maxZoom: z.number().optional(),
-    zoom: z.number().optional(),
-    center: z.tuple([z.number(), z.number()]).optional(),
-    zoomDelta: z.number().optional(),
-    zoomSnap: z.number().optional(),
-    attributionControl: z.boolean().optional()
-});
-type MapOptions = z.infer<typeof MapOptionsSchema>;
+const MapTypeSchema = z.enum([
+    "tiles", // leaflet tile layer maps
+    "image", // leaflet single image maps
+    "plan", // leaflet maps with multiple images and layers
+    "model" // 3D model maps using three.js
+]);
+type MapType = z.infer<typeof MapTypeSchema>;
 
 const MapFeaturesSchema = z.object({
     backgroundColor: z.string().optional(),
-    usesTiles: z.boolean().optional(),
     wrapX: z.boolean().optional(),
     wrapY: z.boolean().optional()
 });
@@ -29,30 +24,43 @@ const MapAttributionSchema = z.object({
 });
 type MapAttribution = z.infer<typeof MapAttributionSchema>;
 
-const MapTypeSchema = z.enum(["tiles", "image", "model"]);
-type MapType = z.infer<typeof MapTypeSchema>;
-
-const MapConfigBaseSchema = z.object({
+const BaseMapConfigSchema = z.object({
     id: z.string(),
     type: MapTypeSchema,
-    options: MapOptionsSchema,
     features: MapFeaturesSchema,
     label: z.string().optional(),
     attribution: MapAttributionSchema.optional(),
     waypointPath: z.string().optional(),
-    bounds: z.array(z.tuple([z.number(), z.number()])).optional(),
     mapPreview: z.string().optional()
 });
-type MapConfigData = z.infer<typeof MapConfigBaseSchema>;
+type BaseMapConfig = z.infer<typeof BaseMapConfigSchema>;
 
-const TileMapConfigSchema = MapConfigBaseSchema.extend({
+const MapOptionsSchema = z.object({
+    crs: z.string().optional(),
+    minZoom: z.number().optional(),
+    maxZoom: z.number().optional(),
+    zoom: z.number().optional(),
+    center: z.tuple([z.number(), z.number()]).optional(),
+    zoomDelta: z.number().optional(),
+    zoomSnap: z.number().optional(),
+    attributionControl: z.boolean().optional()
+});
+type MapOptions = z.infer<typeof MapOptionsSchema>;
+
+const LeafletMapOptionsSchema = BaseMapConfigSchema.extend({
+    options: MapOptionsSchema,
+    bounds: z.array(z.tuple([z.number(), z.number()])).optional(),
+});
+type LeafletMapConfigData = z.infer<typeof LeafletMapOptionsSchema>;
+
+const TileMapConfigSchema = LeafletMapOptionsSchema.extend({
     type: z.literal("tiles"),
     tilePath: z.string(),
     tileFileType: z.string().optional()
 });
 type TileMapConfigData = z.infer<typeof TileMapConfigSchema>;
 
-const ImageMapConfigSchema = MapConfigBaseSchema.extend({
+const ImageMapConfigSchema = LeafletMapOptionsSchema.extend({
     type: z.literal("image"),
     imagePath: z.string(),
     width: z.number().optional(),
@@ -60,7 +68,18 @@ const ImageMapConfigSchema = MapConfigBaseSchema.extend({
 });
 type ImageMapConfigData = z.infer<typeof ImageMapConfigSchema>;
 
-const ModelMapConfigSchema = MapConfigBaseSchema.extend({
+const PlanMapConfigSchema = LeafletMapOptionsSchema.extend({
+    type: z.literal("plan"),
+    width: z.number().optional(),
+    height: z.number().optional(),
+    plans: z.array(z.object({
+        imagePath: z.string(),
+        label: z.string().optional(),
+    }))
+});
+type PlanMapConfigData = z.infer<typeof PlanMapConfigSchema>;
+
+const ModelMapConfigSchema = BaseMapConfigSchema.extend({
     type: z.literal("model"),
     modelPath: z.string(),
 });
@@ -69,40 +88,29 @@ type ModelMapConfigData = z.infer<typeof ModelMapConfigSchema>;
 const MapConfigSchema = z.discriminatedUnion("type", [
     TileMapConfigSchema,
     ImageMapConfigSchema,
+    PlanMapConfigSchema,
     ModelMapConfigSchema
 ]);
+type MapConfigData = z.infer<typeof MapConfigSchema>;
 
 abstract class MapConfig {
     id: string;
     type: MapType;
-    options: MapOptions;
     features: MapFeatures;
 
     label?: string;
     attribution?: MapAttribution;
     waypointPath?: string;
-    bounds?: [number, number][];
     mapPreview?: string;
 
-    constructor(data: {
-        id: string;
-        type: MapType;
-        options: MapOptions;
-        features: MapFeatures;
-        label?: string;
-        attribution?: MapAttribution;
-        waypointPath?: string;
-        bounds?: [number, number][];
-        mapPreview?: string;
-    }) {
+    protected constructor(data: BaseMapConfig) {
         this.id = data.id;
         this.type = data.type;
-        this.options = data.options;
         this.features = data.features;
+
         this.label = data.label;
         this.attribution = data.attribution;
         this.waypointPath = data.waypointPath;
-        this.bounds = data.bounds;
         this.mapPreview = data.mapPreview;
     }
 
@@ -117,6 +125,8 @@ abstract class MapConfig {
                 return new TileMapConfig(res.data);
             case "image":
                 return new ImageMapConfig(res.data);
+            case "plan":
+                return new PlanMapConfig(res.data);
             case "model":
                 return new ModelMapConfig(res.data);
             default:
@@ -124,15 +134,29 @@ abstract class MapConfig {
         }
     }
 
+}
+
+abstract class LeafletMapConfig extends MapConfig {
+    options: MapOptions;
+    bounds?: [number, number][];
+
+    protected constructor(data: LeafletMapConfigData) {
+        super(data);
+        this.options = data.options;
+        this.bounds = data.bounds;
+    }
+
     get leafletOptions(): L.MapOptions {
+        if (!this.options) return {};
         const crs = this.options.crs === "simple" ? L.CRS.Simple : L.CRS.EPSG3857;
-        
+        const center = this.options.center ? L.latLng(this.options.center[0], this.options.center[1]) : undefined;
+
         return {
-            crs: crs,
+            crs,
             minZoom: this.options.minZoom,
             maxZoom: this.options.maxZoom,
             zoom: this.options.zoom,
-            center: this.options.center ? L.latLng(this.options.center[0], this.options.center[1]) : undefined,
+            center: center,
             zoomDelta: this.options.zoomDelta,
             zoomSnap: this.options.zoomSnap,
             attributionControl: this.options.attributionControl
@@ -140,7 +164,8 @@ abstract class MapConfig {
     }
 }
 
-class TileMapConfig extends MapConfig {
+
+class TileMapConfig extends LeafletMapConfig {
     tilePath: string;
     tileFileType?: string;
 
@@ -151,7 +176,7 @@ class TileMapConfig extends MapConfig {
     }
 }
 
-class ImageMapConfig extends MapConfig {
+class ImageMapConfig extends LeafletMapConfig {
     imagePath: string;
     width?: number;
     height?: number;
@@ -159,6 +184,19 @@ class ImageMapConfig extends MapConfig {
     constructor(data: ImageMapConfigData) {
         super(data);
         this.imagePath = data.imagePath;
+        this.width = data.width;
+        this.height = data.height;
+    }
+}
+
+class PlanMapConfig extends LeafletMapConfig {
+    plans: Array<{ imagePath: string; label?: string; }>;
+    width?: number;
+    height?: number;
+
+    constructor(data: PlanMapConfigData) {
+        super(data);
+        this.plans = data.plans;
         this.width = data.width;
         this.height = data.height;
     }
@@ -173,4 +211,4 @@ class ModelMapConfig extends MapConfig {
     }
 }
 
-export { MapConfig, TileMapConfig, ImageMapConfig, ModelMapConfig };
+export { MapConfig, LeafletMapConfig, TileMapConfig, ImageMapConfig, PlanMapConfig, ModelMapConfig };
