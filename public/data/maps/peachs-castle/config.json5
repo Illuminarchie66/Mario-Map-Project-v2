@@ -43,7 +43,9 @@
         }
     ],
 
-    features: {},
+    features: {
+        backgroundColor: "#cfe5bd"
+    },
 
     attribution: {
         creator: "DefinitelyNotSascha",

@@ -1,6 +1,6 @@
 import { Loader } from "../core/Loader";
 import { MapConfig } from "./MapConfig";
-import { _Map } from "./Map";
+import { _Map } from "./maps/Map";
 
 interface MapIdentifier {
     id: string;
@@ -15,6 +15,12 @@ class MapRegistry {
             id: "globe",
             label: "Globe",
             configPath: "/data/maps/globe/config.json5" 
+        },
+
+        "globe-3d": {
+            id: "globe-3d",
+            label: "Globe 3D",
+            configPath: "/data/maps/globe-3d/config.json5" 
         },
 
             "mushroom-continent": {

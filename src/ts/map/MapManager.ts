@@ -1,10 +1,12 @@
 import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
-import { _Map, LeafletMap, createMap } from './Map';
+import { _Map } from './maps/Map';
+import { LeafletMap } from './maps/LeafletMap';
 import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
-import { MapView } from './Map';
+import { MapView } from './maps/Map';
+import { CreateMap } from './maps/createMap';
 
 class MapManager {
     map: _Map | null = null;
@@ -36,14 +38,8 @@ class MapManager {
         if (this.map) {
             this.reset();
         }
-    
-        if (config.type === "tiles" || config.type === "image" || config.type === "plan") {
-            this.map = createMap(config, view);
-        } else if (config.type === "model") {
-            // not implemented
-            // will use three.js
-            throw new Error("Model maps are not yet supported.");
-        }
+
+        this.map = CreateMap.createMap(config, view);
 
         await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
 
@@ -78,9 +74,7 @@ class MapManager {
     }
 
     reset(): void {
-        if (this.map instanceof LeafletMap) {
-            this.map.destroy();
-        }
+        this.map?.destroy();
 
         this.map = null;
         this.waypointManager.reset();

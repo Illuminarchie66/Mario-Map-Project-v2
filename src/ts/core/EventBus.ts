@@ -1,5 +1,5 @@
 import { Waypoint } from "../map/Waypoints/Waypoint";
-import { MapView } from "../map/Map";
+import { MapView } from "../map/maps/Map";
 
 type EventMap = {
     "waypoint:click": Waypoint;

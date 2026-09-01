@@ -8,5 +8,5 @@ import '../css/core/fonts.css';
 import { MapManager } from "./map/MapManager";
 import { UIManager } from "./ui/UIManager";
 
-const mapManager = new MapManager("toad-town");
+const mapManager = new MapManager("globe-3d");
 const uiManager = new UIManager();

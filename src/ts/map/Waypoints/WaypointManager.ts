@@ -1,7 +1,7 @@
 import * as L from "leaflet";
 
 import { Waypoint } from "./Waypoint";
-import { _Map, LeafletMap } from "../Map";
+import { _Map, LeafletMap } from "../maps/Map";
 import { Loader } from "../../core/Loader";
 import { iconRegistry } from "./IconRegistry";
 import { eventBus } from "../../core/EventBus";

@@ -1,0 +1,11 @@
+{
+	id: "globe-3d",
+	type: "model",
+
+	label: "Odyssey Globe 3D",
+	mapPreview: "/data/maps/globe/preview.png",
+
+	modelPath: "",
+
+	features: {},
+}
