@@ -20,10 +20,12 @@ export class ModelMap extends _Map<ModelMapConfig> {
     planet!: THREE.Mesh;
     moonPivot!: THREE.Object3D;
     moon!: THREE.Group;
+    moonRing!: THREE.Mesh;
     clouds!: THREE.Mesh;
     atmosphere!: THREE.Mesh;
     cometObservatoryPivot!: THREE.Object3D;
     cometObservatory!: THREE.Group;
+    cometRing!: THREE.Mesh;
     skybox!: THREE.Group;
     controls!: OrbitControls;
 
@@ -66,7 +68,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
     }
 
     createLights(): void {
-        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
         this.scene.add(this.ambientLight);
 
         // this.sunPivot = new THREE.Object3D();
@@ -76,7 +78,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         // this.sun.position.set(-5, 3, 5);
         // this.sunPivot.add(this.sun);
 
-        this.sun = new THREE.DirectionalLight(0xfff7ba, 2);
+        this.sun = new THREE.DirectionalLight(0xffffff, 2);
         // sun in skybox right image
         this.sun.position.set(-10, 0, 0);
         this.scene.add(this.sun);
@@ -111,6 +113,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
             emissive: new THREE.Color(0xffff00),
             emissiveIntensity: 2,
             metalnessMap: metalness,
+            metalness: 0.0,
             displacementMap: displacement,
             displacementScale: 0.1,
         });
@@ -196,13 +199,28 @@ export class ModelMap extends _Map<ModelMapConfig> {
             (gltf) => {
                 this.moonPivot = new THREE.Object3D();
                 this.moonPivot.position.set(0, 0, 0);
-                this.moonPivot.rotation.set(0, 0, 0);
+                this.moonPivot.rotation.set(0.3, 0, 0);
                 this.scene.add(this.moonPivot);
 
                 this.moon = gltf.scene;
                 this.moon.scale.set(0.68, 0.68, 0.68);
                 this.moon.position.set(2.336, 0, 0);
                 this.moonPivot.add(this.moon);
+
+                const ringGeometry = new THREE.TorusGeometry(
+                    2.336, // torus radius
+                    0.005,   // tube radius
+                    128, 128,
+                    Math.PI * 2 // end angle
+                );
+                const ringMaterial = new THREE.MeshPhongMaterial({
+                    color: 0xb18f01,
+                    emissive: new THREE.Color(0xb18f01),
+                    side: THREE.DoubleSide,
+                });
+                this.moonRing = new THREE.Mesh(ringGeometry, ringMaterial);
+                this.moonRing.rotation.x = Math.PI / 2; 
+                this.moonPivot.add(this.moonRing);
             },
             (xhr) => {},
             (error) => {
@@ -226,6 +244,21 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 this.cometObservatory.position.set(-1.2, 0, 0);
                 this.cometObservatory.rotation.set(Math.PI/8, 0, 0);
                 this.cometObservatoryPivot.add(this.cometObservatory);
+
+                const ringGeometry = new THREE.TorusGeometry(
+                    1.2, // torus radius
+                    0.001,   // tube radius
+                    128, 128,
+                    Math.PI * 2 // end angle
+                );
+                const ringMaterial = new THREE.MeshPhongMaterial({
+                    color: 0xb18f01,
+                    emissive: new THREE.Color(0xb18f01),
+                    side: THREE.DoubleSide,
+                });
+                this.cometRing = new THREE.Mesh(ringGeometry, ringMaterial);
+                this.cometRing.rotation.x = Math.PI / 2; 
+                this.cometObservatoryPivot.add(this.cometRing);
             },
             (xhr) => {},
             (error) => {
@@ -267,7 +300,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
     animate() {
 
-        if (!this.controls || !this.planet || !this.cometObservatoryPivot || !this.cometObservatory || !this.clouds) {
+        if (!this.controls || !this.planet || !this.cometObservatoryPivot || !this.cometObservatory || !this.clouds || !this.moonPivot || !this.moon) {
             this.animationFrameId = requestAnimationFrame(() => this.animate());
             return;
         } 
@@ -276,6 +309,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
         //this.sunPivot.rotation.y += 0.01;
         this.planet.rotation.y += 0.0002;
+
+        this.moonPivot.rotation.y += 0.0005;
+        this.moon.rotation.y += 0.001;
 
         this.cometObservatoryPivot.rotation.y += 0.0005;
         this.cometObservatory.rotation.y += 0.001;

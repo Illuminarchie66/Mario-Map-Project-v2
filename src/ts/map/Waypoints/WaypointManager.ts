@@ -1,7 +1,8 @@
 import * as L from "leaflet";
 
 import { Waypoint } from "./Waypoint";
-import { _Map, LeafletMap } from "../maps/Map";
+import { _Map } from "../maps/Map";
+import { LeafletMap } from "../maps/LeafletMap";
 import { Loader } from "../../core/Loader";
 import { iconRegistry } from "./IconRegistry";
 import { eventBus } from "../../core/EventBus";
@@ -40,7 +41,7 @@ class WaypointManager {
             const icon = iconRegistry.getById(waypoint.icon ?? waypoint.id);
             const marker = map.addMarker(waypoint, icon)
 
-            marker.on("click", (event) => {
+            marker.on("click", (event: L.LeafletMouseEvent) => {
                 L.DomEvent.stopPropagation(event);
                 if (waypoint.displayType === "popup" && marker instanceof L.Marker) {
                     waypoint.markerCoords = [marker.getLatLng().lat, marker.getLatLng().lng];
