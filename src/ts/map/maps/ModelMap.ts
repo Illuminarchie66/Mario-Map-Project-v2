@@ -4,6 +4,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {ModelMapConfig } from "../MapConfig";
 import { _Map } from "./Map";
+import { Waypoint } from '../Waypoints/Waypoint';
+import { IconIdentifier } from '../Waypoints/IconRegistry';
+import { eventBus } from '../../core/EventBus';
 
 export class ModelMap extends _Map<ModelMapConfig> {
     loader: THREE.TextureLoader;
@@ -17,17 +20,26 @@ export class ModelMap extends _Map<ModelMapConfig> {
     ambientLight!: THREE.AmbientLight;
     sunPivot!: THREE.Object3D;
     sun!: THREE.DirectionalLight;
-    planet!: THREE.Mesh;
+
+    earth!: THREE.Mesh;
+    earthRing!: THREE.Mesh;
+    clouds!: THREE.Mesh;
+
     moonPivot!: THREE.Object3D;
     moon!: THREE.Group;
     moonRing!: THREE.Mesh;
-    clouds!: THREE.Mesh;
-    atmosphere!: THREE.Mesh;
+
     cometObservatoryPivot!: THREE.Object3D;
     cometObservatory!: THREE.Group;
     cometRing!: THREE.Mesh;
+
     skybox!: THREE.Group;
+    
     controls!: OrbitControls;
+
+    waypoints!: THREE.Group;
+    raycaster!: THREE.Raycaster;
+    mouse!: THREE.Vector2;
 
     constructor(config: ModelMapConfig) {
         super(config);
@@ -49,13 +61,17 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.mapContainer.appendChild(this.renderer.domElement);
 
         this.createLights();
-        this.createPlanet();
+        this.createEarth();
         this.createMoon();
         this.createClouds();
-        this.createAtmosphere();
         this.createCometObservatory();
         this.createSkybox();
         this.createControls();
+
+        this.waypoints = new THREE.Group();
+        this.earth.add(this.waypoints);
+        this.raycaster = new THREE.Raycaster();
+        this.mouse = new THREE.Vector2();
 
         this.animate();
 
@@ -65,6 +81,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
             this.renderer.setSize(window.innerWidth, window.innerHeight);
             this.renderer.render(this.scene, this.camera);
         });
+
     }
 
     createLights(): void {
@@ -84,7 +101,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.scene.add(this.sun);
     }
 
-    createPlanet(): void {
+    createEarth(): void {
         const albedo = this.loader.load('data/maps/globe-3d/earth/alb.png');
         albedo.colorSpace = THREE.SRGBColorSpace;
         albedo.wrapS = THREE.RepeatWrapping;
@@ -124,8 +141,29 @@ export class ModelMap extends _Map<ModelMapConfig> {
             1, 512, 512,     
         );  
 
-        this.planet = new THREE.Mesh(geometry, material);
-        this.scene.add(this.planet);
+        this.earth = new THREE.Mesh(geometry, material);
+        
+        this.createAtmosphere(this.earth, 1.025);
+
+        const ringRadius = 100
+
+        const ringGeometry = new THREE.TorusGeometry(
+            ringRadius, // torus radius
+            0.01,   // tube radius
+            128, 128,
+            Math.PI/2  // end angle
+        );
+        const ringMaterial = new THREE.MeshPhongMaterial({
+            color: 0xb18f01,
+            emissive: new THREE.Color(0xb18f01),
+            side: THREE.DoubleSide,
+        });
+        this.earthRing = new THREE.Mesh(ringGeometry, ringMaterial);
+        this.earthRing.position.set(0, 0, -ringRadius);
+        this.earthRing.rotation.set(Math.PI / 2, 0, Math.PI/4);
+        this.scene.add(this.earthRing);
+
+        this.scene.add(this.earth);
     }
 
     createClouds(): void {
@@ -150,21 +188,22 @@ export class ModelMap extends _Map<ModelMapConfig> {
     }
 
     //https://discourse.threejs.org/t/fresnel-shader-or-similar-effect/9997/17
-    createAtmosphere(): void {
+    createAtmosphere(planet: THREE.Object3D, radius: number): void {
         const atmosphereMaterial: THREE.ShaderMaterial = new THREE.ShaderMaterial({
             uniforms: {
-                glowColor: { value: new THREE.Vector3(0.3, 0.6, 1.0) },
+                glowColor: { value: new THREE.Color(0.3, 0.6, 1.0) },
                 power: { value: 2.0 },
-                bias: { value: 0.4 }
+                bias: { value: 0.5 }
             },
             vertexShader: `
-                varying vec3 vNormal;
-                varying vec3 vPosition;
+                varying vec3 vWorldNormal;
+                varying vec3 vWorldPosition;
 
                 void main() {
-                    vNormal = normalize(normalMatrix * normal);
-                    vPosition = position;
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                    vWorldNormal = normalize(modelMatrix * vec4(normal, 0.0)).xyz;
+                    vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
+
+                    gl_Position = projectionMatrix * viewMatrix * vec4(vWorldPosition, 1.0);
                 }
             `,
             fragmentShader: `
@@ -172,15 +211,21 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 uniform float power;
                 uniform float bias;
 
-                varying vec3 vNormal;
-                varying vec3 vPosition;
+                varying vec3 vWorldNormal;
+                varying vec3 vWorldPosition;
 
                 void main() {
-                    vec3 viewDirection = normalize(cameraPosition - vPosition);
-                    float intensity = pow(bias - dot(vNormal, viewDirection), power);
-                    vec3 atmosphereColor = glowColor * intensity;
+                    // view dir in world space
+                    vec3 viewDirection = normalize(cameraPosition - vWorldPosition);
+                    
+                    // dot product of normal and view direction, inverted and raised to power for freshnel effect
+                    float fresnel = dot(normalize(vWorldNormal), viewDirection);
+                    float intensity = pow(bias + (1.0 - fresnel), power);
 
-                    gl_FragColor = vec4(atmosphereColor, 1.0);
+                    // clamp intensity between 0 and 1 
+                    intensity = clamp(intensity, 0.0, 1.0);
+
+                    gl_FragColor = vec4(glowColor * intensity, intensity);
                 }
             `,
             blending: THREE.AdditiveBlending,
@@ -188,9 +233,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
             transparent: true,
         });
 
-        const atmosphereGeometry = new THREE.SphereGeometry(1.035, 64, 64);
-        this.atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
-        this.scene.add(this.atmosphere);
+        const atmosphereGeometry = new THREE.SphereGeometry(radius, 64, 64);
+        const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+        planet.add(atmosphere);
     }
 
     createMoon(): void {
@@ -219,6 +264,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
                     side: THREE.DoubleSide,
                 });
                 this.moonRing = new THREE.Mesh(ringGeometry, ringMaterial);
+                this.moonRing.position.y -= 0.0075
                 this.moonRing.rotation.x = Math.PI / 2; 
                 this.moonPivot.add(this.moonRing);
             },
@@ -281,7 +327,79 @@ export class ModelMap extends _Map<ModelMapConfig> {
         ]);
         texture.colorSpace = THREE.SRGBColorSpace;
         this.scene.background = texture;
-    
+    }
+
+    // const delta = 6;
+    // let startX;
+    // let startY;
+
+    // element.addEventListener('mousedown', function (event) {
+    // startX = event.pageX;
+    // startY = event.pageY;
+    // });
+
+    // element.addEventListener('mouseup', function (event) {
+    // const diffX = Math.abs(event.pageX - startX);
+    // const diffY = Math.abs(event.pageY - startY);
+
+    // if (diffX < delta && diffY < delta) {
+    //     // Click!
+    // }
+    // });
+
+    setupWaypoints(): void {
+        window.addEventListener('mousemove', (event: MouseEvent) => {
+            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            this.raycaster.setFromCamera(this.mouse, this.camera);
+            const intersects = this.raycaster.intersectObjects(this.waypoints.children);
+            if (intersects.length > 0) {
+                this.mapContainer.style.cursor = 'pointer';
+            } else {
+                this.mapContainer.style.cursor = 'default';
+            }
+        });
+
+        window.addEventListener('pointerdown', (event: PointerEvent) => {
+            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            this.raycaster.setFromCamera(this.mouse, this.camera);
+            const intersects = this.raycaster.intersectObjects(this.waypoints.children);
+            if (intersects.length > 0) {
+                const first = intersects[0];
+                const marker = first.object.userData as { waypoint: Waypoint, icon: IconIdentifier };
+                console.log(marker.waypoint.id);
+                eventBus.emit("waypoint:click", marker.waypoint);
+            }
+        });
+    }
+
+    addMarker(waypoint: Waypoint, icon: IconIdentifier) {
+        let [lat, lng] = waypoint.coords;
+        lat = 2*lat + 90;
+        lng = (155.5 - lng) % 360;
+        
+        const phi = (lat * Math.PI) / 180;
+        const theta = (lng * Math.PI) / 180 + Math.PI / 2;
+
+        const radius = (this.earth.geometry.boundingSphere?.radius || 1) + 0.03;
+        const x = - radius * Math.cos(phi) * Math.sin(theta);
+        const y = radius * Math.sin(phi);
+        const z = radius * Math.cos(phi) * Math.cos(theta);
+
+        const iconImage = this.loader.load(icon.iconPath);
+        const iconMaterial = new THREE.SpriteMaterial({map: iconImage});
+        const marker = new THREE.Sprite(iconMaterial);
+
+        const scale = 0.003
+        marker.scale.set(scale*icon.iconSize[0], scale*icon.iconSize[1], scale);
+        marker.position.set(x, y+(scale/2)*icon.iconSize[1], z);
+        marker.center.set(0.5, 0);
+        marker.userData = {
+            waypoint: waypoint,
+            icon: icon
+        };
+        this.waypoints.add(marker);
     }
 
     createControls(): void {
@@ -291,7 +409,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
         this.controls.enablePan = false;      
         this.controls.minDistance = 2.5;        
-        this.controls.maxDistance = 5.0;
+        this.controls.maxDistance = 7.0;
 
         this.controls.rotateSpeed = 0.6;
         this.controls.zoomSpeed = 0.8;
@@ -300,7 +418,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
     animate() {
 
-        if (!this.controls || !this.planet || !this.cometObservatoryPivot || !this.cometObservatory || !this.clouds || !this.moonPivot || !this.moon) {
+        if (!this.controls || !this.earth || !this.cometObservatoryPivot || !this.cometObservatory || !this.clouds || !this.moonPivot || !this.moon) {
             this.animationFrameId = requestAnimationFrame(() => this.animate());
             return;
         } 
@@ -308,7 +426,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.controls.update(); 
 
         //this.sunPivot.rotation.y += 0.01;
-        this.planet.rotation.y += 0.0002;
+        this.earth.rotation.y += 0.0002;
 
         this.moonPivot.rotation.y += 0.0005;
         this.moon.rotation.y += 0.001;
@@ -319,6 +437,12 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.clouds.rotation.y += 0.001;
 
         this.renderer.render(this.scene, this.camera);
+
+        const zoom = (this.controls.getDistance() - this.controls.minDistance) / this.controls.maxDistance;
+        const scale = 0.001 + (0.0035 - 0.001)*zoom
+        this.waypoints.children.forEach(wp => {
+            wp.scale.set(scale*25, scale*41, scale*1);
+        })
 
         this.animationFrameId = requestAnimationFrame(() => this.animate());
     }

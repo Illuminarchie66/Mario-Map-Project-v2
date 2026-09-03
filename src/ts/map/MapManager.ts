@@ -6,7 +6,7 @@ import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
 import { MapView } from './maps/Map';
-import { CreateMap } from './maps/createMap';
+import { CreateMap } from './maps/CreateMap';
 
 class MapManager {
     map: _Map | null = null;
