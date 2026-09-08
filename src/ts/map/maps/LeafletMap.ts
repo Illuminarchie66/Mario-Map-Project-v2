@@ -43,6 +43,13 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
     }
 
     handleBounds(bounds: L.LatLngBounds): void {
+        const imgWidth = 3780
+        const imgHeight = 1281
+        const southWest = this.map.unproject([0, imgHeight], this.map.getMaxZoom());
+        const northEast = this.map.unproject([imgWidth, 0], this.map.getMaxZoom());
+        const newbounds = new L.LatLngBounds(southWest, northEast);
+        console.log(newbounds);
+
         this.map.setMaxBounds(bounds);
         this.map.options.maxBoundsViscosity = 1.0;
 

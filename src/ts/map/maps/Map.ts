@@ -12,6 +12,10 @@ export abstract class _Map<TConfig extends MapConfig = MapConfig> {
         this.mapContainer = document.getElementById(this.containerId)! as HTMLElement;
     }
 
+    async init(): Promise<void> {
+        return Promise.resolve();
+    }
+
     abstract getZoom(): number 
     abstract getCenter(): { lat: number, lng: number }
     abstract destroy(): void

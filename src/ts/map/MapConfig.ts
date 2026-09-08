@@ -148,7 +148,17 @@ abstract class LeafletMapConfig extends MapConfig {
 
     get leafletOptions(): L.MapOptions {
         if (!this.options) return {};
-        const crs = this.options.crs === "simple" ? L.CRS.Simple : L.CRS.EPSG3857;
+
+        let crs: L.CRS;
+        switch (this.options.crs) {
+            case "simple":
+                crs = L.CRS.Simple;
+            case "earth":
+                crs = L.CRS.Earth;
+            default:
+                crs = L.CRS.Simple;
+        }
+
         const center = this.options.center ? L.latLng(this.options.center[0], this.options.center[1]) : undefined;
 
         return {

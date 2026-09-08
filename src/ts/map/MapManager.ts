@@ -2,6 +2,7 @@ import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
 import { _Map } from './maps/Map';
 import { LeafletMap } from './maps/LeafletMap';
+import { ModelMap } from './maps/ModelMap';
 import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './Waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
@@ -40,6 +41,7 @@ class MapManager {
         }
 
         this.map = CreateMap.createMap(config, view);
+        await this.map.init();
 
         await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
 

@@ -6,7 +6,7 @@
 	mapPreview: "/data/maps/globe/preview.png",
 
 	modelPath: "",
-	waypointPath: "/data/maps/globe/waypoints.json5",
+	waypointPath: "/data/maps/globe-3d/waypoints.json5",
 
 	features: {},
 }
