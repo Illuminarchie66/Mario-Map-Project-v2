@@ -11,10 +11,10 @@ import { eventBus } from '../../core/EventBus';
 export class WaypointSprite extends THREE.Sprite {
     waypoint: Waypoint;
     icon: IconIdentifier;
-    sphereProjection: THREE.Vector3;
+    sphereProjection: THREE.Object3D;
     active: boolean;
 
-    constructor(waypoint: Waypoint, icon: IconIdentifier, sphereProjection: THREE.Vector3, material?: THREE.SpriteMaterial, active?: boolean) {
+    constructor(waypoint: Waypoint, icon: IconIdentifier, sphereProjection: THREE.Object3D, material?: THREE.SpriteMaterial, active?: boolean) {
         super(material);
         this.waypoint = waypoint;
         this.icon = icon;
@@ -43,7 +43,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
     scene: THREE.Scene;
     camera: THREE.PerspectiveCamera;
     renderer: THREE.WebGLRenderer;
-    private animationFrameId: number | null = null;
+    animationFrameId: number | null = null;
 
     ambientLight!: THREE.AmbientLight;
     sunPivot!: THREE.Object3D;
@@ -66,18 +66,23 @@ export class ModelMap extends _Map<ModelMapConfig> {
     controls!: OrbitControls;
 
     waypoints!: THREE.Group;
+    showWaypoints: boolean = true;
     raycaster!: THREE.Raycaster;
     mouse!: THREE.Vector2;
 
-    test!: THREE.Object3D;
-    temp!: THREE.Object3D; 
-    plane!: THREE.Plane;
-    planeHelper!: THREE.PlaneHelper;
-    debug: boolean = false;
+    mouseDelta: number = 6;
+    mouseStart: THREE.Vector2 = new THREE.Vector2();
+    mouseEnd: THREE.Vector2 = new THREE.Vector2();
+
     displacement!: THREE.Texture<unknown, THREE.TextureEventMap>
     displacementScale: number = 0.1;
     displacementCanvas!: HTMLCanvasElement;
     displacementCtx!: CanvasRenderingContext2D;
+
+    debug: boolean = false;
+
+    maxWaypointScale: number = 0.003;
+    minWaypointScale: number = 0.001;
 
     constructor(config: ModelMapConfig) {
         super(config);
@@ -100,6 +105,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.mapContainer.appendChild(this.renderer.domElement);
 
         this.waypoints = new THREE.Group();
+        this.scene.add(this.waypoints);
         this.raycaster = new THREE.Raycaster();
         this.mouse = new THREE.Vector2();
 
@@ -115,9 +121,49 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 this.toggleRings(!this.earthRing.visible);
             }
 
+            if (event.key === 'w') {
+                this.showWaypoints = !this.showWaypoints;
+                this.waypoints.visible = this.showWaypoints;
+            }
+
             if (event.key === 'd') {
                 this.debug = !this.debug;
             }
+        });
+
+        window.addEventListener('mousedown', (event) => {
+            this.mouseStart.set(event.pageX, event.pageY);
+        });
+
+        window.addEventListener('mouseup', (event) => {
+            this.mouseEnd.set(event.pageX, event.pageY);
+            const diffX = Math.abs(this.mouseEnd.x - this.mouseStart.x);
+            const diffY = Math.abs(this.mouseEnd.y - this.mouseStart.y);
+
+            if (diffX < this.mouseDelta && diffY < this.mouseDelta) {
+                // click 
+                if (!this.showWaypoints) {
+                    eventBus.emit("map:click", {});
+                    return;
+                }
+
+                this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+                this.raycaster.setFromCamera(this.mouse, this.camera);
+                const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
+                const intersects = this.raycaster.intersectObjects(activeWaypoints);
+                if (intersects.length > 0) {
+                    const marker = intersects[0].object as WaypointSprite;
+                    console.log(marker.waypoint.id);
+                    eventBus.emit("waypoint:click", marker.waypoint);
+                } else {
+                    eventBus.emit("map:click", {});
+                }
+            } 
+        });
+
+        window.addEventListener('wheel', (event: WheelEvent) => {
+            eventBus.emit("map:zoom", {zoom: this.getZoom()}) 
         });
         
     }
@@ -171,17 +217,13 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
         this.scene.add(this.ambientLight);
 
-        // this.sunPivot = new THREE.Object3D();
-        // this.scene.add(this.sunPivot);
-
-        // this.sun = new THREE.DirectionalLight(0xfff7ba, 2);
-        // this.sun.position.set(-5, 3, 5);
-        // this.sunPivot.add(this.sun);
+        this.sunPivot = new THREE.Object3D();
+        this.scene.add(this.sunPivot);
 
         this.sun = new THREE.DirectionalLight(0xffffff, 2);
         // sun in skybox right image
-        this.sun.position.set(-10, 0, 0);
-        this.scene.add(this.sun);
+        this.sun.position.set(-20, 0, 0);
+        this.sunPivot.add(this.sun);
     }
 
     async createEarth(): Promise<void> {
@@ -227,7 +269,6 @@ export class ModelMap extends _Map<ModelMapConfig> {
         );  
 
         this.earth = new THREE.Mesh(geometry, material);
-        this.earth.add(this.waypoints);
         
         this.createAtmosphere(this.earth, 1.025);
         this.createEarthRing();
@@ -339,6 +380,13 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.moon.position.set(2.336, 0, 0);
         this.moonPivot.add(this.moon);
 
+        // this.moonDebug = new THREE.Mesh(
+        //     new THREE.SphereGeometry(0.68/2, 32, 32),
+        //     new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
+        // );
+        // this.moonDebug.position.set(2.336, 0, 0);
+        // this.moonPivot.add(this.moonDebug);
+
         const ringGeometry = new THREE.TorusGeometry(
             2.336,      // torus radius
             0.005,      // tube radius
@@ -404,26 +452,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.scene.background = texture;
     }
 
-    // const delta = 6;
-    // let startX;
-    // let startY;
-
-    // element.addEventListener('mousedown', function (event) {
-    // startX = event.pageX;
-    // startY = event.pageY;
-    // });
-
-    // element.addEventListener('mouseup', function (event) {
-    // const diffX = Math.abs(event.pageX - startX);
-    // const diffY = Math.abs(event.pageY - startY);
-
-    // if (diffX < delta && diffY < delta) {
-    //     // Click!
-    // }
-    // });
-
     setupWaypoints(): void {
         window.addEventListener('mousemove', (event: MouseEvent) => {
+            if (!this.showWaypoints) return;
             this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
             this.raycaster.setFromCamera(this.mouse, this.camera);
@@ -437,17 +468,6 @@ export class ModelMap extends _Map<ModelMapConfig> {
         });
 
         window.addEventListener('pointerdown', (event: PointerEvent) => {
-            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-            this.raycaster.setFromCamera(this.mouse, this.camera);
-            const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
-            const intersects = this.raycaster.intersectObjects(activeWaypoints);
-            if (intersects.length > 0) {
-                const marker = intersects[0].object as WaypointSprite;
-                console.log(marker.waypoint.id);
-                eventBus.emit("waypoint:click", marker.waypoint);
-            }
-
             const intersectsEarth = this.raycaster.intersectObject(this.earth);
             if (intersectsEarth.length > 0) {
                 const point = intersectsEarth[0].point;
@@ -470,7 +490,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.displacementCtx.drawImage(img, 0, 0);
     }
 
-    getDisplacementValue(u: number, v: number) {
+    getDisplacementValue(direction: THREE.Vector3) {
+        const u = 0.5 - (Math.atan2(direction.z, direction.x) / (2 * Math.PI));
+        const v = 0.5 - (Math.asin(direction.y) / Math.PI);
 
         const ix = Math.min(Math.floor(u * this.displacementCanvas.width), this.displacementCanvas.width - 1);
         const iy = Math.min(Math.floor(v * this.displacementCanvas.height), this.displacementCanvas.height - 1);
@@ -480,9 +502,13 @@ export class ModelMap extends _Map<ModelMapConfig> {
         return pixelData[0] / 255;
     }
 
-    addMarker(waypoint: Waypoint, icon: IconIdentifier) {
-        const scale = 0.0005;
+    setMarkerScale(marker: WaypointSprite) {
+        const zoom = this.getZoom();
+        const scale = this.minWaypointScale + (this.maxWaypointScale - this.minWaypointScale)*zoom
+        marker.scale.set(scale*marker.icon.iconSize[0], scale*marker.icon.iconSize[1], scale);
+    }
 
+    addMarker(waypoint: Waypoint, icon: IconIdentifier) {
         const [lat, lng] = waypoint.coords;
         
         const phi = (lat * Math.PI) / 180;
@@ -493,82 +519,59 @@ export class ModelMap extends _Map<ModelMapConfig> {
         const z = Math.cos(phi) * Math.cos(theta);
 
         const direction = new THREE.Vector3(x, y, z).normalize();
-        const u = 0.5 - (Math.atan2(direction.z, direction.x) / (2 * Math.PI));
-        const v = 0.5 - (Math.asin(direction.y) / Math.PI);
-
-        const displacement = this.getDisplacementValue(u, v);
+        
+        const displacement = this.getDisplacementValue(direction);
         const height = 1 + this.displacementScale * displacement;
-        console.log(`Waypoint: ${waypoint.id}, Height: ${displacement}`);
-        const sphereProjection = new THREE.Vector3(x * height, y * height, z * height);
+        const sphereProjection = new THREE.Object3D();
+        sphereProjection.position.set(x * height, y * height, z * height);
+        this.earth.add(sphereProjection);
 
         const iconImage = this.textureLoader.load(icon.iconPath);
         const iconMaterial = new THREE.SpriteMaterial({map: iconImage});
         const marker = new WaypointSprite(waypoint, icon, sphereProjection, iconMaterial, false);
-
-        marker.scale.set(scale*icon.iconSize[0], scale*icon.iconSize[1], scale);
+        
+        this.setMarkerScale(marker);
         marker.center.set(0.5, 0);
 
         this.waypoints.add(marker);
     }
 
+    intersectsSphere(lineSegment: THREE.Line3, origin: THREE.Vector3, radius: number): boolean {
+        const closestPoint = new THREE.Vector3();
+        lineSegment.closestPointToPoint(origin, true, closestPoint);
+        const distanceSq = closestPoint.distanceToSquared(origin);
+        const radiusSq = radius * radius;
+        return distanceSq <= radiusSq;
+    }
+
     renderMarker(marker: WaypointSprite) {
-        const P = new THREE.Vector3().copy(marker.sphereProjection);
+        const spherePos = marker.sphereProjection.getWorldPosition(new THREE.Vector3());
+        const P = new THREE.Vector3().copy(spherePos);
         const ray = new THREE.Vector3().copy(P).sub(this.camera.position).normalize();
         const P_prime = new THREE.Vector3().copy(P);
-        P_prime.addScaledVector(ray, -1.3)
+        P_prime.addScaledVector(ray, -0.1); 
 
         marker.position.copy(P_prime);
 
-        const angle = this.camera.position.angleTo(marker.sphereProjection.clone().normalize());
-        if (angle * (180 / Math.PI) > 80) {
+        const angle = this.camera.position.angleTo(spherePos.clone().normalize());
+        if (angle * (180 / Math.PI) > 70) {
             marker.deactivate();
             return;
         }
 
         const lineSegment = new THREE.Line3(P, P_prime);
-        const closestPoint = new THREE.Vector3();
-        lineSegment.closestPointToPoint(new THREE.Vector3(0, 0, 0), true, closestPoint);
-        const distanceSq = closestPoint.lengthSq();
-        const radiusSq = 0.95**2;
-
-        if (distanceSq <= radiusSq) {
+        if (this.intersectsSphere(lineSegment, new THREE.Vector3(0, 0, 0), 0.99)) {
+            marker.deactivate();
+            return;
+        }
+        
+        const moonPos = this.moon.getWorldPosition(new THREE.Vector3());
+        if (this.intersectsSphere(lineSegment, moonPos, 0.68/2)) {
             marker.deactivate();
             return;
         }
 
         marker.activate();
-
-        //this.temp.position.copy(P_prime);
-    }
-
-    createTestBall(): void {
-        this.plane = new THREE.Plane();
-        this.planeHelper = new THREE.PlaneHelper(this.plane, 0.2, 0xffff00);
-        this.scene.add(this.planeHelper);
-
-        const lat = 0;
-        const lng = 0;
-        const phi = (lat * Math.PI) / 180;
-        const theta = (lng * Math.PI) / 180 + Math.PI / 2;
-
-        const radius = (this.earth.geometry.boundingSphere?.radius || 1);
-        const x = - radius * Math.cos(phi) * Math.sin(theta);
-        const y = radius * Math.sin(phi);
-        const z = radius * Math.cos(phi) * Math.cos(theta);
-
-        const geometry = new THREE.SphereGeometry(0.02, 32, 32);
-        const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        this.test = new THREE.Mesh(geometry, material);
-        this.test.position.set(x, y, z);
-        this.test.userData = {
-            originalPosition: new THREE.Vector3(x, y, z),
-        }
-        this.scene.add(this.test);
-
-        const geometry2 = new THREE.SphereGeometry(0.002, 32, 32);
-        const material2 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        this.temp = new THREE.Mesh(geometry2, material2);
-        this.scene.add(this.temp);
     }
 
     toggleRings(visible: boolean): void {
@@ -583,20 +586,25 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.controls.dampingFactor = 0.05;
 
         this.controls.enablePan = false;      
-        this.controls.minDistance = 1.1;        
+        this.controls.minDistance = 1.5;        
         this.controls.maxDistance = 7.0;
 
         this.controls.rotateSpeed = 0.6;
         this.controls.zoomSpeed = 0.8;
         this.controls.enableDamping = true;
+
+        eventBus.emit("map:zoom", {zoom: this.getZoom()}) 
     }
 
     animate() {
 
         this.controls.update(); 
 
-        //this.sunPivot.rotation.y += 0.01;
-        //this.earth.rotation.y += 0.0002;
+        
+        this.earth.rotation.y += 0.0002;
+
+        this.sunPivot.rotation.y -= 0.00005;
+        this.scene.backgroundRotation.y -= 0.00005;
 
         this.moonPivot.rotation.y += 0.0005;
         this.moon.rotation.y += 0.001;
@@ -612,11 +620,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
         this.renderer.render(this.scene, this.camera);
 
-        // const zoom = this.getZoom();
-        // const scale = 0.001 + (0.0035 - 0.001)*zoom
-        // this.waypoints.children.forEach(wp => {
-        //     wp.scale.set(scale*25, scale*41, scale*1);
-        // })
+       this.waypoints.children.forEach(wp => {
+            this.setMarkerScale(wp as WaypointSprite);
+        })
 
         this.animationFrameId = requestAnimationFrame(() => this.animate());
     }
