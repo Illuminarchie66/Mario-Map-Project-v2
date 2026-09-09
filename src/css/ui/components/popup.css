@@ -1,19 +1,19 @@
 .map-popup__carousel-btn--prev { left: 8px; }
 .map-popup__carousel-btn--next { right: 8px; }
 
-.map-popup-custom .leaflet-popup-content-wrapper {
+.leaflet-popup-content-wrapper {
     background: transparent;
     border: none;
     box-shadow: none;
     padding: 0;
 }
 
-.map-popup-custom .leaflet-popup-content {
+.leaflet-popup-content {
     margin: 0;
     padding: 0;
 }
 
-.map-popup-custom .leaflet-popup-tip-container {
+.leaflet-popup-tip-container {
     display: none;
 }
 

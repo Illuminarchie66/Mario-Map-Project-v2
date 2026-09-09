@@ -2,11 +2,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/Addons.js';
 import {ModelMapConfig } from "../MapConfig";
 import { _Map } from "./Map";
 import { Waypoint } from '../Waypoints/Waypoint';
 import { IconIdentifier } from '../Waypoints/IconRegistry';
 import { eventBus } from '../../core/EventBus';
+import { PopupComponent } from '../../ui/components/Popup';
 
 export class WaypointSprite extends THREE.Sprite {
     waypoint: Waypoint;
@@ -44,6 +46,10 @@ export class ModelMap extends _Map<ModelMapConfig> {
     camera: THREE.PerspectiveCamera;
     renderer: THREE.WebGLRenderer;
     animationFrameId: number | null = null;
+
+    htmlRenderer: CSS2DRenderer;
+    popupContainer: CSS2DObject;
+    activePopup: WaypointSprite | null = null;
 
     ambientLight!: THREE.AmbientLight;
     sunPivot!: THREE.Object3D;
@@ -104,6 +110,16 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.renderer.outputColorSpace = THREE.SRGBColorSpace;
         this.mapContainer.appendChild(this.renderer.domElement);
 
+        this.htmlRenderer = new CSS2DRenderer();
+        this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
+        this.htmlRenderer.domElement.style.position = 'absolute';
+        this.htmlRenderer.domElement.style.top = '0px';
+        this.htmlRenderer.domElement.style.pointerEvents = 'none';
+        this.mapContainer.appendChild(this.htmlRenderer.domElement);
+
+        this.popupContainer = new CSS2DObject(document.createElement('div'));
+        this.scene.add(this.popupContainer);
+
         this.waypoints = new THREE.Group();
         this.scene.add(this.waypoints);
         this.raycaster = new THREE.Raycaster();
@@ -131,17 +147,19 @@ export class ModelMap extends _Map<ModelMapConfig> {
             }
         });
 
-        window.addEventListener('mousedown', (event) => {
+        this.mapContainer.addEventListener('mousedown', (event) => {
             this.mouseStart.set(event.pageX, event.pageY);
         });
 
-        window.addEventListener('mouseup', (event) => {
+        this.mapContainer.addEventListener('mouseup', (event) => {
             this.mouseEnd.set(event.pageX, event.pageY);
             const diffX = Math.abs(this.mouseEnd.x - this.mouseStart.x);
             const diffY = Math.abs(this.mouseEnd.y - this.mouseStart.y);
 
             if (diffX < this.mouseDelta && diffY < this.mouseDelta) {
                 // click 
+                this.removePopup();
+
                 if (!this.showWaypoints) {
                     eventBus.emit("map:click", {});
                     return;
@@ -154,8 +172,26 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 const intersects = this.raycaster.intersectObjects(activeWaypoints);
                 if (intersects.length > 0) {
                     const marker = intersects[0].object as WaypointSprite;
-                    console.log(marker.waypoint.id);
                     eventBus.emit("waypoint:click", marker.waypoint);
+
+                    if (marker.waypoint.displayType === "popup") {
+                        const popup = new PopupComponent(marker.waypoint.content, marker.waypoint.path);
+                        
+                        const leafletPopupWrapper = document.createElement('div');
+                        leafletPopupWrapper.classList = 'leaflet-popup-content-wrapper'
+                        leafletPopupWrapper.style = 'transform: translate(-50%, -100%)'
+                        const leafletPopup = document.createElement('div');
+                        leafletPopup.classList = 'leaflet-popup-content';
+                        leafletPopup.appendChild(popup.render());
+                        leafletPopupWrapper.appendChild(leafletPopup);
+                        
+                        this.popupContainer = new CSS2DObject(leafletPopupWrapper)
+                        this.popupContainer.position.set(0, 0, 0);
+                        this.popupContainer.center.set(0.5, 1.1);
+                        this.scene.add(this.popupContainer);
+                        this.activePopup = marker;
+                    }
+
                 } else {
                     eventBus.emit("map:click", {});
                 }
@@ -166,6 +202,11 @@ export class ModelMap extends _Map<ModelMapConfig> {
             eventBus.emit("map:zoom", {zoom: this.getZoom()}) 
         });
         
+    }
+
+    removePopup() {
+        if (this.popupContainer) this.scene.remove(this.popupContainer)
+        this.activePopup = null;
     }
 
     async init(): Promise<void> {
@@ -453,7 +494,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
     }
 
     setupWaypoints(): void {
-        window.addEventListener('mousemove', (event: MouseEvent) => {
+        this.mapContainer.addEventListener('mousemove', (event: MouseEvent) => {
             if (!this.showWaypoints) return;
             this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -467,7 +508,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
             }
         });
 
-        window.addEventListener('pointerdown', (event: PointerEvent) => {
+        this.mapContainer.addEventListener('pointerdown', (event: PointerEvent) => {
             const intersectsEarth = this.raycaster.intersectObject(this.earth);
             if (intersectsEarth.length > 0) {
                 const point = intersectsEarth[0].point;
@@ -618,23 +659,36 @@ export class ModelMap extends _Map<ModelMapConfig> {
             this.renderMarker(wp as WaypointSprite);
         });
 
-        this.renderer.render(this.scene, this.camera);
+        if (this.activePopup) {
+            if (this.activePopup.active) {
+                this.popupContainer.position.copy(this.activePopup.position);
+            } else {
+                this.removePopup();
+            }
+            
+        }
 
-       this.waypoints.children.forEach(wp => {
+        this.renderer.render(this.scene, this.camera);
+        this.htmlRenderer.render(this.scene, this.camera);
+
+        this.waypoints.children.forEach(wp => {
             this.setMarkerScale(wp as WaypointSprite);
         })
 
+
+
         this.animationFrameId = requestAnimationFrame(() => this.animate());
     }
- 
+
     getZoom(): number {
+        if (!this.controls) return 0;
         return (this.controls.getDistance() - this.controls.minDistance) / this.controls.maxDistance;;
     }
- 
+
     getCenter(): { lat: number, lng: number } {
         return { lat: 0, lng: 0 };
     }
- 
+
     destroy(): void {
         if (this.animationFrameId !== null) {
             cancelAnimationFrame(this.animationFrameId);
@@ -676,3 +730,38 @@ export class ModelMap extends _Map<ModelMapConfig> {
     }
 }
 
+// <div class="leaflet-popup map-popup-custom leaflet-zoom-animated" style="opacity: 1; transform: translate3d(772px, 377px, 0px); bottom: 34px; left: -202.5px;">
+//     <div class="leaflet-popup-content-wrapper">
+//         <div class="leaflet-popup-content" style="width: 407px;">
+//                 <div class="map-popup__wrapper" style="width: 400px;">
+//                     <div class="map-popup__inner">
+//                         <div class="map-popup__image-block">
+//                             <div class="image-zoom">
+//                                 <img class="map-popup__image" src="data/maps/globe/assets/waypoints/baseball-kingdom//baseball.jpg" alt="Baseball Kingdom">
+//                                 <button class="image-zoom__btn"><img src="assets/icons/mag_glass.svg" alt="Zoom" class="image-zoom__icon">
+//                                 </button>
+//                             </div>
+//                             <div class="map-popup__image-fade">
+//                             </div>
+//                         </div>
+//                         <div class="map-popup__body">
+//                             <h3 class="map-popup__title">Baseball Kingdom</h3>
+//                             <hr class="map-popup__rule">
+//                             <p class="map-popup__description">An island resort built by Princess Peach for her and her friends to play baseball together.</p>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     <div class="leaflet-popup-tip-container">
+//         <div class="leaflet-popup-tip"></div>
+//     </div>
+// </div>
+
+// const p = document.createElement('p');
+// p.className = 'text-label';
+// p.textContent = 'Hello 3D Space';
+// p.style = 'color: red;'
+// const container = new CSS2DObject(p);
+// container.position.set(0, 2, 0);
+// this.scene.add(container);
