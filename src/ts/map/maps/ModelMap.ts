@@ -129,7 +129,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
             this.camera.aspect = window.innerWidth / window.innerHeight;
             this.camera.updateProjectionMatrix();
             this.renderer.setSize(window.innerWidth, window.innerHeight);
+            this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
             this.renderer.render(this.scene, this.camera);
+            this.htmlRenderer.render(this.scene, this.camera);
         });
 
         window.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -177,17 +179,20 @@ export class ModelMap extends _Map<ModelMapConfig> {
                     if (marker.waypoint.displayType === "popup") {
                         const popup = new PopupComponent(marker.waypoint.content, marker.waypoint.path);
                         
+                        const popupContainer = document.createElement('div');
+                        popupContainer.classList = 'popup-container';
                         const leafletPopupWrapper = document.createElement('div');
                         leafletPopupWrapper.classList = 'leaflet-popup-content-wrapper'
-                        leafletPopupWrapper.style = 'transform: translate(-50%, -100%)'
+                        leafletPopupWrapper.style.pointerEvents = 'auto';
                         const leafletPopup = document.createElement('div');
                         leafletPopup.classList = 'leaflet-popup-content';
                         leafletPopup.appendChild(popup.render());
                         leafletPopupWrapper.appendChild(leafletPopup);
+                        popupContainer.appendChild(leafletPopupWrapper);
                         
-                        this.popupContainer = new CSS2DObject(leafletPopupWrapper)
+                        this.popupContainer = new CSS2DObject(popupContainer);
                         this.popupContainer.position.set(0, 0, 0);
-                        this.popupContainer.center.set(0.5, 1.1);
+                        this.popupContainer.center.set(0.5, 1);
                         this.scene.add(this.popupContainer);
                         this.activePopup = marker;
                     }
@@ -262,7 +267,6 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.scene.add(this.sunPivot);
 
         this.sun = new THREE.DirectionalLight(0xffffff, 2);
-        // sun in skybox right image
         this.sun.position.set(-20, 0, 0);
         this.sunPivot.add(this.sun);
     }
@@ -642,7 +646,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.controls.update(); 
 
         
-        this.earth.rotation.y += 0.0002;
+        this.earth.rotation.y += 0.000;
 
         this.sunPivot.rotation.y -= 0.00005;
         this.scene.backgroundRotation.y -= 0.00005;
@@ -662,27 +666,32 @@ export class ModelMap extends _Map<ModelMapConfig> {
         if (this.activePopup) {
             if (this.activePopup.active) {
                 this.popupContainer.position.copy(this.activePopup.position);
+                const t = this.popupContainer.element.getElementsByClassName('leaflet-popup-content')[0] as HTMLElement;
+                const offset = -44.76 + -3.05/((this.getZoom() + 0.15)**2)
+                t.style.translate = `${0}px ${offset}px`;
+
+                const p = this.activePopup.position.clone().project(this.camera);
+                p.x = (p.x + 1) / 2 * window.innerWidth;
+                p.y = (-p.y + 1) / 2 * window.innerHeight;
+
             } else {
                 this.removePopup();
             }
-            
         }
-
-        this.renderer.render(this.scene, this.camera);
-        this.htmlRenderer.render(this.scene, this.camera);
 
         this.waypoints.children.forEach(wp => {
             this.setMarkerScale(wp as WaypointSprite);
         })
 
-
+        this.renderer.render(this.scene, this.camera);
+        this.htmlRenderer.render(this.scene, this.camera);
 
         this.animationFrameId = requestAnimationFrame(() => this.animate());
     }
 
     getZoom(): number {
         if (!this.controls) return 0;
-        return (this.controls.getDistance() - this.controls.minDistance) / this.controls.maxDistance;;
+        return (this.controls.getDistance() - this.controls.minDistance) / (this.controls.maxDistance - this.controls.minDistance);
     }
 
     getCenter(): { lat: number, lng: number } {
@@ -729,39 +738,3 @@ export class ModelMap extends _Map<ModelMapConfig> {
         (this as any).renderer = null;
     }
 }
-
-// <div class="leaflet-popup map-popup-custom leaflet-zoom-animated" style="opacity: 1; transform: translate3d(772px, 377px, 0px); bottom: 34px; left: -202.5px;">
-//     <div class="leaflet-popup-content-wrapper">
-//         <div class="leaflet-popup-content" style="width: 407px;">
-//                 <div class="map-popup__wrapper" style="width: 400px;">
-//                     <div class="map-popup__inner">
-//                         <div class="map-popup__image-block">
-//                             <div class="image-zoom">
-//                                 <img class="map-popup__image" src="data/maps/globe/assets/waypoints/baseball-kingdom//baseball.jpg" alt="Baseball Kingdom">
-//                                 <button class="image-zoom__btn"><img src="assets/icons/mag_glass.svg" alt="Zoom" class="image-zoom__icon">
-//                                 </button>
-//                             </div>
-//                             <div class="map-popup__image-fade">
-//                             </div>
-//                         </div>
-//                         <div class="map-popup__body">
-//                             <h3 class="map-popup__title">Baseball Kingdom</h3>
-//                             <hr class="map-popup__rule">
-//                             <p class="map-popup__description">An island resort built by Princess Peach for her and her friends to play baseball together.</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     <div class="leaflet-popup-tip-container">
-//         <div class="leaflet-popup-tip"></div>
-//     </div>
-// </div>
-
-// const p = document.createElement('p');
-// p.className = 'text-label';
-// p.textContent = 'Hello 3D Space';
-// p.style = 'color: red;'
-// const container = new CSS2DObject(p);
-// container.position.set(0, 2, 0);
-// this.scene.add(container);
