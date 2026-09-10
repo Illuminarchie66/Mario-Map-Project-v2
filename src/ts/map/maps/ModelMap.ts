@@ -62,10 +62,12 @@ export class ModelMap extends _Map<ModelMapConfig> {
     moonPivot!: THREE.Object3D;
     moon!: THREE.Group;
     moonRing!: THREE.Mesh;
+    moonCollision!: THREE.Object3D;
 
     cometObservatoryPivot!: THREE.Object3D;
     cometObservatory!: THREE.Group;
     cometObservatoryRing!: THREE.Mesh;
+    cometObservatoryCollision!: THREE.Object3D;
 
     skybox!: THREE.Group;
     
@@ -73,8 +75,11 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
     waypoints!: THREE.Group;
     showWaypoints: boolean = true;
+    earthWaypointActive: boolean = false;
     raycaster!: THREE.Raycaster;
     mouse!: THREE.Vector2;
+
+    grid!: THREE.Group;
 
     mouseDelta: number = 6;
     mouseStart: THREE.Vector2 = new THREE.Vector2();
@@ -139,6 +144,10 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 this.toggleRings(!this.earthRing.visible);
             }
 
+            if (event.key === 'g') {
+                this.grid.visible = !this.grid.visible; 
+            }
+
             if (event.key === 'w') {
                 this.showWaypoints = !this.showWaypoints;
                 this.waypoints.visible = this.showWaypoints;
@@ -160,6 +169,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
             if (diffX < this.mouseDelta && diffY < this.mouseDelta) {
                 // click 
+                this.earthWaypointActive = false;
                 this.removePopup();
 
                 if (!this.showWaypoints) {
@@ -171,9 +181,10 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
                 this.raycaster.setFromCamera(this.mouse, this.camera);
                 const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
-                const intersects = this.raycaster.intersectObjects(activeWaypoints);
-                if (intersects.length > 0) {
-                    const marker = intersects[0].object as WaypointSprite;
+                const earthIntersections = this.raycaster.intersectObjects(activeWaypoints);
+                if (earthIntersections.length > 0) {
+                    this.earthWaypointActive = true;
+                    const marker = earthIntersections[0].object as WaypointSprite;
                     eventBus.emit("waypoint:click", marker.waypoint);
 
                     if (marker.waypoint.displayType === "popup") {
@@ -196,10 +207,25 @@ export class ModelMap extends _Map<ModelMapConfig> {
                         this.scene.add(this.popupContainer);
                         this.activePopup = marker;
                     }
+                    
+                    return;
+                } 
 
-                } else {
-                    eventBus.emit("map:click", {});
+                const moonIntersection = this.raycaster.intersectObject(this.moonCollision)
+                if (moonIntersection.length > 0) {
+                    // moon waypoint click
+                    console.log("clicked the moon");
+                    return;
                 }
+
+                const cometObservatoryIntersection = this.raycaster.intersectObject(this.cometObservatoryCollision)
+                if (cometObservatoryIntersection.length > 0) {
+                    // co waypoint click
+                    console.log("clicked the comet observatory");
+                    return;
+                }
+                
+                eventBus.emit("map:click", {});
             } 
         });
 
@@ -207,6 +233,9 @@ export class ModelMap extends _Map<ModelMapConfig> {
             eventBus.emit("map:zoom", {zoom: this.getZoom()}) 
         });
         
+        eventBus.on("waypoint:close", () => {
+            this.earthWaypointActive = false;
+        });
     }
 
     removePopup() {
@@ -317,6 +346,7 @@ export class ModelMap extends _Map<ModelMapConfig> {
         
         this.createAtmosphere(this.earth, 1.025);
         this.createEarthRing();
+        this.createSphereGrid();
 
         this.scene.add(this.earth);
     }
@@ -392,6 +422,43 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.scene.add(this.earthRing);
     }
 
+    createGridRing(radius: number): THREE.LineLoop {
+        const curve = new THREE.EllipseCurve(
+            0, 0,
+            radius, radius,
+            0, 2 * Math.PI,
+            false,
+            0
+        );
+        const points = curve.getPoints( 50 );
+        const geometry = new THREE.BufferGeometry().setFromPoints( points );
+        const material = new THREE.LineBasicMaterial( { color: 0xb18f01 } );
+        const ellipse = new THREE.LineLoop(geometry, material);
+
+        return ellipse;
+    }
+
+    createSphereGrid(): void {
+        this.grid = new THREE.Group();
+
+        const radius = 1.05;
+        for (let phi=0; phi<360; phi+=15) {
+            const ellipse = this.createGridRing(radius);
+            ellipse.rotation.y = phi * (Math.PI / 180);
+            this.grid.add(ellipse)
+        }
+
+        for (let theta=-90; theta<90; theta+=15) {
+            const r = radius * Math.cos(theta * (Math.PI / 180))
+            const ellipse = this.createGridRing(r);
+            ellipse.position.y = -Math.sin(theta * (Math.PI/180)) 
+            ellipse.rotation.x = Math.PI/2;
+            this.grid.add(ellipse);
+        }
+
+        this.earth.add(this.grid);
+    }
+
     async createClouds(): Promise<void> {
         const albedo = await this.loadTexture('data/maps/globe-3d/earth/cloud_alb.png');
         const normal = await this.loadTexture('data/maps/globe-3d/earth/cloud_nrm.png');
@@ -425,12 +492,17 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.moon.position.set(2.336, 0, 0);
         this.moonPivot.add(this.moon);
 
-        // this.moonDebug = new THREE.Mesh(
-        //     new THREE.SphereGeometry(0.68/2, 32, 32),
-        //     new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
-        // );
-        // this.moonDebug.position.set(2.336, 0, 0);
-        // this.moonPivot.add(this.moonDebug);
+        this.moonCollision = new THREE.Mesh(
+            new THREE.SphereGeometry(0.68/2 + 0.15, 32, 32),
+            new THREE.MeshBasicMaterial({ 
+                color: 0xffffff, 
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+                // wireframe: true
+            })
+        );
+        this.moon.add(this.moonCollision);
 
         const ringGeometry = new THREE.TorusGeometry(
             2.336,      // torus radius
@@ -462,6 +534,19 @@ export class ModelMap extends _Map<ModelMapConfig> {
         this.cometObservatory.position.set(-1.2, 0, 0);
         this.cometObservatory.rotation.set(Math.PI/8, 0, 0);
         this.cometObservatoryPivot.add(this.cometObservatory);
+
+        this.cometObservatoryCollision = new THREE.Mesh(
+            new THREE.SphereGeometry(250, 32, 32),
+            new THREE.MeshBasicMaterial({ 
+                color: 0xffffff,
+                transparent: true,
+                opacity: 0,
+                depthWrite: false
+            })
+        );
+        this.cometObservatory.add(this.cometObservatoryCollision)
+        console.log(this.cometObservatory.position)
+        console.log(this.cometObservatoryCollision.getWorldPosition(new THREE.Vector3()))
 
         const ringGeometry = new THREE.TorusGeometry(
             1.2,        // torus radius
@@ -645,8 +730,8 @@ export class ModelMap extends _Map<ModelMapConfig> {
 
         this.controls.update(); 
 
-        
-        this.earth.rotation.y += 0.000;
+        if (!this.earthWaypointActive) 
+            this.earth.rotation.y += 0.0005;
 
         this.sunPivot.rotation.y -= 0.00005;
         this.scene.backgroundRotation.y -= 0.00005;
@@ -670,13 +755,11 @@ export class ModelMap extends _Map<ModelMapConfig> {
                 const offset = -44.76 + -3.05/((this.getZoom() + 0.15)**2)
                 t.style.translate = `${0}px ${offset}px`;
 
-                const p = this.activePopup.position.clone().project(this.camera);
-                p.x = (p.x + 1) / 2 * window.innerWidth;
-                p.y = (-p.y + 1) / 2 * window.innerHeight;
-
             } else {
                 this.removePopup();
             }
+        } else {
+            this.removePopup();
         }
 
         this.waypoints.children.forEach(wp => {

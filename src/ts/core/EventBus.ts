@@ -3,6 +3,7 @@ import { MapView } from "../map/maps/Map";
 
 type EventMap = {
     "waypoint:click": Waypoint;
+    "waypoint:close": {};
     "map:load": { id: string, view?: MapView };
     "map:click": {};
     "map:mousemove": { lat: number, lng: number };
