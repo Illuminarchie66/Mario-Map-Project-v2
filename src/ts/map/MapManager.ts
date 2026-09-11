@@ -4,7 +4,7 @@ import { _Map } from './maps/Map';
 import { LeafletMap } from './maps/LeafletMap';
 import { ModelMap } from './maps/ModelMap';
 import { mapRegistry } from './MapRegistry';
-import { WaypointManager } from './Waypoints/WaypointManager';
+import { WaypointManager } from './waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
 import { MapView } from './maps/Map';
 import { CreateMap } from './maps/CreateMap';

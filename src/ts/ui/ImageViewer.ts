@@ -42,6 +42,7 @@ class ImageViewer {
 
         button.addEventListener("click", (e) => {
             e.stopPropagation();
+            console.log("Zoom button clicked");
             this.show(img.src, caption);
         });
 

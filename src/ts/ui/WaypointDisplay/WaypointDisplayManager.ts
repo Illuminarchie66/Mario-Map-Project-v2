@@ -1,9 +1,9 @@
 import { eventBus } from "../../core/EventBus";
-import { Waypoint } from "../../map/Waypoints/Waypoint";
+import { Waypoint } from "../../map/waypoints/Waypoint";
 import { DocManager } from "./DocManager";
 import { PamphletManager } from "./PamphletManager";
 import { PopupManager } from "./PopupManager";
-import { PamphletWaypoint, DocWaypoint, PopupWaypoint } from "../../map/Waypoints/Waypoint";
+import { PamphletWaypoint, DocWaypoint, PopupWaypoint } from "../../map/waypoints/Waypoint";
 
 export class WaypointDisplayManager {
     pamphletManager: PamphletManager;

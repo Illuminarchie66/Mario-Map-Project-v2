@@ -1,6 +1,6 @@
 import '../../../css/ui/pamphlet.css';
 
-import { PamphletWaypoint } from "../../map/Waypoints/Waypoint";
+import { PamphletWaypoint } from "../../map/waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
 import { eventBus } from "../../core/EventBus";
 

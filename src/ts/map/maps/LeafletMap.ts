@@ -4,8 +4,8 @@ import { LeafletMapConfig } from "../MapConfig";
 import { _Map, MapView } from "./Map";
 import { eventBus } from '../../core/EventBus';
 
-import { Waypoint } from "../Waypoints/WaypointManager";
-import { iconRegistry, IconIdentifier } from "../Waypoints/IconRegistry";
+import { Waypoint } from "../waypoints/WaypointManager";
+import { iconRegistry, IconIdentifier } from "../waypoints/IconRegistry";
 
 export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapConfig> extends _Map<TConfig> {
     

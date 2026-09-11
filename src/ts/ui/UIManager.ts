@@ -1,4 +1,4 @@
-import { WaypointDisplayManager } from './WaypointDisplay/WaypointDisplayManager';
+import { WaypointDisplayManager } from './waypointdisplay/WaypointDisplayManager';
 import { CoordDisplay } from './modals/CoordDisplay';
 import { NavigationDisplayManager } from './NavigationDisplayManager';
 import { eventBus } from '../core/EventBus';

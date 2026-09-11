@@ -70,6 +70,8 @@
     cursor: pointer;
 
     z-index: 999999;
+
+    pointer-events: auto;
 }
 
 .image-zoom__icon {

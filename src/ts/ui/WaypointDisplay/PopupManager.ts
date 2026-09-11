@@ -1,8 +1,8 @@
 import * as L from "leaflet";
 
-import { PopupWaypoint } from "../../map/Waypoints/Waypoint";
+import { PopupWaypoint } from "../../map/waypoints/Waypoint";
 import { PopupComponent } from "../components/Popup";
-import { iconRegistry } from "../../map/Waypoints/IconRegistry";
+import { iconRegistry } from "../../map/waypoints/IconRegistry";
 import { eventBus } from "../../core/EventBus";
 
 export class PopupManager {

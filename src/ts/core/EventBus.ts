@@ -1,4 +1,4 @@
-import { Waypoint } from "../map/Waypoints/Waypoint";
+import { Waypoint } from "../map/waypoints/Waypoint";
 import { MapView } from "../map/maps/Map";
 
 type EventMap = {
