@@ -1,10 +1,12 @@
 import * as L from "leaflet";
 
 import { Waypoint } from "./Waypoint";
-import { _Map, LeafletMap } from "../Map";
+import { _Map } from "../maps/Map";
+import { LeafletMap } from "../maps/LeafletMap";
 import { Loader } from "../../core/Loader";
 import { iconRegistry } from "./IconRegistry";
 import { eventBus } from "../../core/EventBus";
+import { ModelMap } from "../maps/ModelMap";
 
 class WaypointManager {
     waypoints: Waypoint[] = [];
@@ -15,13 +17,17 @@ class WaypointManager {
     constructor() {
     }
 
-    async loadWaypointsByMap(map: LeafletMap): Promise<void> {
+    async loadWaypointsByMap(map: _Map): Promise<void> {
         this.reset();
         const waypointPath = map.config.waypointPath;
         if (!waypointPath) return;
 
         await this.loadWaypointsByPath(waypointPath);
-        this.attachToMap(map);
+        if (map instanceof LeafletMap) {
+            this.attachToLeafletMap(map);
+        } else if (map instanceof ModelMap) {
+            this.attachToModelMap(map);
+        }
 
     }
 
@@ -35,17 +41,17 @@ class WaypointManager {
         }
     }
 
-    attachToMap(map: LeafletMap): void {
+    attachToLeafletMap(map: LeafletMap): void {
         this.waypoints.forEach(waypoint => {
             const icon = iconRegistry.getById(waypoint.icon ?? waypoint.id);
             const marker = map.addMarker(waypoint, icon)
 
-            marker.on("click", (event) => {
+            marker.on("click", (event: L.LeafletMouseEvent) => {
                 L.DomEvent.stopPropagation(event);
                 if (waypoint.displayType === "popup" && marker instanceof L.Marker) {
                     waypoint.markerCoords = [marker.getLatLng().lat, marker.getLatLng().lng];
                 }
-                this.handleWaypointClick(waypoint, event);
+                this.handleLeafletWaypointClick(waypoint, event);
             });
             this.markers.push(marker);
         })
@@ -71,9 +77,17 @@ class WaypointManager {
         }
     }
 
-    handleWaypointClick(waypoint: Waypoint, event: L.LeafletMouseEvent): void {
+    handleLeafletWaypointClick(waypoint: Waypoint, event: L.LeafletMouseEvent): void {
         eventBus.emit("waypoint:click", waypoint);
         event.originalEvent?.stopPropagation();
+    }
+
+    attachToModelMap(map: ModelMap): void {
+        map.setupWaypoints();
+        this.waypoints.forEach(waypoint => {
+            const icon = iconRegistry.getById(waypoint.icon ?? waypoint.id);
+            map.addMarker(waypoint, icon);
+        })
     }
 
     reset(): void {

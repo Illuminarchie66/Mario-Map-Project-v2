@@ -8,7 +8,7 @@
 	options: {
 		crs: "simple",
 		minZoom: 2.5,
-		maxZoom: 4,
+		maxZoom: 5,
 		zoom: 5,
 		center: [-53, 136.75],
 		zoomDelta: 0.5,
@@ -21,8 +21,8 @@
 	waypointPath: "/data/maps/globe/waypoints.json5",
 
 	bounds: [
-		[0, 999999],
-		[-86.75, -999999],
+		[-0.66, 999999],
+		[-87.33, -999999],
 	],
 
 	features: {

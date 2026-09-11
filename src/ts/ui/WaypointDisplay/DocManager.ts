@@ -1,6 +1,6 @@
 import '../../../css/ui/doc.css';
 
-import { DocWaypoint } from "../../map/Waypoints/Waypoint";
+import { DocWaypoint } from "../../map/waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
 
 export class DocManager {

@@ -1,0 +1,731 @@
+[
+    {
+        id: "mushroom-continent",
+		coords: [-7.5, 18.7],
+        
+        label: "Mushroom Continent",
+        icon: "default",
+        path: "data/maps/globe/assets/waypoints/mushroom-continent",
+
+        displayType: "pamphlet",
+
+        content: {
+            left: [
+				{
+					type: "header",
+					title: "Mushroom Continent",
+					tagline: "Where it all began",
+					image: "peach_castle.jpg",
+					link: "https://www.mariowiki.com/Mushroom_Kingdom_(Super_Mario_Odyssey)",
+				},
+				{
+					type: "explore-button",
+					target: "mushroom-continent",
+				},
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario Bros.",
+						year: 1985,
+						link: "https://www.mariowiki.com/Super_Mario_Bros."
+					},
+					lastAppeared: {
+						game: "Super Mario Odyssey",
+						year: 2017,
+						link: "https://www.mariowiki.com/Super_Mario_Odyssey"
+					}
+				},
+				{
+					type: "image",
+					image: "shiver_region.png",
+					caption: "Shiver Region",
+					zoomable: true,
+					imageWidth: "300px",
+					imageHeight: "220px",
+					alignCaption: "left",
+				}
+			],
+			right: [
+				{
+					type: "text",
+					title: "Overview",
+					titleColor: "#b18f01",
+					alignTitle: "left",
+					content: "The Mushroom Continent is the primary recurring location between Mario games. It is a large mushroom shaped landmass that features various biomes and serves as the hub world for the game. The continent is home to many familiar locations from previous Mario games, such as Peach's Castle, Bob-omb Battlefield, and more.",
+					alignContent: "left",
+				},
+				{
+					type: "image-right",
+					title: "Wish Magic",
+					titleColor: "#b18f01",
+					alignImage: "center",
+					image: "shooting_star_summit.jpg",
+					imageHeight: "220px",
+					content: "The Mushroom Continent is also the location of the Shooting Star Summit, where Mario can use Wish Magic to make wishes that affect the world around him. This adds an extra layer of interactivity and exploration to the game, as players can experiment with different wishes to see their effects on the environment.",
+					caption: "Shooting Star Summit"
+				},
+				{
+					type: "image-left",
+					alignImage: "top",
+					image: "nsmbu_world_map.webp",
+					imageWidth: "250px",
+					content: "The continent is home to a large number of biomes, from mushroom plains, to dry deserts, to sparkling waters and candy mountains. It truly has it all.",
+					caption: "NSMBU World Map",
+					zoomable: true,
+				},
+				{
+					type: "horizontal-rule",
+					align: "center",
+					color: "#b18f01"
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "bowser_castle.png",
+							caption: "Bowser's Castle"
+						},
+						{
+							image: "diamond_city.jpg",
+							caption: "Diamond City"
+						},
+						{
+							image: "dry_dry_desert.webp",
+							caption: "Dry Dry Desert"
+						}
+					]
+				},
+				{
+					type: "spacer"
+				},
+				{
+					type: "image-bottom",
+					image: "nsmb_hills.jpg",
+					height: "150px"
+				}
+			]
+		},
+    },
+
+    {
+		id: "mushroom-kingdom",
+		coords: [-10.35, 15.15],
+
+		label: "Mushroom Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "peach_castle.jpg",
+			title: "Mushroom Kingdom", 
+			description: "Where Princess Peach rules over the Toads over the vast and varied kingdom!",
+			caption: "Princess Peach's Castle"
+		}
+	},
+
+	{
+		id: "koopa-kingdom",
+		coords: [-9, 14.25],
+
+		label: "Koopa Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "bowser_castle.png",
+			title: "Koopa Kingdom", 
+			description: "The volcanic and fiery domain of Bowser and his Koopa Troop.",
+			caption: "Bowser's Castle"
+		}
+	},
+
+	{
+		id: "flower-kingdom",
+		coords: [-5.3, 14.15],
+
+		label: "Flower Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "flower_kingdom.webp",
+			title: "Flower Kingdom", 
+			description: "Ruled by Prince Florian, the Flower Kingdom is a beautiful land of wonder!",
+			caption: "Flower Kingdom Map"
+		}
+	},
+
+	{
+		id: "diamond-city",
+		coords: [-4.75, 23.65],
+
+		label: "Diamond City",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "diamond_city.jpg",
+			title: "Diamond City", 
+			description: "Home to Wario and co, Diamond City is a wacky and chaotic city of excitement!",
+			caption: "Diamond City"
+		}
+	},
+
+	{
+		id: "mushroom-world",
+		coords: [-8, 12.25],
+
+		label: "Mushroom World",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "mushroom_world.webp",
+			title: "Mushroom World", 
+			description: "To the East of the Mushroom Kingdom lies the 8 territories of the Mushroom World - each ruled by a different King.",
+			caption: "Mushroom World Map"
+		}
+	},
+
+	// Super Mario Odyssey Kingdoms
+	{
+		id: "cap-kingdom",
+		coords: [2.28, 339.55],
+
+		label: "Cap Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/cap-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "cap_kingdom.jpg",
+			title: "Cap Kingdom", 
+			description: "Thick fog surrounds the city of Bonneton; where the moonlight shines on the hat-shaped airships that peruse the skies.",
+			caption: "Ice Ice Outpost"
+		}
+
+	},
+
+	{
+		id: "cascade-kingdom",
+		coords: [1.55, 330.35],
+		
+		label: "Cascade Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/cascade-kingdom/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Cascade Kingdom",
+					tagline: "Home of Prehistory",
+					image: "header.png",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Super Mario World",
+						year: 2001,
+						link: "https://www.mariowiki.com/Super_Mario_World:_Super_Mario_Advance_2"
+					},
+					lastAppeared: {
+						game: "Paper Mario: The Thousand-Year Door (Nintendo Switch)",
+						year: 2024,
+						link: "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door_(Nintendo_Switch)"
+					}
+				},
+				{
+					type: "text",
+					content: "Vibrant greens! Rushing streams! Giant dinosaurs! Cascade Kingdom is an idyllic paradise of the past, with a slew of  prehistoric reptiles roaming the fields. Adorning the grassy mountains are fossilised remains of those that once resided here and vast rushing rivers and waterfalls. Whether you visit the imposing Fossil Falls, the mystical Aldegara Waterfall, the enchanting Fairy Forest, or just chill with the Yoshis, you will remember this trip for life.",
+					alignContent: "left",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "image-right",
+					title: "Fossil Falls",
+					titleColor: "#b18f01",
+					titleOnTop: true,
+					image: "fossil_falls_concept.jpg",
+					caption: "Fossil Falls Concept Art",
+					content: "The central landmark of the triceratops-shaped landmass, is an impressive display of the enormity of the Kingdom. Connected to the Cap Kingdom by a spark pylon, the kingdom has strange ruins of airships Bonneters once flew. One of these ruins becomes the iconic ship The Odyssey. Here you can find the intimidating T-Rexes snoozing in the sun."
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "fossil_falls.webp",
+					caption: "Fossil Falls",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Awazon River Basin",
+					titleColor: "#b18f01",
+					content: "A large central river that flows through the jungles of Cascade Kingdom. Wario visited here for the events of Virtual Boy Wario Land, taking a vacation before the Aldegara Waterfall. Deep underground there are many masked creatures hoarding treasures, and hiding the Realm of the Demon Head.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "awazon_river.png",
+					caption: "Wario looking at the Aldegara Waterfall",
+					alignCaption: "center",
+				},
+			],
+
+			right: [
+				{
+					type: "text",
+					title: "Dinosaur Land",
+					titleColor: "#b18f01",
+					content: "Off the coast of the main continent is a small archipelago inhabited by many dinosaurs, most famously Yoshi! Here you will find a host of creatures including Blarggs, dino-Rhinos, Dino-Torches, Eeries, Rexes and Reznors. In Super Mario World, this is the vacation spot of Mario and his friends.",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "dinosaur_land.webp",
+					caption: "Dinosaur Land Map",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Fairy Forest",
+					titleColor: "#b18f01",
+					titleOnTop: false,
+					image: "wanda.png",
+					imageWidth: "250px",
+					caption: "Wanda the Fairy",
+					content: "Deep within the forest depths, not too far from the Sprixie Kingdom, lies the magical Fairy Forest. Here  Wanda resides, and helps Mario against Wario's escapades. "
+				},
+				{
+					type: "text",
+					content: "Wanda joins them on their adventures across the Cascade Kingdom. This includes Yos Lake, the rumored to be the origin of Yoshis. There is also Cloud-Catching Mountain, the Ice and Flame Caverns, and the Cheep Cheep Sea.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "fairy_forest.png",
+							caption: "Fairy Forest"
+						},
+						{
+							image: "yos_lake.png",
+							caption: "Yos Lake"
+						},
+						{
+							image: "cloudcatching.png",
+							caption: "Cloud Catching Mountain"
+						},
+						{
+							image: "ice_cavern.png",
+							caption: "Ice Caverns"
+						},
+						{
+							image: "fire_cavern.png",
+							caption: "Fire Caverns"
+						},
+						{
+							image: "cheep_cheep_sea.png",
+							caption: "Cheep Cheep Sea"
+						}
+					]
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					title: "Keelhaul Key",
+					titleColor: "#b18f01",
+					titleOnTop: true,
+					image: "keelhaul.jpg",
+					caption: "Keelhaul Key",
+					content: "A tropical jungle island to the South of Rogueport, off the coast of the Cascade Kingdom. The isle is said to be deserted and cursed. A small shantytown has been built by pirates searching for treasure just outside of the dense jungle. If you search hard enough, you might just find the Pirate's Grotto, and Cortez's legendary ship: the Black Skull. "
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "lake-kingdom",
+		coords: [23.35, 262.25],
+
+		label: "Lake Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/lake-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "lake.jpg",
+			title: "Lake Kingdom", 
+			description: "The home of the beautiful Lake Lamode and the gorgeous Lochlady Dress.",
+			caption: "Water Plaza in Lake Lamode"
+		}
+	},
+
+	{
+		id: "lost-kingdom",
+		coords: [2.93, 224.92],
+
+		label: "Lost Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/lost-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "lost.jpg",
+			title: "Lost Kingdom", 
+			description: "A paradise in poison, inhabited by the colorful Tropical Wigglers!",
+			caption: "Tropical Wiggler in Lost Kingdom"
+		}
+	},
+
+	{
+		id: "luncheon-kingdom",
+		coords: [17.17, 111.15],
+
+		label: "Luncheon Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/luncheon-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "luncheon.webp",
+			title: "Luncheon Kingdom", 
+			description: "Stock up on food in the Old Town and Peronza Plaza - Then visit the volcanic Mount Volbono!",
+			caption: "The big stewing pot above Mount Volbono"
+		}
+	},
+
+	{
+		id: "ruined-kingdom",
+		coords: [12, 91.5],
+
+		label: "Ruined Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/ruined-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "ruined.jpg",
+			title: "Ruined Kingdom", 
+			description: "The giant stone spires make up Crumbleden; the destroyed domain of the Lord of Lightning.",
+			caption: "The Lord of Lightning perched on his tower"
+		}
+	},
+
+	{
+		id: "metro-kingdom",
+		coords: [11.3, 180],
+
+		label: "Metro Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/metro-kingdom/",
+
+		displayType: "pamphlet",
+
+		content: {
+			left: [
+				{
+					type: "header",
+					title: "Metro Kingdom",
+					tagline: "The Big Banana",
+					image: "header.png",
+				},		
+				{
+					type: "appeared-table",
+					firstAppeared: {
+						game: "Donkey Kong",
+						year: 1981,
+						link: "https://www.mariowiki.com/Donkey_Kong_(game)"
+					},
+					lastAppeared: {
+						game: "Donkey Kong Bananza",
+						year: 2025,
+						link: "https://www.mariowiki.com/Donkey_Kong_Bananza"
+					}
+				},
+				{
+					type: "text",
+					content: "The modern commerce center and urban playground, the Metro Kingdom is a vast and bustling web of cities and skyscrapers. Its most famous location, New Donk City, is the home of the famous rivalry between Mario and Donkey Kong; now governed by Mayor Pauline. It is constantly under construction, with the iconic red girders scaling every street! ",
+					alignContent: "left",
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "new_donk.jpg",
+					caption: "New Donk City",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "Retro Beginnings",
+					content: "This here is where Mario took up his first jobs! As a carpenter Mario fought Donkey Kong; then he and Luigi worked in a bottling plant; before proceeding to work in a Cement Factory; next serving in the military; a brief stint as part of a Wrecking Crew; until eventually settling in his role as a plumber - cleaning the pipes of the city.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "dk_arcade.png",
+							caption: "Donkey Kong Arcade"
+						},
+						{
+							image: "mario_bros_gw.jpg",
+							caption: "Mario Bros. Game & Watch"
+						},
+						{
+							image: "cement_factory.jpg",
+							caption: "Cement Factory"
+						},
+						{
+							image: "bombs_away.gif",
+							caption: "Bombs Away"
+						},
+						{
+							image: "wrecking_crew.png",
+							caption: "Wrecking Crew"
+						},
+						{
+							image: "mario_arcade.png",
+							caption: "Mario Bros."
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "text",
+					title: "New Donk City",
+					content: "The City that never Leaps! This is the urban center, notarized by the New Donk City Hall - the tallest skyscraper in the city. This is a hub of tourism with the original Crazy Cap store, its musical culture and the wondrous festival and accompanying lightshow. The city is powered with an underground power plant below the city, using the energy of moons. Here are some of the various streets and attractions in New Donk City:",
+					alignContent: "left",
+				},
+				{
+					type: "list",
+					content: [
+						"Diddy's Mart",
+						"Dixie Street",
+						"Dixie Theater",
+						"Tiny's Piroshkis",
+						"Cranky Avenue",
+						"K. Rool Avenue",
+						"Squawks Park",
+						"Expresso Street",
+						"Expresso Espresso",
+						"Candy's Cafe",
+						"Rattley Street",
+						"Rambi Street",
+						"Banana Bagels",
+					]
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "city_hall.jpg",
+							caption: "Mayor Pauline outside New Donk City Hall"
+						},
+						{
+							image: "crazy_cap.webp",
+							caption: "Crazy Cap Store"
+						},
+						{
+							image: "power_plant.png",
+							caption: "New Donk City Power Plant"
+						},
+					]
+				},
+			],
+
+			right: [
+				{
+					type: "image-left",
+					image: "forest.png",
+					imageWidth: "230px",
+					caption: "Forest",
+					title: "Big City",
+					titleColor: "#b18f01",
+					content: "We see more of the various skyscrapers and apartments in Donkey Kong for the Game Boy! We also see the large forest just outside the city."
+				},
+				{
+					type: "image",
+					alignImage: "center",
+					image: "big_city.png",
+					imageWidth: "300px",
+					caption: "Big City",
+					alignCaption: "center",
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "image-right",
+					image: "neon_heights.png",
+					imageWidth: "200px",
+					caption: "Neon Heights",
+					title: "Neon Heights",
+					titleOnTop: true,
+					titleColor: "#b18f01",
+					content: "Beyond New Donk City we find the the bright lights of Neon Heights! Atop of these skyscrapers has its own theatre district, a movie set, a space center and a baseball diamond! Not to mention the large Mario of Liberty statue!"
+				},
+				{
+					type: "horizontal-rule",
+					color: "#b18f01"
+				},
+				{
+					type: "text",
+					title: "DK Summit",
+					titleColor: "#b18f01",
+					content: "Looming over the metropolis is the snow covered peaks of a Donkey Kong themed ski resort! With frozen lakes, and tight icy corners, it makes for a perilous racetrack and vacation spot for New Donkers. ",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "snowy_mountain.png",
+							caption: "Snowy Mountain from Donkey Konga 2"
+						},
+						{
+							image: "rumbly_mountain.png",
+							caption: "Rumbly Peak from Donkey Konga 2"
+						},
+						{
+							image: "dk_summit.png",
+							caption: "DK Summit"
+						},
+						{
+							image: "dk_pass.png",
+							caption: "DK Pass"
+						},
+					]
+				},
+			]
+		}
+
+	},
+
+	{
+		id: "wooded-kingdom",
+		coords: [-15.3, 259.15],
+
+		label: "Wooded Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/wooded-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "wood.jpg",
+			title: "Wooded Kingdom", 
+			description: "In the forested mountains, deep in the woods, lies the mechanical green house, the Steam Gardens.",
+			caption: "Sky Garden Tower in Wooded Kingdom"
+		}
+	},
+
+	{
+		id: "sand-kingdom",
+		coords: [2.25, 299.5],
+
+		label: "Sand Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/sand-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "sand.jpg",
+			title: "Sand Kingdom", 
+			description: "Below the inverted pyramid ruins lies the colorful desert town Tostarena!",
+			caption: "Tostarena Town before the Great Inverted Pyramid"
+		}
+	},
+
+	{
+		id: "seaside-kingdom",
+		coords: [0.4, 132.85],
+
+		label: "Seaside Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/seaside-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "seaside.webp",
+			title: "Seaside Kingdom", 
+			description: "Where the Sea meets the Sun; at this relaxing resort by the Carbonated Sea.",
+			caption: "Mario in boxer shorts, in front of the Glass Tower"
+		}
+
+	},
+
+	{
+		id: "snow-kingdom",
+		coords: [35.75, 137.75],
+
+		label: "Snow Kingdom",
+		icon: "default",
+		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+
+		displayType: "popup",
+
+		content: {
+			type: "popup",
+			image: "brrr.webp",
+			title: "Snow Kingdom", 
+			description: "Home to the Shiverians, the warmest community in the coldest land.",
+			caption: "Mario freezing in a Snow Kingdom blizzard"
+		}
+
+	},
+
+]
