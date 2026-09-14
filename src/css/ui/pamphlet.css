@@ -30,7 +30,7 @@
     right: 0;
     left: auto;
     transform: translateX(100%);
-    background: url("assets/core/images/odyssey_map_yellow.png") center center / cover no-repeat;
+    background: url("/assets/core/images/odyssey_map_yellow.png") center center / cover no-repeat;
 }
 
 .panel.open.left { transform: translateX(0); }
