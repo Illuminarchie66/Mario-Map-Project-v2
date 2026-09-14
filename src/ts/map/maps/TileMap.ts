@@ -27,7 +27,8 @@ export class TileMap extends LeafletMap<TileMapConfig> {
         new CustomTileLayer().addTo(this.map);
 
         if (this.config.bounds) {
-            this.handleBounds(L.latLngBounds(this.config.bounds));
+            this.map.setMaxBounds(this.config.bounds);
+            this.map.options.maxBoundsViscosity = 1.0;
         }
     }
 }

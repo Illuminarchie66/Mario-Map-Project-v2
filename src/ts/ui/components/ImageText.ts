@@ -36,7 +36,7 @@ export type ImageRightBlock = z.infer<typeof ImageRightBlockSchema>;
 
 export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRightBlock> extends Component<T> {
     render(): HTMLElement {
-        const left = this.data.type === "image-left";
+        const left = (window.innerWidth < 425) ? false : (this.data.type === "image-left") ;
 
         const container = document.createElement("div");
         container.className = `c-media-block__container`;

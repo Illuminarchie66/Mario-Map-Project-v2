@@ -7,7 +7,9 @@ export class ImageMap extends ImageBasedMap<ImageMapConfig> {
     addLayers(): void {
         this.computeBounds().then(bounds => {
             const overlay = L.imageOverlay(this.config.imagePath, bounds).addTo(this.map);
-            this.handleBounds(bounds);
+            
+            this.map.setMaxBounds(bounds);
+            this.map.options.maxBoundsViscosity = 1.0;
         });
     }
 }

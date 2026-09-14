@@ -1,24 +1,24 @@
-import '../../css/ui/navigation-display.css';
-import { mapRegistry } from '../map/MapRegistry';
-import { MapConfig } from '../map/MapConfig';
-import { eventBus } from '../core/EventBus';
+import '../../../css/ui/panels/map-selector.css';
+import { Panel } from './Panel';
+import { eventBus } from '../../core/EventBus';
+import { MapConfig } from '../../map/MapConfig';
+import { mapRegistry } from '../../map/MapRegistry';
 
-export class NavigationDisplayManager {
-    panel: HTMLElement;
-    mapContainer: HTMLElement;
+export class MapSelectorPanel extends Panel {
+    mapsContainer!: HTMLElement;
+    
+    constructor(panelContainer: HTMLElement) {
+        super("map-selector", panelContainer);
+        this.addContent();
+    }
 
-    constructor() {
-        this.panel = document.createElement("div");
-        this.panel.id = "navigationPanel";
-        this.panel.className = "panel navigation";
+    addContent(): void {
+        const titleElement = this.createTitle("Map Selector");
+        titleElement.className = "ui__title";
+        this.panel.appendChild(titleElement);
 
-        const title = document.createElement("h1");
-        title.className = "navigation__title";
-        title.textContent = "Map Navigation";
-        this.panel.appendChild(title);
-
-        this.mapContainer = document.createElement("div");
-        this.mapContainer.className = "navigation__map-container";
+        this.mapsContainer = document.createElement("div");
+        this.mapsContainer.className = "ui__maps-container";
 
         mapRegistry.getAll().then((configs) => {
             this.populateMapList(configs);
@@ -26,43 +26,33 @@ export class NavigationDisplayManager {
             console.error("Error fetching map configs:", error);
         });
 
-        this.panel.appendChild(this.mapContainer);
-        document.body.appendChild(this.panel);
-
-        eventBus.on("map:click", () => {
-            this.hide();
-        });
-
-        document.addEventListener("keydown", (e) => { 
-            if (e.key === "Escape") this.hide(); 
-            if (e.key === "n" || e.key === "N") this.show();
-        });
+        this.panel.appendChild(this.mapsContainer);
     }
 
     populateMapList(configs: MapConfig[]) {
         for (const config of configs) {
             const mapSelector = document.createElement("div");
-            mapSelector.className = "navigation__map-selector";
+            mapSelector.className = "ui__map-selector";
             mapSelector.addEventListener("click", () => {
                 eventBus.emit("map:load", {id: config.id});
             });
 
             const previewImage = document.createElement("img");
-            previewImage.className = "navigation__map-preview";
+            previewImage.className = "ui__map-preview";
             previewImage.src = config.mapPreview ?? "assets/core/images/black_default.jpg";
             mapSelector.appendChild(previewImage);
 
             const mapText = document.createElement("div");
-            mapText.className = "navigation__map-text";
+            mapText.className = "ui__map-text";
 
             const mapTitle = document.createElement("h2");
-            mapTitle.className = "navigation__map-title";
+            mapTitle.className = "ui__map-title";
             mapTitle.textContent = config.label ?? config.id
             mapText.appendChild(mapTitle);
             
             if (config.attribution) {
                 const mapAttribution = document.createElement("p");
-                mapAttribution.className = "navigation__map-attribution";
+                mapAttribution.className = "ui__map-attribution";
                 
                 let link;
                 if (config.attribution.source) {
@@ -86,15 +76,7 @@ export class NavigationDisplayManager {
             }
                
             mapSelector.appendChild(mapText);
-            this.mapContainer.appendChild(mapSelector);
+            this.mapsContainer.appendChild(mapSelector);
         }
     }
-
-    show() {
-        this.panel.classList.add("open");
-    }
-
-    hide() {
-        this.panel.classList.remove("open");
-    }
-} 
+}

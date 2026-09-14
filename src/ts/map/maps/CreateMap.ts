@@ -6,7 +6,6 @@ import { ImageMap } from "./ImageMap";
 import { PlanMap } from "./PlanMap";
 import { modelRegistry } from "../models/ModelRegistry";
 
-
 export class CreateMap {
     static createMap(config: MapConfig, view?: MapView): _Map {
         if (config instanceof TileMapConfig) return new TileMap(config, view);

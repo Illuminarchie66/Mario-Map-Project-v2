@@ -16,8 +16,8 @@ export abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConf
 
     createBounds(width: number, height: number): L.LatLngBounds {
         return L.latLngBounds(
-            [-height / 2, -width / 2],
-            [height / 2, width / 2]
+            [-height, 0],
+            [0, width]
         )
     }
 

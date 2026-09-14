@@ -36,11 +36,11 @@ const BaseMapConfigSchema = z.object({
 type BaseMapConfig = z.infer<typeof BaseMapConfigSchema>;
 
 const MapOptionsSchema = z.object({
+    zoom: z.number(),
+    center: z.tuple([z.number(), z.number()]),
     crs: z.string().optional(),
     minZoom: z.number().optional(),
     maxZoom: z.number().optional(),
-    zoom: z.number().optional(),
-    center: z.tuple([z.number(), z.number()]).optional(),
     zoomDelta: z.number().optional(),
     zoomSnap: z.number().optional(),
     attributionControl: z.boolean().optional()
@@ -49,14 +49,14 @@ type MapOptions = z.infer<typeof MapOptionsSchema>;
 
 const LeafletMapOptionsSchema = BaseMapConfigSchema.extend({
     options: MapOptionsSchema,
-    bounds: z.array(z.tuple([z.number(), z.number()])).optional(),
 });
 type LeafletMapConfigData = z.infer<typeof LeafletMapOptionsSchema>;
 
 const TileMapConfigSchema = LeafletMapOptionsSchema.extend({
     type: z.literal("tiles"),
     tilePath: z.string(),
-    tileFileType: z.string().optional()
+    tileFileType: z.string().optional(),
+    bounds: z.array(z.tuple([z.number(), z.number()])),
 });
 type TileMapConfigData = z.infer<typeof TileMapConfigSchema>;
 
@@ -64,7 +64,8 @@ const ImageMapConfigSchema = LeafletMapOptionsSchema.extend({
     type: z.literal("image"),
     imagePath: z.string(),
     width: z.number().optional(),
-    height: z.number().optional()
+    height: z.number().optional(),
+    bounds: z.array(z.tuple([z.number(), z.number()])).optional(),
 });
 type ImageMapConfigData = z.infer<typeof ImageMapConfigSchema>;
 
@@ -143,7 +144,6 @@ abstract class LeafletMapConfig extends MapConfig {
     protected constructor(data: LeafletMapConfigData) {
         super(data);
         this.options = data.options;
-        this.bounds = data.bounds;
     }
 
     get leafletOptions(): L.MapOptions {
@@ -159,7 +159,11 @@ abstract class LeafletMapConfig extends MapConfig {
                 crs = L.CRS.Simple;
         }
 
-        const center = this.options.center ? L.latLng(this.options.center[0], this.options.center[1]) : undefined;
+        if (this.options.center === undefined || this.options.zoom === undefined) {
+            throw new Error("Leaflet map options must include both center and zoom.");
+        }
+
+        const center = L.latLng(this.options.center[0], this.options.center[1]);
 
         return {
             crs,
@@ -178,11 +182,13 @@ abstract class LeafletMapConfig extends MapConfig {
 class TileMapConfig extends LeafletMapConfig {
     tilePath: string;
     tileFileType?: string;
+    bounds: [number, number][];
 
     constructor(data: TileMapConfigData) {
         super(data);
         this.tilePath = data.tilePath;
         this.tileFileType = data.tileFileType;
+        this.bounds = data.bounds;
     }
 }
 
@@ -190,12 +196,14 @@ class ImageMapConfig extends LeafletMapConfig {
     imagePath: string;
     width?: number;
     height?: number;
+    bounds?: [number, number][];
 
     constructor(data: ImageMapConfigData) {
         super(data);
         this.imagePath = data.imagePath;
         this.width = data.width;
         this.height = data.height;
+        this.bounds = data.bounds;
     }
 }
 

@@ -18,7 +18,9 @@ export class PlanMap extends ImageBasedMap<PlanMapConfig> {
             }
 
             this.control = L.control.layers({}, this.layers, { collapsed: false }).addTo(this.map);
-            this.handleBounds(bounds);
+            
+            this.map.setMaxBounds(bounds);
+            this.map.options.maxBoundsViscosity = 1.0;
         });
     }
 }
