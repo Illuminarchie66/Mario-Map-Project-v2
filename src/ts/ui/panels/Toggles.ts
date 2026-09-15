@@ -10,7 +10,6 @@ export class TogglesPanel extends Panel {
 
     addContent(): void {
         const titleElement = this.createTitle("Toggles");
-        titleElement.className = "ui__title";
         this.panel.appendChild(titleElement);
     }
 }

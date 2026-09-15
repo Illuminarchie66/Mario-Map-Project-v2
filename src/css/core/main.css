@@ -1,3 +1,46 @@
+:root {
+    --color_white: #fff;
+    --color_black: #000;
+    --color_gray-1: #1a1a1a;
+    --color_gray-2: #333;
+    --color_gray-3: #555;
+    --color_gray-4: #999;
+    --color_gray-5: #ccc;
+    --color_gray-6: #f0f0f0;
+    --color_gold-1: #b18f01;
+    --color_gold-2: #d4b84a;
+    --color_red-1: #d32f2f;
+    --color_red-2: #f44336;
+
+    --background-color: var(--color_white);
+    --background-color-2: var(--color_gray-6);
+    --background-color-3: var(--color_gray-5);
+    --primary-color: var(--color_gold-1);
+    --secondary-color: var(--color_gold-2);
+    --complement-color: var(--color_white);
+
+    --big-title-text-color: var(--color_black);
+    --title-text-color: var(--color_gray-1);
+    --core-text-color: var(--color_gray-2);
+    --sub-text-color: var(--color_gray-3);
+
+    --font-size-big-title: 3.5rem;
+    --font-size-title: 2.5rem;
+    --font-size-small-title: 2rem;
+    --font-size-subtitle: 1.5rem;
+    --font-size-core-large: 1.2rem;
+    --font-size-core: 1rem;
+    --font-size-subtext: 0.9rem;
+
+    --font-family-title: 'Futura PT', sans-serif;
+    --font-family-core: 'Brandon Text', sans-serif;
+    --font-family-subtext: 'Brandon Text', sans-serif;
+    --font-family-silly: 'Pop Joy', sans-serif;
+
+    --navbar-width: 70px;
+    --navbar-height: 70px;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -17,7 +60,6 @@ html, body {
     height: 100vh;
 }
 
-
 .click-through-transparent {
-    pointer-events: visiblePainted !important; 
+    pointer-events: visiblePainted !important;
 }

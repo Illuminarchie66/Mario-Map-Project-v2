@@ -1,3 +1,5 @@
+import '../../css/ui/panels/panels.css'
+
 import { WaypointDisplayManager } from './waypointdisplay/WaypointDisplayManager';
 import { CoordDisplay } from './modals/CoordDisplay';
 import { PanelManager } from './panels/PanelManager';

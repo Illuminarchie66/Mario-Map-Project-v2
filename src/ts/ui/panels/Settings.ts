@@ -10,7 +10,6 @@ export class SettingsPanel extends Panel {
 
     addContent(): void {
         const titleElement = this.createTitle("Settings");
-        titleElement.className += " ui__title";
         this.panel.appendChild(titleElement);
     }
 }

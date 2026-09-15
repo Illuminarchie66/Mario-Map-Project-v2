@@ -15,7 +15,7 @@ export abstract class Panel {
 
     createTitle(title: string): HTMLElement {
         const titleElement = document.createElement("h1");
-        titleElement.className = "panel__title";
+        titleElement.className = "ui__title";
         titleElement.textContent = title;
         return titleElement;
     }

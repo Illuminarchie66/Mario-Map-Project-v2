@@ -14,11 +14,10 @@ export class MapSelectorPanel extends Panel {
 
     addContent(): void {
         const titleElement = this.createTitle("Map Selector");
-        titleElement.className = "ui__title";
         this.panel.appendChild(titleElement);
 
         this.mapsContainer = document.createElement("div");
-        this.mapsContainer.className = "ui__maps-container";
+        this.mapsContainer.className = "map-selector__maps-container";
 
         mapRegistry.getAll().then((configs) => {
             this.populateMapList(configs);
@@ -32,27 +31,26 @@ export class MapSelectorPanel extends Panel {
     populateMapList(configs: MapConfig[]) {
         for (const config of configs) {
             const mapSelector = document.createElement("div");
-            mapSelector.className = "ui__map-selector";
+            mapSelector.className = "map-selector__map-option";
             mapSelector.addEventListener("click", () => {
                 eventBus.emit("map:load", {id: config.id});
             });
 
             const previewImage = document.createElement("img");
-            previewImage.className = "ui__map-preview";
+            previewImage.className = "map-selector__map-preview";
             previewImage.src = config.mapPreview ?? "assets/core/images/black_default.jpg";
             mapSelector.appendChild(previewImage);
 
             const mapText = document.createElement("div");
-            mapText.className = "ui__map-text";
 
             const mapTitle = document.createElement("h2");
-            mapTitle.className = "ui__map-title";
+            mapTitle.className = "map-selector__map-title";
             mapTitle.textContent = config.label ?? config.id
             mapText.appendChild(mapTitle);
             
             if (config.attribution) {
                 const mapAttribution = document.createElement("p");
-                mapAttribution.className = "ui__map-attribution";
+                mapAttribution.className = "map-selector__map-attribution";
                 
                 let link;
                 if (config.attribution.source) {
@@ -74,7 +72,7 @@ export class MapSelectorPanel extends Panel {
                 
                 mapText.appendChild(mapAttribution);
             }
-               
+
             mapSelector.appendChild(mapText);
             this.mapsContainer.appendChild(mapSelector);
         }

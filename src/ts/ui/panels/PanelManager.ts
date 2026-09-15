@@ -1,3 +1,4 @@
+import '../../../css/ui/panels/ui.css'
 import { Panel } from "./Panel";
 import { MapSelectorPanel } from "./MapSelector";
 import { TogglesPanel } from "./Toggles";
@@ -46,9 +47,9 @@ export class PanelManager {
         });
 
         this.widthControl = document.createElement("div");
-        this.widthControl.className = "ui__width-control";
+        this.widthControl.className = "panel__width-control";
         const widthControlDisplay = document.createElement("div");
-        widthControlDisplay.className = "ui__width-control-display";
+        widthControlDisplay.className = "panel__width-control-display";
         this.widthControl.appendChild(widthControlDisplay);
 
         this.widthControl.addEventListener("pointerdown", (e: PointerEvent) => {

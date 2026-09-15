@@ -1,0 +1,31 @@
+
+.panel.ui {
+    width: 600px;
+
+    background: none;
+    background-color: var(--background-color); 
+}
+
+.panel.ui::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+    background: url("/assets/core/images/odyssey_map.png") center center / cover no-repeat;
+    opacity: 0.2;
+
+    z-index: -1;
+}
+
+.ui__title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-big-title);
+    font-weight: 500;
+    color: var(--big-title-text-color);
+
+    margin: 0;
+    padding: 1rem;
+}

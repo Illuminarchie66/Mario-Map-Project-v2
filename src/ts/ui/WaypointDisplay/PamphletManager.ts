@@ -1,4 +1,4 @@
-import '../../../css/ui/pamphlet.css';
+import '../../../css/ui/panels/pamphlet.css';
 
 import { PamphletWaypoint } from "../../map/waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
@@ -16,14 +16,14 @@ export class PamphletManager {
     constructor() {
         this.left = document.createElement("div");
         this.left.id = "leftPanel";
-        this.left.className = "panel left";
+        this.left.className = "panel pamphlet left";
         this.leftContent = document.createElement("div");
         this.leftContent.className = "panel__content";
         this.left.appendChild(this.leftContent);
 
         this.right = document.createElement("div");
         this.right.id = "rightPanel";
-        this.right.className = "panel right";
+        this.right.className = "panel pamphlet right";
         this.rightContent = document.createElement("div");
         this.rightContent.className = "panel__content";
         this.right.appendChild(this.rightContent);
