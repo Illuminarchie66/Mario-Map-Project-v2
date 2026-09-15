@@ -11,7 +11,18 @@ export class PamphletManager {
     rightContent: HTMLElement;
     currentId: string | null = null;
     currentWaypoint: PamphletWaypoint | null = null;
+
+    widthControl!: HTMLElement;
+    isDragging: boolean = false;
+    initialWidth: number = 0;
+    initialHeight: number = 0;
+    initialMouseX: number = 0;
+    initialMouseY: number = 0;
+
     previousWindowWidth: number = window.innerWidth;
+
+    panelHeight: number = 60; //in vh
+    panelWidth: number = 600; //in px
 
     constructor() {
         this.left = document.createElement("div");
@@ -32,6 +43,60 @@ export class PamphletManager {
         document.body.appendChild(this.right);
 
         document.addEventListener("keydown", (e) => { if (e.key === "Escape") this.hide(); });
+
+        this.widthControl = document.createElement("div");
+        this.widthControl.className = "panel__width-control";
+        const widthControlDisplay = document.createElement("div");
+        widthControlDisplay.className = "panel__width-control-display";
+        this.widthControl.appendChild(widthControlDisplay);
+
+        this.widthControl.addEventListener("pointerdown", (e: PointerEvent) => {
+            if (!this.currentWaypoint) return;
+            e.preventDefault();
+            e.stopPropagation();
+            this.isDragging = true;
+            this.initialWidth = this.left.offsetWidth;
+            this.initialHeight = this.left.offsetHeight;
+            this.initialMouseX = e.clientX;
+            this.initialMouseY = e.clientY;
+            this.widthControl.setPointerCapture(e.pointerId);
+        });
+
+        document.addEventListener("pointerup", (e: PointerEvent) => {
+            this.isDragging = false;
+            if (this.widthControl.hasPointerCapture(e.pointerId)) {
+                this.widthControl.releasePointerCapture(e.pointerId);
+            }
+        });
+
+        document.addEventListener("pointercancel", () => {
+            this.isDragging = false;
+        });
+
+        document.addEventListener("pointermove", (e: PointerEvent) => {
+            if (this.isDragging && this.currentWaypoint) {
+                e.preventDefault();
+                if (screen.width < 768) {
+                    const newHeight = (this.initialHeight - e.clientY + this.initialMouseY)
+                    const percentageHeight = Math.min(80, (newHeight / window.innerHeight) * 100);
+                    
+                    if (percentageHeight < 20) {
+                        this.panelHeight = 20;
+                        this.left.style.height = "20vh";
+                        this.hide();
+                    } else {
+                        this.panelHeight = percentageHeight;
+                        this.left.style.height = percentageHeight + "vh";
+                    }
+                    
+                } else {
+                    const newWidth = Math.max(400, Math.min(this.initialWidth + e.clientX - this.initialMouseX, 700));
+                    this.panelWidth = newWidth;
+                    this.left.style.width = newWidth + "px";
+                    this.right.style.width = newWidth + "px";
+                }
+            }
+        }, { passive: false });
 
         window.addEventListener("resize", () => {
             if ((window.innerWidth < 1440 && this.previousWindowWidth >= 1440) ||
@@ -78,6 +143,17 @@ export class PamphletManager {
             this.right.classList.add("open");
         }
 
+        this.left.appendChild(this.widthControl);
+
+        if (screen.width < 768) {
+            this.left.style.width = "100%";
+            this.left.style.height = this.panelHeight + "vh";
+        } else {
+            this.left.style.width = this.panelWidth + "px";
+            this.right.style.width = this.panelWidth + "px";
+            this.left.style.height = "100%";
+        }
+
     }
 
     hide(): void {
@@ -86,6 +162,8 @@ export class PamphletManager {
         this.left.classList.remove("open");
         this.right.classList.remove("open");
         this.clear();
+        if (this.left.contains(this.widthControl))
+            this.left.removeChild(this.widthControl);
     }
 
     clear(): void {

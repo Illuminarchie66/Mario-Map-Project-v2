@@ -111,23 +111,29 @@ export class Globe3D extends ModelMap {
 
         this.camera = new THREE.PerspectiveCamera(
             45,
-            window.innerWidth / window.innerHeight,
+            this.mapContainer.clientWidth / this.mapContainer.clientHeight,
             0.1,
             1000
         );
         this.camera.position.z = 3;
 
         this.renderer = new THREE.WebGLRenderer({ antialias: false });
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(this.mapContainer.clientWidth, this.mapContainer.clientHeight);
+        this.renderer.domElement.style.display = 'block';
         this.renderer.outputColorSpace = THREE.SRGBColorSpace;
         this.mapContainer.appendChild(this.renderer.domElement);
 
         this.htmlRenderer = new CSS2DRenderer();
-        this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
+        this.htmlRenderer.setSize(this.mapContainer.clientWidth, this.mapContainer.clientHeight);
         this.htmlRenderer.domElement.style.position = 'absolute';
         this.htmlRenderer.domElement.style.top = '0px';
+        this.htmlRenderer.domElement.style.left = '0px';
+        this.htmlRenderer.domElement.style.width = '100%';
+        this.htmlRenderer.domElement.style.height = '100%';
+        this.htmlRenderer.domElement.style.zIndex = '1';
         this.htmlRenderer.domElement.style.pointerEvents = 'none';
         this.mapContainer.appendChild(this.htmlRenderer.domElement);
+        this.mapContainer.style.position = 'relative';
 
         this.popupContainer = new CSS2DObject(document.createElement('div'));
         this.scene.add(this.popupContainer);
@@ -138,10 +144,14 @@ export class Globe3D extends ModelMap {
         this.mouse = new THREE.Vector2();
 
         window.addEventListener('resize', () => {
-            this.camera.aspect = window.innerWidth / window.innerHeight;
+            this.camera.lookAt(this.origin);
+
+            const width = this.mapContainer.clientWidth;
+            const height = this.mapContainer.clientHeight;
+            this.camera.aspect = width / height;
             this.camera.updateProjectionMatrix();
-            this.renderer.setSize(window.innerWidth, window.innerHeight);
-            this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
+            this.renderer.setSize(width, height);
+            this.htmlRenderer.setSize(width, height);
             this.renderer.render(this.scene, this.camera);
             this.htmlRenderer.render(this.scene, this.camera);
         });
@@ -576,8 +586,9 @@ export class Globe3D extends ModelMap {
             return;
         }
 
-        this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        const rect = this.renderer.domElement.getBoundingClientRect();
+        this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
         this.raycaster.setFromCamera(this.mouse, this.camera);
         const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
         const earthIntersections = this.raycaster.intersectObjects(activeWaypoints);
@@ -789,8 +800,9 @@ export class Globe3D extends ModelMap {
     setupWaypoints(): void {
         this.mapContainer.addEventListener('mousemove', (event: MouseEvent) => {
             if (!this.showWaypoints) return;
-            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            const rect = this.renderer.domElement.getBoundingClientRect();
+            this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
             this.raycaster.setFromCamera(this.mouse, this.camera);
             const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
             activeWaypoints.push(this.moonCollision)
@@ -804,6 +816,10 @@ export class Globe3D extends ModelMap {
         });
 
         this.mapContainer.addEventListener('pointerdown', (event: PointerEvent) => {
+            const rect = this.renderer.domElement.getBoundingClientRect();
+            this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+            this.raycaster.setFromCamera(this.mouse, this.camera);
             const intersectsEarth = this.raycaster.intersectObject(this.earth);
             if (intersectsEarth.length > 0) {
                 const point = intersectsEarth[0].point;

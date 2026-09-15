@@ -100,7 +100,6 @@ export class PopupComponent extends BaseComponent<PopupContent> {
     render(): HTMLElement {
         const wrapper = document.createElement("div");
         wrapper.className = "map-popup__wrapper";
-        wrapper.style.width = "400px";
 
         const inner = document.createElement("div");
         inner.className = "map-popup__inner";

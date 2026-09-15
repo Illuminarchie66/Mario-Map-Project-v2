@@ -8,6 +8,5 @@ import '../css/core/fonts.css';
 import { MapManager } from "./map/MapManager";
 import { UIManager } from "./ui/UIManager";
 
-// const appContainer = document.getElementById("appContainer"); 
-const mapManager = new MapManager("globe");
+const mapManager = new MapManager("globe-3d");
 const uiManager = new UIManager();

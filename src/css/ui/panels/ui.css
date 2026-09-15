@@ -21,8 +21,8 @@
 }
 
 .ui__title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-big-title);
+    font-family: var(--title-font-family);
+    font-size: var(--big-title-font-size);
     font-weight: 500;
     color: var(--big-title-text-color);
 
