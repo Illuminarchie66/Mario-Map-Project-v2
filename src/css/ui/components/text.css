@@ -1,12 +1,12 @@
 .c-text-block {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .c-text-block__title {
-  font-family: 'Brandon Text', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 0.3rem 0;
+    font-family: var(--core-font-family);
+    font-size: var(--subtitle-font-size);
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
 }
 
 .c-text-block__title--left { text-align: left; }
@@ -14,11 +14,11 @@
 .c-text-block__title--right { text-align: right; }
 
 .c-text-block__content {
-  font-family: 'Brandon Text', sans-serif;
-  font-size: 1rem;
+  font-family: var(--core-font-family);
+  font-size: var(--core-font-size);
   line-height: 1.2;
   margin: 0;
-  color: #333333
+  color: var(--core-text-color);
 }
 
 .c-text-block__content--left { text-align: left; }
@@ -30,10 +30,10 @@
 }
 
 .doc-viewer .c-text-block__title {
-    font-size: 1.7rem;
+    font-size: var(--small-title-font-size);
 }
 
 .doc-viewer .c-text-block__content {
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: var(--core-font-size);
 }

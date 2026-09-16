@@ -18,10 +18,9 @@
     transition: transform 0.3s ease;
 
     background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
     scrollbar-width: thin;
-    scrollbar-color: #d4b84a transparent;
+    scrollbar-color: var(--secondary-color) transparent;
 }
 
 .panel.open {

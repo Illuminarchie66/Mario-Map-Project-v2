@@ -24,7 +24,7 @@
 .map-popup__wrapper {
     position: relative;
     background: #ffffff;
-    border: 3px solid #b18f01;
+    border: 3px solid var(--primary-color);
     border-radius: 14px;
     overflow: visible;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
@@ -54,7 +54,7 @@
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 14px solid #b18f01;
+    border-top: 14px solid var(--primary-color);
 }
 
 .map-popup__wrapper::before {
@@ -67,7 +67,7 @@
     height: 0;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-top: 11px solid #ffffff;
+    border-top: 11px solid var(--background-color);
     z-index: 1;
 }
 
@@ -82,7 +82,7 @@
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background: #ffffff;
+    background: var(--background-color);
     transform: translateZ(0);
 }
 
@@ -112,7 +112,7 @@
     left: 0;
     width: 100%;
     height: 55%;
-    background: linear-gradient(to bottom, transparent, #ffffff);
+    background: linear-gradient(to bottom, transparent, var(--background-color));
     pointer-events: none;
     z-index: 100;
 }
@@ -134,11 +134,11 @@
 }
 
 .map-popup__title {
-    font-family: 'Futura PT', sans-serif;
+    font-family: var(--title-font-family);
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: var(--core-large-font-size);
     line-height: 1;
-    color: #1a1a1a;
+    color: var(--title-text-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin: 0 0 6px;
@@ -160,7 +160,7 @@
 }
 
 .map-popup__title a {
-    color: #1a1a1a;
+    color: var(--title-text-color);
     text-decoration: none;
 }
 
@@ -172,15 +172,15 @@
     border: none;
     width: 75%;
     height: 2px;
-    background-color: #b18f01;
+    background-color: var(--primary-color);
     margin: 0 auto 8px 0;
     opacity: 0.6;
 }
 
 .map-popup__description {
-    font-family: 'Brandon Text', sans-serif;
-    font-size: 1rem;
-    color: #555;
+    font-family: var(--core-font-family);
+    font-size: var(--core-font-size);
+    color: var(--core-text-color);
     line-height: 1.5;
     margin: 0;
     user-select: text !important;
@@ -190,14 +190,14 @@
 
 @media (max-width: 768px) {
     .map-popup__description {
-        font-size: 0.9rem;
+        font-size: var(--subtext-font-size);
         line-height: 1.25;
     }
 }
 
 @media (max-width: 425px) {
     .map-popup__description {
-        font-size: 0.8rem;
+        font-size: var(--subtext-font-size);
         line-height: 1.25;
     }
 }
@@ -211,7 +211,7 @@
     width: 24px;
     height: 24px;
     font-size: 1.5rem;
-    color: #b18f01;
+    color: var(--primary-color);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -221,7 +221,7 @@
 }
 
 .map-popup__close:hover {
-    color: white;
+    color: var(--complement-color);
 }
 
 .map-popup__image-block .image-zoom {
@@ -239,7 +239,7 @@
 .map-popup__carousel-container {
     position: relative;
     overflow: hidden;
-    background: #ffffff;
+    background: var(--background-color);
 }
 
 .map-popup__carousel {
@@ -281,9 +281,9 @@
 
 .map-popup__carousel .slick-prev, 
 .map-popup__carousel .slick-next {
-  z-index: 10;
-  width: 30px;
-  height: 30px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
 }
 
 .map-popup__carousel .slick-prev:before, 
@@ -292,13 +292,13 @@
 } 
 
 .map-popup__carousel .slick-prev {
-  left: 5px;
-  transform: translateY(5px);
+    left: 5px;
+    transform: translateY(5px);
 }
 
 .map-popup__carousel .slick-next {
-  right: 5px;
-  transform: translateY(5px);
+    right: 5px;
+    transform: translateY(5px);
 }
 
 .map-popup__body .c-explore-button {

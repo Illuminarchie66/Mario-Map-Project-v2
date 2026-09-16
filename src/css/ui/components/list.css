@@ -3,8 +3,8 @@
 }
 
 .c-list__title {
-    font-family: 'Brandon Text', sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--core-font-family);
+    font-size: var(--subtitle-font-size);
     font-weight: 700;
     margin: 0 0 0.5rem 0;
 }
@@ -29,9 +29,9 @@
 }
 
 .c-list__item {
-    font-family: 'Brandon Text', sans-serif;
-    font-size: 0.95rem;
-    color: #333;
+    font-family: var(--core-font-family);
+    font-size: var(--core-font-size);
+    color: var(--core-text-color);
     line-height: 1.4;
     padding: 4px 0;
     border-bottom: 1px solid rgba(177, 143, 1, 0.12);
