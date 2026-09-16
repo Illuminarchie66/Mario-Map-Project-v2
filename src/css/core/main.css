@@ -26,7 +26,7 @@
     --big-title-text-color: var(--color_black);
     --title-text-color: var(--color_gray-1);
     --core-text-color: var(--color_gray-2);
-    --sub-text-color: var(--color_gray-3);
+    --subtext-color: var(--color_gray-3);
 
     --big-title-font-size: 3.5rem;
     --title-font-size: 2.5rem;

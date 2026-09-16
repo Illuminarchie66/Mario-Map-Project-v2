@@ -1,34 +1,35 @@
 .c-carousel {
-  margin-top: 0.2rem;
-  margin-bottom: 0 !important;
+    margin-top: 0.2rem;
+    margin-bottom: 0 !important;
 }
 
 .c-carousel__container {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .c-carousel__title {
-  font-family: 'Brandon Text', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 0.1rem 0;
+    font-family: var(--core-font-family);
+    font-size: var(--subtitle-font-size);
+    font-weight: 700;
+    margin: 0 0 0.1rem 0;
 }
 
 .slick-initalized {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .c-carousel__slide {
-  padding: 0;
+    padding: 0;
 }
 
 .c-carousel__image {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 180px;
 }
 
 .c-carousel__image .image-zoom {
@@ -45,16 +46,16 @@
 }
 
 .c-carousel__main-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .c-carousel__caption {
-  font-family: 'Brandon Text', sans-serif;
-  font-size: 0.9rem;
-  color: #555;
+    font-family: var(--subtext-font-family);
+    font-size: var(--subtext-font-size);
+    color: var(--subtext-color);
 }
 .c-carousel__caption--left { text-align: left; }
 .c-carousel__caption--center { text-align: center; }
@@ -62,34 +63,34 @@
 
 
 .c-panel-carousel.slick-slider {
-  margin: 0;
+    margin: 0;
 }
 
 .c-carousel .slick-list {
-  padding: 0 0 0.5rem 0 !important;
-  margin: 0;
+    padding: 0 0 0.5rem 0 !important;
+    margin: 0;
 }
 
 .c-carousel .slick-dots {
-  position: absolute; 
-  bottom: -10px;
+    position: absolute; 
+    bottom: -10px;
 }
 
 .c-carousel .slick-dots li {
-  margin: 0 0px; 
+    margin: 0 0; 
 }
 
 .c-carousel .slick-prev, 
 .c-carousel .slick-next {
-  z-index: 10;
-  width: 40px;
-  height: 40px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
 }
 
 .c-carousel .slick-prev {
-  left: 10px;
+    left: 10px;
 }
 
 .c-carousel .slick-next {
-  right: 10px;
+    right: 10px;
 }
