@@ -53,6 +53,7 @@ export class Globe3D extends ModelMap {
 
     earth!: THREE.Mesh;
     earthRing!: THREE.Mesh;
+    earthCollision!: THREE.Object3D;
     clouds!: THREE.Group;
     cloudBase!: THREE.Mesh;
     cloudTop!: THREE.Mesh;
@@ -268,6 +269,17 @@ export class Globe3D extends ModelMap {
         );  
 
         this.earth = new THREE.Mesh(geometry, material);
+        this.earthCollision = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 32, 32),
+            new THREE.MeshBasicMaterial({ 
+                color: 0xffffff, 
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+                // wireframe: true
+            })
+        );
+        this.earth.add(this.earthCollision);
         
         this.createAtmosphere(this.earth, 1.025);
         this.createEarthRing();
@@ -606,18 +618,17 @@ export class Globe3D extends ModelMap {
             return;
         } 
 
-        const moonIntersection = this.raycaster.intersectObject(this.moonCollision)
-        if (moonIntersection.length > 0) {
-            this.clickMoon();
-            return;
+        const otherIntersection = this.raycaster.intersectObjects([this.earthCollision, this.moonCollision, this.cometObservatoryCollision])
+        if (otherIntersection.length > 0) {
+            if (otherIntersection[0].object === this.moonCollision) {
+                this.clickMoon();
+                return;
+            } else if (otherIntersection[0].object === this.cometObservatoryCollision) {
+                this.clickCometObservatory();
+                return;
+            } 
         }
 
-        const cometObservatoryIntersection = this.raycaster.intersectObject(this.cometObservatoryCollision)
-        if (cometObservatoryIntersection.length > 0) {
-            this.clickCometObservatory();
-            return;
-        }
-        
         eventBus.emit("map:click", {});
     }
 
@@ -805,14 +816,17 @@ export class Globe3D extends ModelMap {
             this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
             this.raycaster.setFromCamera(this.mouse, this.camera);
             const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
-            activeWaypoints.push(this.moonCollision)
-            activeWaypoints.push(this.cometObservatoryCollision)
+            activeWaypoints.push(this.earthCollision);
+            activeWaypoints.push(this.moonCollision);
+            activeWaypoints.push(this.cometObservatoryCollision);
             const intersects = this.raycaster.intersectObjects(activeWaypoints);
             if (intersects.length > 0) {
-                this.mapContainer.style.cursor = 'pointer';
-            } else {
-                this.mapContainer.style.cursor = 'default';
-            }
+                if (intersects[0].object !== this.earthCollision) {
+                    this.mapContainer.style.cursor = 'pointer';
+                    return;
+                }
+            } 
+            this.mapContainer.style.cursor = 'default';
         });
 
         this.mapContainer.addEventListener('pointerdown', (event: PointerEvent) => {
@@ -820,7 +834,7 @@ export class Globe3D extends ModelMap {
             this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
             this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
             this.raycaster.setFromCamera(this.mouse, this.camera);
-            const intersectsEarth = this.raycaster.intersectObject(this.earth);
+            const intersectsEarth = this.raycaster.intersectObject(this.earthCollision);
             if (intersectsEarth.length > 0) {
                 const point = intersectsEarth[0].point;
                 const lat = 90 - (Math.acos(point.y / point.length()) * 180 / Math.PI);
