@@ -5,6 +5,7 @@ import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
 import { imageViewer } from "../ImageViewer";
+import { getPortableURL } from '../../core/portableURL';
 
 export const ImageBlockSchema = z.object({
     type: z.literal("image"),
@@ -37,7 +38,7 @@ export class ImageComponent extends Component<ImageBlock> {
         let imagePath = this.data.image;
         if (this.path)
             imagePath = this.path + "/" + imagePath;
-        img.src = imagePath;
+        img.src = getPortableURL(imagePath);
         img.alt = this.data.caption || "";
         img.className = "c-image-single__img";
 

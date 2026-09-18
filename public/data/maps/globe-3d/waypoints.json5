@@ -5,7 +5,7 @@
         
         label: "Mushroom Continent",
         icon: "default",
-        path: "data/maps/globe/assets/waypoints/mushroom-continent",
+        path: "/data/maps/globe/assets/waypoints/mushroom-continent",
 
         displayType: "pamphlet",
 
@@ -113,7 +113,7 @@
 
 		label: "Mushroom Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -132,7 +132,7 @@
 
 		label: "Koopa Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 		
 		displayType: "popup",
 
@@ -151,7 +151,7 @@
 
 		label: "Flower Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -170,7 +170,7 @@
 
 		label: "Diamond City",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -189,7 +189,7 @@
 
 		label: "Mushroom World",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -209,7 +209,7 @@
 
 		label: "Cap Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/cap-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/cap-kingdom/",
 
 		displayType: "popup",
 
@@ -229,7 +229,7 @@
 		
 		label: "Cascade Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/cascade-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/cascade-kingdom/",
 
 		displayType: "pamphlet",
 
@@ -384,7 +384,7 @@
 
 		label: "Lake Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/lake-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/lake-kingdom/",
 
 		displayType: "popup",
 
@@ -403,7 +403,7 @@
 
 		label: "Lost Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/lost-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/lost-kingdom/",
 
 		displayType: "popup",
 
@@ -422,7 +422,7 @@
 
 		label: "Luncheon Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/luncheon-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/luncheon-kingdom/",
 
 		displayType: "popup",
 
@@ -441,7 +441,7 @@
 
 		label: "Ruined Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/ruined-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/ruined-kingdom/",
 
 		displayType: "popup",
 
@@ -460,7 +460,7 @@
 
 		label: "Metro Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/metro-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/metro-kingdom/",
 
 		displayType: "pamphlet",
 
@@ -656,7 +656,7 @@
 
 		label: "Wooded Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/wooded-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/wooded-kingdom/",
 
 		displayType: "popup",
 
@@ -675,7 +675,7 @@
 
 		label: "Sand Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/sand-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/sand-kingdom/",
 
 		displayType: "popup",
 
@@ -694,7 +694,7 @@
 
 		label: "Seaside Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/seaside-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/seaside-kingdom/",
 
 		displayType: "popup",
 
@@ -714,7 +714,7 @@
 
 		label: "Snow Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/snow-kingdom/",
 
 		displayType: "popup",
 

@@ -6,7 +6,7 @@
         
         label: "Mushroom Continent",
         icon: "default",
-        path: "data/maps/globe/assets/waypoints/mushroom-continent",
+        path: "/data/maps/globe/assets/waypoints/mushroom-continent",
 
         displayType: "pamphlet",
 
@@ -114,7 +114,7 @@
 
 		label: "Mushroom Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -133,7 +133,7 @@
 
 		label: "Koopa Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 		
 		displayType: "popup",
 
@@ -152,7 +152,7 @@
 
 		label: "Flower Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -171,7 +171,7 @@
 
 		label: "Diamond City",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -190,7 +190,7 @@
 
 		label: "Mushroom World",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -209,7 +209,7 @@
 
 		label: "Fever Island",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -228,7 +228,7 @@
 
 		label: "Kingdom of Bask",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mushroom-continent/",
+		path: "/data/maps/globe/assets/waypoints/mushroom-continent/",
 
 		displayType: "popup",
 
@@ -248,7 +248,7 @@
 
 		label: "Cap Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/cap-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/cap-kingdom/",
 
 		displayType: "popup",
 
@@ -268,7 +268,7 @@
 		
 		label: "Cascade Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/cascade-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/cascade-kingdom/",
 
 		displayType: "pamphlet",
 
@@ -423,7 +423,7 @@
 
 		label: "Lake Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/lake-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/lake-kingdom/",
 
 		displayType: "popup",
 
@@ -442,7 +442,7 @@
 
 		label: "Lost Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/lost-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/lost-kingdom/",
 
 		displayType: "popup",
 
@@ -461,7 +461,7 @@
 
 		label: "Luncheon Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/luncheon-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/luncheon-kingdom/",
 
 		displayType: "popup",
 
@@ -480,7 +480,7 @@
 
 		label: "Ruined Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/ruined-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/ruined-kingdom/",
 
 		displayType: "popup",
 
@@ -499,7 +499,7 @@
 
 		label: "Metro Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/metro-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/metro-kingdom/",
 
 		displayType: "pamphlet",
 
@@ -695,7 +695,7 @@
 
 		label: "Wooded Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/wooded-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/wooded-kingdom/",
 
 		displayType: "popup",
 
@@ -714,7 +714,7 @@
 
 		label: "Sand Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/sand-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/sand-kingdom/",
 
 		displayType: "popup",
 
@@ -733,7 +733,7 @@
 
 		label: "Seaside Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/seaside-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/seaside-kingdom/",
 
 		displayType: "popup",
 
@@ -753,7 +753,7 @@
 
 		label: "Snow Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/snow-kingdom/",
 
 		displayType: "popup",
 
@@ -774,7 +774,7 @@
 
 		label: "Sarasaland",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/sarasaland/",
+		path: "/data/maps/globe/assets/waypoints/sarasaland/",
 
 		displayType: "pamphlet",
 
@@ -926,7 +926,7 @@
 
 		label: "Birabuto Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/birabuto-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/birabuto-kingdom/",
 
 		displayType: "popup",
 
@@ -945,7 +945,7 @@
 
 		label: "Muda Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/muda-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/muda-kingdom/",
 
 		displayType: "popup",
 
@@ -964,7 +964,7 @@
 
 		label: "Easton Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/easton-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/easton-kingdom/",
 
 		displayType: "popup",
 
@@ -983,7 +983,7 @@
 
 		label: "Chai Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/chai-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/chai-kingdom/",
 
 		displayType: "popup",
 
@@ -1003,7 +1003,7 @@
 
 		label: "Baseball Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/baseball-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/baseball-kingdom/",
 
 		displayType: "popup",
 
@@ -1022,7 +1022,7 @@
 
 		label: "Kitchen Island",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/kitchen-island/",
+		path: "/data/maps/globe/assets/waypoints/kitchen-island/",
 
 		displayType: "popup",
 
@@ -1041,7 +1041,7 @@
 
 		label: "Mario Land",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mario-land/",
+		path: "/data/maps/globe/assets/waypoints/mario-land/",
 
 		displayType: "popup",
 
@@ -1060,7 +1060,7 @@
 
 		label: "Keelhaul Key",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/keelhaul-key/",
+		path: "/data/maps/globe/assets/waypoints/keelhaul-key/",
 
 		displayType: "popup",
 
@@ -1079,7 +1079,7 @@
 
 		label: "Northern Kremisphere",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/northern-kremisphere/",
+		path: "/data/maps/globe/assets/waypoints/northern-kremisphere/",
 
 		displayType: "popup",
 
@@ -1098,7 +1098,7 @@
 
 		label: "Ice Ice Outpost",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/snow-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/snow-kingdom/",
 
 		displayType: "popup",
 
@@ -1117,7 +1117,7 @@
 
 		label: "Sunshine Archipelago",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/sunshine-archipelago/",
+		path: "/data/maps/globe/assets/waypoints/sunshine-archipelago/",
 
 		displayType: "pamphlet",
 
@@ -1263,7 +1263,7 @@
 
 		label: "Prism Island",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/prism-island/",
+		path: "/data/maps/globe/assets/waypoints/prism-island/",
 
 		displayType: "pamphlet",
 
@@ -1431,7 +1431,7 @@
 
 		label: "Mario Kart World",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/mario-kart-world/",
+		path: "/data/maps/globe/assets/waypoints/mario-kart-world/",
 
 		displayType: "pamphlet",
 
@@ -1651,7 +1651,7 @@
 
 		label: "Sprixie Kingdom",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/sprixie-kingdom/",
+		path: "/data/maps/globe/assets/waypoints/sprixie-kingdom/",
 
 		displayType: "pamphlet",
 
@@ -1869,7 +1869,7 @@
 
 		label: "Dinosaur Land",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/dinosaur-land/",
+		path: "/data/maps/globe/assets/waypoints/dinosaur-land/",
 
 		displayType: "pamphlet",
 
@@ -2039,7 +2039,7 @@
 
 		label: "Rogueport",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/rogueport/",
+		path: "/data/maps/globe/assets/waypoints/rogueport/",
 
 		displayType: "pamphlet",
 
@@ -2228,7 +2228,7 @@
 
 		label: "DK Archipelago",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/dk-archipelago/",
+		path: "/data/maps/globe/assets/waypoints/dk-archipelago/",
 
 		displayType: "pamphlet",
 
@@ -2245,7 +2245,7 @@
 
 		label: "Piillo Island",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/piillo-island/",
+		path: "/data/maps/globe/assets/waypoints/piillo-island/",
 
 		displayType: "pamphlet",
 
@@ -2262,7 +2262,7 @@
 
 		label: "Rogue Coast",
 		icon: "default",
-		path: "data/maps/globe/assets/waypoints/ttyd-waters/",
+		path: "/data/maps/globe/assets/waypoints/ttyd-waters/",
 
 		displayType: "doc",
 

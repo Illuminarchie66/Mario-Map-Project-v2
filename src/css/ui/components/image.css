@@ -96,6 +96,8 @@
 .c-image-bottom {
     width: 100%;
     overflow: hidden;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .c-image-bottom__img {

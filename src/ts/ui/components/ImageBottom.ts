@@ -2,6 +2,7 @@ import '../../../css/ui/components/image.css';
 
 import { z } from "zod";
 import { Component } from "./Component";
+import { getPortableURL } from '../../core/portableURL';
 
 export const ImageBottomBlockSchema = z.object({
     type: z.literal("image-bottom"),
@@ -24,7 +25,7 @@ export class ImageBottomComponent extends Component<ImageBottomBlock> {
         let imagePath = this.data.image;
         if (this.path)
             imagePath = this.path + "/" + imagePath;
-        img.src = imagePath;
+        img.src = getPortableURL(imagePath);
         img.className = "c-image-bottom__img";
 
         if (this.data.height) {

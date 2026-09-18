@@ -1,10 +1,12 @@
 import * as L from 'leaflet';
 import { TileMapConfig } from "../MapConfig";
 import { LeafletMap } from "./LeafletMap";
+import { getPortableURL } from '../../core/portableURL';
 
 export class TileMap extends LeafletMap<TileMapConfig> {
     addLayers(): void {
-        const { tilePath, features } = this.config;
+        let { tilePath, features } = this.config;
+        tilePath = getPortableURL(tilePath);
         const fileType = this.config.tileFileType || 'png';
 
         const CustomTileLayer = L.TileLayer.extend({

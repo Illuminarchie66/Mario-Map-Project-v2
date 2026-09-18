@@ -6,6 +6,7 @@ import { eventBus } from '../../core/EventBus';
 
 import { Waypoint } from "../waypoints/WaypointManager";
 import { iconRegistry, IconIdentifier } from "../waypoints/IconRegistry";
+import { getPortableURL } from '../../core/portableURL';
 
 export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapConfig> extends _Map<TConfig> {
     
@@ -81,7 +82,7 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
             ]
 
             const overlay = L.imageOverlay(
-                icon.iconPath, bounds,
+                getPortableURL(icon.iconPath), bounds,
                 { interactive: true, zIndex: 1000 }
             ).addTo(this.map);
 

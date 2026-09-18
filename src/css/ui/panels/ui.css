@@ -29,3 +29,11 @@
     margin: 0;
     padding: 1rem;
 }
+
+
+@media (max-width:425px) {
+    .ui__title {
+        font-size: var(--title-font-size);
+        padding-top: 1.4rem;
+    }
+}

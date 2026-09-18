@@ -1,6 +1,7 @@
 import * as L from 'leaflet';
 import { ImageMapConfig, PlanMapConfig } from "../MapConfig";
 import { LeafletMap } from "./LeafletMap";
+import { getPortableURL } from "../../core/portableURL";
 
 export abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConfig> extends LeafletMap<TConfig> {
     abstract addLayers(): void;
@@ -10,7 +11,7 @@ export abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConf
             const img = new Image();
             img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
             img.onerror = reject;
-            img.src = imagePath;
+            img.src = getPortableURL(imagePath);
         });
     }
 
@@ -32,9 +33,9 @@ export abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConf
 
         let imagePath: string;
         if (this.config instanceof ImageMapConfig) {
-            imagePath = this.config.imagePath;
+            imagePath = getPortableURL(this.config.imagePath);
         } else if (this.config instanceof PlanMapConfig) {
-            imagePath = this.config.plans[0].imagePath;
+            imagePath = getPortableURL(this.config.plans[0].imagePath);
         } else {
             throw new Error("Unsupported map config type for computing bounds.");
         }

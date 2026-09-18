@@ -7,7 +7,7 @@
         ],
         icon: "peach",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
 
         tag: "landmark",
 
@@ -50,7 +50,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -68,7 +68,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -86,7 +86,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -104,7 +104,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -122,7 +122,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -140,7 +140,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -158,7 +158,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -176,7 +176,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -194,7 +194,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -212,7 +212,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -230,7 +230,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -248,7 +248,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -266,7 +266,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -284,7 +284,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -302,7 +302,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -320,7 +320,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -338,7 +338,7 @@
         ],
         icon: "star",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "landmark",
         content: {
             "type": "popup",
@@ -356,7 +356,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -374,7 +374,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -392,7 +392,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -410,7 +410,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -428,7 +428,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -446,7 +446,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -464,7 +464,7 @@
         ],
         icon: "pipe",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -482,7 +482,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -500,7 +500,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -518,7 +518,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -536,7 +536,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -554,7 +554,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -572,7 +572,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -590,7 +590,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -608,7 +608,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -626,7 +626,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -644,7 +644,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -662,7 +662,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -680,7 +680,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -698,7 +698,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -716,7 +716,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -734,7 +734,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -752,7 +752,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -770,7 +770,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -788,7 +788,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -806,7 +806,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -824,7 +824,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -842,7 +842,7 @@
         ],
         icon: "tennis",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "landmark",
         content: {
             "type": "popup",
@@ -860,7 +860,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -878,7 +878,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -896,7 +896,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -914,7 +914,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -932,7 +932,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -950,7 +950,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -968,7 +968,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -986,7 +986,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1004,7 +1004,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1022,7 +1022,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1040,7 +1040,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1058,7 +1058,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1076,7 +1076,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1094,7 +1094,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1112,7 +1112,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1130,7 +1130,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1148,7 +1148,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1166,7 +1166,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1184,7 +1184,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1202,7 +1202,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1220,7 +1220,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1238,7 +1238,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1256,7 +1256,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1274,7 +1274,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1292,7 +1292,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1310,7 +1310,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1328,7 +1328,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1346,7 +1346,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1364,7 +1364,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1382,7 +1382,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1400,7 +1400,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1418,7 +1418,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1436,7 +1436,7 @@
         ],
         icon: "golf",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1454,7 +1454,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1472,7 +1472,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1490,7 +1490,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1508,7 +1508,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1526,7 +1526,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1544,7 +1544,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1562,7 +1562,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1580,7 +1580,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1598,7 +1598,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1616,7 +1616,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1634,7 +1634,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1652,7 +1652,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1670,7 +1670,7 @@
         ],
         icon: "mario",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "landmark",
         content: {
             "type": "popup",
@@ -1688,7 +1688,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1706,7 +1706,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1724,7 +1724,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1742,7 +1742,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1760,7 +1760,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1778,7 +1778,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1796,7 +1796,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1814,7 +1814,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -1832,7 +1832,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1850,7 +1850,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1868,7 +1868,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1886,7 +1886,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -1904,7 +1904,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1922,7 +1922,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1940,7 +1940,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1958,7 +1958,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1976,7 +1976,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -1994,7 +1994,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2012,7 +2012,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2030,7 +2030,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2048,7 +2048,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2066,7 +2066,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2084,7 +2084,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2102,7 +2102,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2120,7 +2120,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2138,7 +2138,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2156,7 +2156,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2174,7 +2174,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2192,7 +2192,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2210,7 +2210,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2228,7 +2228,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2246,7 +2246,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2264,7 +2264,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2282,7 +2282,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2300,7 +2300,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2318,7 +2318,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2336,7 +2336,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2354,7 +2354,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2372,7 +2372,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2390,7 +2390,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2408,7 +2408,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2426,7 +2426,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2444,7 +2444,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2462,7 +2462,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2480,7 +2480,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2498,7 +2498,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2516,7 +2516,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2534,7 +2534,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2552,7 +2552,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2570,7 +2570,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2588,7 +2588,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2606,7 +2606,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2624,7 +2624,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2642,7 +2642,7 @@
         ],
         icon: "flower",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "location",
         content: {
             "type": "popup",
@@ -2660,7 +2660,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",
@@ -2678,7 +2678,7 @@
         ],
         icon: "vehicle",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "vehicle",
         content: {
             "type": "popup",
@@ -2696,7 +2696,7 @@
         ],
         icon: "mushroom",
         displayType: "popup",
-        path: "data/maps/toad-town/assets/images/",
+        path: "/data/maps/toad-town/assets/images/",
         tag: "area",
         content: {
             "type": "popup",

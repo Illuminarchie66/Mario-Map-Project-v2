@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {ModelMapConfig } from "../MapConfig";
 import { _Map } from "./Map";
+import { getPortableURL } from '../../core/portableURL';
 
 export abstract class ModelMap extends _Map<ModelMapConfig> {
     textureLoader: THREE.TextureLoader;
@@ -24,7 +25,7 @@ export abstract class ModelMap extends _Map<ModelMapConfig> {
     loadTexture(url: string): Promise<THREE.Texture> {
         return new Promise((resolve, reject) => {
             this.textureLoader.load(
-                url,
+                getPortableURL(url),
                 texture => resolve(texture),
                 undefined,
                 error => reject(error)
@@ -35,7 +36,7 @@ export abstract class ModelMap extends _Map<ModelMapConfig> {
     loadGLTF(url: string): Promise<THREE.Group> {
         return new Promise((resolve, reject) => {
             this.gltfLoader.load(
-                url,
+                getPortableURL(url),
                 gltf => resolve(gltf.scene),
                 undefined,
                 error => reject(error)
@@ -44,6 +45,7 @@ export abstract class ModelMap extends _Map<ModelMapConfig> {
     }
 
     loadCubeTexture(urls: string[]): Promise<THREE.CubeTexture> {
+        urls = urls.map(url => getPortableURL(url));
         return new Promise((resolve, reject) => {
             this.cubeTextureLoader.load(
                 urls,

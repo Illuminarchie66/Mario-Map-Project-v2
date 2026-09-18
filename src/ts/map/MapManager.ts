@@ -24,9 +24,10 @@ class MapManager {
         });
 
         if (initialMapId) {
-            this.loadMapById({ id: initialMapId }).catch(error => {
-                console.error(`Failed to load initial map: "${initialMapId}": `, error);
-            });
+            eventBus.emit("map:load", { id: initialMapId });
+            // this.loadMapById({ id: initialMapId }).catch(error => {
+            //     console.error(`Failed to load initial map: "${initialMapId}": `, error);
+            // });
         }
     }
 
@@ -64,6 +65,8 @@ class MapManager {
                 zoom: map.getZoom(),
             });
         }
+
+        eventBus.emit("map:loaded", { id: config.id, view: view, map: this.map });
         
     }
 

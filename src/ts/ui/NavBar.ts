@@ -1,63 +1,104 @@
 import '../../css/ui/navbar.css';
 import { PanelManager } from "./panels/PanelManager";
+import { eventBus } from "../core/EventBus";
+import { getPortableURL } from '../core/portableURL';
 
 export class NavBar {
     panelManager: PanelManager;
     navbar: HTMLDivElement;
+
+    mapSelectorButton: HTMLButtonElement;
+    waypointToggleButton: HTMLButtonElement;
+    starAtlasButton: HTMLButtonElement;
+    settingsButton: HTMLButtonElement;
+    attributionButton: HTMLButtonElement;
+    rocketButton: HTMLButtonElement;
+
+    currentMapID: string | null = null;
 
     constructor(panelManager: PanelManager) {
         this.panelManager = panelManager;
 
         this.navbar = document.getElementById("navbar") as HTMLDivElement;
 
-        const mapSelectorButton = document.createElement("button");
-        mapSelectorButton.className = "navbar__button";
-        const mapSelectorIcon = document.createElement("img");
-        mapSelectorIcon.src = "assets/icons/globe-white.png";
-        mapSelectorIcon.alt = "Map Selector";
-        mapSelectorButton.appendChild(mapSelectorIcon);
-        this.navbar.appendChild(mapSelectorButton);
+        this.mapSelectorButton = document.createElement("button");
+        this.setupButton(
+            this.mapSelectorButton, 
+            "Map Selector", 
+            "/assets/icons/globe-white.png", 
+            () => { this.panelManager.showPanel("map-selector"); }
+        );
+        this.navbar.appendChild(this.mapSelectorButton);
 
-        const waypointToggleButton = document.createElement("button");
-        waypointToggleButton.className = "navbar__button";
-        const waypointToggleIcon = document.createElement("img");
-        waypointToggleIcon.src = "assets/icons/map.svg";
-        waypointToggleIcon.alt = "Waypoint Toggle";
-        waypointToggleButton.appendChild(waypointToggleIcon);
-        this.navbar.appendChild(waypointToggleButton);
+        this.waypointToggleButton = document.createElement("button");
+        this.setupButton(
+            this.waypointToggleButton, 
+            "Waypoint Toggles",
+            "/assets/icons/waypoint.svg",
+            () => { this.panelManager.showPanel("toggles"); }
+        );
+        this.navbar.appendChild(this.waypointToggleButton);
 
-        const starAtlasButton = document.createElement("button");
-        starAtlasButton.className = "navbar__button";
-        const starAtlasIcon = document.createElement("img");
-        starAtlasIcon.src = "assets/icons/book.svg";
-        starAtlasIcon.alt = "Star Atlas";
-        starAtlasIcon.className = "inverted";
-        starAtlasButton.appendChild(starAtlasIcon);
-        this.navbar.appendChild(starAtlasButton);
+        this.starAtlasButton = document.createElement("button");
+        this.setupButton(
+            this.starAtlasButton, 
+            "Star Atlas",
+            "/assets/icons/fat-star.svg",
+            () => { console.log("Star Atlas") }
+        );
+        this.navbar.appendChild(this.starAtlasButton);
 
-        const settingsButton = document.createElement("button");
-        settingsButton.className = "navbar__button";
-        const settingsIcon = document.createElement("img");
-        settingsIcon.src = "assets/icons/cog.svg";
-        settingsIcon.alt = "Settings";
-        settingsIcon.className = "inverted";
-        settingsButton.appendChild(settingsIcon);
-        this.navbar.appendChild(settingsButton);
+        this.settingsButton = document.createElement("button");
+        this.setupButton(
+            this.settingsButton, 
+            "Settings",
+            "/assets/icons/cog2.svg",
+            () => { this.panelManager.showPanel("settings"); }
+        );
+        this.navbar.appendChild(this.settingsButton);
 
-        mapSelectorButton.addEventListener("click", () => {
-            console.log("Map Selector button clicked");
-            this.panelManager.showPanel("map-selector");
+        this.attributionButton = document.createElement("button");
+        this.setupButton(
+            this.attributionButton, 
+            "Attribution",
+            "/assets/icons/person.svg",
+            () => { this.panelManager.showPanel("attribution"); }
+        );
+        this.navbar.appendChild(this.attributionButton);
+
+        this.rocketButton = document.createElement("button");
+        this.setupButton(
+            this.rocketButton, 
+            "Rocket",
+            "/assets/icons/rocket.svg",
+            () => { this.rocketButtonClick() }
+        );
+
+        eventBus.on("map:loaded", (payload) => {
+            this.currentMapID = payload.id;
+            if (this.currentMapID === "globe") {
+                this.navbar.appendChild(this.rocketButton);
+            } else {
+                this.rocketButton.remove();
+            }
         });
 
-        waypointToggleButton.addEventListener("click", () => {
-            console.log("Waypoint Toggle button clicked");
-            this.panelManager.showPanel("toggles");
-        });
+    }
 
-        settingsButton.addEventListener("click", () => {
-            console.log("Settings button clicked");
-            this.panelManager.showPanel("settings");
-        });
+    setupButton(button: HTMLButtonElement, title: string, iconPath: string, onClick: () => void) {
+        button.className = "navbar__button";
+        button.title = title;
+        const icon = document.createElement("img");
+        icon.src = getPortableURL(iconPath);
+        icon.alt = title;
+        button.appendChild(icon);
+        button.addEventListener("click", onClick);
+    }
+
+    rocketButtonClick() {
+        if (this.currentMapID === "globe") {
+            eventBus.emit("map:load", { id: "globe-3d" });
+        }
     }
 
 }

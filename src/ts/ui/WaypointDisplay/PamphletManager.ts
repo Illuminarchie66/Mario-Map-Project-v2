@@ -76,7 +76,7 @@ export class PamphletManager {
         document.addEventListener("pointermove", (e: PointerEvent) => {
             if (this.isDragging && this.currentWaypoint) {
                 e.preventDefault();
-                if (screen.width < 768) {
+                if (window.innerWidth < 768) {
                     const newHeight = (this.initialHeight - e.clientY + this.initialMouseY)
                     const percentageHeight = Math.min(80, (newHeight / window.innerHeight) * 100);
                     
@@ -131,21 +131,25 @@ export class PamphletManager {
 
             this.left.classList.add("open");
         } else {
-            const closeButton = this.createCloseButton();
-            this.right.appendChild(closeButton);
+            if (waypoint.content.right.length > 0) {
+                const closeButton = this.createCloseButton();
+                this.right.appendChild(closeButton);
 
-            for (const component of waypoint.content.right) {
-                const element = componentRenderer.render(component, path);
-                this.rightContent.appendChild(element);
+                for (const component of waypoint.content.right) {
+                    const element = componentRenderer.render(component, path);
+                    this.rightContent.appendChild(element);
+                }
+
+                this.left.classList.add("open");
+                this.right.classList.add("open");
+            } else {
+                this.left.classList.add("open");
             }
-
-            this.left.classList.add("open");
-            this.right.classList.add("open");
         }
 
         this.left.appendChild(this.widthControl);
 
-        if (screen.width < 768) {
+        if (window.innerWidth < 768) {
             this.left.style.width = "100%";
             this.left.style.height = this.panelHeight + "vh";
         } else {

@@ -8,6 +8,7 @@ import { imageViewer } from "../ImageViewer";
 
 import $ from 'jquery';
 import 'slick-carousel';
+import { getPortableURL } from '../../core/portableURL';
 
 export const PopupContentSchema = z.object({
     title: z.string().optional(),
@@ -34,7 +35,7 @@ export class PopupComponent extends BaseComponent<PopupContent> {
         if (this.path)
             imagePath = this.path + "/" + imagePath;
 
-        img.src = imagePath;
+        img.src = getPortableURL(imagePath);
         img.alt = caption || "";
 
         const finalImage = imageViewer.makeZoomableImage(img, caption)
@@ -67,7 +68,7 @@ export class PopupComponent extends BaseComponent<PopupContent> {
             if (this.path)
                 imagePath = this.path + "/" + imagePath;
 
-            img.src = imagePath;
+            img.src = getPortableURL(imagePath);
             img.alt = this.data.caption || "";
             img.className = "map-popup__carousel-main-image";
 

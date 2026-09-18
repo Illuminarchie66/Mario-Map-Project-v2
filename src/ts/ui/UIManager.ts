@@ -20,7 +20,7 @@ export class UIManager {
         this.coordDisplay = new CoordDisplay();
         this.coordDisplay.show();
 
-        eventBus.on("map:load", (payload) => {
+        eventBus.on("map:loaded", (payload) => {
             this.hideAll();
         });
     }

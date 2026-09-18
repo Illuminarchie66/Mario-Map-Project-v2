@@ -32,6 +32,19 @@
     height: 180px;
 }
 
+@media (max-width:425px) {
+    .c-carousel__image {
+        height: 180px;
+    }
+}
+
+@media (max-width:768px) {
+    .c-carousel__image {
+        height: 300px;
+    }
+}
+
+
 .c-carousel__image .image-zoom {
     display: block;
     width: 100%;

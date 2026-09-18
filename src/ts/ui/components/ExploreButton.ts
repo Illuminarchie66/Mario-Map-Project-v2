@@ -3,6 +3,7 @@ import '../../../css/ui/components/explore-button.css';
 import { z } from "zod";
 import { Component } from "./Component";
 import { eventBus } from "../../core/EventBus";
+import { getPortableURL } from '../../core/portableURL';
 
 export const ExploreButtonBlockSchema = z.object({
     type: z.literal("explore-button"),
@@ -26,7 +27,7 @@ export class ExploreButtonComponent extends Component<ExploreButtonBlock> {
         button.append("Explore");
 
         const icon = document.createElement("img");
-        icon.src = "/assets/icons/mag_glass.svg";
+        icon.src = getPortableURL("/assets/icons/mag_glass.svg");
         icon.alt = "Zoom";
         icon.className = "c-explore-button__icon";
 

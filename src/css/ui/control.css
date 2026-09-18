@@ -1,0 +1,26 @@
+.leaflet-control-layers-toggle {
+    
+}
+
+.leaflet-control-layers-expanded {
+    font-family: var(--silly-font-family);
+    font-size: var(--core-font-size);
+    color: var(--title-text-color);
+    background: var(--transparent-background-color-light);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+@media (max-width:768px) {
+    .leaflet-control-layers-expanded {
+        font-size: var(--subtext-font-size);
+    }
+}
+
+.leaflet-touch .leaflet-control-layers {
+    border: 2px solid #b18f0190;
+}
+
+.leaflet-control-layers-selector {
+    accent-color: var(--primary-color);
+}

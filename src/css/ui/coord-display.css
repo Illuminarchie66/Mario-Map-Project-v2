@@ -9,7 +9,7 @@
     color: var(--title-text-color);
 
     background: var(--transparent-background-color-light);
-    border: 1px solid #b18f0180;
+    border: 2px solid #b18f0190;
     border-radius: 8px;
     padding: 5px 12px;
 
@@ -31,6 +31,7 @@
 
 @media (max-width:768px) {
     .coord-display {
+        font-size: var(--subtext-font-size);
         bottom: calc(var(--navbar-height) + 6px);
         left: 6px;
         border: 2px solid #b18f0180

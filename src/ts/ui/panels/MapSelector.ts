@@ -3,6 +3,7 @@ import { Panel } from './Panel';
 import { eventBus } from '../../core/EventBus';
 import { MapConfig } from '../../map/MapConfig';
 import { mapRegistry } from '../../map/MapRegistry';
+import { getPortableURL } from '../../core/portableURL';
 
 export class MapSelectorPanel extends Panel {
     mapsContainer!: HTMLElement;
@@ -38,7 +39,7 @@ export class MapSelectorPanel extends Panel {
 
             const previewImage = document.createElement("img");
             previewImage.className = "map-selector__map-preview";
-            previewImage.src = config.mapPreview ?? "assets/core/images/black_default.jpg";
+            previewImage.src = getPortableURL(config.mapPreview ?? "/assets/core/images/black_default.jpg");
             mapSelector.appendChild(previewImage);
 
             const mapText = document.createElement("div");

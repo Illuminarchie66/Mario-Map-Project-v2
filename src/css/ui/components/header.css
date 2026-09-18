@@ -72,3 +72,19 @@
         0 0 10px rgba(255, 255, 255, 0.9),
         0 0 20px rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width:425px) {
+    .c-header__title  {
+        font-size: var(--small-title-font-size);
+    }
+}
+
+@media (max-width:768px) {
+    .c-header__title  {
+        font-size: var(--big-title-font-size);
+    }
+
+    .c-header__tagline {
+        font-size: var(--small-title-font-size);
+    }
+}

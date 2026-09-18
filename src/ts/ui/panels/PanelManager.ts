@@ -3,6 +3,7 @@ import { Panel } from "./Panel";
 import { MapSelectorPanel } from "./MapSelector";
 import { TogglesPanel } from "./Toggles";
 import { SettingsPanel } from "./Settings";
+import { AttributionPanel } from "./Attribution";
 import { eventBus } from "../../core/EventBus";
 
 export class PanelManager {
@@ -30,6 +31,7 @@ export class PanelManager {
         this.panels.set("map-selector", new MapSelectorPanel(this.panelsContainer));
         this.panels.set("toggles", new TogglesPanel(this.panelsContainer));
         this.panels.set("settings", new SettingsPanel(this.panelsContainer));
+        this.panels.set("attribution", new AttributionPanel(this.panelsContainer));
 
         eventBus.on("map:click", () => {
             this.hideCurrentPanel();
@@ -78,7 +80,7 @@ export class PanelManager {
         document.addEventListener("pointermove", (e: PointerEvent) => {
             if (this.isDragging && this.currentPanel) {
                 e.preventDefault();
-                if (screen.width < 768) {
+                if (window.innerWidth < 768) {
                     const newHeight = (this.initialHeight - e.clientY + this.initialMouseY)
                     const percentageHeight = Math.min(80, (newHeight / window.innerHeight) * 100);
                     
@@ -126,7 +128,7 @@ export class PanelManager {
         this.currentPanel = panel;
         this.currentPanel.panel.appendChild(this.widthControl);
 
-        if (screen.width < 768) {
+        if (window.innerWidth < 768) {
             this.currentPanel.panel.style.width = "100%";
             this.currentPanel.panel.style.height = this.panelHeight + "vh";
         } else {

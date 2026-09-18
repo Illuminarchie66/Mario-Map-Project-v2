@@ -5,6 +5,7 @@ import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
 import { imageViewer } from "../ImageViewer";
+import { getPortableURL } from '../../core/portableURL';
 
 const ImageTextBlockSchema = z.object({
     title: z.string().optional(),
@@ -67,7 +68,7 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
         let imagePath = this.data.image;
         if (this.path)
             imagePath = this.path + "/" + imagePath;
-        img.src = imagePath;
+        img.src = getPortableURL(imagePath);
         img.alt = this.data.title || "";
         img.className = "c-media-block__main-image";
         img.style.height = this.data.imageHeight || "200px";

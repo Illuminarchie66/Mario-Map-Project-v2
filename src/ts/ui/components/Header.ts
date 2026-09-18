@@ -2,6 +2,7 @@ import '../../../css/ui/components/header.css';
 
 import { z } from "zod";
 import { Component } from "./Component";
+import { getPortableURL } from '../../core/portableURL';
 
 export const HeaderBlockSchema = z.object({
     type: z.literal("header"),
@@ -27,7 +28,7 @@ export class HeaderComponent extends Component<HeaderBlock> {
             let imagePath = this.data.image;
             if (this.path)
                 imagePath = this.path + "/" + imagePath;
-            img.src = imagePath;
+            img.src = getPortableURL(imagePath);
             img.alt = this.data.title || "";
             img.className = "c-header__image";
             container.appendChild(img);

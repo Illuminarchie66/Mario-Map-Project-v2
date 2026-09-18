@@ -9,6 +9,7 @@ import { IconIdentifier } from '../waypoints/IconRegistry';
 import { eventBus } from '../../core/EventBus';
 import { PopupComponent } from '../../ui/components/Popup';
 import { deepDispose } from './deepDispose';
+import { getPortableURL } from '../../core/portableURL';
 
 export class WaypointSprite extends THREE.Sprite {
     waypoint: Waypoint;
@@ -227,24 +228,24 @@ export class Globe3D extends ModelMap {
     }
 
     async createEarth(): Promise<void> {
-        const albedo = await this.loadTexture('data/maps/globe-3d/assets/earth/alb.png');
+        const albedo = await this.loadTexture('/data/maps/globe-3d/assets/earth/alb.png');
         albedo.colorSpace = THREE.SRGBColorSpace;
         albedo.wrapS = THREE.RepeatWrapping;
         albedo.repeat.x = 1;
 
-        const normal = await this.loadTexture('data/maps/globe-3d/assets/earth/norm.png');
+        const normal = await this.loadTexture('/data/maps/globe-3d/assets/earth/norm.png');
         normal.colorSpace = THREE.NoColorSpace;
 
-        const rough = await this.loadTexture('data/maps/globe-3d/assets/earth/rgh.png');
+        const rough = await this.loadTexture('/data/maps/globe-3d/assets/earth/rgh.png');
         rough.colorSpace = THREE.NoColorSpace;
 
-        const emmisive = await this.loadTexture('data/maps/globe-3d/assets/earth/emm.png');
+        const emmisive = await this.loadTexture('/data/maps/globe-3d/assets/earth/emm.png');
         emmisive.colorSpace = THREE.NoColorSpace;
 
-        const metalness = await this.loadTexture('data/maps/globe-3d/assets/earth/mtl.png');
+        const metalness = await this.loadTexture('/data/maps/globe-3d/assets/earth/mtl.png');
         metalness.colorSpace = THREE.NoColorSpace;
 
-        const displacement = await this.loadTexture('data/maps/globe-3d/assets/earth/displace.png');
+        const displacement = await this.loadTexture('/data/maps/globe-3d/assets/earth/displace.png');
         displacement.colorSpace = THREE.NoColorSpace;
 
         this.displacement = displacement;
@@ -400,8 +401,8 @@ export class Globe3D extends ModelMap {
         this.clouds = new THREE.Group();
         this.scene.add(this.clouds);
 
-        const albedo = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_alb.png');
-        const normal = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_nrm.png');
+        const albedo = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_alb.png');
+        const normal = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_nrm.png');
 
         const cloudMaterial = new THREE.MeshStandardMaterial({
             map: albedo,
@@ -431,7 +432,7 @@ export class Globe3D extends ModelMap {
         const cloudTopGeometry = new THREE.SphereGeometry(1.05, 128, 128, 0, Math.PI * 2, 0, Math.PI * 0.1/2);
         this.cloudTop = new THREE.Mesh(cloudTopGeometry, cloudGeneralMaterial);
 
-        const albedoTop = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_top_alb.png');
+        const albedoTop = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_top_alb.png');
         albedoTop.colorSpace = THREE.SRGBColorSpace;
         albedoTop.magFilter = THREE.LinearFilter;
         const cloudTopBandMaterial = new THREE.MeshStandardMaterial({
@@ -452,7 +453,7 @@ export class Globe3D extends ModelMap {
         const cloudBottomGeometry = new THREE.SphereGeometry(1.05, 128, 128, 0, Math.PI * 2, (1 - 0.1/2) * Math.PI, 0.1 * Math.PI);
         this.cloudBottom = new THREE.Mesh(cloudBottomGeometry, cloudGeneralMaterial);
 
-        const albedoBottom = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_bottom_alb.png');
+        const albedoBottom = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_bottom_alb.png');
         albedoBottom.colorSpace = THREE.SRGBColorSpace;
         albedoBottom.magFilter = THREE.LinearFilter;
         const cloudBottomBandMaterial = new THREE.MeshStandardMaterial({
@@ -472,7 +473,7 @@ export class Globe3D extends ModelMap {
     }
 
     async createMoon(): Promise<void> {
-        this.moon = await this.loadGLTF('data/maps/globe-3d/assets/moon/moon.glb');
+        this.moon = await this.loadGLTF('/data/maps/globe-3d/assets/moon/moon.glb');
 
         this.moonPivot = new THREE.Object3D();
         this.moonPivot.position.set(0, 0, 0);
@@ -514,7 +515,7 @@ export class Globe3D extends ModelMap {
 
     //"Wii - Super Mario Galaxy - Comet Observatory" (https://skfb.ly/puIFF) by Then is Peach is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
     async createCometObservatory(): Promise<void> {
-        this.cometObservatory = await this.loadGLTF('data/maps/globe-3d/assets/comet-observatory.glb');
+        this.cometObservatory = await this.loadGLTF('/data/maps/globe-3d/assets/comet-observatory.glb');
 
         this.cometObservatoryPivot = new THREE.Object3D();
         this.cometObservatoryPivot.position.set(0, 0, 0);
@@ -557,12 +558,12 @@ export class Globe3D extends ModelMap {
     // https://tools.wwwtyro.net/space-3d/index.html
     async createSkybox(): Promise<void> {
         const textureUrls = [
-            'data/maps/globe-3d/assets/skybox/right.png',
-            'data/maps/globe-3d/assets/skybox/left.png',
-            'data/maps/globe-3d/assets/skybox/top.png',
-            'data/maps/globe-3d/assets/skybox/bottom.png',
-            'data/maps/globe-3d/assets/skybox/front.png',
-            'data/maps/globe-3d/assets/skybox/back.png',
+            '/data/maps/globe-3d/assets/skybox/right.png',
+            '/data/maps/globe-3d/assets/skybox/left.png',
+            '/data/maps/globe-3d/assets/skybox/top.png',
+            '/data/maps/globe-3d/assets/skybox/bottom.png',
+            '/data/maps/globe-3d/assets/skybox/front.png',
+            '/data/maps/globe-3d/assets/skybox/back.png',
         ];
 
         const texture = this.cubeTextureLoader.load(textureUrls);
@@ -640,7 +641,7 @@ export class Globe3D extends ModelMap {
             
             label: "The Moon",
             icon: "default",
-            path: "data/maps/globe-3d/assets/waypoints/moon",
+            path: "/data/maps/globe-3d/assets/waypoints/moon",
 
             displayType: "pamphlet",
 
@@ -892,7 +893,7 @@ export class Globe3D extends ModelMap {
         sphereProjection.position.set(x * height, y * height, z * height);
         this.earth.add(sphereProjection);
 
-        const iconImage = this.textureLoader.load(icon.iconPath);
+        const iconImage = this.textureLoader.load(getPortableURL(icon.iconPath));
         const iconMaterial = new THREE.SpriteMaterial({map: iconImage});
         const marker = new WaypointSprite(waypoint, icon, sphereProjection, iconMaterial, false);
         
