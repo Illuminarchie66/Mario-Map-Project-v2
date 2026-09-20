@@ -32,8 +32,14 @@
     attribution: {
         creator: "Merridoodles",
         links: [
-            "https://bsky.app/profile/merrideer.bsky.social",
-            "https://x.com/uncerfvert"
+            {
+                label: "BlueSky",
+                url: "https://bsky.app/profile/merrideer.bsky.social"
+            },
+            {
+                label: "Twitter", 
+                url: "https://x.com/uncerfvert"
+            }
         ]
     }
 }

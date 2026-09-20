@@ -45,10 +45,10 @@ export abstract class ModelMap extends _Map<ModelMapConfig> {
     }
 
     loadCubeTexture(urls: string[]): Promise<THREE.CubeTexture> {
-        urls = urls.map(url => getPortableURL(url));
+        const portableUrls = urls.map(url => getPortableURL(url));
         return new Promise((resolve, reject) => {
             this.cubeTextureLoader.load(
-                urls,
+                portableUrls,
                 texture => resolve(texture),
                 undefined,
                 error => reject(error)

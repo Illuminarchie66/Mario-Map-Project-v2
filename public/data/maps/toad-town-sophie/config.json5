@@ -20,5 +20,19 @@
 
     features: {
         
+    },
+
+	attribution: {
+        creator: "Lady Sophie",
+        links: [
+            {
+                label: "Twitter", 
+                url: "https://x.com/Lady_Sophie17/"
+            },
+            {
+                label: "Tumblr",
+                url: "https://www.tumblr.com/cartographers-office"
+            }
+        ]
     }
 }

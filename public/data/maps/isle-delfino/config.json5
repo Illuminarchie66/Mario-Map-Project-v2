@@ -9,9 +9,9 @@
 		crs: "simple",
 		minZoom: -2,
 		maxZoom: 1,
-		zoom: 0,
+		zoom: -2,
 		zoomDelta: 0.5,
-        center: [0, 0],
+        center: [-3248.00, 4284.0000],
 		zoomSnap: 0.5,
 		attributionControl: false,
 	},
@@ -22,11 +22,21 @@
         wrapX: false,
     },
 
-    attribution: {
+	attribution: {
         creator: "Lady Sophie",
-        source: "https://x.com/Lady_Sophie17/status/1321780785733656577",
+        source: {
+            label: "Twitter",
+            url: "https://x.com/Lady_Sophie17/status/1321780785733656577"
+        },
         links: [
-            "https://x.com/Lady_Sophie17/"
+            {
+                label: "Twitter", 
+                url: "https://x.com/Lady_Sophie17/"
+            },
+            {
+                label: "Tumblr",
+                url: "https://www.tumblr.com/cartographers-office"
+            }
         ]
     }
 }

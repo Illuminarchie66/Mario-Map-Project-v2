@@ -28,4 +28,19 @@
 	features: {
 		wrapX: true,
 	},
+
+	attribution: {
+        creator: "Nintendo",
+		game: "Super Mario Odyssey",
+        source: {
+            label: "",
+            url: ""
+        },
+        links: [
+            {
+                label: "", 
+                url: ""
+            }
+        ]
+    }
 }

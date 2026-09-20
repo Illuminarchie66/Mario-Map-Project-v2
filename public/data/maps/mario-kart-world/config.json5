@@ -9,9 +9,9 @@
 		crs: "simple",
 		minZoom: -2,
 		maxZoom: 0.5,
-		zoom: 0,
+		zoom: -1,
 		zoomDelta: 0.5,
-        center: [50, 0],
+        center: [-1206.00, 1338.0000],
 		zoomSnap: 0.5,
 		attributionControl: false,
 	},
@@ -22,5 +22,20 @@
     features: {
         wrapX: false,
         backgroundColor: "#3D7CB6",
+    },
+
+    attribution: {
+        creator: "Nintendo",
+        game: "Mario Kart World",
+        source: {
+            label: "Reddit",
+            url: "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fmario-kart-world-hi-res-map-image-extracted-from-japanese-v0-dpksjc4ax1ve1.png%3Fwidth%3D1337%26format%3Dpng%26auto%3Dwebp%26s%3D29371942dcf22d71e6262e3e229dd38b105f0d3c"
+        },
+        links: [
+            {
+                label: "Super Mario Wiki", 
+                url: "https://www.mariowiki.com/Mario_Kart_World"
+            }
+        ]
     }
 }

@@ -47,11 +47,17 @@
         backgroundColor: "#cfe5bd"
     },
 
-    attribution: {
+	attribution: {
         creator: "DefinitelyNotSascha",
-        source: "https://www.deviantart.com/definitelynotsascha/art/Ultimate-Peach-s-Castle-Map-labelled-version-1079118973",
+        source: {
+            label: "DeviantArt",
+            url: "https://www.deviantart.com/definitelynotsascha/art/Ultimate-Peach-s-Castle-Map-labelled-version-1079118973"
+        },
         links: [
-            "https://www.deviantart.com/definitelynotsascha",
+            {
+                label: "DeviantArt", 
+                url: "https://www.deviantart.com/definitelynotsascha"
+            }
         ]
     }
 }

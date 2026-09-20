@@ -17,6 +17,7 @@
 @media (max-width: 768px) {
     .c-header__image {
         height: auto;
+        max-height: 300px;
     }
 }
 
@@ -43,9 +44,10 @@
 
 .c-header__title {
     font-family: var(--title-font-family);
-    font-size: var(--title-font-size);
+    font-size: var(--big-title-font-size);
     font-weight: 500;
     color: var(--big-title-text-color);
+    line-height: 0.9;
     margin: 0;    
     text-shadow:
         0 0 12px rgba(255, 255, 255, 0.9),
@@ -64,7 +66,7 @@
 
 .c-header__tagline {
     font-family: var(--title-font-family);
-    font-size: var(--core-large-font-size);
+    font-size: var(--small-title-font-size);
     font-weight: 400;
     margin: 0;
     color: #1a1a1a;
@@ -81,7 +83,7 @@
 
 @media (max-width:768px) {
     .c-header__title  {
-        font-size: var(--big-title-font-size);
+        font-size: var(--title-font-size);
     }
 
     .c-header__tagline {

@@ -27,5 +27,15 @@
 
     features: {
         wrapX: false,
+    },
+
+	attribution: {
+        creator: "Illuminarchie",
+        links: [
+            {
+                label: "Website", 
+                url: "https://www.archie-harrodine.com/projects/"
+            }
+        ]
     }
 }

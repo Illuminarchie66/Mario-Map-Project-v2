@@ -450,7 +450,7 @@ class IconRegistry {
             iconAnchor: [65, 65],
             popupAnchor: [0, -20],
         },
-        "dk-spaceport": {
+        "dk-space-port": {
             iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_DK_Spaceport.png",
 
             iconSize: [130, 130],

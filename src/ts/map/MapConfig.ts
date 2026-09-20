@@ -18,9 +18,15 @@ type MapFeatures = z.infer<typeof MapFeaturesSchema>;
 
 const MapAttributionSchema = z.object({
     creator: z.string().optional(),
-    source: z.string().optional(),
-    links: z.array(z.string()).optional(),
-    license: z.string().optional()
+    game: z.string().optional(),
+    source: z.object({
+        label: z.string(),
+        url: z.string()
+    }).optional(),
+    links: z.array(z.object({
+        label: z.string(),
+        url: z.string()
+    })).optional()
 });
 type MapAttribution = z.infer<typeof MapAttributionSchema>;
 
