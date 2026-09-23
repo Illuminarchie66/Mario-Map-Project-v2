@@ -806,7 +806,126 @@ export class Globe3D extends ModelMap {
     }
 
     clickCometObservatory() {
-        console.log("clicked the comet observatory");
+        this.cometObservatoryWaypointActive = true;
+        const waypoint: Waypoint = {
+            id: "comet-observatory",
+            coords: [0, 0],
+            
+            label: "The Comet Observatory",
+            icon: "default",
+            path: "/data/maps/globe-3d/assets/waypoints/comet-observatory",
+
+            displayType: "pamphlet",
+
+            content: {
+                left: [
+                    {
+                        type: "header",
+                        title: "The Comet Observatory",
+                        tagline: "",
+                        image: "",
+                        link: "https://www.mariowiki.com/Comet_Observatory",
+                    },
+                    {
+                        type: "appeared-table",
+                        firstAppeared: {
+                            game: "Super Mario Galaxy",
+                            year: 2007,
+                            link: "https://www.mariowiki.com/Super_Mario_Galaxy"
+                        },
+                        lastAppeared: {
+                            game: "Mario Tennis Fever",
+                            year: 2026,
+                            link: ""
+                        }
+                    },
+                    {
+                        type: "text",
+                        content: "The star-kissed home of the Lumas, that acts as both a space station and an observatory for the vast universe. Rosalina, Mother of the Stars, calls this station her home, where she traverses tbe galaxy aiding the little Lumas who need a place to call home. Granted energy by the power stars, the comet observatory comes to orbut the Earth every 100 years, when the people of the Mushroom Kingdom come to celebrate the Star Festival.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "text",
+                        title: "Watcher of the Stars",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "Lady of the Shooting Stars, Rosalina, is the tall illustrious princess of the cosmos who is the adoptive mother of the Lumas. After departing into space in search of her mother aboard the Starshroom, Rosalina eventually built the Comet Observatory with her adopted family, as a place to call home. Helping her fly the starship is Polari, a black Luma with deep blue eyes.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Terrace",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A grassy dome atop of pleasant plains and flowers. Inside has a starry wallpaper with a castle design in silhouette.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Fountain",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A blue and white tiled dome that has gentle running water coming out from its sides. polari describes the dome as very relaxing, as inside is a pool of refreshing water for any Luma to relax.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Kitchen",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "Atop a small spire next to the library is the cosy kitchen. With brick walls and a homely chimney, here is where Rosalina and the Lumas indulge on Starbits and other pleasantries.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Bedroom",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A purple dome draped in large starry curtains. Presumed to be Rosalina's bedroom, there is a large canopy bed that is decorated with many stars.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Engine Room",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A mechanical wonder atop of the Comet Observatory. Within are many purple and blue pipes from a steel mesh floor, where a lone Gearmo tends to the machinery.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Garden",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A gorgeous secret dome decorated with pink pearl and a tiara atop. Inside, is an expansive green garden, lush with many flowers and rocks that protrude from the ground. The most peaceful location in the whole observatory.",
+                        alignContent: "left",
+                    },
+                ],
+                right: [
+                    {
+                        type: "text",
+                        title: "The Garage",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A small octagonal docking bay found just beyond the Terrace Dome. Here is where the Toad Brigade lands and recieves repairs in their Starshroom - a mushroom shaped spaceship!",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "text",
+                        title: "The Library",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A cosy section of the observatory, with a roaring fire amongst a vast collection of books. A large snug carpet extends before a gentle rocking chair, and is where all the Lumas gather to listen to stories told by their mother.",
+                        alignContent: "left",
+                    },
+                ]
+            },
+        }
+
+        eventBus.emit("waypoint:click", waypoint);
     }
 
     setupWaypoints(): void {

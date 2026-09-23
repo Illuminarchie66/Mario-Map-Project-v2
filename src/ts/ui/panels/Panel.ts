@@ -1,3 +1,5 @@
+import { _Map } from "../../map/maps/Map";
+
 export abstract class Panel {
     panel: HTMLElement;
     panelName: string;
@@ -12,6 +14,7 @@ export abstract class Panel {
     }
 
     abstract addContent(): void;
+    abstract updateContent(map: _Map): void;
 
     createTitle(title: string): HTMLElement {
         const titleElement = document.createElement("h1");

@@ -33,6 +33,12 @@ export class PanelManager {
         this.panels.set("settings", new SettingsPanel(this.panelsContainer));
         this.panels.set("attribution", new AttributionPanel(this.panelsContainer));
 
+        eventBus.on("map:loaded", (payload) => {
+            this.panels.forEach((panel) => {
+                panel.updateContent(payload.map);
+            });
+        });
+
         eventBus.on("map:click", () => {
             this.hideCurrentPanel();
         });

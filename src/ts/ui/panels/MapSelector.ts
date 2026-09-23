@@ -4,6 +4,7 @@ import { eventBus } from '../../core/EventBus';
 import { MapConfig } from '../../map/MapConfig';
 import { mapRegistry } from '../../map/MapRegistry';
 import { getPortableURL } from '../../core/portableURL';
+import { _Map } from '../../map/maps/Map';
 
 export class MapSelectorPanel extends Panel {
     mapsContainer!: HTMLElement;
@@ -28,6 +29,8 @@ export class MapSelectorPanel extends Panel {
 
         this.panel.appendChild(this.mapsContainer);
     }
+
+    updateContent(map: _Map): void {}
 
     populateMapList(configs: MapConfig[]) {
         for (const config of configs) {
@@ -62,7 +65,7 @@ export class MapSelectorPanel extends Panel {
 
                 if (link) {
                     const anchor = document.createElement("a");
-                    anchor.href = link;
+                    anchor.href = link.url;
                     anchor.textContent = config.attribution.creator ? config.attribution.creator : "Source";
                     anchor.target = "_blank";
                     anchor.onclick = (e) => e.stopPropagation(); 

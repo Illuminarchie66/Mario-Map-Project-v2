@@ -126,6 +126,12 @@ class MapRegistry {
         return configs;
     }
 
+    containsId(id: string): boolean {
+        const identifier = this.maps[id];
+        if (!identifier) return false;
+        return true
+    }
+
     async getById(id: string): Promise<MapConfig> {
         if (this.cache[id]) {
             return this.cache[id];

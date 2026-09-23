@@ -12,4 +12,5 @@ export class TogglesPanel extends Panel {
         const titleElement = this.createTitle("Toggles");
         this.panel.appendChild(titleElement);
     }
+    updateContent(): void {}
 }
