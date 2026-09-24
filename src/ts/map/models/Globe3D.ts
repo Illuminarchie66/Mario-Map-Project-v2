@@ -558,12 +558,12 @@ export class Globe3D extends ModelMap {
     // https://tools.wwwtyro.net/space-3d/index.html
     async createSkybox(): Promise<void> {
         const textureUrls = [
-            '/data/maps/globe-3d/assets/skybox/right.png',
-            '/data/maps/globe-3d/assets/skybox/left.png',
-            '/data/maps/globe-3d/assets/skybox/top.png',
-            '/data/maps/globe-3d/assets/skybox/bottom.png',
-            '/data/maps/globe-3d/assets/skybox/front.png',
-            '/data/maps/globe-3d/assets/skybox/back.png',
+            getPortableURL('/data/maps/globe-3d/assets/skybox/right.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/left.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/top.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/bottom.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/front.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/back.png'),
         ];
 
         const texture = this.cubeTextureLoader.load(textureUrls);

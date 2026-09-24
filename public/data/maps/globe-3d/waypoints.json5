@@ -30,29 +30,114 @@
 						link: "https://www.mariowiki.com/Super_Mario_Bros."
 					},
 					lastAppeared: {
-						game: "Super Mario Odyssey",
-						year: 2017,
-						link: "https://www.mariowiki.com/Super_Mario_Odyssey"
+						game: "Mario Tennis Fever",
+						year: 2026,
+						link: "https://www.mariowiki.com/Mario_Tennis_Fever"
 					}
 				},
 				{
-					type: "image",
-					image: "shiver_region.png",
-					caption: "Shiver Region",
-					zoomable: true,
-					imageWidth: "300px",
-					imageHeight: "220px",
-					alignCaption: "left",
-				}
+					type: "text",
+					content: "The Mushroom Continent is the primary recurring location between Mario games. It is a large mushroom shaped landmass that features various biomes and serves as the hub world for the game. The continent is home to many familiar locations spanning many games, spanning a vast geography and history. From vast trailing deserts, colorful mushroom plains, icy peaks, poison-soaked jungles, and volcanic mountains, the Mushroom Continent has it all.",
+					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "dry_dry_desert.webp",
+							caption: "Dry Dry Desert"
+						},
+						{
+							image: "mushroom_plains.webp",
+							caption: "Mushroom Plains"
+						},
+						{
+							image: "shiver_region.png",
+							caption: "Shiver Region"
+						},
+						{
+							image: "poison_jungle.webp",
+							caption: "Soda Jungle"
+						},
+						{
+							image: "volcano.webp",
+							caption: "Rumble Volcano"
+						}
+					]
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "image-left",
+					title: "South East",
+					titleColor: "#b18f01",
+					alignImage: "top",
+					image: "nsmbu_world_map.webp",
+					imageWidth: "250px",
+					content: "Just South of Peach's Castle is some of the most varied terrain. This includes Acorn Forest, Layer-Cake Desert, Frosted Glacier, Sparkling Waters, Soda Jungle, Rock-Candy Mines and Meringue Clouds! This makes up the bulk of Mario's adventures in New Super Mario Bros. U, and is an example of the sheer variety across this continent.",
+					caption: "NSMBU World Map",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "image-left",
+					title: "Mushroom Kingdom",
+					titleColor: "#b18f01",
+					alignImage: "top",
+					image: "toad_town.webp",
+					imageWidth: "250px",
+					content: "Ruled by Princess Peach, the Mushroom Kingdom is a vast land of wonder and excitement, from the bustling Toad Town and Peach's Castle, to Toad Harbour and landmarks of the coast, to the bright and dazzling lights of Shroom City! Inhabited by Toads, Yoshis, Goombas, Koopas and many more, the Mushroom Kingdom is a land of adventure and excitement.",
+					caption: "Toad Town",
+				},
+				{
+					type: "horizontal-rule",
+				},
+				{
+					type: "image-right",
+					title: "Koopa Kingdom",
+					titleColor: "#b18f01",
+					alignImage: "top",
+					image: "bowser_castle.png",
+					imageWidth: "250px",
+					content: "Just North of the Mushroom Kingdom is the Koopa Kingdom, ruled by Bowser and his Koopa Troop. This volcanic and fiery land is home to the Lava Lair, the hub of Bowser's operations and his castle. He has an elite army consisting of a vast array of minions. Its not all fire and ash, with locations like Neo-Bowser City and Bone Dry Dunes, the Koopa Kingdom is a hub of action.",
+					caption: "Bowser's Castle",
+				},
 			],
 			right: [
 				{
 					type: "text",
-					title: "Overview",
+					title: "Other Kingdoms",
 					titleColor: "#b18f01",
 					alignTitle: "left",
-					content: "The Mushroom Continent is the primary recurring location between Mario games. It is a large mushroom shaped landmass that features various biomes and serves as the hub world for the game. The continent is home to many familiar locations from previous Mario games, such as Peach's Castle, Bob-omb Battlefield, and more.",
+					content: "Beyond the Mushroom and Koopa Kingdom, there are many more provinces present across the continent. This includes the friendly Flower Kingdom to the North, the chaotic Diamond City across the desert, the funky Bean Bean Kingdom to the South, and the Mushroom World to the East. ",
 					alignContent: "left",
+				},
+				{
+					type: "carousel",
+					images: [
+						{
+							image: "flower.jpg",
+							caption: "Flower Kingdom"
+						},
+						{
+							image: "diamond_city.jpg",
+							caption: "Diamond City"
+						},
+						{
+							image: "bean.webp",
+							caption: "Bean Bean Kingdom"
+						},
+						{
+							image: "mushroom_world.webp",
+							caption: "Mushroom World"
+						},
+					]
+				},
+				{
+					type: "horizontal-rule",
+					align: "center",
 				},
 				{
 					type: "image-right",
@@ -60,43 +145,24 @@
 					titleColor: "#b18f01",
 					alignImage: "center",
 					image: "shooting_star_summit.jpg",
-					imageHeight: "220px",
-					content: "The Mushroom Continent is also the location of the Shooting Star Summit, where Mario can use Wish Magic to make wishes that affect the world around him. This adds an extra layer of interactivity and exploration to the game, as players can experiment with different wishes to see their effects on the environment.",
+					content: "The Mushroom Continent is also home to Shooting Star Summit, a gateway to interact with the star magic of the cosmos. Star Power is the basis of all matter, light, life and magic in the Mario Universe; and the Star Spirits cultivate this power.",
 					caption: "Shooting Star Summit"
-				},
-				{
-					type: "image-left",
-					alignImage: "top",
-					image: "nsmbu_world_map.webp",
-					imageWidth: "250px",
-					content: "The continent is home to a large number of biomes, from mushroom plains, to dry deserts, to sparkling waters and candy mountains. It truly has it all.",
-					caption: "NSMBU World Map",
-					zoomable: true,
 				},
 				{
 					type: "horizontal-rule",
 					align: "center",
-					color: "#b18f01"
 				},
 				{
-					type: "carousel",
-					images: [
-						{
-							image: "bowser_castle.png",
-							caption: "Bowser's Castle"
-						},
-						{
-							image: "diamond_city.jpg",
-							caption: "Diamond City"
-						},
-						{
-							image: "dry_dry_desert.webp",
-							caption: "Dry Dry Desert"
-						}
-					]
+					type: "image-left",
+					alignImage: "center",
+					image: "creatures.png",
+					content: "The continent is home to many many creatures. From the friendly to the deadly. This includes the standard Toads and Koopas of course, but also Pokeys, Spineys, Boos, Piranha Plants, Bramballs, Bob-ombs, Chuckyas, Broozers, and many many more. Anywhere you go, you will find a host of different people and creatures to meet and interact with.",
+					caption: "The Koopa Troop chasing Peach",
+					imageWidth: "250px",
 				},
 				{
-					type: "spacer"
+					type: "spacer",
+					height: "3rem"
 				},
 				{
 					type: "image-bottom",
