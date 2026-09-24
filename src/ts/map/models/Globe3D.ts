@@ -798,6 +798,15 @@ export class Globe3D extends ModelMap {
                         content: "A futuristic settlement on the Moon, equipped with rovers and shuttles.",
                         caption: "Moon Surface"
                     },
+                    {
+                        type: "spacer",
+                        height: "3rem"
+                    },
+                    {
+                        type: "image-bottom",
+                        image: "bottom.png",
+                        height: "150px"
+                    }
                 ]
             },
         }
@@ -822,8 +831,8 @@ export class Globe3D extends ModelMap {
                     {
                         type: "header",
                         title: "The Comet Observatory",
-                        tagline: "",
-                        image: "",
+                        tagline: "Starship of the Cosmos",
+                        image: "header.png",
                         link: "https://www.mariowiki.com/Comet_Observatory",
                     },
                     {
@@ -845,23 +854,43 @@ export class Globe3D extends ModelMap {
                         alignContent: "left",
                     },
                     {
+                        type: "image",
+                        image: "overview.webp",
+                        caption: "Overview of the Comet Observatory",
+                        imageHeight: "300px",
+                        alignCaption: "left",
+                    },
+                    {
                         type: "horizontal-rule",
                     },
                     {
-                        type: "text",
+                        type: "image-left",
                         title: "Watcher of the Stars",
                         titleColor: "#b18f01",
+                        titleOnTop: true,
                         alignTitle: "left",
                         content: "Lady of the Shooting Stars, Rosalina, is the tall illustrious princess of the cosmos who is the adoptive mother of the Lumas. After departing into space in search of her mother aboard the Starshroom, Rosalina eventually built the Comet Observatory with her adopted family, as a place to call home. Helping her fly the starship is Polari, a black Luma with deep blue eyes.",
-                        alignContent: "left",
+                        alignImage: "center",
+                        image: "rosalina-polari.jpg",
+                        imageWidth: "250px",
+                        caption: "Rosalina and Polari"
                     },
                     {
-                        type: "text",
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
                         title: "The Terrace",
                         titleColor: "#b18f01",
                         alignTitle: "left",
                         content: "A grassy dome atop of pleasant plains and flowers. Inside has a starry wallpaper with a castle design in silhouette.",
                         alignContent: "left",
+                        image: "terrace.webp",
+                        imageWidth: "250px",
+                        caption: "The Terrace Dome",
+                    },
+                    {
+                        type: "horizontal-rule",
                     },
                     {
                         type: "text",
@@ -872,13 +901,29 @@ export class Globe3D extends ModelMap {
                         alignContent: "left",
                     },
                     {
-                        type: "text",
+                        type: "image",
+                        image: "fountain.webp",
+                        caption: "The Fountain Dome",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-left",
                         title: "The Kitchen",
                         titleColor: "#b18f01",
                         alignTitle: "left",
                         content: "Atop a small spire next to the library is the cosy kitchen. With brick walls and a homely chimney, here is where Rosalina and the Lumas indulge on Starbits and other pleasantries.",
                         alignContent: "left",
+                        image: "kitchen.webp",
+                        imageWidth: "250px",
+                        caption: "The Kitchen Dome",
                     },
+
+                ],
+                right: [
                     {
                         type: "text",
                         title: "The Bedroom",
@@ -888,12 +933,21 @@ export class Globe3D extends ModelMap {
                         alignContent: "left",
                     },
                     {
-                        type: "text",
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
                         title: "The Engine Room",
                         titleColor: "#b18f01",
                         alignTitle: "left",
                         content: "A mechanical wonder atop of the Comet Observatory. Within are many purple and blue pipes from a steel mesh floor, where a lone Gearmo tends to the machinery.",
                         alignContent: "left",
+                        image: "engine.webp",
+                        imageWidth: "250px",
+                        caption: "The Engine Room",
+                    },
+                    {
+                        type: "horizontal-rule",
                     },
                     {
                         type: "text",
@@ -903,8 +957,16 @@ export class Globe3D extends ModelMap {
                         content: "A gorgeous secret dome decorated with pink pearl and a tiara atop. Inside, is an expansive green garden, lush with many flowers and rocks that protrude from the ground. The most peaceful location in the whole observatory.",
                         alignContent: "left",
                     },
-                ],
-                right: [
+                    {
+                        type: "image",
+                        image: "garden.webp",
+                        caption: "The Garden",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
                     {
                         type: "text",
                         title: "The Garage",
@@ -914,13 +976,35 @@ export class Globe3D extends ModelMap {
                         alignContent: "left",
                     },
                     {
-                        type: "text",
+                        type: "image",
+                        image: "garage.webp",
+                        caption: "The Garage with the Starshroom",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
                         title: "The Library",
                         titleColor: "#b18f01",
                         alignTitle: "left",
                         content: "A cosy section of the observatory, with a roaring fire amongst a vast collection of books. A large snug carpet extends before a gentle rocking chair, and is where all the Lumas gather to listen to stories told by their mother.",
                         alignContent: "left",
+                        image: "library.png",
+                        imageWidth: "250px",
+                        caption: "Rosalina reading to the Lumas in the Library",
                     },
+                    {
+                        type: "spacer",
+                        height: "3rem"
+                    },
+                    {
+                        type: "image-bottom",
+                        image: "bottom.png",
+                        height: "150px"
+                    }
                 ]
             },
         }
