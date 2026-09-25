@@ -1,22 +1,38 @@
 [
     {
 		id: "peach-stadium",
-		coords: [-190, 1],
+		coords: [-1361, 1338.5],
 
         label: "Peach Stadium",
 		displayType: "popup",
 		
 		content: {
 			type: "popup",
-			image: "https://mario.wiki.gallery/images/thumb/5/5e/MKW_PS.jpg/1600px-MKW_PS.jpg",
-            caption: "Chain Chomps outside Peach Stadium",
+			images: [
+				{
+					image: "https://mario.wiki.gallery/images/thumb/5/5e/MKW_PS.jpg/1600px-MKW_PS.jpg",
+					caption: "Chain Chomps outside Peach Stadium",
+				},
+				{
+					image: "https://mario.wiki.gallery/images/thumb/7/7a/MKW_Peach_Screenshot_1.jpg/1280px-MKW_Peach_Screenshot_1.jpg",
+					caption: "Peach Stadium",
+				},
+				{
+					image: "https://mario.wiki.gallery/images/thumb/f/f0/NM_MKWorld_Peach_Stadium_Intro.png/1280px-NM_MKWorld_Peach_Stadium_Intro.png",
+					caption: "Starting line of Peach Stadium",
+				}, 
+				{
+					image: "https://mario.wiki.gallery/images/thumb/6/6c/NM_MKWorld_Battle_Stadium_Mario_Kart_8_Deluxe.png/1280px-NM_MKWorld_Battle_Stadium_Mario_Kart_8_Deluxe.png",
+					caption: "Peach Stadium Terminal"
+				}
+			],
 			title: "Peach Stadium", 
-			description: "",
+			description: "A massive race course shaped after Peach's Castle, overlooking the grassy plains and star lake of the isle. The roads above are littered with Chain Chomps; and below is the Stadium Terminal where cars and buses pass through.",
 		}
 	},
     {
 		id: "cheep-cheep-falls",
-		coords: [-50, 315],
+		coords: [-1212, 1654],
 
         label: "Cheep Cheep Falls",
 		displayType: "popup",
@@ -26,12 +42,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/a4/MKWorld_Cheep_Cheep_Falls_View_1.webp/1600px-MKWorld_Cheep_Cheep_Falls_View_1.webp.png",
             caption: "Cheep Cheep Falls",
 			title: "Cheep Cheep Falls", 
-			description: "",
+			description: "Glide across Pagodas and Waterfalls in this autumnal themed track. Water is constantly rushing down to the bottom of the falls, and Cheep Cheeps leap excitedly. Watch out for the floating Goombas, and Whamps along the road!",
 		}
 	},
     {
 		id: "acorn-heights",
-		coords: [870, 5],
+		coords: [-269, 1343],
 
         label: "Acorn Heights",
 		displayType: "popup",
@@ -41,12 +57,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/ac/MKW_AcornHeights.jpg/1600px-MKW_AcornHeights.jpg",
             caption: "Great Tree of Acorn Heights",
 			title: "Acorn Heights", 
-			description: "",
+			description: "Taking place within a giant tree with large acorns, racers drive through a small village in the treetops, along leaf platforms and over small rivers around the tree's roots. Stingbies and Wigglers roam the track!",
 		}
 	},
     {
 		id: "airship-fortress",
-		coords: [425, -956],
+		coords: [-736, 400],
 
         label: "Airship Fortress",
 		displayType: "popup",
@@ -56,12 +72,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/ab/MKWorldAirshipFortress.png/1600px-MKWorldAirshipFortress.png",
             caption: "Banzai Bill cannons firing from the Airship Fortress",
 			title: "Airship Fortress", 
-			description: "",
+			description: "A grand airship docks at the fortress, with cannons launching Banzai Bills at racers. There are plenty of traps and hazards, with dark ominous skies ahead. ",
 		}
 	},
     {
 		id: "boo-cinema",
-		coords: [755, 349],
+		coords: [-418, 1684],
 
         label: "Boo Cinema",
 		displayType: "popup",
@@ -71,12 +87,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/5/52/MKW_BC_BC.jpg/1600px-MKW_BC_BC.jpg",
             caption: "Boo Cinema",
 			title: "Boo Cinema", 
-			description: "",
+			description: "Have a spirit showing at the ghostly movie theatre, Boo Cinema. It's a whole new kind of 'drive-in theater. Deep in the ghostly woods, the cinema stars the film 'Boo Castle'. Be careful of the haunted boardwalks you must drive to get there though.",
 		}
 	},
     {
 		id: "bowsers-castle",
-		coords: [704, -620],
+		coords: [-467, 716],
 		
         label: "Bowser's Castle",
 		displayType: "popup",
@@ -86,12 +102,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/aa/MKWorld_Bowsers_Castle_View_1.webp/1600px-MKWorld_Bowsers_Castle_View_1.webp.png",
             caption: "Bowser's Castle with Bowser breathing fire",
 			title: "Bowser's Castle", 
-			description: "",
+			description: "This explosive castle resembles an erupting volcano with a Bowser shaped mushroom cloud. Lava bombs rain down on the course, and if you manage to dodge them there is no shortage of lava pits to avoid. Smoke pours from this industrial castle - you better drive fast!",
 		}
 	},
     {
 		id: "choco-mountain",
-		coords: [-45, -335],
+		coords: [-1214, 1010],
 		
         label: "Choco Mountain",
 		displayType: "popup",
@@ -101,12 +117,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/8/8b/MKWorldChocoMountain.png/1600px-MKWorldChocoMountain.png",
             caption: "Choco Mountain",
 			title: "Choco Mountain", 
-			description: "",
+			description: "A thrilling arena filled with energetic Chargin Chuck onlookers. Admire the monster truck iconography and don't get stuck in the sticky mud!",
 		}
 	},
     {
 		id: "crown-city",
-		coords: [-475, -330],
+		coords: [-1673, 1001],
 		
         label: "Crown City",
 		displayType: "popup",
@@ -116,12 +132,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/e/e7/MKWorld-CrownCity-Night.jpg/1600px-MKWorld-CrownCity-Night.jpg",
             caption: "Crown City at night",
 			title: "Crown City", 
-			description: "",
+			description: "See the sights and structures of Crown City. You can even soar in style down main street. It is named after the large trophy-shaped statue with a crowned tire on top that serves as a notable landmark and its highest point.",
 		}
 	},
     {
 		id: "dandelion-depths",
-		coords: [310, 310],
+		coords: [-861, 1655],
 		
         label: "Dandelion Depths",
 		displayType: "popup",
@@ -131,12 +147,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/9/9e/MKWorld_Dandelion_Depths_View_1.webp/1600px-MKWorld_Dandelion_Depths_View_1.webp.png",
             caption: "Dandelion Depths",
 			title: "Dandelion Depths", 
-			description: "",
+			description: "Set in a grassland, drift across abandoned construction sites into the dandelion filled caves. Para-Biddybuds patrol the lush waterways of the caves, as light glistens against the stalactites and stalagmites.",
 		}
 	},
     {
 		id: "desert-hills",
-		coords: [-465, -1022],
+		coords: [-1633, 325],
 
         label: "Desert Hills",
 		displayType: "popup",
@@ -146,12 +162,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/7/74/MKWorldDesertHills.png/1600px-MKWorldDesertHills.png",
             caption: "Batadons in Desert Hills",
 			title: "Desert Hills", 
-			description: "",
+			description: "A valley of sand, filled with large Batadons and Tokotokos from Sarasaland to dodge. Conkdors are scattered across the roads too!",
 		}
 	},
     {
 		id: "dino-dino-jungle",
-		coords: [-860, 380],
+		coords: [-2037, 1718],
 		
         label: "Dino Dino Jungle",
 		displayType: "popup",
@@ -161,12 +177,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/9/91/MKWorld_Dino_Dino_Jungle_View_1.webp/1600px-MKWorld_Dino_Dino_Jungle_View_1.webp.png",
             caption: "Dino Dino Jungle Laboratory",
 			title: "Dino Dino Jungle", 
-			description: "",
+			description: "Large dinosaurs roam the jungle, centred around the grand laboratory that researches them. Find T-Rexes, Triceratops, and Pterodactyls as you drive amongst the tall looming trees.",
 		}
 	},
     {
 		id: "dk-pass",
-		coords: [160, 595],
+		coords: [-1025, 1919],
 		
         label: "DK Pass",
 		displayType: "popup",
@@ -176,12 +192,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/6/60/MKWorldDKPass.png/1600px-MKWorldDKPass.png",
             caption: "Ski Jump at DK Pass",
 			title: "DK Pass", 
-			description: "",
+			description: "A snowy mountain track lined with winding roads overlooking a frozen lake. It is decked out with winding ski slopes and a huge ski jump! Cute log cabins are scattered across the mountain, and a large ski lift carries racers up to the top!",
 		}
 	},
     {
 		id: "dk-space-port",
-		coords: [-805, -285],
+		coords: [-1976, 1052],
 		
         label: "DK Space Port",
 		displayType: "popup",
@@ -191,12 +207,12 @@
 			image: "https://mario.wiki.gallery/images/9/91/MKWorld_DKSpaceport.png",
             caption: "DK Space Port with RoboDK throwing barrels",
 			title: "DK Space Port", 
-			description: "",
+			description: "Climb giant girders as you dodge the attacks of Robo DK, a giant robotic version of Donkey Kong. The track is set in a spaceport, with a rocket preparing to launch!",
 		}
 	},
     {
 		id: "dry-bones-burnout",
-		coords: [745, -330],
+		coords: [-446, 1013],
 		
         label: "Dry Bones Burnout",
 		displayType: "popup",
@@ -206,12 +222,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/f/ff/MKW_DBB_View.jpg/1600px-MKW_DBB_View.jpg",
             caption: "Dry Bones Burnout",
 			title: "Dry Bones Burnout", 
-			description: "",
+			description: "Cross giant skeletal remains that make up bridges over sizzling lava, and admire the colorful artwork that adorns the remains of the track. Cinder scorches the air from the nearby volcano.",
 		}
 	},
     {
 		id: "faraway-oasis",
-		coords: [-455, 275],
+		coords: [-1632, 1637],
 		
         label: "Faraway Oasis",
 		displayType: "popup",
@@ -221,12 +237,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/9/90/MKW_Faraway_View.png/1600px-MKW_Faraway_View.png",
             caption: "The Big Jump at Faraway Oasis",
 			title: "Faraway Oasis", 
-			description: "",
+			description: "A special riverside safari, populated by various animals such as elephants, giraffes and zebras. Drive from Toad's Wharf across muddy waterfalls and steep rock ramps.",
 		}
 	},
     {
 		id: "great-question-block-ruins",
-		coords: [-720, 700],
+		coords: [-1903, 2059],
 		
         label: "Great Question Block Ruins",
 		displayType: "popup",
@@ -236,12 +252,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/5/5e/MKWorld_Great_Q_Block_Ruins_View_1.webp/1600px-MKWorld_Great_Q_Block_Ruins_View_1.webp.png",
             caption: "Great Question Block Ruins",
 			title: "Great Question Block Ruins", 
-			description: "",
+			description: "Taking place high in the sky, amongst ruins elevated in the air, racers drive across sku islands that surround a giant ?-Block. Waterfalls cascade down the sides of the islands, and clouds launch racers from isle to isle.",
 		}
 	},
     {
 		id: "koopa-troopa-beach",
-		coords: [-720, -1],
+		coords: [-1887, 1327],
 		
         label: "Koopa Troopa Beach",
 		displayType: "popup",
@@ -251,12 +267,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/d/d7/MKWorld_Koopa_Troopa_Beach_View_1.webp/1600px-MKWorld_Koopa_Troopa_Beach_View_1.webp.png",
             caption: "Koopa Troopa Beach",
 			title: "Koopa Troopa Beach", 
-			description: "",
+			description: "Featuring a rave known as the Koopa Festival, a large Koopa balloon floats above the course! A DJ plays music from loud speakers on the sunny shores, while you drive through the water fountains of the beach.",
 		}
 	},
     {
 		id: "mario-bros-circuit",
-		coords: [-240, -740],
+		coords: [-650, 1348],
 
         label: "Mario Bros. Circuit",
 		displayType: "popup",
@@ -266,12 +282,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/f/ff/MKWorld_Mario_Bros_Circuit_View_1.webp/1600px-MKWorld_Mario_Bros_Circuit_View_1.webp.png",
             caption: "Mario Bros. Circuit",
 			title: "Mario Bros. Circuit", 
-			description: "",
+			description: "Ride the ridges and roads on Mario Bros. Circuit, and cruise the curves around the canyon - you can't miss it.",
 		}
 	},
     {
 		id: "mario-circuit",
-		coords: [510, 15],
+		coords: [-1413, 635],
 		
         label: "Mario Circuit",
 		displayType: "popup",
@@ -281,12 +297,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/d/d3/MKW_MC_View.jpg/1600px-MKW_MC_View.jpg",
             caption: "Mario Circuit",
 			title: "Mario Circuit", 
-			description: "",
+			description: "Three circuits in one! This is a homage to the original Mario Circuits with a new twist, decked out with ramps, new shortcuts and plenty of pipes!",
 		}
 	},
     {
 		id: "moo-moo-meadows",
-		coords: [170, -2],
+		coords: [-993, 1344],
 		
         label: "Moo Moo Meadows",
 		displayType: "popup",
@@ -301,7 +317,7 @@
 	},
     {
 		id: "peach-beach",
-		coords: [-460, 930],
+		coords: [-1632, 2275],
 		
         label: "Peach Beach",
 		displayType: "popup",
@@ -311,12 +327,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/4/47/MKWorldPeachBeach.png/1600px-MKWorldPeachBeach.png",
             caption: "Cataquacks along Peach Beach",
 			title: "Peach Beach", 
-			description: "",
+			description: "A gorgeous beach taking place around the Peach Resort Royal Beach Hotel. Cataquacks walk the waters, as the most beautiful sunset kisses the horizon. ",
 		}
 	},
     {
 		id: "salty-salty-speedway",
-		coords: [-260, 660],
+		coords: [-1439, 1969],
 		
         label: "Salty Salty Speedway",
 		displayType: "popup",
@@ -326,12 +342,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/4/49/MKWorld_Salty_Salty_Speedway_View_1.webp/1600px-MKWorld_Salty_Salty_Speedway_View_1.webp.png",
             caption: "Lagoon City",
 			title: "Salty Salty Speedway", 
-			description: "",
+			description: "Drift along the rapid water ways of Salty Salty Speedway and make a splash around the city's canals. It takes place in a town called lagoon City, featuring a state of Birdo as a mermaid.",
 		}
 	},
     {
 		id: "shy-guy-bazaar",
-		coords: [0, -1030],
+		coords: [-1220, 344],
 		
         label: "Shy Guy Bazaar",
 		displayType: "popup",
@@ -341,12 +357,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/a5/MKWorld_Shy_Guy_Bazaar_View_1.webp/1600px-MKWorld_Shy_Guy_Bazaar_View_1.webp.png",
             caption: "Shy Guy Bazaar",
 			title: "Shy Guy Bazaar", 
-			description: "",
+			description: "Taking place in a bazaar bustling with Shy Guys, a grand palace adorned with Daisy's flower emblem serves as the central landmark. This is a dazzling paradise in the desert, fresh with flowers, color, and life.",
 		}
 	},
     {
 		id: "sky-high-sundae",
-		coords: [330, 930],
+		coords: [-834, 2264],
 		
         label: "Sky-High Sundae",
 		displayType: "popup",
@@ -356,12 +372,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/a/a5/MKW_SHS_Cone.jpg/1600px-MKW_SHS_Cone.jpg",
             caption: "Sky High Sundae",
 			title: "Sky-High Sundae", 
-			description: "",
+			description: "Set in a large area made entirely of ice cream and other candy-related food high in the sky, this track is a treat for the senses! You won't find a place more colorful nor delicious!",
 		}
 	},
     {
 		id: "starview-peak",
-		coords: [570, 630],
+		coords: [-600, 1968],
 		
         label: "Starview Peak",
 		displayType: "popup",
@@ -371,12 +387,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/3/32/MKWorld_Starview_Peak_View_1.webp/1600px-MKWorld_Starview_Peak_View_1.webp.png",
             caption: "Starview Peak",
 			title: "Starview Peak", 
-			description: "",
+			description: "Stay cool in the snowy trails of Starview Peak. Just don't slip off while soaking up the scenery. It takes place atop an icy mountain on structures resembling the Comet Observatory. Say Hi to the Lumas!",
 		}
 	},
     {
 		id: "toads-factory",
-		coords: [360, -310],
+		coords: [-810, 1027],
 		
         label: "Toad's Factory",
 		displayType: "popup",
@@ -386,12 +402,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/8/81/MKWorld_Toads_Factory_View_1.webp/1600px-MKWorld_Toads_Factory_View_1.webp.png",
             caption: "Toad's Factory at night",
 			title: "Toad's Factory", 
-			description: "",
+			description: "A glorious factory to produce the mystery boxes needed for every race! Cranes and trucks run overtime, lifting girders and hauling goods. The factory is a maze of conveyor belts and crushers that prepare the boxes for shipment.",
 		}
 	},
     {
 		id: "wario-shipyard",
-		coords: [-100, 950],
+		coords: [-1269, 2285],
 		
         label: "Wario Shipyard",
 		displayType: "popup",
@@ -401,12 +417,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/0/04/MKWorld_Wario_Shipyard_View_1.webp/1600px-MKWorld_Wario_Shipyard_View_1.webp.png",
             caption: "Wario's Shipyard",
 			title: "Wario Shipyard", 
-			description: "",
+			description: "A sunken ship in a fort with no shortage of Wario's branding. These spooky shores are honed with jagged rocks and shipwrecks.",
 		}
 	},
     {
 		id: "wario-stadium",
-		coords: [150, -640],
+		coords: [-1025, 689],
 		
         label: "Wario Stadium",
 		displayType: "popup",
@@ -416,12 +432,12 @@
 			image: "https://mario.wiki.gallery/images/thumb/e/e5/MKWorldWarioStadium.png/1600px-MKWorldWarioStadium.png",
             caption: "Gates to Wario Stadium",
 			title: "Wario Stadium", 
-			description: "",
+			description: "An enormous scrapyard inspired stadium with countless dirt roads and ramps to trick across. The stadium is thrilling with large pillars of fire and gleaming spotlights.",
 		}
 	},
     {
 		id: "whistlestop-summit",
-		coords: [-680, -700],
+		coords: [-1858, 631],
     
         label: "Whistlestop Summit",
 		displayType: "popup",
@@ -431,7 +447,7 @@
 			image: "https://mario.wiki.gallery/images/7/70/MKWorld_Whistlestop_View.png",
             caption: "The train climbing up the steamy slopes of Whistlestop Summit",
 			title: "Whistlestop Summit", 
-			description: "",
+			description: "This track takes place on a giant mountain themed after a steam train in the mesa region of the game's map, referred to as the Wilderness Coast. At the peak of the mountain is a smokestack shaped like a giant train funnel.",
 		}
 	},
 ]

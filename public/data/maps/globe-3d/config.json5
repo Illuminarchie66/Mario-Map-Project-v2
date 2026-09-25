@@ -3,10 +3,29 @@
 	type: "model",
 
 	label: "Odyssey Globe 3D",
-	mapPreview: "/data/maps/globe/preview.png",
+	mapPreview: "/data/maps/globe-3d/preview.png",
 
 	modelPath: "",
 	waypointPath: "/data/maps/globe-3d/waypoints.json5",
 
 	features: {},
+
+	attribution: {
+        creator: "Nintendo",
+		game: "Super Mario Odyssey",
+        source: {
+            label: "Model's Resource",
+            url: "https://models.spriters-resource.com/nintendo_switch/supermarioodyssey/asset/342608/"
+        },
+		links: [
+			{
+				label: "Sketchfab",
+				url: "https://skfb.ly/puIFF"
+			},
+			{
+				label: "Other",
+				url: "https://tools.wwwtyro.net/space-3d/index.html"
+			}
+		]
+    }
 }

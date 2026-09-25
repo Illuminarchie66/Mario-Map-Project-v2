@@ -6,6 +6,7 @@ import { imageViewer } from "../ImageViewer";
 
 import $ from 'jquery';
 import 'slick-carousel';
+import { getPortableURL } from '../../core/portableURL';
 
 export const CarouselBlockSchema = z.object({
     type: z.literal("carousel"),
@@ -60,7 +61,7 @@ export class CarouselComponent extends Component<CarouselBlock> {
             if (this.path)
                 imagePath = this.path + "/" + imagePath;
 
-            img.src = imagePath;
+            img.src = getPortableURL(imagePath);
             img.alt = imgData.caption || "";
             img.className = "c-carousel__main-image";
 

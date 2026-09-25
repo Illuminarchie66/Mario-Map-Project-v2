@@ -12,7 +12,7 @@
         zoom: 1,
         zoomDelta: 0.5,
         zoomSnap: 0.5,
-        center: [1200, -1200],
+        center: [-759.5, 600],
         attributionControl: false,
     },
 
@@ -23,10 +23,17 @@
     },
 
     attribution: {
-        creator: "Super Mario Wiki",
-        source: "https://mario.wiki.gallery/images/thumb/c/c9/MSS_Baseball_Kingdom.jpg/1200px-MSS_Baseball_Kingdom.jpg",
+        creator: "Nintendo",
+        game: "Mario Super Sluggers",
+        source: {
+            label: "Super Mario Wiki",
+            url: "https://mario.wiki.gallery/images/thumb/c/c9/MSS_Baseball_Kingdom.jpg/1200px-MSS_Baseball_Kingdom.jpg"
+        },
         links: [
-            "https://www.mariowiki.com/Baseball_Kingdom"
+            {
+                label: "Super Mario Wiki", 
+                url: "https://www.mariowiki.com/Baseball_Kingdom"
+            }
         ]
     }
 }

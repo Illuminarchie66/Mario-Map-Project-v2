@@ -11,7 +11,7 @@
 		maxZoom: 2,
 		zoom: 0,
 		zoomDelta: 0.5,
-        center: [0, 0],
+        center: [-600.00, 973.0000],
 		zoomSnap: 0.5,
 		attributionControl: false,
 	},
@@ -20,5 +20,20 @@
 
     features: {
         wrapX: false,
+    },
+
+    attribution: {
+        creator: "Nintendo",
+        game: "Super Mario Party",
+        source: {
+            label: "Spriter's Resource", 
+            url: "https://www.spriters-resource.com/nintendo_switch/supermarioparty/asset/238947/"
+        },
+        links: [
+            {
+                label: "Super Mario Wiki", 
+                url: "https://www.mariowiki.com/Super_Mario_Party#Challenge_Road"
+            }
+        ]
     }
 }

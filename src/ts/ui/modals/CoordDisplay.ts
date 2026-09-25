@@ -29,6 +29,16 @@ export class CoordDisplay {
             this.zoom = zoom;
             this.updateDisplay();
         });
+
+        // window.addEventListener("pointerdown", (event) => {
+        //     if (event.target instanceof HTMLElement) {
+        //         navigator.clipboard.writeText(`[${this.lat.toFixed(0)}, ${this.lng.toFixed(0)}]`).then(() => {
+        //             console.log("Coordinates copied to clipboard.");
+        //         }).catch((err) => {
+        //             console.error("Failed to copy coordinates: ", err);
+        //         });
+        //     }
+        // });
     }
 
     show() {

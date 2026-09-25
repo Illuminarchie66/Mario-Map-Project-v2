@@ -13,7 +13,7 @@ class MapManager {
     map: _Map | null = null;
     waypointManager: WaypointManager;
 
-    constructor(initialMapId?: string) {
+    constructor(initialMapId?: string, initialMapView?: MapView) {
         this.waypointManager = new WaypointManager();
 
         eventBus.on("map:load", (payload) => {
@@ -24,9 +24,10 @@ class MapManager {
         });
 
         if (initialMapId) {
-            this.loadMapById({ id: initialMapId }).catch(error => {
-                console.error(`Failed to load initial map: "${initialMapId}": `, error);
-            });
+            eventBus.emit("map:load", { id: initialMapId, view: initialMapView });
+            // this.loadMapById({ id: initialMapId }).catch(error => {
+            //     console.error(`Failed to load initial map: "${initialMapId}": `, error);
+            // });
         }
     }
 
@@ -65,6 +66,16 @@ class MapManager {
             });
         }
         
+        const url = new URL(window.location.href);
+        if (url.searchParams.get('map') !== config.id) {
+            url.searchParams.set('map', config.id);
+            url.searchParams.delete('lat');
+            url.searchParams.delete('lng');
+            url.searchParams.delete('zoom');
+            window.history.pushState({}, '', url);
+        }
+        
+        eventBus.emit("map:loaded", { id: config.id, view: view, map: this.map });
     }
 
     async loadMapById({ id, view }: {

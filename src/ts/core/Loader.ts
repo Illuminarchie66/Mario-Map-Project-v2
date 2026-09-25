@@ -1,19 +1,23 @@
 import JSON5 from 'json5';
 import * as yaml from 'js-yaml';
 
+import { getPortableURL } from './portableURL';
+
 class Loader {
 
     static async loadData<T = any>(path: string): Promise<T | null> {
         let res: Response;
 
+        const targetPath = getPortableURL(path);
+
         try {
-            res = await fetch(path);
+            res = await fetch(targetPath);
         } catch (error: any) {
-            throw new Error(`Failed to fetch "${path}": ${error.message}`);
+            throw new Error(`Failed to fetch "${targetPath}": ${error.message}`);
         }
 
         if (!res.ok) {
-            throw new Error(`Failed to load "${path}": HTTP ${res.status} ${res.statusText}`);
+            throw new Error(`Failed to load "${targetPath}": HTTP ${res.status} ${res.statusText}`);
         }
 
         const text = await res.text();
@@ -22,23 +26,23 @@ class Loader {
             return null;
         }
 
-        if (path.endsWith(".json5")) {
+        if (targetPath.endsWith(".json5")) {
             try {
                 return JSON5.parse(text) as T;
             } catch (error: any) {
-                throw new Error(`Invalid JSON5 in "${path}": ${error.message}`);
+                throw new Error(`Invalid JSON5 in "${targetPath}": ${error.message}`);
             }
         }
 
-        if (path.endsWith(".yaml") || path.endsWith(".yml")) {
+        if (targetPath.endsWith(".yaml") || targetPath.endsWith(".yml")) {
             try {
                 return yaml.load(text) as T;
             } catch (error: any) {
-                throw new Error(`Invalid YAML in "${path}": ${error.message}`);
+                throw new Error(`Invalid YAML in "${targetPath}": ${error.message}`);
             }
         }
         
-        throw new Error(`Unsupported file type for "${path}"`);
+        throw new Error(`Unsupported file type for "${targetPath}"`);
     }
 }
 

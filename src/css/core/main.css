@@ -1,3 +1,69 @@
+:root {
+    --color_white: #fff;
+    --color_black: #000;
+    --color_transparent-white: #ffffff85;
+    --color_transparent-black: #00000085;
+    --color_gray-1: #1a1a1a;
+    --color_gray-2: #333;
+    --color_gray-3: #555;
+    --color_gray-4: #999;
+    --color_gray-5: #ccc;
+    --color_gray-6: #f0f0f0;
+    --color_gold-1: #b18f01;
+    --color_gold-2: #d4b84a;
+    --color_red-1: #d32f2f;
+    --color_red-2: #f44336;
+
+    --background-color: var(--color_white);
+    --background-color-2: var(--color_gray-6);
+    --background-color-3: var(--color_gray-5);
+    --transparent-background-color-light: var(--color_transparent-white);
+    --transparent-background-color-dark: var(--color_transparent-black);
+    --primary-color: var(--color_gold-1);
+    --secondary-color: var(--color_gold-2);
+    --complement-color: var(--color_white);
+
+    --big-title-text-color: var(--color_black);
+    --title-text-color: var(--color_gray-1);
+    --core-text-color: var(--color_gray-2);
+    --subtext-color: var(--color_gray-3);
+
+    --big-title-font-size: 3.5rem;
+    --title-font-size: 2.5rem;
+    --small-title-font-size: 2rem;
+    --subtitle-font-size: 1.5rem;
+    --core-large-font-size: 1.2rem;
+    --core-font-size: 1rem;
+    --subtext-font-size: 0.9rem;
+
+    --title-font-family: 'Futura PT', sans-serif;
+    --core-font-family: 'Brandon Text', sans-serif;
+    --subtext-font-family: 'Brandon Text', sans-serif;
+    --silly-font-family: 'Pop Joy', sans-serif;
+
+    --navbar-width: 70px;
+    --navbar-height: 70px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#appContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#mapContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+    height: 100vh;
+}
+
 .click-through-transparent {
-    pointer-events: visiblePainted !important; 
+    pointer-events: visiblePainted !important;
 }

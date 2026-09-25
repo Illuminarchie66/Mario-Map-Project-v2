@@ -9,9 +9,9 @@
 		crs: "simple",
 		minZoom: -1.2,
 		maxZoom: 1,
-		zoom: 0,
+		zoom: -1,
 		zoomDelta: 0.5,
-        center: [275, -400],
+        center: [-1424.00, 3464.0000],
 		zoomSnap: 0.5,
 		attributionControl: false,
 	},
@@ -20,5 +20,20 @@
 
     features: {
         wrapX: false,
+    },
+
+	attribution: {
+        creator: "Nintendo",
+        game: "Paper Mario: Color Splash",
+        source: {
+            label: "Reddit",
+            url: "https://www.reddit.com/r/papermario/comments/9kkpca/i_pieced_together_an_incredibly_highres_version/#lightbox"
+        },
+        links: [
+            {
+                label: "Super Mario Wiki", 
+                url: "https://www.mariowiki.com/Paper_Mario:_Color_Splash"
+            }
+        ]
     }
 }

@@ -22,11 +22,21 @@
         wrapX: false,
     },
 
-    attribution: {
+	attribution: {
         creator: "Lady Sophie",
-        source: "https://www.reddit.com/r/Marioverse/comments/htjg2o/the_sunshine_archipelago/",
+        source: {
+            label: "Reddit",
+            url: "https://www.reddit.com/r/Marioverse/comments/htjg2o/the_sunshine_archipelago/"
+        },
         links: [
-            "https://x.com/Lady_Sophie17/"
+            {
+                label: "Twitter", 
+                url: "https://x.com/Lady_Sophie17/"
+            },
+            {
+                label: "Tumblr",
+                url: "https://www.tumblr.com/cartographers-office"
+            }
         ]
     }
 }

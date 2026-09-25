@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("assets/fonts/futura-pt/FuturaCyrillicLight.ttf") format("truetype");
+  src: url("/assets/fonts/futura-pt/FuturaCyrillicLight.ttf") format("truetype");
   font-weight: 300; /* Light */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Futura PT";
-  src: url("assets/fonts/futura-pt/FuturaCyrillicBook.ttf") format("truetype");
+  src: url("/assets/fonts/futura-pt/FuturaCyrillicBook.ttf") format("truetype");
   font-weight: 400; /* Book */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Futura PT";
-  src: url("assets/fonts/futura-pt/FuturaCyrillicMedium.ttf") format("truetype");
+  src: url("/assets/fonts/futura-pt/FuturaCyrillicMedium.ttf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
@@ -25,14 +25,14 @@
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("fonts/helvetica-neue-5/HelveticaNeueMedium.otf") format("truetype");
+  src: url("/assets/fonts/helvetica-neue-5/HelveticaNeueMedium.otf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("assets/fonts/helvetica-neue-5/HelveticaNeueRoman.otf") format("truetype");
+  src: url("/assets/fonts/helvetica-neue-5/HelveticaNeueRoman.otf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
@@ -40,21 +40,21 @@
 /* Brandon Text */
 @font-face {
   font-family: "Brandon Text";
-  src: url("assets/fonts/brandon-text/BrandonText_Regular.otf") format("truetype");
+  src: url("/assets/fonts/brandon-text/BrandonText_Regular.otf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brandon Text";
-  src: url("assets/fonts/brandon-text/Brandon_Text_Medium.otf") format("truetype");
+  src: url("/assets/fonts/brandon-text/Brandon_Text_Medium.otf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brandon Text";
-  src: url("assets/fonts/brandon-text/Brandon_Text_Bold.otf") format("truetype");
+  src: url("/assets/fonts/brandon-text/Brandon_Text_Bold.otf") format("truetype");
   font-weight: 700; /* Bold */
   font-style: normal;
 }
@@ -62,5 +62,5 @@
 /* Popjoy */
 @font-face {
     font-family: 'Pop Joy';
-    src: url('assets/fonts/popjoy/FOT-PopJoyStd-B.otf');
+    src: url('/assets/fonts/popjoy/FOT-PopJoyStd-B.otf');
 }

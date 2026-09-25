@@ -1,4 +1,5 @@
 import * as L from 'leaflet';
+import { getPortableURL } from '../../core/portableURL';
 
 export interface IconIdentifier {
     iconPath: string;
@@ -18,7 +19,8 @@ export interface IconIdentifier {
 class IconRegistry {
     private readonly defaultIcons: Record<string, IconIdentifier> = {
         "default": {
-            iconPath: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+            //iconPath: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+            iconPath: '/assets/core/images/marker.png',
             iconSize: [25, 41],
             iconAnchor: [12.5, 41],
             
@@ -448,7 +450,7 @@ class IconRegistry {
             iconAnchor: [65, 65],
             popupAnchor: [0, -20],
         },
-        "dk-spaceport": {
+        "dk-space-port": {
             iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_DK_Spaceport.png",
 
             iconSize: [130, 130],
@@ -601,10 +603,10 @@ class IconRegistry {
 
     createIcon(data: IconIdentifier): L.Icon {
         const icon = L.icon({
-            iconUrl: data.iconPath,
+            iconUrl: getPortableURL(data.iconPath),
             iconSize: data.iconSize,
             iconAnchor: data.iconAnchor,
-            shadowUrl: data.shadowPath,
+            shadowUrl: data.shadowPath ? getPortableURL(data.shadowPath) : undefined,
             shadowSize: data.shadowSize,
             shadowAnchor: data.shadowAnchor,
             popupAnchor: data.popupAnchor

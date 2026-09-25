@@ -1,33 +1,35 @@
 .c-explore-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.1rem;
-  justify-content: center;
-  margin: 0.3rem;
-  padding: 0.1rem 1.2rem;
-  font-family: 'Futura PT', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #222;
-  background: #fff;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.1rem;
+    margin: 0.3rem;
+    padding: 0.1rem 1.2rem;
+
+    font-family: var(--title-font-family);
+    font-size: var(--subtitle-font-size);
+    font-weight: 400;
+    color: var(--title-text-color);
+    background: var(--background-color);
+    border: 1px solid var(--color_gray-5);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .c-explore-button:hover {
-  background: #d32f2f;
-  color: #fff;
-  border-color: #d32f2f;
+    background: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .c-explore-button__icon {
-  width: 1.7rem;
-  height: 1.7rem;
-  display: inline-block;
-  transition: filter 0.1s ease-in-out;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: inline-block;
+    transition: filter 0.1s ease-in-out;
 }
 
 .c-explore-button:hover .c-explore-button__icon {
-  filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }

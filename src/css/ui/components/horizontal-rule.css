@@ -1,7 +1,7 @@
 .c-horizontal-rule {
     border: none;
     width: 75%;
-    border-top: 2px solid #ccc;
+    border-top: 2px solid var(--color_gray-5);
     margin-top: 0.5rem;
     display: block;
 }

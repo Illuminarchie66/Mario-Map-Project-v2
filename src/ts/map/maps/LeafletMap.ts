@@ -6,30 +6,38 @@ import { eventBus } from '../../core/EventBus';
 
 import { Waypoint } from "../waypoints/WaypointManager";
 import { iconRegistry, IconIdentifier } from "../waypoints/IconRegistry";
+import { getPortableURL } from '../../core/portableURL';
 
 export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapConfig> extends _Map<TConfig> {
     
     map: L.Map;
+    private handleWindowResize = () => this.map.invalidateSize();
     private handlePopupShow = (popup: L.Popup) => this.openPopup(popup);
     private handlePopupHide = (popup: L.Popup) => this.closePopup(popup);
 
     constructor(config: TConfig, view ?: MapView) {
         super(config);
 
-        const leafletOptions = this.config.leafletOptions;
+        const leafletOptions = this.config.leafletOptions || {};
+        leafletOptions.center = leafletOptions.center || L.latLng(0, 0);
+        leafletOptions.zoom = leafletOptions.zoom || 0;
+
         if (view?.center) {
             leafletOptions.center = L.latLng(view.center[0], view.center[1]);
-        }
+        } 
 
         if (view?.zoom) {
             leafletOptions.zoom = view.zoom;
-        }
+        } 
         
-        this.map = L.map(this.containerId, this.config.leafletOptions);
+        this.map = L.map(this.containerId, leafletOptions);
         this.applyBackground();
 
         this.addLayers();
 
+        this.map.invalidateSize();
+
+        window.addEventListener("resize", this.handleWindowResize);
         eventBus.on("popup:show", this.handlePopupShow);
         eventBus.on("popup:hide", this.handlePopupHide);
         this.on("click", () => eventBus.emit("map:click", {}));
@@ -40,22 +48,6 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
     applyBackground(): void {
         const backgroundColor = this.config.features.backgroundColor || "#e8e8e8";
         this.mapContainer.style.backgroundColor = backgroundColor;
-    }
-
-    handleBounds(bounds: L.LatLngBounds): void {
-        const imgWidth = 3780
-        const imgHeight = 1281
-        const southWest = this.map.unproject([0, imgHeight], this.map.getMaxZoom());
-        const northEast = this.map.unproject([imgWidth, 0], this.map.getMaxZoom());
-        const newbounds = new L.LatLngBounds(southWest, northEast);
-        console.log(newbounds);
-
-        this.map.setMaxBounds(bounds);
-        this.map.options.maxBoundsViscosity = 1.0;
-
-        if (!this.config.leafletOptions.zoom || !this.config.leafletOptions.center) {
-            this.map.fitBounds(bounds);
-        }
     }
 
     getZoom(): number {
@@ -90,7 +82,7 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
             ]
 
             const overlay = L.imageOverlay(
-                icon.iconPath, bounds,
+                getPortableURL(icon.iconPath), bounds,
                 { interactive: true, zIndex: 1000 }
             ).addTo(this.map);
 
@@ -114,6 +106,7 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
     }
 
     destroy(): void {
+        window.removeEventListener("resize", this.handleWindowResize);
         eventBus.off("popup:show", this.handlePopupShow);
         eventBus.off("popup:hide", this.handlePopupHide);
         this.map.remove();

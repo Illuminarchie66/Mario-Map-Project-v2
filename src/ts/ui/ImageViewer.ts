@@ -1,4 +1,5 @@
 import '../../css/ui/image-viewer.css';
+import { getPortableURL } from '../core/portableURL';
 
 class ImageViewer {
     overlay: HTMLDivElement;
@@ -35,14 +36,13 @@ class ImageViewer {
         button.className = "image-zoom__btn";
 
         const icon = document.createElement("img");
-        icon.src = "assets/icons/mag_glass.svg";
+        icon.src = getPortableURL("/assets/icons/mag_glass.svg");
         icon.alt = "Zoom";
         icon.className = "image-zoom__icon";
         button.appendChild(icon);
 
         button.addEventListener("click", (e) => {
             e.stopPropagation();
-            console.log("Zoom button clicked");
             this.show(img.src, caption);
         });
 
@@ -53,7 +53,7 @@ class ImageViewer {
     }
 
     show(src: string, caption?: string) {
-        this.img.src = src;
+        this.img.src = getPortableURL(src);
         if (caption) {
             this.caption.textContent = caption;
             this.caption.style.display = "block";

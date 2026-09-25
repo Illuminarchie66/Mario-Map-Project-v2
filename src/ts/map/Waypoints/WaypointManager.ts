@@ -1,10 +1,10 @@
 import * as L from "leaflet";
 
-import { Waypoint } from "./Waypoint";
+import { Waypoint } from "../waypoints/Waypoint";
 import { _Map } from "../maps/Map";
 import { LeafletMap } from "../maps/LeafletMap";
 import { Loader } from "../../core/Loader";
-import { iconRegistry } from "./IconRegistry";
+import { iconRegistry } from "../waypoints/IconRegistry";
 import { eventBus } from "../../core/EventBus";
 import { ModelMap } from "../maps/ModelMap";
 

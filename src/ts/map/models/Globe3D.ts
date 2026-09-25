@@ -9,6 +9,7 @@ import { IconIdentifier } from '../waypoints/IconRegistry';
 import { eventBus } from '../../core/EventBus';
 import { PopupComponent } from '../../ui/components/Popup';
 import { deepDispose } from './deepDispose';
+import { getPortableURL } from '../../core/portableURL';
 
 export class WaypointSprite extends THREE.Sprite {
     waypoint: Waypoint;
@@ -53,6 +54,7 @@ export class Globe3D extends ModelMap {
 
     earth!: THREE.Mesh;
     earthRing!: THREE.Mesh;
+    earthCollision!: THREE.Object3D;
     clouds!: THREE.Group;
     cloudBase!: THREE.Mesh;
     cloudTop!: THREE.Mesh;
@@ -111,23 +113,29 @@ export class Globe3D extends ModelMap {
 
         this.camera = new THREE.PerspectiveCamera(
             45,
-            window.innerWidth / window.innerHeight,
+            this.mapContainer.clientWidth / this.mapContainer.clientHeight,
             0.1,
             1000
         );
         this.camera.position.z = 3;
 
         this.renderer = new THREE.WebGLRenderer({ antialias: false });
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(this.mapContainer.clientWidth, this.mapContainer.clientHeight);
+        this.renderer.domElement.style.display = 'block';
         this.renderer.outputColorSpace = THREE.SRGBColorSpace;
         this.mapContainer.appendChild(this.renderer.domElement);
 
         this.htmlRenderer = new CSS2DRenderer();
-        this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
+        this.htmlRenderer.setSize(this.mapContainer.clientWidth, this.mapContainer.clientHeight);
         this.htmlRenderer.domElement.style.position = 'absolute';
         this.htmlRenderer.domElement.style.top = '0px';
+        this.htmlRenderer.domElement.style.left = '0px';
+        this.htmlRenderer.domElement.style.width = '100%';
+        this.htmlRenderer.domElement.style.height = '100%';
+        this.htmlRenderer.domElement.style.zIndex = '1';
         this.htmlRenderer.domElement.style.pointerEvents = 'none';
         this.mapContainer.appendChild(this.htmlRenderer.domElement);
+        this.mapContainer.style.position = 'relative';
 
         this.popupContainer = new CSS2DObject(document.createElement('div'));
         this.scene.add(this.popupContainer);
@@ -138,10 +146,14 @@ export class Globe3D extends ModelMap {
         this.mouse = new THREE.Vector2();
 
         window.addEventListener('resize', () => {
-            this.camera.aspect = window.innerWidth / window.innerHeight;
+            this.camera.lookAt(this.origin);
+
+            const width = this.mapContainer.clientWidth;
+            const height = this.mapContainer.clientHeight;
+            this.camera.aspect = width / height;
             this.camera.updateProjectionMatrix();
-            this.renderer.setSize(window.innerWidth, window.innerHeight);
-            this.htmlRenderer.setSize(window.innerWidth, window.innerHeight);
+            this.renderer.setSize(width, height);
+            this.htmlRenderer.setSize(width, height);
             this.renderer.render(this.scene, this.camera);
             this.htmlRenderer.render(this.scene, this.camera);
         });
@@ -216,24 +228,24 @@ export class Globe3D extends ModelMap {
     }
 
     async createEarth(): Promise<void> {
-        const albedo = await this.loadTexture('data/maps/globe-3d/assets/earth/alb.png');
+        const albedo = await this.loadTexture('/data/maps/globe-3d/assets/earth/alb.png');
         albedo.colorSpace = THREE.SRGBColorSpace;
         albedo.wrapS = THREE.RepeatWrapping;
         albedo.repeat.x = 1;
 
-        const normal = await this.loadTexture('data/maps/globe-3d/assets/earth/norm.png');
+        const normal = await this.loadTexture('/data/maps/globe-3d/assets/earth/norm.png');
         normal.colorSpace = THREE.NoColorSpace;
 
-        const rough = await this.loadTexture('data/maps/globe-3d/assets/earth/rgh.png');
+        const rough = await this.loadTexture('/data/maps/globe-3d/assets/earth/rgh.png');
         rough.colorSpace = THREE.NoColorSpace;
 
-        const emmisive = await this.loadTexture('data/maps/globe-3d/assets/earth/emm.png');
+        const emmisive = await this.loadTexture('/data/maps/globe-3d/assets/earth/emm.png');
         emmisive.colorSpace = THREE.NoColorSpace;
 
-        const metalness = await this.loadTexture('data/maps/globe-3d/assets/earth/mtl.png');
+        const metalness = await this.loadTexture('/data/maps/globe-3d/assets/earth/mtl.png');
         metalness.colorSpace = THREE.NoColorSpace;
 
-        const displacement = await this.loadTexture('data/maps/globe-3d/assets/earth/displace.png');
+        const displacement = await this.loadTexture('/data/maps/globe-3d/assets/earth/displace.png');
         displacement.colorSpace = THREE.NoColorSpace;
 
         this.displacement = displacement;
@@ -258,6 +270,17 @@ export class Globe3D extends ModelMap {
         );  
 
         this.earth = new THREE.Mesh(geometry, material);
+        this.earthCollision = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 32, 32),
+            new THREE.MeshBasicMaterial({ 
+                color: 0xffffff, 
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+                // wireframe: true
+            })
+        );
+        this.earth.add(this.earthCollision);
         
         this.createAtmosphere(this.earth, 1.025);
         this.createEarthRing();
@@ -378,8 +401,8 @@ export class Globe3D extends ModelMap {
         this.clouds = new THREE.Group();
         this.scene.add(this.clouds);
 
-        const albedo = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_alb.png');
-        const normal = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_nrm.png');
+        const albedo = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_alb.png');
+        const normal = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_nrm.png');
 
         const cloudMaterial = new THREE.MeshStandardMaterial({
             map: albedo,
@@ -409,7 +432,7 @@ export class Globe3D extends ModelMap {
         const cloudTopGeometry = new THREE.SphereGeometry(1.05, 128, 128, 0, Math.PI * 2, 0, Math.PI * 0.1/2);
         this.cloudTop = new THREE.Mesh(cloudTopGeometry, cloudGeneralMaterial);
 
-        const albedoTop = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_top_alb.png');
+        const albedoTop = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_top_alb.png');
         albedoTop.colorSpace = THREE.SRGBColorSpace;
         albedoTop.magFilter = THREE.LinearFilter;
         const cloudTopBandMaterial = new THREE.MeshStandardMaterial({
@@ -430,7 +453,7 @@ export class Globe3D extends ModelMap {
         const cloudBottomGeometry = new THREE.SphereGeometry(1.05, 128, 128, 0, Math.PI * 2, (1 - 0.1/2) * Math.PI, 0.1 * Math.PI);
         this.cloudBottom = new THREE.Mesh(cloudBottomGeometry, cloudGeneralMaterial);
 
-        const albedoBottom = await this.loadTexture('data/maps/globe-3d/assets/earth/cloud_bottom_alb.png');
+        const albedoBottom = await this.loadTexture('/data/maps/globe-3d/assets/earth/cloud_bottom_alb.png');
         albedoBottom.colorSpace = THREE.SRGBColorSpace;
         albedoBottom.magFilter = THREE.LinearFilter;
         const cloudBottomBandMaterial = new THREE.MeshStandardMaterial({
@@ -450,7 +473,7 @@ export class Globe3D extends ModelMap {
     }
 
     async createMoon(): Promise<void> {
-        this.moon = await this.loadGLTF('data/maps/globe-3d/assets/moon/moon.glb');
+        this.moon = await this.loadGLTF('/data/maps/globe-3d/assets/moon/moon.glb');
 
         this.moonPivot = new THREE.Object3D();
         this.moonPivot.position.set(0, 0, 0);
@@ -492,7 +515,7 @@ export class Globe3D extends ModelMap {
 
     //"Wii - Super Mario Galaxy - Comet Observatory" (https://skfb.ly/puIFF) by Then is Peach is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
     async createCometObservatory(): Promise<void> {
-        this.cometObservatory = await this.loadGLTF('data/maps/globe-3d/assets/comet-observatory.glb');
+        this.cometObservatory = await this.loadGLTF('/data/maps/globe-3d/assets/comet-observatory.glb');
 
         this.cometObservatoryPivot = new THREE.Object3D();
         this.cometObservatoryPivot.position.set(0, 0, 0);
@@ -535,12 +558,12 @@ export class Globe3D extends ModelMap {
     // https://tools.wwwtyro.net/space-3d/index.html
     async createSkybox(): Promise<void> {
         const textureUrls = [
-            'data/maps/globe-3d/assets/skybox/right.png',
-            'data/maps/globe-3d/assets/skybox/left.png',
-            'data/maps/globe-3d/assets/skybox/top.png',
-            'data/maps/globe-3d/assets/skybox/bottom.png',
-            'data/maps/globe-3d/assets/skybox/front.png',
-            'data/maps/globe-3d/assets/skybox/back.png',
+            getPortableURL('/data/maps/globe-3d/assets/skybox/right.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/left.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/top.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/bottom.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/front.png'),
+            getPortableURL('/data/maps/globe-3d/assets/skybox/back.png'),
         ];
 
         const texture = this.cubeTextureLoader.load(textureUrls);
@@ -576,8 +599,9 @@ export class Globe3D extends ModelMap {
             return;
         }
 
-        this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        const rect = this.renderer.domElement.getBoundingClientRect();
+        this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
         this.raycaster.setFromCamera(this.mouse, this.camera);
         const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
         const earthIntersections = this.raycaster.intersectObjects(activeWaypoints);
@@ -595,18 +619,17 @@ export class Globe3D extends ModelMap {
             return;
         } 
 
-        const moonIntersection = this.raycaster.intersectObject(this.moonCollision)
-        if (moonIntersection.length > 0) {
-            this.clickMoon();
-            return;
+        const otherIntersection = this.raycaster.intersectObjects([this.earthCollision, this.moonCollision, this.cometObservatoryCollision])
+        if (otherIntersection.length > 0) {
+            if (otherIntersection[0].object === this.moonCollision) {
+                this.clickMoon();
+                return;
+            } else if (otherIntersection[0].object === this.cometObservatoryCollision) {
+                this.clickCometObservatory();
+                return;
+            } 
         }
 
-        const cometObservatoryIntersection = this.raycaster.intersectObject(this.cometObservatoryCollision)
-        if (cometObservatoryIntersection.length > 0) {
-            this.clickCometObservatory();
-            return;
-        }
-        
         eventBus.emit("map:click", {});
     }
 
@@ -618,7 +641,7 @@ export class Globe3D extends ModelMap {
             
             label: "The Moon",
             icon: "default",
-            path: "data/maps/globe-3d/assets/waypoints/moon",
+            path: "/data/maps/globe-3d/assets/waypoints/moon",
 
             displayType: "pamphlet",
 
@@ -775,6 +798,15 @@ export class Globe3D extends ModelMap {
                         content: "A futuristic settlement on the Moon, equipped with rovers and shuttles.",
                         caption: "Moon Surface"
                     },
+                    {
+                        type: "spacer",
+                        height: "3rem"
+                    },
+                    {
+                        type: "image-bottom",
+                        image: "bottom.png",
+                        height: "150px"
+                    }
                 ]
             },
         }
@@ -783,28 +815,230 @@ export class Globe3D extends ModelMap {
     }
 
     clickCometObservatory() {
-        console.log("clicked the comet observatory");
+        this.cometObservatoryWaypointActive = true;
+        const waypoint: Waypoint = {
+            id: "comet-observatory",
+            coords: [0, 0],
+            
+            label: "The Comet Observatory",
+            icon: "default",
+            path: "/data/maps/globe-3d/assets/waypoints/comet-observatory",
+
+            displayType: "pamphlet",
+
+            content: {
+                left: [
+                    {
+                        type: "header",
+                        title: "The Comet Observatory",
+                        tagline: "Starship of the Cosmos",
+                        image: "header.png",
+                        link: "https://www.mariowiki.com/Comet_Observatory",
+                    },
+                    {
+                        type: "appeared-table",
+                        firstAppeared: {
+                            game: "Super Mario Galaxy",
+                            year: 2007,
+                            link: "https://www.mariowiki.com/Super_Mario_Galaxy"
+                        },
+                        lastAppeared: {
+                            game: "Mario Tennis Fever",
+                            year: 2026,
+                            link: ""
+                        }
+                    },
+                    {
+                        type: "text",
+                        content: "The star-kissed home of the Lumas, that acts as both a space station and an observatory for the vast universe. Rosalina, Mother of the Stars, calls this station her home, where she traverses tbe galaxy aiding the little Lumas who need a place to call home. Granted energy by the power stars, the comet observatory comes to orbut the Earth every 100 years, when the people of the Mushroom Kingdom come to celebrate the Star Festival.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "image",
+                        image: "overview.webp",
+                        caption: "Overview of the Comet Observatory",
+                        imageHeight: "300px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-left",
+                        title: "Watcher of the Stars",
+                        titleColor: "#b18f01",
+                        titleOnTop: true,
+                        alignTitle: "left",
+                        content: "Lady of the Shooting Stars, Rosalina, is the tall illustrious princess of the cosmos who is the adoptive mother of the Lumas. After departing into space in search of her mother aboard the Starshroom, Rosalina eventually built the Comet Observatory with her adopted family, as a place to call home. Helping her fly the starship is Polari, a black Luma with deep blue eyes.",
+                        alignImage: "center",
+                        image: "rosalina-polari.jpg",
+                        imageWidth: "250px",
+                        caption: "Rosalina and Polari"
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
+                        title: "The Terrace",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A grassy dome atop of pleasant plains and flowers. Inside has a starry wallpaper with a castle design in silhouette.",
+                        alignContent: "left",
+                        image: "terrace.webp",
+                        imageWidth: "250px",
+                        caption: "The Terrace Dome",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "text",
+                        title: "The Fountain",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A blue and white tiled dome that has gentle running water coming out from its sides. polari describes the dome as very relaxing, as inside is a pool of refreshing water for any Luma to relax.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "image",
+                        image: "fountain.webp",
+                        caption: "The Fountain Dome",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-left",
+                        title: "The Kitchen",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "Atop a small spire next to the library is the cosy kitchen. With brick walls and a homely chimney, here is where Rosalina and the Lumas indulge on Starbits and other pleasantries.",
+                        alignContent: "left",
+                        image: "kitchen.webp",
+                        imageWidth: "250px",
+                        caption: "The Kitchen Dome",
+                    },
+
+                ],
+                right: [
+                    {
+                        type: "text",
+                        title: "The Bedroom",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A purple dome draped in large starry curtains. Presumed to be Rosalina's bedroom, there is a large canopy bed that is decorated with many stars.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
+                        title: "The Engine Room",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A mechanical wonder atop of the Comet Observatory. Within are many purple and blue pipes from a steel mesh floor, where a lone Gearmo tends to the machinery.",
+                        alignContent: "left",
+                        image: "engine.webp",
+                        imageWidth: "250px",
+                        caption: "The Engine Room",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "text",
+                        title: "The Garden",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A gorgeous secret dome decorated with pink pearl and a tiara atop. Inside, is an expansive green garden, lush with many flowers and rocks that protrude from the ground. The most peaceful location in the whole observatory.",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "image",
+                        image: "garden.webp",
+                        caption: "The Garden",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "text",
+                        title: "The Garage",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A small octagonal docking bay found just beyond the Terrace Dome. Here is where the Toad Brigade lands and recieves repairs in their Starshroom - a mushroom shaped spaceship!",
+                        alignContent: "left",
+                    },
+                    {
+                        type: "image",
+                        image: "garage.webp",
+                        caption: "The Garage with the Starshroom",
+                        imageHeight: "220px",
+                        alignCaption: "left",
+                    },
+                    {
+                        type: "horizontal-rule",
+                    },
+                    {
+                        type: "image-right",
+                        title: "The Library",
+                        titleColor: "#b18f01",
+                        alignTitle: "left",
+                        content: "A cosy section of the observatory, with a roaring fire amongst a vast collection of books. A large snug carpet extends before a gentle rocking chair, and is where all the Lumas gather to listen to stories told by their mother.",
+                        alignContent: "left",
+                        image: "library.png",
+                        imageWidth: "250px",
+                        caption: "Rosalina reading to the Lumas in the Library",
+                    },
+                    {
+                        type: "spacer",
+                        height: "3rem"
+                    },
+                    {
+                        type: "image-bottom",
+                        image: "bottom.png",
+                        height: "150px"
+                    }
+                ]
+            },
+        }
+
+        eventBus.emit("waypoint:click", waypoint);
     }
 
     setupWaypoints(): void {
         this.mapContainer.addEventListener('mousemove', (event: MouseEvent) => {
             if (!this.showWaypoints) return;
-            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            const rect = this.renderer.domElement.getBoundingClientRect();
+            this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
             this.raycaster.setFromCamera(this.mouse, this.camera);
             const activeWaypoints = this.waypoints.children.filter((wp) => (wp as WaypointSprite).active);
-            activeWaypoints.push(this.moonCollision)
-            activeWaypoints.push(this.cometObservatoryCollision)
+            activeWaypoints.push(this.earthCollision);
+            activeWaypoints.push(this.moonCollision);
+            activeWaypoints.push(this.cometObservatoryCollision);
             const intersects = this.raycaster.intersectObjects(activeWaypoints);
             if (intersects.length > 0) {
-                this.mapContainer.style.cursor = 'pointer';
-            } else {
-                this.mapContainer.style.cursor = 'default';
-            }
+                if (intersects[0].object !== this.earthCollision) {
+                    this.mapContainer.style.cursor = 'pointer';
+                    return;
+                }
+            } 
+            this.mapContainer.style.cursor = 'default';
         });
 
         this.mapContainer.addEventListener('pointerdown', (event: PointerEvent) => {
-            const intersectsEarth = this.raycaster.intersectObject(this.earth);
+            const rect = this.renderer.domElement.getBoundingClientRect();
+            this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+            this.raycaster.setFromCamera(this.mouse, this.camera);
+            const intersectsEarth = this.raycaster.intersectObject(this.earthCollision);
             if (intersectsEarth.length > 0) {
                 const point = intersectsEarth[0].point;
                 const lat = 90 - (Math.acos(point.y / point.length()) * 180 / Math.PI);
@@ -862,7 +1096,7 @@ export class Globe3D extends ModelMap {
         sphereProjection.position.set(x * height, y * height, z * height);
         this.earth.add(sphereProjection);
 
-        const iconImage = this.textureLoader.load(icon.iconPath);
+        const iconImage = this.textureLoader.load(getPortableURL(icon.iconPath));
         const iconMaterial = new THREE.SpriteMaterial({map: iconImage});
         const marker = new WaypointSprite(waypoint, icon, sphereProjection, iconMaterial, false);
         
