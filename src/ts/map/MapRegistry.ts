@@ -89,11 +89,11 @@ class MapRegistry {
                 configPath: "/data/maps/prism-island/config.json5"
             },
 
-            "dinosaur-land": {
-                id: "dinosaur-land",
-                label: "Dinosaur Land",
-                configPath: "/data/maps/dinosaur-land/config.json5"
-            }
+            // "dinosaur-land": {
+            //     id: "dinosaur-land",
+            //     label: "Dinosaur Land",
+            //     configPath: "/data/maps/dinosaur-land/config.json5"
+            // }
     };
 
     cache: Record<string, MapConfig> = {};
