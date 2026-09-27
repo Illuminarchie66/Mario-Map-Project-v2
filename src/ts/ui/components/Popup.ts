@@ -8,7 +8,14 @@ import { imageViewer } from "../ImageViewer";
 
 import $ from 'jquery';
 import 'slick-carousel';
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+This is specifically a popup component for the map, displaying just above the waypoint. 
+This is used on both the leaflet map and model map. 
+It has an image/carousel of images with a white fade at the bottom into the title, description and optional explore button.
+The title can be a link to an external page. 
+*/
 
 export const PopupContentSchema = z.object({
     title: z.string().optional(),
@@ -152,7 +159,7 @@ export class PopupComponent extends BaseComponent<PopupContent> {
         if (this.data.description) {
             const desc = document.createElement("p");
             desc.className = "map-popup__description";
-            desc.textContent = this.data.description;
+            desc.innerHTML = this.formatText(this.data.description);
             body.appendChild(desc);
         }
 

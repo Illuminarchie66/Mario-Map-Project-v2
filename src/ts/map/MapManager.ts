@@ -2,13 +2,17 @@ import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
 import { _Map } from './maps/Map';
 import { LeafletMap } from './maps/LeafletMap';
-import { ModelMap } from './maps/ModelMap';
 import { mapRegistry } from './MapRegistry';
 import { WaypointManager } from './waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
 import { MapView } from './maps/Map';
-import { CreateMap } from './maps/CreateMap';
+import { createMap } from './maps/CreateMap';
 
+/*
+This is the primary manager for handling maps and waypoints.
+It has an event listener for "map:load" events, which will load the specified map by its ID and map view.
+Core function is loadMap, which takes a config and optional view, and initializes the map and waypoints.
+*/
 class MapManager {
     map: _Map | null = null;
     waypointManager: WaypointManager;
@@ -41,31 +45,12 @@ class MapManager {
             this.reset();
         }
 
-        this.map = CreateMap.createMap(config, view);
-        await this.map.init();
+        this.map = createMap(config, view);
+        await this.map.init(); //use init for async initialization of the map, mainly for three.js
 
-        await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap);
-
-        if (this.map instanceof LeafletMap) {
-            this.map.on("mousemove", (e: L.LeafletMouseEvent) => {
-                eventBus.emit("map:mousemove", {
-                    lat: e.latlng.lat,
-                    lng: e.latlng.lng,
-                });
-            });
-
-            const map = this.map;
-            map.on("zoomend", () => {
-                eventBus.emit("map:zoom", {
-                    zoom: map.getZoom(),
-                });
-            });
-
-            eventBus.emit("map:zoom", {
-                zoom: map.getZoom(),
-            });
-        }
+        await this.waypointManager.loadWaypointsByMap(this.map as LeafletMap); //when the map is loaded, load the waypoints for that map
         
+        // Update the URL to reflect the loaded map and reset lat/lng/zoom parameters
         const url = new URL(window.location.href);
         if (url.searchParams.get('map') !== config.id) {
             url.searchParams.set('map', config.id);
@@ -75,9 +60,11 @@ class MapManager {
             window.history.pushState({}, '', url);
         }
         
+        // Tell the UI that the map has updated
         eventBus.emit("map:loaded", { id: config.id, view: view, map: this.map });
     }
 
+    // Wraps loadMap to load a map by its ID, fetching the config from the registry first
     async loadMapById({ id, view }: {
         id: string;
         view?: MapView;

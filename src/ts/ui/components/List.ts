@@ -4,6 +4,11 @@ import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
+/*
+This is a list component that displays a list of items. It does so as two columns, with the left column having one more item than the right column if there is an odd number of items.
+This is to fill the space better and make it look more balanced.
+*/
+
 export const ListBlockSchema = z.object({
     type: z.literal("list"),
     title: z.string().optional(),
@@ -26,7 +31,7 @@ export class ListComponent extends Component<ListBlock> {
         items.forEach(text => {
             const li = document.createElement("div");
             li.className = "c-list__item";
-            li.textContent = text;
+            li.innerHTML = this.formatText(text);
             col.appendChild(li);
         });
 
@@ -45,7 +50,7 @@ export class ListComponent extends Component<ListBlock> {
             `;
             if (this.data.titleColor) 
                 title.style.color = this.data.titleColor;
-            title.textContent = this.data.title;
+            title.innerHTML = this.formatText(this.data.title);
             container.appendChild(title);
         }
 

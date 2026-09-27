@@ -1,6 +1,11 @@
 import * as L from 'leaflet';
 import z from 'zod';
 
+/*
+This file defines all of the configs for loading in different map types.
+Each map has its own config type validated via Zod. 
+*/
+
 const MapTypeSchema = z.enum([
     "tiles", // leaflet tile layer maps
     "image", // leaflet single image maps
@@ -100,6 +105,10 @@ const MapConfigSchema = z.discriminatedUnion("type", [
 ]);
 type MapConfigData = z.infer<typeof MapConfigSchema>;
 
+/*
+We define an abstract class MapConfig that serves as a base for all map configurations.
+This allows for extra functionality such as assigning leaflet or three.js types and options.
+*/
 abstract class MapConfig {
     id: string;
     type: MapType;
@@ -183,7 +192,6 @@ abstract class LeafletMapConfig extends MapConfig {
         };
     }
 }
-
 
 class TileMapConfig extends LeafletMapConfig {
     tilePath: string;

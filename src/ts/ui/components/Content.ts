@@ -11,6 +11,12 @@ import { CarouselBlockSchema } from "./Carousel";
 import { SpacerBlockSchema } from "./Spacer";
 import { ImageBottomBlockSchema } from "./ImageBottom";
 
+/*
+Definitions of the different content display types. This is because the pamphlet and doc content types are different, but they share some common content types.
+This allows for the content to be checked by zod so we can find errors before rendering.
+If we need a new display type we can add it here with little change to the rest of the code.
+*/
+
 const ContentBlockSchema = z.discriminatedUnion("type", [
     HeaderBlockSchema,
     ExploreButtonBlockSchema,

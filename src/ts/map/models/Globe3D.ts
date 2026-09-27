@@ -9,8 +9,12 @@ import { IconIdentifier } from '../waypoints/IconRegistry';
 import { eventBus } from '../../core/EventBus';
 import { PopupComponent } from '../../ui/components/Popup';
 import { deepDispose } from './deepDispose';
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 
+/*
+A small extension of THREE.Sprite that adds more explicit user data definitions, improving typescript support.
+This is used for waypoints on the globe, represented as sprites like on leaflet maps.
+*/
 export class WaypointSprite extends THREE.Sprite {
     waypoint: Waypoint;
     icon: IconIdentifier;
@@ -38,6 +42,15 @@ export class WaypointSprite extends THREE.Sprite {
     }
 }
 
+/*
+This class is the 3D globe map implementation, which extends the ModelMap base class.
+This includes the Earth, Moon and Comet Observatory, and handles the waypoints on the globe.
+We use orbit controls to allow the user to rotate and zoom the globe, and we use raycasting to detect clicks on waypoints.
+
+The Earth consists of a sphere with a displacement map for terrain, a freshnel effect for the atmosphere, and a cloud layer. It also has a sphere used for raycast collision.
+The Moon and Comet Observatory orbit around the Earth, and have spheres representing their collision areas for raycasting.
+The background uses a simple cube skybox with a star texture. The sun is represented as a directional light, and the ambient light is used to illuminate the scene.
+*/
 export class Globe3D extends ModelMap {
 
     camera: THREE.PerspectiveCamera;
@@ -215,6 +228,8 @@ export class Globe3D extends ModelMap {
         this.animate();
     }
 
+    // Direction light for the sun and ambient light for the scene
+    // Need to make ambient light adjustable by the user
     async createLights(): Promise<void> {
         this.ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
         this.scene.add(this.ambientLight);
@@ -227,6 +242,8 @@ export class Globe3D extends ModelMap {
         this.sunPivot.add(this.sun);
     }
 
+    // We use a texture, normal, roughness, emissive, metalness, and displacement map for the Earth. The displacement map is used to create a more realistic terrain effect.
+    // The displacement map was created via poisson integration of the normal map.
     async createEarth(): Promise<void> {
         const albedo = await this.loadTexture('/data/maps/globe-3d/assets/earth/alb.png');
         albedo.colorSpace = THREE.SRGBColorSpace;
@@ -290,6 +307,7 @@ export class Globe3D extends ModelMap {
     }
 
     //https://discourse.threejs.org/t/fresnel-shader-or-similar-effect/9997/17
+    // Creates a blue glow around the earth to simulate the atmosphere.
     createAtmosphere(planet: THREE.Object3D, radius: number): void {
         const atmosphereMaterial: THREE.ShaderMaterial = new THREE.ShaderMaterial({
             uniforms: {
@@ -340,6 +358,7 @@ export class Globe3D extends ModelMap {
         planet.add(atmosphere);
     }
 
+    // Creates a ring indicating the Earth's orbit. Toggled off by default.
     createEarthRing(): void {
         const ringRadius = 100
 
@@ -376,6 +395,7 @@ export class Globe3D extends ModelMap {
         return ellipse;
     }
 
+    // Creates latitude and longitude lines across the planet. Toggled on by default.
     createSphereGrid(): void {
         this.grid = new THREE.Group();
 
@@ -397,6 +417,9 @@ export class Globe3D extends ModelMap {
         this.earth.add(this.grid);
     }
 
+    // We have larger clouds at the base and then smaller clouds at the top and bottom to hide pole distortion.
+    // We use alpha map based on the cloud texture for transparency.
+    // The top and bottom clouds consist of a block of white material, with a ring of cloud texture for the edges.
     async createClouds(): Promise<void> {
         this.clouds = new THREE.Group();
         this.scene.add(this.clouds);
@@ -472,6 +495,9 @@ export class Globe3D extends ModelMap {
         this.clouds.add(this.cloudBottom);
     }
 
+    // We load the moon model from a .glb file gotten from blender from the Mario Odyssey .dae model of the Earth and Moon. 
+    // The moon is scaled down to 0.68, and is positioned 2.336 units away from the Earth, which was computed from the original model.
+    // The moon has a collision sphere for raycasting, and a ring indicating its orbit around the Earth.
     async createMoon(): Promise<void> {
         this.moon = await this.loadGLTF('/data/maps/globe-3d/assets/moon/moon.glb');
 
@@ -514,6 +540,9 @@ export class Globe3D extends ModelMap {
     }
 
     //"Wii - Super Mario Galaxy - Comet Observatory" (https://skfb.ly/puIFF) by Then is Peach is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+    // We load the comet observatory model from a .glb file gotten from sketchfab.
+    // It is scaled down a lot to fit the scene, and is positioned just off the atmosphere of the Earth.
+    // It has a collision sphere for raycasting, and a ring indicating its orbit around the Earth.
     async createCometObservatory(): Promise<void> {
         this.cometObservatory = await this.loadGLTF('/data/maps/globe-3d/assets/comet-observatory.glb');
 
@@ -556,6 +585,7 @@ export class Globe3D extends ModelMap {
     }
 
     // https://tools.wwwtyro.net/space-3d/index.html
+    // We use a simple cube texture from the above site for the skybox, which procedurally generates a starfield. 
     async createSkybox(): Promise<void> {
         const textureUrls = [
             getPortableURL('/data/maps/globe-3d/assets/skybox/right.png'),
@@ -572,6 +602,8 @@ export class Globe3D extends ModelMap {
         this.scene.background = texture;
     }
 
+    // We use orbit controls to allow the user to rotate and zoom around the globe.
+    // For now panning is disabled. Zooming is limited to a min and max to prevent clipping. Damping smooths the movement.
     createControls(): void {
         this.controls = new OrbitControls(this.camera, this.renderer.domElement);
         this.controls.enableDamping = true;
@@ -588,6 +620,10 @@ export class Globe3D extends ModelMap {
         eventBus.emit("map:zoom", {zoom: this.getZoom()}) 
     }
 
+    // When you click on the scene, it projects a ray from the camera to the mouse position and checks if it intersects any of the active waypoints. 
+    // If it does it emits a waypoint click and if its a popup it will manually do the addPopup function. 
+    // If it doesn't intersect any waypoints, it checks if it intersects the moon or comet observatory collision spheres and emits a click event for those, which the waypoint display manager will handle.
+    // Makes sure that if you click the Earth before the moon or comet observatory nothing will happen.
     click(event: MouseEvent) {
         this.earthWaypointActive = false;
         this.moonWaypointActive = false;
@@ -633,6 +669,7 @@ export class Globe3D extends ModelMap {
         eventBus.emit("map:click", {});
     }
 
+    // Since the moon and comet observatory are unique waypoints in 3D space, we define their click events and content here.
     clickMoon() {
         this.moonWaypointActive = true;
         const waypoint: Waypoint = {
@@ -1012,6 +1049,9 @@ export class Globe3D extends ModelMap {
         eventBus.emit("waypoint:click", waypoint);
     }
 
+    // Sets up the raycaster for detecting mouse interactions with waypoints, where if the mouse is hovering over a waypoint the cursor changes to a pointer.
+    // Adds pointerdown logic for receiving the lat/lng of the mouse position on the Earth and emitting it to the map:mousemove event.
+    // Initializes a displacement texture canvas to get the height value of the Earth at a given lat/lng for accurate waypoint placement.
     setupWaypoints(): void {
         this.mapContainer.addEventListener('mousemove', (event: MouseEvent) => {
             if (!this.showWaypoints) return;
@@ -1060,6 +1100,8 @@ export class Globe3D extends ModelMap {
         this.displacementCtx.drawImage(img, 0, 0);
     }
 
+    // Given a direction vector, the function calculates the respective u and v coordinates and retrieves the corresponding pixel data from the displacement map. 
+    // We normalize the pixel value to a range of 0 to 1, which determines the height of the Earth at that specific direction. 
     getDisplacementValue(direction: THREE.Vector3) {
         const u = 0.5 - (Math.atan2(direction.z, direction.x) / (2 * Math.PI));
         const v = 0.5 - (Math.asin(direction.y) / Math.PI);
@@ -1072,12 +1114,16 @@ export class Globe3D extends ModelMap {
         return pixelData[0] / 255;
     }
 
+    // Sets the scale of a waypoint marker based on the current zoom level of the camera. This just uses linear interpolation between min and max scale values, derived from testing.
     setMarkerScale(marker: WaypointSprite) {
         const zoom = this.getZoom();
         const scale = this.minWaypointScale + (this.maxWaypointScale - this.minWaypointScale)*zoom
         marker.scale.set(scale*marker.icon.iconSize[0], scale*marker.icon.iconSize[1], scale);
     }
 
+    // Given the latitude and longitude of the given waypoint data, it converts it to a normalised direction vector, and calculates the height of the Earth at that direction using the displacement map.
+    // It then scales it by the displacement scale + radius of the Earth. Then it creates a new object which is the projection of the waypoint on the surface of the Earth. We do this so the marker can rotate with the Earth.
+    // We then create a new sprite with WaypointSprite, using the given icon and waypoint data. 
     addMarker(waypoint: Waypoint, icon: IconIdentifier) {
         const [lat, lng] = waypoint.coords;
         
@@ -1106,6 +1152,8 @@ export class Globe3D extends ModelMap {
         this.waypoints.add(marker);
     }
 
+    // A function to test if a line segment intersects with a sphere at the given origin with the given radius. 
+    // THis is used to determine occlusion.
     intersectsEarth(lineSegment: THREE.Line3, origin: THREE.Vector3, radius: number): boolean {
         lineSegment.closestPointToPoint(origin, true, this.closestPoint);
         const distanceSq = this.closestPoint.distanceToSquared(origin);
@@ -1113,6 +1161,11 @@ export class Globe3D extends ModelMap {
         return distanceSq <= radiusSq;
     }
 
+    // Given a waypoint marker, it calculates the world position of the sphere projection, then tries to project it out onto a plane in front of the camera.
+    // This is done to prevent the marker clipping into the Earth or other objects, and to remain flat on screen.
+    // It also determines if the marker is active. If the angle between the camera and marker is too large, it knows that it is not facing the camera and is deactivated.
+    // Then it checks the line segment between the marker and the camera to see if it intersects with the Earth or Moon, and if so it deactivates the marker.
+    // Otherwise it activates! This is done every frame in the animate function.
     renderMarker(marker: WaypointSprite) {
         marker.sphereProjection.getWorldPosition(this.earthPos);
         this.P.copy(this.earthPos);
@@ -1142,6 +1195,8 @@ export class Globe3D extends ModelMap {
         marker.activate();
     }
 
+    // Given a waypoint which is a popup, we add a new PopupComponent to the scene, which is a HTML element that is rendered in 3D space using CSS2DRenderer.
+    // The center height is currently inaccurate, as offset varies on focal length and zoom, as well as screen resolution. This is a known issue and will be fixed in the future.
     addPopup(waypoint: PopupWaypoint) {
         const popup = new PopupComponent(waypoint.content, waypoint.path);
                 
@@ -1173,6 +1228,7 @@ export class Globe3D extends ModelMap {
         this.activeMarker = null;
     }
 
+    // Simple toggle that shows or hides the rings around the Earth, Moon, and comet observatory.
     toggleRings(visible: boolean): void {
         this.earthRing.visible = visible;
         this.moonRing.visible = visible;
@@ -1183,6 +1239,7 @@ export class Globe3D extends ModelMap {
 
         this.controls.update(); 
 
+        // Rotates the Background+Sun, Earth, Moon, Comet Observatory, and clouds at a slow rate to simulate the rotation of the Earth and other celestial bodies.
         if (!this.earthWaypointActive) 
             this.earth.rotation.y += 0.0002;
 
@@ -1207,7 +1264,7 @@ export class Globe3D extends ModelMap {
             if (this.activeMarker.active && this.activeMarker.waypoint.displayType === "popup") {
                 this.popupContainer.position.copy(this.activeMarker.position);
                 const t = this.popupContainer.element.getElementsByClassName('leaflet-popup-content')[0] as HTMLElement;
-                const offset = -44.76 + -3.05/((this.getZoom() + 0.15)**2)
+                const offset = -44.76 + -3.05/((this.getZoom() + 0.15)**2) //temporary offset to make the popup appear above the marker, computed via regression. Will be updated.
                 t.style.translate = `${0}px ${offset}px`;
 
             } else {
@@ -1236,6 +1293,7 @@ export class Globe3D extends ModelMap {
         return { lat: 0, lng: 0 };
     }
 
+    // Uses the deepDispose function to recursively dispose of all objects in the scene, including geometries, materials, and textures. It also cancels the animation frame and removes the renderer's DOM elements from the container.
     destroy(): void {
         if (this.animationFrameId !== null) {
             cancelAnimationFrame(this.animationFrameId);

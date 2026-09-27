@@ -48,6 +48,15 @@
     height: auto;
 }
 
+.panel a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.panel a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .panel {
         top: auto;

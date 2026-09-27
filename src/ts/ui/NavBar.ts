@@ -1,8 +1,15 @@
 import '../../css/ui/navbar.css';
 import { PanelManager } from "./panels/PanelManager";
 import { eventBus } from "../core/EventBus";
-import { getPortableURL } from '../core/portableURL';
+import { getPortableURL } from '../core/Loader';
 
+/*
+Navbar class handles the creation and management of the navigation bar in the UI. 
+It appears on the left for larger screens, and at the bottom for smaller screens. 
+It contains buttons for map selection, waypoint toggles, Star Atlas, settings, and attribution.
+It makes use of the panel manager to show the appropriate panels when buttons are clicked.
+Also has the rocket button which appears when the globe map is loaded, and allows the user to switch to the 3D globe map.
+*/
 export class NavBar {
     panelManager: PanelManager;
     navbar: HTMLDivElement;

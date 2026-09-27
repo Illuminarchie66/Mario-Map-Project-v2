@@ -4,6 +4,11 @@ import { z } from "zod";
 import { GameRefSchema } from "./Generics";
 import { Component } from "./Component";
 
+/*
+This component is used to display a table of info about when a game first and last appeared (or their only appearance).
+It also supports a link to the game to the Super Mario Wiki page for that game.
+*/
+
 export const AppearedTableBlockSchema = z.object({
     type: z.literal("appeared-table"),
     firstAppeared: GameRefSchema.optional(),

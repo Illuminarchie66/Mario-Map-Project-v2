@@ -23,6 +23,15 @@
     pointer-events: auto;
 }
 
+.image-viewer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.image-viewer a:hover {
+    text-decoration: underline;
+}
+
 .image-viewer__content {
     display: flex;
     flex-direction: column;

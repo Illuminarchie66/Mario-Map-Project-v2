@@ -4,6 +4,15 @@ import { PamphletWaypoint } from "../../map/waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
 import { eventBus } from "../../core/EventBus";
 
+/*
+This is the pamphlet manager, which handles the creation and display of the pamphlet panels. 
+For large screens there is a left and right panel, for smaller screens there is only a left panel and mobile screens have the panel come from the bottom. 
+Uses the componentRenderer to render the content of the PamphletWaypoint.
+Also has a width control similar to the PanelManager. 
+Will close the pamphlet when the user clicks outside of it or presses the Escape key.
+Need to make it an option to have the pamphlet be a single panel even for large screens.
+*/
+
 export class PamphletManager {
     left: HTMLElement;
     leftContent: HTMLElement;

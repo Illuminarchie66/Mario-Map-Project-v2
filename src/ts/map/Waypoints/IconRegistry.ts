@@ -1,5 +1,6 @@
 import * as L from 'leaflet';
-import { getPortableURL } from '../../core/portableURL';
+import '../../../css/ui/waypoints.css';
+import { getPortableURL } from '../../core/Loader';
 
 export interface IconIdentifier {
     iconPath: string;
@@ -16,6 +17,11 @@ export interface IconIdentifier {
     staticScale?: number;
 }
 
+/*
+The registry for all maps in the application.
+It contains a list of all maps with their ids, and corresponding details of paths, size, anchor, and shadows. Also data on if its static or not.
+It is broken down into different groups of icons for different maps, such as Toad Town and Mushroom Continent.
+*/
 class IconRegistry {
     private readonly defaultIcons: Record<string, IconIdentifier> = {
         "default": {
@@ -601,6 +607,7 @@ class IconRegistry {
         return icon;
     }
 
+    // wrapper function to create a Leaflet icon from an IconIdentifier
     createIcon(data: IconIdentifier): L.Icon {
         const icon = L.icon({
             iconUrl: getPortableURL(data.iconPath),

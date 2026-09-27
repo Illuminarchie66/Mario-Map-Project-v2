@@ -1,4 +1,4 @@
-import { Loader } from "../core/Loader";
+import { loadData } from "../core/Loader";
 import { MapConfig } from "./MapConfig";
 import { _Map } from "./maps/Map";
 
@@ -8,6 +8,12 @@ interface MapIdentifier {
     configPath: string;
 }
 
+/*
+The registry for all maps in the application.
+It contains a list of all maps with their ids, labels, and config paths.
+We use a config path to load json5 files, so that the data is not hardcoded into the application, and can be easily modified or added to.
+The registry also contains a cache of loaded map configs, so that we don't have to load them from disk multiple times.
+*/
 class MapRegistry {
     
     private readonly maps: Record<string, MapIdentifier> = {
@@ -89,6 +95,7 @@ class MapRegistry {
                 configPath: "/data/maps/prism-island/config.json5"
             },
 
+            // Awaiting permission.
             // "dinosaur-land": {
             //     id: "dinosaur-land",
             //     label: "Dinosaur Land",
@@ -132,6 +139,8 @@ class MapRegistry {
         return true
     }
 
+    // Gets the map config by its id, loading it from the registry if it is not already cached.
+    // Uses the Loader to get the JSON object, then uses MapConfig.create to create the appropriate config type.
     async getById(id: string): Promise<MapConfig> {
         if (this.cache[id]) {
             return this.cache[id];
@@ -141,7 +150,7 @@ class MapRegistry {
         if (!identifier) 
             throw new Error(`Map with id "${id}" not found in registry.`);
         
-        const rawData = await Loader.loadData<MapConfig>(identifier.configPath);
+        const rawData = await loadData<MapConfig>(identifier.configPath);
         return MapConfig.create(rawData);
     }
 
@@ -153,5 +162,6 @@ class MapRegistry {
     }
 }
 
+// When we create the map registry, we immediately fill the cache with all configs, so we do not load them multiple times.
 export const mapRegistry = new MapRegistry();
 await mapRegistry.fillCache()

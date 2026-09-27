@@ -1,7 +1,13 @@
-import { getPortableURL } from '../../core/portableURL';
-import { MapConfig } from '../../map/MapConfig';
+import { getPortableURL } from '../../core/Loader';
 import { _Map } from '../../map/maps/Map';
 import { Panel } from './Panel';
+
+/*
+This class is the attribution panel, which displays the attribution info for the map, including the creator, source, and any relevant links. 
+In future we will update the image icon to be relevant to the source, such as a Twitter icon for a Twitter link, or a GitHub icon for a GitHub link. For now, we will use a generic star icon for all links.
+We will also include a map description at the top of the page.
+updateContent() is called whenever the map is loaded, and it updates the content of the panel based on the map's attribution info. If there is no attribution info, the panel will be empty.
+*/
 
 export class AttributionPanel extends Panel {
     attributionContainer!: HTMLElement;

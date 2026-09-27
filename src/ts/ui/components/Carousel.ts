@@ -6,7 +6,15 @@ import { imageViewer } from "../ImageViewer";
 
 import $ from 'jquery';
 import 'slick-carousel';
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+This component is used to display a carousel of images, with optional captions and zoom functionality.
+Makes use of the slick-carousel library to provide the carousel functionality.
+Current issues:
+- When changing the panel size the carousel does not resize properly, and the images are cut off. 
+- The height of the carousel does not scale well with panel size, need to redo css.
+*/
 
 export const CarouselBlockSchema = z.object({
     type: z.literal("carousel"),
@@ -42,7 +50,7 @@ export class CarouselComponent extends Component<CarouselBlock> {
             if (this.data.titleColor) 
                 title.style.color = this.data.titleColor;
 
-            title.textContent = this.data.title;
+            title.innerHTML = this.formatText(this.data.title);
             container.appendChild(title);
         }
         
@@ -78,7 +86,7 @@ export class CarouselComponent extends Component<CarouselBlock> {
                     c-carousel__caption 
                     c-carousel__caption--${imgData.alignCaption || "right"}
                 `;
-                cap.textContent = imgData.caption;
+                cap.innerHTML = this.formatText(imgData.caption);
                 slide.appendChild(cap);
             }
 

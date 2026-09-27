@@ -3,6 +3,12 @@ import '../../../css/ui/doc.css';
 import { DocWaypoint } from "../../map/waypoints/Waypoint";
 import { componentRenderer } from "../ComponentRenderer";
 
+/*
+Manages the creation and display of the doc viewer overlay. 
+Displays the content of a DocWaypoint when it is clicked, and hides the overlay when the user clicks outside of it or presses the Escape key.
+Uses the componentRenderer to render the content of the DocWaypoint.
+*/
+
 export class DocManager {
     overlay: HTMLElement;
     content: HTMLElement;

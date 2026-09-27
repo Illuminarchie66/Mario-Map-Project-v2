@@ -3,8 +3,14 @@ import { Panel } from './Panel';
 import { eventBus } from '../../core/EventBus';
 import { MapConfig } from '../../map/MapConfig';
 import { mapRegistry } from '../../map/MapRegistry';
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 import { _Map } from '../../map/maps/Map';
+
+/*
+This class is the map selector panel, displaying a list of available maps for the user to select from.
+For now it remains constant and does not update based on the current map, but may be updated in the future for unlockables.
+Each map option displays a preview image, the map's title, and the creator's name or source link if available.
+*/
 
 export class MapSelectorPanel extends Panel {
     mapsContainer!: HTMLElement;

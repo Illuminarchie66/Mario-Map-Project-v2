@@ -5,6 +5,12 @@ import { PamphletManager } from "./PamphletManager";
 import { PopupManager } from "./PopupManager";
 import { PamphletWaypoint, DocWaypoint, PopupWaypoint } from "../../map/waypoints/Waypoint";
 
+/*
+This class manages the display of waypoints, using the appropriate manager based on the waypoint's display type.
+It handles the showing and hiding of waypoints, as well as the communication between the different managers and the event bus.
+If we introduce new waypoint types in the future we will add new managers for them and add them to this class.
+*/
+
 export class WaypointDisplayManager {
     pamphletManager: PamphletManager;
     docManager: DocManager;
@@ -16,6 +22,7 @@ export class WaypointDisplayManager {
         this.popupManager = new PopupManager();
 
         eventBus.on("waypoint:click", (waypoint) => {
+            this.hideAll();
             this.displayWaypoint(waypoint);
         });
 

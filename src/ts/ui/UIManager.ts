@@ -6,6 +6,10 @@ import { PanelManager } from './panels/PanelManager';
 import { eventBus } from '../core/EventBus';
 import { NavBar } from './NavBar';
 
+/*
+Central manager of the UI. This handles the waypoint display, panel display, navbar and coordinate display. 
+It also listens for events to hide all panels and waypoints when a new map is loaded.
+*/
 export class UIManager {
     navBar: NavBar;
     waypointDisplayManager: WaypointDisplayManager;

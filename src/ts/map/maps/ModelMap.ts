@@ -3,8 +3,13 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {ModelMapConfig } from "../MapConfig";
 import { _Map } from "./Map";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 
+/*
+This is the base abstract class for all 3D model-based maps. 
+It provides common functionality for loading textures, GLTF models, and cube textures using Three.js loaders.
+This differs slightly from the LeafletMap class, as different map models will have their own class that inherit from this base class; whereas leaflet maps are all instances of LeafletMap.
+*/
 export abstract class ModelMap extends _Map<ModelMapConfig> {
     textureLoader: THREE.TextureLoader;
     gltfLoader: GLTFLoader;

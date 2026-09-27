@@ -2,6 +2,12 @@ import '../../../css/ui/coord-display.css';
 
 import { eventBus } from "../../core/EventBus";
 
+/*
+A simple component that displays the current coordinates of the mouse on the map, as well as the current zoom level.
+Works dependent on the map emitting "map:mousemove" and "map:zoom" events with the appropriate data.
+Is optional and will be hidden by default, turned on via debug mode in settings.
+*/
+
 export class CoordDisplay {
     modal: HTMLDivElement;
     lat: number;
@@ -30,6 +36,8 @@ export class CoordDisplay {
             this.updateDisplay();
         });
 
+        // Add a click event listener to the window to copy the coordinates to the clipboard when clicked
+        // Turned off for now, as it was causing issues with other click events on the page. Can be re-enabled if needed.
         // window.addEventListener("pointerdown", (event) => {
         //     if (event.target instanceof HTMLElement) {
         //         navigator.clipboard.writeText(`[${this.lat.toFixed(0)}, ${this.lng.toFixed(0)}]`).then(() => {

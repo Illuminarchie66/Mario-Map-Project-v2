@@ -1,8 +1,12 @@
 import * as L from 'leaflet';
 import { ImageMapConfig, PlanMapConfig } from "../MapConfig";
 import { LeafletMap } from "./LeafletMap";
-import { getPortableURL } from "../../core/portableURL";
+import { getPortableURL } from "../../core/Loader";
 
+/*
+This is the generic base class for image-based maps, which includes both ImageMap and PlanMap. 
+It creates common functionality for loading image dimensions and computing bounds based on the image size or using provided bounds.
+*/
 export abstract class ImageBasedMap<TConfig extends ImageMapConfig | PlanMapConfig> extends LeafletMap<TConfig> {
     abstract addLayers(): void;
 

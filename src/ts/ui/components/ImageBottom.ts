@@ -2,7 +2,12 @@ import '../../../css/ui/components/image.css';
 
 import { z } from "zod";
 import { Component } from "./Component";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+This component is for pamphlets, where it has a cute bottom image that fades in. This is to be similar to the Odyssey pamphlet.
+This requires an image that has a rough ratio of 1:2 or more for optimal display.
+*/
 
 export const ImageBottomBlockSchema = z.object({
     type: z.literal("image-bottom"),

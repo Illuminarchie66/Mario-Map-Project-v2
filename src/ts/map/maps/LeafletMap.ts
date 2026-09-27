@@ -6,8 +6,13 @@ import { eventBus } from '../../core/EventBus';
 
 import { Waypoint } from "../waypoints/WaypointManager";
 import { iconRegistry, IconIdentifier } from "../waypoints/IconRegistry";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 
+/*
+This is the LeafletMap class which is the base for all Leaflet maps including TileMap, ImageMap, and PlanMap. 
+It provides common functionality for initializing the map, adding layers, handling events, managing markers and popups, ons, offs, and destroy.
+The handle functions are used to manage event listeners for window resize and popup show/hide events, which are destroyed when the map is destroyed to prevent memory leaks.
+*/
 export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapConfig> extends _Map<TConfig> {
     
     map: L.Map;
@@ -41,6 +46,23 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
         eventBus.on("popup:show", this.handlePopupShow);
         eventBus.on("popup:hide", this.handlePopupHide);
         this.on("click", () => eventBus.emit("map:click", {}));
+
+        this.map.on("mousemove", (e: L.LeafletMouseEvent) => {
+            eventBus.emit("map:mousemove", {
+                lat: e.latlng.lat,
+                lng: e.latlng.lng,
+            });
+        });
+
+        this.map.on("zoomend", () => {
+            eventBus.emit("map:zoom", {
+                zoom: this.map.getZoom(),
+            });
+        });
+
+        eventBus.emit("map:zoom", {
+            zoom: this.map.getZoom(),
+        });
     }
 
     abstract addLayers(): void;
@@ -83,7 +105,7 @@ export abstract class LeafletMap<TConfig extends LeafletMapConfig = LeafletMapCo
 
             const overlay = L.imageOverlay(
                 getPortableURL(icon.iconPath), bounds,
-                { interactive: true, zIndex: 1000 }
+                { interactive: true, zIndex: 1000, className: "static-image-icon" }
             ).addTo(this.map);
 
             return overlay;

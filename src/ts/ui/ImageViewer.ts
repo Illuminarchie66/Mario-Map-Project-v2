@@ -1,6 +1,11 @@
 import '../../css/ui/image-viewer.css';
-import { getPortableURL } from '../core/portableURL';
+import { getPortableURL } from '../core/Loader';
 
+/*
+A simple helper class to create an image viewer overlay to let users zoom in on images. 
+It creates an overlay with the image and an optional caption.
+It also has a helper function to make an image zoomable by wrapping it in a div with a zoom button.
+*/
 class ImageViewer {
     overlay: HTMLDivElement;
     img: HTMLImageElement
@@ -26,6 +31,17 @@ class ImageViewer {
         document.body.appendChild(this.overlay);
 
         this.overlay.addEventListener("click", () => this.hide());
+    }
+
+    formatText(text: string): string {
+        const urlRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        const italicRegex = /(?<!\*)\*([^*]+)\*(?!\*)/g;
+        const boldRegex = /(?<!\*)\*\*([^*]+)\*\*(?!\*)/g;
+        const formattedText = text
+            .replace(urlRegex, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+            .replace(boldRegex, '<strong>$1</strong>')
+            .replace(italicRegex, '<em>$1</em>');
+        return formattedText;
     }
 
     makeZoomableImage(img: HTMLImageElement, caption?: string) {
@@ -55,7 +71,7 @@ class ImageViewer {
     show(src: string, caption?: string) {
         this.img.src = getPortableURL(src);
         if (caption) {
-            this.caption.textContent = caption;
+            this.caption.innerHTML = this.formatText(caption);
             this.caption.style.display = "block";
         } else {
             this.caption.style.display = "none";

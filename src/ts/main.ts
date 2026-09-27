@@ -10,6 +10,12 @@ import { UIManager } from "./ui/UIManager";
 import { mapRegistry } from './map/MapRegistry';
 import { MapView } from './map/maps/Map';
 
+/* 
+This code reads the URL parameters to determine which map to load in initially. 
+If no map is specified it defaults to the "globe" map. If a map is specified, it checks if the map exists in the registry.
+If the map exists it sets the mapId to that specified map. Additionally if there are lat, lng, and zoom parameters specified in the URL it will set the mapView to those values.
+Zoom is optional and if not specified it will default to 0. 
+*/
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let mapId: string = "globe"
@@ -25,5 +31,11 @@ if (mapParam) {
     if (latParam && lngParam && zoomParam) mapView = { center: [latParam, lngParam], zoom: zoomParam }
 }
 
+/*
+This sets up the two main managers for the application. 
+The UIManager handles all the UI elements such as the NavBar, Panels, WaypointDisplay and CoordDisplay.
+The MapManager handles the loading and management of maps and waypoints.
+They interact via the event bus.
+*/
 const uiManager = new UIManager();
 const mapManager = new MapManager(mapId, mapView);

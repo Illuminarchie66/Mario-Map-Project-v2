@@ -5,7 +5,12 @@ import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
 import { imageViewer } from "../ImageViewer";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+This component is for a single image. This will have no text only a caption. 
+Very similar to a carousel but only one image. We may want to merge this with the carousel component in the future.
+*/
 
 export const ImageBlockSchema = z.object({
     type: z.literal("image"),
@@ -57,7 +62,7 @@ export class ImageComponent extends Component<ImageBlock> {
                 c-image-single__caption 
                 c-image-single__caption--${this.data.alignCaption || "center"}
             `;
-            cap.textContent = this.data.caption;
+            cap.innerHTML = this.formatText(this.data.caption);
             imageWrapper.appendChild(cap);
         }
 

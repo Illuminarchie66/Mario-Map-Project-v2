@@ -2,7 +2,11 @@ import '../../../css/ui/components/header.css';
 
 import { z } from "zod";
 import { Component } from "./Component";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+Defines a header component for pamphlets. This has an image in the background with a white fade, and a title and tagline in the foreground. The title can be a link to an external page.
+*/
 
 export const HeaderBlockSchema = z.object({
     type: z.literal("header"),

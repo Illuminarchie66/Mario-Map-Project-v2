@@ -4,6 +4,11 @@ import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
+/*
+Simple class that renders a horizontal rule. This can be used to separate content in a pamphlet or doc.
+Known issue is that color is set by the data, but this fails for a pamphlet split. 
+*/
+
 export const HorizontalRuleBlockSchema = z.object({
     type: z.literal("horizontal-rule"),
     align: AlignSchema.optional(),

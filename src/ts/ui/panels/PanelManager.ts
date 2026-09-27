@@ -6,6 +6,13 @@ import { SettingsPanel } from "./Settings";
 import { AttributionPanel } from "./Attribution";
 import { eventBus } from "../../core/EventBus";
 
+/*
+This class manages all of the panels, with a map of panel names to panel instances. 
+It handles showing and hiding panels, as well as resizing them based on the window size and user input. 
+It also handles the resizing of the panels when the user drags with the width control. Width control is horizontal for mobile (and really is height control but you know, naming).
+We need to update the initial width to be dependent on the window size.
+*/
+
 export class PanelManager {
     private panels: Map<string, Panel> = new Map();
     panelsContainer: HTMLElement;

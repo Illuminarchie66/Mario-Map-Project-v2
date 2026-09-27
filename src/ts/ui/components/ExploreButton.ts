@@ -3,7 +3,12 @@ import '../../../css/ui/components/explore-button.css';
 import { z } from "zod";
 import { Component } from "./Component";
 import { eventBus } from "../../core/EventBus";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+Simple button that can be attached to content that will emit a map load request when clicked.
+This will be used to zoom in on more detailed map areas.
+*/
 
 export const ExploreButtonBlockSchema = z.object({
     type: z.literal("explore-button"),

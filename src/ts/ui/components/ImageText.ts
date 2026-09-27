@@ -5,7 +5,14 @@ import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
 import { imageViewer } from "../ImageViewer";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
+
+/*
+This component is for a single image with text. The text can either be on the left or right side, specified by the type being image-left or image-right. 
+The text can be aligned to the left, center, or right, and the image can be aligned to the top, middle, or bottom. 
+The title can be on top of the image or above the text, which helps for when there is not enough text. 
+On small screens, we just stack the image and text on top of each other, with the image on top.
+*/
 
 const ImageTextBlockSchema = z.object({
     title: z.string().optional(),
@@ -50,7 +57,7 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
             `;
             if (this.data.titleColor) 
                 title.style.color = this.data.titleColor;
-            title.textContent = this.data.title;
+            title.innerHTML = this.formatText(this.data.title);
             container.appendChild(title);
         }
 
@@ -85,7 +92,7 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
                 c-media-block__caption 
                 c-media-block__caption--${this.data.alignCaption || "right"}
             `;
-            cap.textContent = this.data.caption;
+            cap.innerHTML = this.formatText(this.data.caption);
             imageWrapper.appendChild(cap);
         }
 
@@ -99,7 +106,7 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
                 c-media-block__title--${this.data.alignTitle || "left"}`;
             if (this.data.titleColor) 
                 title.style.color = this.data.titleColor;
-            title.textContent = this.data.title;
+            title.innerHTML = this.formatText(this.data.title);
             textWrapper.appendChild(title);
         }
 
@@ -107,7 +114,7 @@ export abstract class ImageTextComponentBase<T extends ImageLeftBlock | ImageRig
         text.className = `
             c-media-block__content 
             c-media-block__content--${this.data.alignContent || "left"}`;
-        text.textContent = this.data.content;
+        text.innerHTML = this.formatText(this.data.content);
         textWrapper.appendChild(text);
         
         if (left) {

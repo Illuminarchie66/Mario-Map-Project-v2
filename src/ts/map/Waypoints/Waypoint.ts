@@ -1,16 +1,12 @@
 import { z } from "zod";
 
-import { PamphletContent, PamphletContentSchema, DocContent, DocContentSchema } from "../../ui/components/Content";
-import { PopupContent, PopupContentSchema } from "../../ui/components/Popup";
+import { PamphletContentSchema, DocContentSchema } from "../../ui/components/Content";
+import { PopupContentSchema } from "../../ui/components/Popup";
 
-interface WaypointBase {
-    id: string;
-    coords: [number, number];
-    
-    path?: string;
-    label?: string;
-    icon?: string;
-}
+/*
+This is the configuration for a waypoint, describing the details it needs to be rendered with specific content and display type. 
+We use zod to validate the data and ensure it is as expected.
+*/
 
 const WaypointBaseSchema = z.object({
     id: z.string(),
@@ -49,6 +45,7 @@ const WaypointSchema = z.discriminatedUnion("displayType", [
 
 export type Waypoint = z.infer<typeof WaypointSchema>;
 
+// waypoint factory to create a waypoint from data, validating it against the schema
 export const Waypoint = {
     create(data: unknown): Waypoint {
         const res = WaypointSchema.safeParse(data);

@@ -3,8 +3,13 @@ import '../../../css/ui/control.css';
 import * as L from 'leaflet';
 import { PlanMapConfig } from "../MapConfig";
 import { ImageBasedMap } from "./ImageBasedMap";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 
+/*
+PlanMap is an implementation of ImageBasedMap that has multiple image overlays. 
+It computes the bounds of the image either from the provided configuration or by loading the image dimensions.
+For now we assume all plans have the same dimensions.
+*/
 export class PlanMap extends ImageBasedMap<PlanMapConfig> {
     private layers: Record<string, L.LayerGroup> = {};
     private control: L.Control.Layers | null = null;

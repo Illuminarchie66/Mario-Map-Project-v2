@@ -5,6 +5,12 @@ import { PopupComponent } from "../components/Popup";
 import { iconRegistry } from "../../map/waypoints/IconRegistry";
 import { eventBus } from "../../core/EventBus";
 
+/*
+The weird popup manager handles the creation and display of the popup when a waypoint is clicked.
+This is weird as it has to communicate back to the map to attach itself to the map, as the UI element is dependent on the map element. 
+Makes use of the Leaflet popup system. Will be hidden when the user clicks outside of it or presses the Escape key.
+*/
+
 export class PopupManager {
 
     popup: L.Popup | null;

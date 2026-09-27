@@ -956,7 +956,7 @@
 					type: "image",
 					alignImage: "center",
 					image: "chai.jpg",
-					caption: "Chai Kingdom",
+					caption: "Chai Kingdom by [Adamkop](https://www.reddit.com/r/Mario/comments/sd9l1f/i_drew_my_take_on_the_chai_kingdom_from_super/)",
 					alignCaption: "center",
 				},
 				{
@@ -1038,8 +1038,8 @@
 			type: "popup",
 			image: "easton.jpg",
 			title: "Easton Kingdom", 
-			description: "The isles of Sarasaland, covered in large moai stone statues, inhabited by the similar looking Batadons and Tokotoko enemies.",
-			caption: "Depiction of the Easton Kingdom"
+			description: "The isles of *Sarasaland*, covered in large moai stone statues, inhabited by the similar looking Batadons and Tokotoko enemies. Art by Adamkop.",
+			caption: "Easton Kingdom by [Adamkop](https://www.reddit.com/r/Mario/comments/w14plj/i_drew_a_little_scene_of_mario_lands_easton/)"
 		}
 	},
 

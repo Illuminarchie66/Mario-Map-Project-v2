@@ -4,6 +4,11 @@ import { z } from "zod";
 import { AlignSchema } from "./Generics";
 import { Component } from "./Component";
 
+/*
+A simple text component that displays a title and content that can be aligned as desired.
+In future need to add rendering with italics, bold and hyperlinks. 
+*/
+
 export const TextBlockSchema = z.object({
     type: z.literal("text"),
     title: z.string().optional(),
@@ -34,7 +39,7 @@ export class TextComponent extends Component<TextBlock> {
             if (this.data.titleColor)
                 title.style.color = this.data.titleColor;
 
-            title.textContent = this.data.title;
+            title.innerHTML = this.formatText(this.data.title);
             container.appendChild(title);
         }
 
@@ -43,7 +48,7 @@ export class TextComponent extends Component<TextBlock> {
             c-text-block__content 
             c-text-block__content--${this.data.alignContent || "left"}
         `;
-        text.textContent = this.data.content;
+        text.innerHTML = this.formatText(this.data.content);
         container.appendChild(text);
 
         return container;

@@ -1,8 +1,15 @@
 import * as L from 'leaflet';
 import { TileMapConfig } from "../MapConfig";
 import { LeafletMap } from "./LeafletMap";
-import { getPortableURL } from '../../core/portableURL';
+import { getPortableURL } from '../../core/Loader';
 
+/*
+TileMap is an implementation of LeafletMap that uses a tile approach of (z, x, y) approach for rendering maps. 
+The tiles are generated via gdal2tiles.py, and the path and type is provided by the config. 
+The bounds currently have to be set manually in the config, as I'm unsure how to compute the bounds from the tiles themselves.
+
+If wrapX is set to true, the map will wrap horizontally, allowing for infinite scrolling in the x direction, useful for globe maps. Similarly true for wrapY.
+*/
 export class TileMap extends LeafletMap<TileMapConfig> {
     addLayers(): void {
         let { tilePath, features } = this.config;

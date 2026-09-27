@@ -3,19 +3,23 @@ import * as L from "leaflet";
 import { Waypoint } from "../waypoints/Waypoint";
 import { _Map } from "../maps/Map";
 import { LeafletMap } from "../maps/LeafletMap";
-import { Loader } from "../../core/Loader";
+import { loadData } from "../../core/Loader";
 import { iconRegistry } from "../waypoints/IconRegistry";
 import { eventBus } from "../../core/EventBus";
 import { ModelMap } from "../maps/ModelMap";
 
+/*
+This class handles the loading and management of waypoints.
+loadWaypointsByMap loads the waypoints for a given map and attaches them to the map depending on the type.
+This loads in the waypoints to this.waypoints; then attachToLeafletMap or attachToModelMap is called to add the waypoints to the map.
+*/
 class WaypointManager {
     waypoints: Waypoint[] = [];
     markers: (L.Marker | L.ImageOverlay)[] = [];
 
     _wrapHandler: (() => void) | null = null;
 
-    constructor() {
-    }
+    constructor() {}
 
     async loadWaypointsByMap(map: _Map): Promise<void> {
         this.reset();
@@ -33,7 +37,7 @@ class WaypointManager {
 
     async loadWaypointsByPath(path: string): Promise<void> {
         try {
-            const data = await Loader.loadData<Waypoint[]>(path);
+            const data = await loadData<Waypoint[]>(path);
             this.waypoints = data?.map(item => Waypoint.create(item)) || [];
         } catch (error) {
             this.waypoints = [];
@@ -57,6 +61,7 @@ class WaypointManager {
         })
 
         if (map.config.features?.wrapX) {
+            // for wrapX we need to update the marker positions when the map is moved, so that they appear in the correct position on the wrapped map
             this._wrapHandler = () => {
                 const centerLng = map.getCenter().lng;
 

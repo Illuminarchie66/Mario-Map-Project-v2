@@ -1,4 +1,3 @@
-import { Component } from './components/Component';
 import { HeaderComponent } from "./components/Header";
 import { ExploreButtonComponent } from "./components/ExploreButton";
 import { AppearedTableComponent } from "./components/AppearedTable";
@@ -14,6 +13,12 @@ import { ImageBottomComponent } from "./components/ImageBottom";
 import { BaseComponent } from "./components/BaseComponent";
 import { ContentBlock } from "./components/Content";
 
+/*
+This class is responsible for rendering content blocks into their corresponding HTML elements.
+It maintains a registry of component types and their corresponding classes, and provides a method to render a content block into an HTML element.
+It defines a type for the component constructor and a type for the registry map, which maps content block types to their corresponding component constructors.
+All components are in src/ts/ui/components and extend the BaseComponent class.
+*/
 type ComponentConstructor<T extends ContentBlock = ContentBlock> = new (
     data: T,
     path?: string
