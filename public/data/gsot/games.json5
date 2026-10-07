@@ -3381,7 +3381,7 @@
         ]
     },
     {
-        "id": "sm6-n64",
+        "id": "sm64-n64",
         "name": "Super Mario 64",
         "link": "https://www.mariowiki.com/Super_Mario_64",
         "console": {
@@ -3417,7 +3417,7 @@
         ]
     },
     {
-        "id": "mk6-n64",
+        "id": "mk64-n64",
         "name": "Mario Kart 64",
         "link": "https://www.mariowiki.com/Mario_Kart_64",
         "console": {
@@ -3711,7 +3711,7 @@
         ]
     },
     {
-        "id": "dk6-n64",
+        "id": "dk64-n64",
         "name": "Donkey Kong 64",
         "link": "https://www.mariowiki.com/Donkey_Kong_64",
         "console": {
@@ -3905,7 +3905,7 @@
         ]
     },
     {
-        "id": "dm6-n64",
+        "id": "dm64-n64",
         "name": "Dr. Mario 64",
         "link": "https://www.mariowiki.com/Dr._Mario_64",
         "console": {
@@ -4047,7 +4047,7 @@
         ]
     },
     {
-        "id": "lm-ngc",
+        "id": "lm-gc",
         "name": "Luigi's Mansion",
         "link": "https://www.mariowiki.com/Luigi%27s_Mansion",
         "console": {
@@ -4083,7 +4083,7 @@
         ]
     },
     {
-        "id": "ssbm-ngc",
+        "id": "ssbm-gc",
         "name": "Super Smash Bros. Melee",
         "link": "https://www.mariowiki.com/Super_Smash_Bros._Melee",
         "console": {
@@ -4117,7 +4117,7 @@
         "tags": []
     },
     {
-        "id": "smss-ngc",
+        "id": "smss-gc",
         "name": "Super Mario Sunshine",
         "link": "https://www.mariowiki.com/Super_Mario_Sunshine",
         "console": {
@@ -4153,7 +4153,7 @@
         ]
     },
     {
-        "id": "mp4-ngc",
+        "id": "mp4-gc",
         "name": "Mario Party 4",
         "link": "https://www.mariowiki.com/Mario_Party_4",
         "console": {
@@ -4194,7 +4194,7 @@
         ]
     },
     {
-        "id": "npc-ngc",
+        "id": "npc-gc",
         "name": "Nintendo Puzzle Collection",
         "link": "https://www.mariowiki.com/Nintendo_Puzzle_Collection",
         "console": {
@@ -4236,7 +4236,7 @@
         "tags": []
     },
     {
-        "id": "ww-ngc",
+        "id": "ww-gc",
         "name": "Wario World",
         "link": "https://www.mariowiki.com/Wario_World",
         "console": {
@@ -4272,7 +4272,7 @@
         ]
     },
     {
-        "id": "mgtt-ngc",
+        "id": "mgtt-gc",
         "name": "Mario Golf: Toadstool Tour",
         "link": "https://www.mariowiki.com/Mario_Golf:_Toadstool_Tour",
         "console": {
@@ -4310,7 +4310,7 @@
         ]
     },
     {
-        "id": "wwimpg-ngc",
+        "id": "wwimpg-gc",
         "name": "WarioWare, Inc.: Mega Party Game$!",
         "link": "https://www.mariowiki.com/WarioWare,_Inc.:_Mega_Party_Game$!",
         "console": {
@@ -4351,7 +4351,7 @@
         ]
     },
     {
-        "id": "mkdd-ngc",
+        "id": "mkdd-gc",
         "name": "Mario Kart: Double Dash!!",
         "link": "https://www.mariowiki.com/Mario_Kart:_Double_Dash!!",
         "console": {
@@ -4388,7 +4388,7 @@
         ]
     },
     {
-        "id": "mp5-ngc",
+        "id": "mp5-gc",
         "name": "Mario Party 5",
         "link": "https://www.mariowiki.com/Mario_Party_5",
         "console": {
@@ -4429,7 +4429,7 @@
         ]
     },
     {
-        "id": "dk-ngc",
+        "id": "dk-gc",
         "name": "Donkey Konga",
         "link": "https://www.mariowiki.com/Donkey_Konga",
         "console": {
@@ -4465,7 +4465,7 @@
         ]
     },
     {
-        "id": "dk2-ngc",
+        "id": "dk2-gc",
         "name": "Donkey Konga 2",
         "link": "https://www.mariowiki.com/Donkey_Konga_2",
         "console": {
@@ -4501,7 +4501,7 @@
         ]
     },
     {
-        "id": "pmttyd-ngc",
+        "id": "pmttyd-gc",
         "name": "Paper Mario: The Thousand-Year Door",
         "link": "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door",
         "console": {
@@ -4539,7 +4539,7 @@
         ]
     },
     {
-        "id": "mpt-ngc",
+        "id": "mpt-gc",
         "name": "Mario Power Tennis",
         "link": "https://www.mariowiki.com/Mario_Power_Tennis",
         "console": {
@@ -4581,7 +4581,7 @@
         ]
     },
     {
-        "id": "mp6-ngc",
+        "id": "mp6-gc",
         "name": "Mario Party 6",
         "link": "https://www.mariowiki.com/Mario_Party_6",
         "console": {
@@ -4626,7 +4626,7 @@
         ]
     },
     {
-        "id": "dkjb-ngc",
+        "id": "dkjb-gc",
         "name": "Donkey Kong Jungle Beat",
         "link": "https://www.mariowiki.com/Donkey_Kong_Jungle_Beat",
         "console": {
@@ -4662,7 +4662,7 @@
         ]
     },
     {
-        "id": "nsv-ngc",
+        "id": "nsv-gc",
         "name": "NBA Street V3",
         "link": "https://www.mariowiki.com/NBA_Street_V3",
         "console": {
@@ -4696,7 +4696,7 @@
         "tags": []
     },
     {
-        "id": "dk3-ngc",
+        "id": "dk3-gc",
         "name": "Donkey Konga 3",
         "link": "https://www.mariowiki.com/Donkey_Konga_3",
         "console": {
@@ -4732,7 +4732,7 @@
         ]
     },
     {
-        "id": "ddrmm-ngc",
+        "id": "ddrmm-gc",
         "name": "Dance Dance Revolution: Mario Mix",
         "link": "https://www.mariowiki.com/Dance_Dance_Revolution:_Mario_Mix",
         "console": {
@@ -4776,7 +4776,7 @@
         ]
     },
     {
-        "id": "msb-ngc",
+        "id": "msb-gc",
         "name": "Mario Superstar Baseball",
         "link": "https://www.mariowiki.com/Mario_Superstar_Baseball",
         "console": {
@@ -4816,7 +4816,7 @@
         ]
     },
     {
-        "id": "sot-ngc",
+        "id": "sot-gc",
         "name": "SSX on Tour",
         "link": "https://www.mariowiki.com/SSX_on_Tour",
         "console": {
@@ -4850,7 +4850,7 @@
         "tags": []
     },
     {
-        "id": "mp7-ngc",
+        "id": "mp7-gc",
         "name": "Mario Party 7",
         "link": "https://www.mariowiki.com/Mario_Party_7",
         "console": {
@@ -4895,7 +4895,7 @@
         ]
     },
     {
-        "id": "sms-ngc",
+        "id": "sms-gc",
         "name": "Super Mario Strikers",
         "link": "https://www.mariowiki.com/Super_Mario_Strikers",
         "console": {
@@ -5049,7 +5049,7 @@
         ]
     },
     {
-        "id": "dm6-ique",
+        "id": "dm64-ique",
         "name": "Dr. Mario 64",
         "link": "https://www.mariowiki.com/Dr._Mario_64",
         "console": {
@@ -5075,7 +5075,7 @@
         ]
     },
     {
-        "id": "sm6-ique",
+        "id": "sm64-ique",
         "name": "Super Mario 64",
         "link": "https://www.mariowiki.com/Super_Mario_64",
         "console": {
@@ -5099,7 +5099,7 @@
         ]
     },
     {
-        "id": "mk6-ique",
+        "id": "mk64-ique",
         "name": "Mario Kart 64",
         "link": "https://www.mariowiki.com/Mario_Kart_64",
         "console": {
@@ -18854,7 +18854,7 @@
         ]
     },
     {
-        "id": "mk6-arcade",
+        "id": "mk64-arcade",
         "name": "Mario Kart 64",
         "link": "https://www.mariowiki.com/Mario_Kart_64_(slot_machine)",
         "console": {
@@ -18891,7 +18891,7 @@
         ]
     },
     {
-        "id": "sm6-arcade",
+        "id": "sm64-arcade",
         "name": "Super Mario 64",
         "link": "https://www.mariowiki.com/Super_Mario_64_(slot_machine)",
         "console": {
@@ -23342,7 +23342,7 @@
         "tags": []
     },
     {
-        "id": "qdk6-html",
+        "id": "qdk64-html",
         "name": "Questiomario Donkey Kong 64",
         "link": "https://www.mariowiki.com/Questiomario_Donkey_Kong_64",
         "console": {
