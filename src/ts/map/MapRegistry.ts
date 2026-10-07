@@ -47,11 +47,11 @@ class MapRegistry {
                         configPath: "/data/maps/peachs-castle/config.json5"
                     },
 
-                "toad-town-sophie": {
-                    id: "toad-town-sophie",
-                    label: "Toad Town (Lady Sophie)",
-                    configPath: "/data/maps/toad-town-sophie/config.json5"
-                },
+                // "toad-town-sophie": {
+                //     id: "toad-town-sophie",
+                //     label: "Toad Town (Lady Sophie)",
+                //     configPath: "/data/maps/toad-town-sophie/config.json5"
+                // },
 
                 "challenge-road": {
                     id: "challenge-road",
@@ -65,17 +65,17 @@ class MapRegistry {
                     configPath: "/data/maps/flower-kingdom/config.json5"
                 },
 
-            "sunshine-archipelago": {
-                id: "sunshine-archipelago",
-                label: "Sunshine Archipelago",
-                configPath: "/data/maps/sunshine-archipelago/config.json5"
-            },
+            // "sunshine-archipelago": {
+            //     id: "sunshine-archipelago",
+            //     label: "Sunshine Archipelago",
+            //     configPath: "/data/maps/sunshine-archipelago/config.json5"
+            // },
 
-                "isle-delfino": {
-                    id: "isle-delfino",
-                    label: "Isle Delfino",
-                    configPath: "/data/maps/isle-delfino/config.json5"
-                },
+                // "isle-delfino": {
+                //     id: "isle-delfino",
+                //     label: "Isle Delfino",
+                //     configPath: "/data/maps/isle-delfino/config.json5"
+                // },
 
             "baseball-kingdom": {
                 id: "baseball-kingdom",
