@@ -2,7 +2,7 @@ import * as L from 'leaflet';
 import { MapConfig } from './MapConfig';
 import { _Map } from './maps/Map';
 import { LeafletMap } from './maps/LeafletMap';
-import { mapRegistry } from './MapRegistry';
+import { mapRegistry } from '../main';
 import { WaypointManager } from './waypoints/WaypointManager';
 import { eventBus } from '../core/EventBus';
 import { MapView } from './maps/Map';

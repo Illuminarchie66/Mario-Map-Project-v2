@@ -1,0 +1,89 @@
+[
+    {
+        id: "globe",
+        label: "Globe",
+        configPath: "/data/maps/globe/config.json5" 
+    },
+
+    {
+        id: "globe-3d",
+        label: "Globe 3D",
+        configPath: "/data/maps/globe-3d/config.json5" 
+    },
+
+    {
+        id: "mushroom-continent",
+        label: "Mushroom Continent",
+        configPath: "/data/maps/mushroom-continent/config.json5"
+    },
+
+    {
+        id: "toad-town",
+        label: "Toad Town",
+        configPath: "/data/maps/toad-town/config.json5"
+    },
+
+    {
+        id: "peachs-castle",
+        label: "Peach's Castle",
+        configPath: "/data/maps/peachs-castle/config.json5"
+    },
+
+    // Awaiting permission.
+    // {
+    //     id: "toad-town-sophie",
+    //     label: "Toad Town (Lady Sophie)",
+    //     configPath: "/data/maps/toad-town-sophie/config.json5"
+    // },
+
+    {
+        id: "challenge-road",
+        label: "Challenge Road",
+        configPath: "/data/maps/challenge-road/config.json5"
+    },
+
+    {
+        id: "flower-kingdom",
+        label: "Flower Kingdom",
+        configPath: "/data/maps/flower-kingdom/config.json5"
+    },
+
+    // Awaiting permission.
+    // {
+    //     id: "sunshine-archipelago",
+    //     label: "Sunshine Archipelago",
+    //     configPath: "/data/maps/sunshine-archipelago/config.json5"
+    // },
+
+    // Awaiting permission.
+    // {
+    //     id: "isle-delfino",
+    //     label: "Isle Delfino",
+    //     configPath: "/data/maps/isle-delfino/config.json5"
+    // },
+
+    {
+        id: "baseball-kingdom",
+        label: "Baseball Kingdom",
+        configPath: "/data/maps/baseball-kingdom/config.json5"
+    },
+
+    {
+        id: "mario-kart-world",
+        label: "Mario Kart World",
+        configPath: "/data/maps/mario-kart-world/config.json5"
+    },
+
+    {
+        id: "prism-island",
+        label: "Prism Island",
+        configPath: "/data/maps/prism-island/config.json5"
+    },
+
+    // Awaiting permission.
+    // {
+    //     id: "dinosaur-land",
+    //     label: "Dinosaur Land",
+    //     configPath: "/data/maps/dinosaur-land/config.json5"
+    // }
+]

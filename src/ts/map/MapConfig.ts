@@ -109,7 +109,9 @@ type MapConfigData = z.infer<typeof MapConfigSchema>;
 We define an abstract class MapConfig that serves as a base for all map configurations.
 This allows for extra functionality such as assigning leaflet or three.js types and options.
 */
-abstract class MapConfig {
+
+
+abstract class MapConfigBase {
     id: string;
     type: MapType;
     features: MapFeatures;
@@ -130,29 +132,9 @@ abstract class MapConfig {
         this.mapPreview = data.mapPreview;
     }
 
-    static create(data: unknown): MapConfig {
-        const res = MapConfigSchema.safeParse(data);
-        if (!res.success) {
-            throw new Error(`Invalid map config data: ${res.error.message}`);
-        }
-
-        switch (res.data.type) {
-            case "tiles":
-                return new TileMapConfig(res.data);
-            case "image":
-                return new ImageMapConfig(res.data);
-            case "plan":
-                return new PlanMapConfig(res.data);
-            case "model":
-                return new ModelMapConfig(res.data);
-            default:
-                throw new Error(`Unsupported map type: ${res.data}`);
-        }
-    }
-
 }
 
-abstract class LeafletMapConfig extends MapConfig {
+abstract class LeafletMapConfig extends MapConfigBase {
     options: MapOptions;
     bounds?: [number, number][];
 
@@ -234,7 +216,7 @@ class PlanMapConfig extends LeafletMapConfig {
     }
 }
 
-class ModelMapConfig extends MapConfig {
+class ModelMapConfig extends MapConfigBase {
     modelPath: string;
 
     constructor(data: ModelMapConfigData) {
@@ -243,4 +225,22 @@ class ModelMapConfig extends MapConfig {
     }
 }
 
-export { MapConfig, LeafletMapConfig, TileMapConfig, ImageMapConfig, PlanMapConfig, ModelMapConfig };
+class MapConfig extends MapConfigBase {
+    constructor(data: MapConfigData) {
+        super(data);
+        switch (data.type) {
+            case "tiles":
+                return new TileMapConfig(data);
+            case "image":
+                return new ImageMapConfig(data);
+            case "plan":
+                return new PlanMapConfig(data);
+            case "model":
+                return new ModelMapConfig(data);
+            default:
+                throw new Error(`Unsupported map type.`);
+        }
+    }
+}
+
+export { MapConfigData, MapConfig, LeafletMapConfig, TileMapConfig, ImageMapConfig, PlanMapConfig, ModelMapConfig };

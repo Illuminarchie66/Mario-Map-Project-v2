@@ -1,5 +1,6 @@
 import z from 'zod';
 import { loadData } from "../Loader";
+import { Registry } from "../Registry";
 
 const GameDataSchema = z.object({
     id: z.string(),
@@ -50,24 +51,17 @@ export class Game {
     }
 }
 
-class GameRegistry {
-    private readonly games: Record<string, Game> = {};
-
+export class GameRegistry extends Registry<Game> {
     constructor(games: Game[]) {
+        super();
         games.forEach(game => {
-            this.games[game.id] = game;
-        })
+            this.register(game.id, game);
+        });
     }
 
-    static async create() {
+    static async create(): Promise<GameRegistry> {
         const data = await loadData<GameData[]>("/data/gsot/games.json5");
         const games = data?.map(item => new Game(item)) || [];
         return new GameRegistry(games);
     }
-
-    getById(id: string): Game | undefined {
-        return this.games[id];
-    }
 }
-
-export const gameRegistry = await GameRegistry.create();

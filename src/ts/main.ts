@@ -7,8 +7,14 @@ import '../css/core/fonts.css';
 
 import { MapManager } from "./map/MapManager";
 import { UIManager } from "./ui/UIManager";
-import { mapRegistry } from './map/MapRegistry';
+import { MapRegistry } from './map/MapRegistry';
+import { IconRegistry } from './map/waypoints/IconRegistry';
+import { ModelRegistry } from './map/models/ModelRegistry';
 import { MapView } from './map/maps/Map';
+
+export const mapRegistry = await MapRegistry.create();
+export const iconRegistry = await IconRegistry.create();
+export const modelRegistry = new ModelRegistry();
 
 /* 
 This code reads the URL parameters to determine which map to load in initially. 

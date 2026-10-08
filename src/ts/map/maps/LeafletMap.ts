@@ -5,7 +5,8 @@ import { _Map, MapView } from "./Map";
 import { eventBus } from '../../core/EventBus';
 
 import { Waypoint } from "../waypoints/WaypointManager";
-import { iconRegistry, IconIdentifier } from "../waypoints/IconRegistry";
+import { IconIdentifier } from "../waypoints/IconRegistry";
+import { iconRegistry } from '../../main';
 import { getPortableURL } from '../../core/Loader';
 
 /*

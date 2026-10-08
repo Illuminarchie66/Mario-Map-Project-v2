@@ -2,7 +2,7 @@ import '../../../css/ui/panels/map-selector.css';
 import { Panel } from './Panel';
 import { eventBus } from '../../core/EventBus';
 import { MapConfig } from '../../map/MapConfig';
-import { mapRegistry } from '../../map/MapRegistry';
+import { mapRegistry } from '../../main';
 import { getPortableURL } from '../../core/Loader';
 import { _Map } from '../../map/maps/Map';
 
@@ -27,11 +27,7 @@ export class MapSelectorPanel extends Panel {
         this.mapsContainer = document.createElement("div");
         this.mapsContainer.className = "map-selector__maps-container";
 
-        mapRegistry.getAll().then((configs) => {
-            this.populateMapList(configs);
-        }).catch((error) => {
-            console.error("Error fetching map configs:", error);
-        });
+        this.populateMapList(mapRegistry.getAll())
 
         this.panel.appendChild(this.mapsContainer);
     }
