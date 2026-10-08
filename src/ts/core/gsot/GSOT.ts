@@ -1,8 +1,10 @@
 import z from 'zod';
-import { Game, gameRegistry } from "./Game";
+import { Game } from "./Game";
+import { gameRegistry } from "../../mariodle/main";
 import { loadData } from "../Loader";
+import { Registry } from '../Registry';
 
-const MarioEntitySchema = z.object({
+const CharacterSchema = z.object({
     id: z.string(),
     name: z.string(),
     species: z.string(),
@@ -16,9 +18,9 @@ const MarioEntitySchema = z.object({
     playable: z.boolean().optional(),
     tags: z.array(z.string())
 });
-export type MarioEntityData = z.infer<typeof MarioEntitySchema>;
+export type CharacterData = z.infer<typeof CharacterSchema>;
 
-export class MarioEntity {
+export class Character {
     id: string;
     name: string;
     species: string;
@@ -32,7 +34,7 @@ export class MarioEntity {
     playable?: boolean;
     tags: string[];
 
-    constructor(data: MarioEntityData) {
+    constructor(data: CharacterData) {
         this.id = data.id;
         this.name = data.name;
         this.species = data.species;
@@ -45,5 +47,20 @@ export class MarioEntity {
         this.allegiances = data.allegiances;
         this.playable = data.playable;
         this.tags = data.tags;
+    }
+}
+
+export class CharacterRegistry extends Registry<Character> {
+    constructor(characters: Character[]) {
+        super();
+        characters.forEach(character => {
+            this.register(character.id, character);
+        });
+    }
+
+    static async create(): Promise<CharacterRegistry> {
+        const data = await loadData<CharacterData[]>("/data/gsot/characters.json5");
+        const characters = data?.map(item => new Character(item)) || [];
+        return new CharacterRegistry(characters);
     }
 }

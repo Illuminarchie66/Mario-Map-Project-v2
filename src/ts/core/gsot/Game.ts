@@ -1,5 +1,6 @@
 import z from 'zod';
 import { loadData } from "../Loader";
+import { getPortableURL } from "../Loader";
 import { Registry } from "../Registry";
 
 const GameDataSchema = z.object({
