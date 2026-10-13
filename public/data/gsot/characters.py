@@ -1,3 +1,6 @@
+import re
+import json
+
 """
 Character object:
     {
@@ -100,7 +103,7 @@ characters = [
         ],
         "allegiances": ["Mushroom Kingdom"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "Toad",
@@ -117,7 +120,7 @@ characters = [
         ],
         "allegiances": ["Mushroom Kingdom"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "Koopa Troopa",
@@ -133,7 +136,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "Bowser",
@@ -308,7 +311,7 @@ characters = [
         ],
         "allegiances": ["8 Bits", "Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "Nabbit",
@@ -403,7 +406,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Cheep Cheep",
@@ -419,7 +422,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Dry Bones",
@@ -466,7 +469,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Moo Moo",
@@ -482,7 +485,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Stingby",
@@ -498,7 +501,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Snowman",
@@ -514,7 +517,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Penguin",
@@ -530,7 +533,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Para-Biddybud",
@@ -546,7 +549,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Princess Daisy",
@@ -626,7 +629,7 @@ characters = [
         ],
         "allegiances": ["8 Bits", "Other"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "King Boo",
@@ -690,7 +693,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored", "only-playable-in-mkw"]
     },
     {
         "name": "Pianta",
@@ -706,7 +709,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored"]
     },
     {
         "name": "Rocky Wrench",
@@ -722,7 +725,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Conkdor",
@@ -738,7 +741,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Peepa",
@@ -769,7 +772,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Coin Coffer",
@@ -785,7 +788,7 @@ characters = [
         ],
         "allegiances": ["Other"],
         "playable": True,
-        "tags": []
+        "tags": ["multi-colored", "only-playable-in-mkw"]
     },
     {
         "name": "Dolphin",
@@ -817,7 +820,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "Fish Bone",
@@ -833,7 +836,7 @@ characters = [
         ],
         "allegiances": ["Koopatroop"],
         "playable": True,
-        "tags": []
+        "tags": ["only-playable-in-mkw"]
     },
     {
         "name": "",
@@ -2922,3 +2925,10 @@ characters = [
     },
 
 ]
+
+for c in characters:
+    cid = re.sub(r'[^a-zA-Z0-9 ]', '', c['name']).lower().replace(' ', '-')
+    c['id'] = cid
+
+with open("characters.json5", 'w') as f:
+    json.dump(characters, f, indent=4)

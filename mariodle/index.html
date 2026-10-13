@@ -92,19 +92,50 @@
 
     <div class="container">
         <div class="header">
-            <img src="../public/assets/core/images/mariodle.png" alt="Mariodle">
+            <img src="/assets/core/images/mariodle.png" alt="Mariodle">
         </div>
 
         <div class="description">
-        
+            <p>
+                Welcome to Mariodle! Guess your favourite Mario characters based on the clues given!
+            </p>
+            <p>
+                Select your guess from the search bar below.
+            </p>
         </div>
 
         <div class="character-search">
-
+            <input type="text" id="character-search-input" placeholder="Search...">
+            <ul id="character-options">
+                <!-- <li>hi</li> -->
+            </ul>
         </div>
 
-        <div class="guess">
-            
+        <div class="guesses">
+            <div class="guesses-table">
+                <div class="guesses-table-head">
+                    <div>Character</div>
+                    <div>Species</div>
+                    <div>Colors</div>
+                    <div>Allegiance</div>
+                    <div>Playable</div>
+                    <div>First Game</div>
+                    <div>Last Game</div>
+                    <div>Origin Year</div>
+                </div>
+                <div class="guesses-table-body">
+                    <!-- <div class="guesses-row">
+                        <div>Mario</div>
+                        <div class="correct">Human</div>
+                        <div class="partial">Red, Blue</div>
+                        <div class="incorrect">Mushroom Kingdom</div>
+                        <div>True</div>
+                        <div>Donkey Kong (Arcade)</div>
+                        <div>Super Mario Bros. Wonder + Meetup in Bellabel Park</div>
+                        <div>1981</div>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
 

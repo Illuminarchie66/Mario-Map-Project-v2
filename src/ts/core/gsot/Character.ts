@@ -28,7 +28,7 @@ export class Character {
     link?: string;
     imageLink?: string;
     firstAppearance: Game;
-    lastAppearance?: Game;
+    lastAppearance: Game;
     colors?: string[];
     allegiances?: string[];
     playable?: boolean;
@@ -42,7 +42,7 @@ export class Character {
         this.link = data.link;
         this.imageLink = data.imageLink;
         this.firstAppearance = gameRegistry.getById(data.firstAppearance) as Game;
-        this.lastAppearance = data.lastAppearance ? gameRegistry.getById(data.lastAppearance) : undefined;
+        this.lastAppearance = data.lastAppearance ? gameRegistry.getById(data.lastAppearance) : gameRegistry.getById(data.firstAppearance);
         this.colors = data.colors;
         this.allegiances = data.allegiances;
         this.playable = data.playable;
@@ -60,7 +60,7 @@ export class CharacterRegistry extends Registry<Character> {
 
     static async create(): Promise<CharacterRegistry> {
         const data = await loadData<CharacterData[]>("/data/gsot/characters.json5");
-        const characters = data?.map(item => new Character(item)) || [];
+        const characters = data?.filter(item => item.id !== "").map(item => new Character(item)) || [];
         return new CharacterRegistry(characters);
     }
 }
