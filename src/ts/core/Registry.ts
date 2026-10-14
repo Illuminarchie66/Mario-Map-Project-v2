@@ -1,4 +1,4 @@
-import { loadData } from "./Loader";
+import { RNG } from "./RNG"
 
 export abstract class Registry<T> {
 
@@ -25,5 +25,17 @@ export abstract class Registry<T> {
 
     containsId(id: string): boolean {
         return !!this.items[id];
+    }
+
+    getRandom(blacklist?: Set<string>, rng?: RNG): T {
+        let keys = Object.keys(this.items)
+        if (blacklist !== undefined) {
+            keys = keys.filter(id => { return !blacklist.has(id); });
+        }
+
+        if (rng !== undefined)
+            return this.items[rng.getRandomElement(keys)]; 
+        
+        return this.items[keys[Math.floor(Math.random()*keys.length)]];
     }
 }
