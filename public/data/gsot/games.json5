@@ -15793,47 +15793,6 @@
         ]
     },
     {
-        "id": "mk8dbcp-switch",
-        "name": "Mario Kart 8 Deluxe + Booster Course Pass",
-        "link": "https://www.mariowiki.com/Mario_Kart_8_Deluxe_%2B_Booster_Course_Pass?action=edit&redlink=1",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/10/2023"
-            },
-            {
-                "region": "NA",
-                "date": "01/12/2023"
-            },
-            {
-                "region": "EU",
-                "date": "01/12/2023"
-            },
-            {
-                "region": "AU",
-                "date": "01/12/2023"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Planning_%26_Development",
-                "name": "Nintendo EPD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Bandai_Namco_Entertainment",
-                "name": "Bandai Namco Entertainment"
-            }
-        ],
-        "tags": [
-            "kart",
-            "mario"
-        ]
-    },
-    {
         "id": "smbw-switch",
         "name": "Super Mario Bros. Wonder",
         "link": "https://www.mariowiki.com/Super_Mario_Bros._Wonder",
