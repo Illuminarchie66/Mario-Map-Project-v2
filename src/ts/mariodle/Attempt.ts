@@ -1,5 +1,6 @@
 import { Game } from "../core/gsot/Game";
 import { Character } from "../core/gsot/Character";
+import { getPortableURL } from "../core/Loader";
 
 function getEarliestReleaseYear(game: Game): number {
     if (!game.releases) 
@@ -59,12 +60,15 @@ export class Attempt {
     }
 
     meta: {
-        name: string
+        name: string,
+        link: string,
+        imageLink: string
     };
 
     firstAppearance: {
         value: string,
-        result: AttemptResult 
+        result: AttemptResult,
+        link: string 
     };
 
     firstAppearanceYear: {
@@ -74,11 +78,12 @@ export class Attempt {
 
     lastAppearance: {
         value: string,
-        result: AttemptResult
+        result: AttemptResult,
+        link: string
     };
 
     species: {
-        value: string,
+        value: string[],
         result: AttemptResult
     }
 
@@ -104,19 +109,23 @@ export class Attempt {
         this.guess = guess;
 
         this.meta = {
-            name: guess.name
+            name: guess.name,
+            link: guess.link || "",
+            imageLink: guess.imageLink || ""
         }
 
         // First Appearance Game
         if (guess.firstAppearance.id === target.firstAppearance.id) {
             this.firstAppearance = {
                 value: guess.firstAppearance.name,
-                result: AttemptResult.correct
+                result: AttemptResult.correct,
+                link: guess.firstAppearance.link || ""
             }
         } else {
             this.firstAppearance = {
                 value: guess.firstAppearance.name,
-                result: AttemptResult.incorrect
+                result: AttemptResult.incorrect,
+                link: guess.firstAppearance.link || ""
             }
         }
 
@@ -146,69 +155,25 @@ export class Attempt {
         if (guess.lastAppearance.id === target.lastAppearance.id) {
             this.lastAppearance = {
                 value: guess.lastAppearance.name,
-                result: AttemptResult.correct
+                result: AttemptResult.correct,
+                link: guess.lastAppearance.link || ""
             }
         } else {
             this.lastAppearance = {
                 value: guess.lastAppearance.name,
-                result: AttemptResult.incorrect
+                result: AttemptResult.incorrect,
+                link: guess.lastAppearance.link || ""
             }
         }
 
         // Species
-        if (guess.species.toUpperCase() === target.species.toUpperCase()) {
-            this.species = {
-                value: guess.species,
-                result: AttemptResult.correct
-            }
-        } else {
-            this.species = {
-                value: guess.species,
-                result: AttemptResult.incorrect
-            }
-        }
+        this.species = this.arrayCorrectness(guess.species, target.species)
 
         // Colors
-        const guessColors = (guess.colors || []).map( c => c.toUpperCase());
-        const targetColors = (target.colors || []).map( c => c.toUpperCase());
-        const intersectionColors = intersect(guessColors, targetColors);
-        if (intersectionColors.length === 0) {
-            this.colors = {
-                value: guess.colors || [],
-                result: AttemptResult.incorrect
-            }
-        } else if ((intersectionColors.length === targetColors.length) && (intersectionColors.length === guessColors.length)) {
-            this.colors = {
-                value: guess.colors || [],
-                result: AttemptResult.correct
-            }
-        } else {
-            this.colors = {
-                value: guess.colors || [],
-                result: AttemptResult.partial
-            }
-        }
+        this.colors = this.arrayCorrectness(guess.colors, target.colors)
 
         // Allegiance
-        const guessAllegiances = (guess.allegiances || []).map( c => c.toUpperCase())
-        const targetAllegiances = (target.allegiances || []).map( c => c.toUpperCase())
-        const intersectionAllegiances = intersect(guessAllegiances, targetAllegiances);
-        if (intersectionAllegiances.length === 0) {
-            this.allegiances = {
-                value: guess.allegiances || [],
-                result: AttemptResult.incorrect
-            }
-        } else if ((intersectionAllegiances.length === targetAllegiances.length) && (intersectionAllegiances.length === guessAllegiances.length)) {
-            this.allegiances = {
-                value: guess.allegiances || [],
-                result: AttemptResult.correct
-            }
-        } else {
-            this.allegiances = {
-                value: guess.allegiances || [],
-                result: AttemptResult.partial
-            }
-        }
+        this.allegiances = this.arrayCorrectness(guess.allegiances, target.allegiances)
 
         // Playable
         if (guess.playable === target.playable) {
@@ -224,48 +189,97 @@ export class Attempt {
         }
     }
 
+    arrayCorrectness(guess: string[], target: string[]): {value: string[], result: AttemptResult} {
+        const guessUpper = (guess || []).map( c => c.toUpperCase())
+        const targetUpper = (target || []).map( c => c.toUpperCase())
+        const intersection = intersect(guessUpper, targetUpper);
+        if (intersection.length === 0) {
+            return {
+                value: guess || [],
+                result: AttemptResult.incorrect
+            }
+        } else if ((intersection.length === target.length) && (intersection.length === guess.length)) {
+            return {
+                value: guess || [],
+                result: AttemptResult.correct
+            }
+        } else {
+            return {
+                value: guess || [],
+                result: AttemptResult.partial
+            }
+        }
+    }
+
     render() {
         const row = document.createElement('div');
         row.classList = "guesses-row";
         
         const meta = document.createElement('div');
-        meta.innerText = this.meta.name
+        meta.classList = "guesses-meta";
+        const image = document.createElement("img");
+        image.src = this.meta.imageLink || getPortableURL("/assets/core/images/black_default.jpg")
+        const text = document.createElement("a");
+        text.href = this.meta.link;
+        text.target = "_blank";
+        text.rel = "noopener noreferrer";
+        text.innerText = this.meta.name;
+        meta.appendChild(image);
+        meta.appendChild(text);
+        meta.title = this.meta.name;
         row.appendChild(meta);
 
         const species = document.createElement('div');
         species.classList = this.resultClassMap[this.species.result];
-        species.innerText = this.species.value;
+        species.innerText = this.species.value.join(", ");
+        species.title = this.species.value.join(", ");
         row.appendChild(species);
 
         const colors = document.createElement('div');
         colors.classList = this.resultClassMap[this.colors.result];
         colors.innerText = this.colors.value.join(", ");
+        colors.title = `Main Colors: ${this.colors.value.join(", ")}`;
         row.appendChild(colors);
 
         const allegiances = document.createElement('div');
         allegiances.classList = this.resultClassMap[this.allegiances.result];
         allegiances.innerText = this.allegiances.value.join(", ");
+        allegiances.title = `Allegiances: ${this.allegiances.value.join(", ")}`;
         row.appendChild(allegiances);
 
         const playable = document.createElement('div');
         playable.classList = this.resultClassMap[this.playable.result];
         playable.innerText = this.playable.value;
+        playable.title = this.playable.value === "True" ? "Playable" : "Not Playable";
         row.appendChild(playable);
 
         const firstGame = document.createElement('div');
         firstGame.classList = this.resultClassMap[this.firstAppearance.result];
-        firstGame.innerText = this.firstAppearance.value;
+        const firstGameLink = document.createElement("a");
+        firstGameLink.href = this.firstAppearance.link;
+        firstGameLink.innerText = this.firstAppearance.value;
+        firstGameLink.target = "_blank";
+        firstGameLink.rel = "noopener noreferrer";
+        firstGame.appendChild(firstGameLink);
+        firstGame.title = `First Appeared In: ${this.firstAppearance.value}`;
         row.appendChild(firstGame);
 
         const lastGame = document.createElement('div');
         lastGame.classList = this.resultClassMap[this.lastAppearance.result];
-        lastGame.innerText = this.lastAppearance.value;
+        const lastGameLink = document.createElement("a");
+        lastGameLink.href = this.lastAppearance.link;
+        lastGameLink.innerText = this.lastAppearance.value;
+        lastGameLink.target = "_blank";
+        lastGameLink.rel = "noopener noreferrer";
+        lastGame.appendChild(lastGameLink);
+        lastGame.title = `Last Appeared In: ${this.lastAppearance.value}`;
         row.appendChild(lastGame);
 
         const originYear = document.createElement('div');
         if (this.firstAppearanceYear.result === AttemptResultYear.equal) {
             originYear.classList = "correct";
             originYear.innerText = this.firstAppearanceYear.value.toString();
+            originYear.title = this.firstAppearanceYear.value.toString();
         } else {
             const yearContainer = document.createElement('div');
             yearContainer.classList = "cell-container"
@@ -275,9 +289,11 @@ export class Attempt {
             if (this.firstAppearanceYear.result === AttemptResultYear.before) {
                 bgImg.classList += " before";
                 bgImg.alt = "Down Arrow"
+                originYear.title = `Before ${this.firstAppearanceYear.value.toString()}`;
             } else {
                 bgImg.classList += " after";
                 bgImg.alt = "Up Arrow"
+                originYear.title = `After ${this.firstAppearanceYear.value.toString()}`;
             }
 
             const content = document.createElement('div')

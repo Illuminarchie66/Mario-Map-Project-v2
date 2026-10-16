@@ -7,14 +7,14 @@ import { Registry } from '../Registry';
 const CharacterSchema = z.object({
     id: z.string(),
     name: z.string(),
-    species: z.string(),
+    species: z.array(z.string()),
     description: z.string().optional(),
     link: z.string().optional(),
     imageLink: z.string().optional(),
     firstAppearance: z.string(),
     lastAppearance: z.string().optional(),
-    colors: z.array(z.string()).optional(),
-    allegiances: z.array(z.string()).optional(),
+    colors: z.array(z.string()),
+    allegiances: z.array(z.string()),
     playable: z.boolean().optional(),
     tags: z.array(z.string())
 });
@@ -23,14 +23,14 @@ export type CharacterData = z.infer<typeof CharacterSchema>;
 export class Character {
     id: string;
     name: string;
-    species: string;
+    species: string[];
     description?: string;
     link?: string;
     imageLink?: string;
     firstAppearance: Game;
     lastAppearance: Game;
-    colors?: string[];
-    allegiances?: string[];
+    colors: string[];
+    allegiances: string[];
     playable?: boolean;
     tags: string[];
 
