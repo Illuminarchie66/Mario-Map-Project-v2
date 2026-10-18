@@ -78,7 +78,7 @@ export class Attempt {
     };
 
     species: {
-        value: string,
+        value: string[],
         result: AttemptResult
     }
 
@@ -156,15 +156,23 @@ export class Attempt {
         }
 
         // Species
-        if (guess.species.toUpperCase() === target.species.toUpperCase()) {
+        const guessSpecies = (guess.species || []).map( c => c.toUpperCase());
+        const targetSpecies = (target.species || []).map( c => c.toUpperCase());
+        const intersectionSpecies = intersect(guessSpecies, targetSpecies);
+        if (intersectionSpecies.length === 0) {
             this.species = {
-                value: guess.species,
+                value: guess.species || [],
+                result: AttemptResult.incorrect
+            }
+        } else if ((intersectionSpecies.length === targetSpecies.length) && (intersectionSpecies.length === guessSpecies.length)) {
+            this.species = {
+                value: guess.species || [],
                 result: AttemptResult.correct
             }
         } else {
             this.species = {
-                value: guess.species,
-                result: AttemptResult.incorrect
+                value: guess.species || [],
+                result: AttemptResult.partial
             }
         }
 
@@ -213,12 +221,12 @@ export class Attempt {
         // Playable
         if (guess.playable === target.playable) {
             this.playable = {
-                value: "True",
+                value: guess.playable ? "True" : "False",
                 result: AttemptResult.correct
             };
         } else {
             this.playable = {
-                value: "True",
+                value: guess.playable ? "True" : "False",
                 result: AttemptResult.incorrect
             };
         }
@@ -234,7 +242,7 @@ export class Attempt {
 
         const species = document.createElement('div');
         species.classList = this.resultClassMap[this.species.result];
-        species.innerText = this.species.value;
+        species.innerText = this.species.value.join(", ");
         row.appendChild(species);
 
         const colors = document.createElement('div');

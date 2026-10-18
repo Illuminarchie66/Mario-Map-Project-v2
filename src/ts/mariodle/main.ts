@@ -12,4 +12,6 @@ export const gameRegistry = await GameRegistry.create();
 export const characterRegistry = await CharacterRegistry.create();
 
 const mariodle = new Mariodle();
+const c = mariodle.generateNewTargetByDate(14);
+console.log(c);
 const search = new SearchBar(mariodle);
