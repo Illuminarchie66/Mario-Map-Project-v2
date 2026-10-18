@@ -13,8 +13,8 @@ const CharacterSchema = z.object({
     imageLink: z.string().optional(),
     firstAppearance: z.string(),
     lastAppearance: z.string().optional(),
-    colors: z.array(z.string()).optional(),
-    allegiances: z.array(z.string()).optional(),
+    colors: z.array(z.string()),
+    allegiances: z.array(z.string()),
     playable: z.boolean().optional(),
     tags: z.array(z.string())
 });
@@ -29,8 +29,8 @@ export class Character {
     imageLink?: string;
     firstAppearance: Game;
     lastAppearance: Game;
-    colors?: string[];
-    allegiances?: string[];
+    colors: string[];
+    allegiances: string[];
     playable?: boolean;
     tags: string[];
 
