@@ -4,7 +4,7 @@ import { _Map, MapView } from "./Map";
 import { TileMap } from "./TileMap";
 import { ImageMap } from "./ImageMap";
 import { PlanMap } from "./PlanMap";
-import { modelRegistry } from "../models/ModelRegistry";
+import { modelRegistry } from "../../main";
 
 /*
 Static factory class to create map instances based on the given configuration.

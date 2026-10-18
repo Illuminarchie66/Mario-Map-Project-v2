@@ -25,6 +25,11 @@ export function getPortableURL(path: string): string {
         base = "./";
     }
 
+    const depth = window.location.pathname.split('/').filter(Boolean).length;
+    for (let i = 0; i < depth; i++) {
+        base = base + "../";
+    }
+
     return base.endsWith("/") ? `${base}${cleanPath}` : `${base}/${cleanPath}`;
 }
 

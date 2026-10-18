@@ -1,0 +1,635 @@
+[
+
+    // Standard
+    {
+        id: 'default',
+        //iconPath: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        iconPath: '/assets/core/images/marker.png',
+        iconSize: [25, 41],
+        iconAnchor: [12.5, 41],
+        
+        shadowPath: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowSize: [41, 41],
+        
+        popupAnchor: [1.5, -34],
+    },
+
+    // Toad Town
+    {
+        id: 'mushroom',
+        iconPath: '/data/maps/toad-town/assets/icons/red-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'flower',
+        iconPath: '/data/maps/toad-town/assets/icons/flower-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'golf',
+        iconPath: '/data/maps/toad-town/assets/icons/golf-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'mario',
+        iconPath: '/data/maps/toad-town/assets/icons/mario-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'peach',
+        iconPath: '/data/maps/toad-town/assets/icons/peach-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'pipe',
+        iconPath: '/data/maps/toad-town/assets/icons/pipe-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'star',
+        iconPath: '/data/maps/toad-town/assets/icons/star-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'tennis',
+        iconPath: '/data/maps/toad-town/assets/icons/tennis-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    {
+        id: 'vehicle',
+        iconPath: '/data/maps/toad-town/assets/icons/vehicle-icon.png',
+        shadowPath: '/data/maps/toad-town/assets/icons/marker-shadow.png',
+        iconSize: [53.6, 86.4], 
+        shadowSize: [75, 80], 
+        iconAnchor: [26.8, 86.4], 
+        shadowAnchor: [22, 81],
+        popupAnchor: [1.5, -56]
+    },
+
+    // Mushroom Continent
+    {
+        id: "aerial-road",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Aerial_RoadSky_Arena.png",
+        
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -50],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "bean-bean-castle",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Beanbean_Castle.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "bloopers-secret-lair",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Bloopers_Secret_Lair.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "booster-tower",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Booster_Tower.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "forest-maze",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Forest_Maze.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "fuzzy-clifftop",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Fuzzy_Clifftop.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "great-acorn-tree",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Great_Acorn_Tree.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "haunted-shipwreck",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Haunted_Shipwreck.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "ludwigs-clockwork-castle",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Ludwigs_Clockwork_Castle.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "magma-mine",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Magma_Mine.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "marrymore-chapel",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Marrymore_Chapel.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "mole-mines",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Mole_Mines.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "nimbus-castle",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Nimbus_Castle.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "rose-town",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Rose_Town.png",
+        
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "rudys-castle",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Rudys_Castle.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "seaside-town",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Seaside_Town.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "sky-high-coaster",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Sky_High_Coaster.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "skyward-stalk",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Skyward_Stalk.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "spikes-sprouting-sands",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Spikes_Sprouting_Sands.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "spinning-star-sky",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Spinning-Star_Sky.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "sunshine-airport",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Sunshine_Airport.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "whimsical-waters",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Whimsical_Waters.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "world-1-4-3d-land",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/World_1-4_3D_Land.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "world-3-1-3d-land",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/World_3-1_3D_Land.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+    {
+        id: "yoshi-park",
+        iconPath: "/data/maps/mushroom-continent/assets/landmarks/Yoshi_Park.png",
+
+        iconSize: [12, 12],
+        iconAnchor: [0, 0],
+        popupAnchor: [0, -20],
+        
+        static: true,
+        staticScale: 1
+    },
+
+    // Mario Kart World 
+    {
+        id: "acorn-heights",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Acorn_Heights.png",
+        
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "airship-fortress",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Airship_Fortress.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "boo-cinema",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Boo_Cinema.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "bowsers-castle",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Bowsers_Castle.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "cheep-cheep-falls",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Cheep_Cheep_Falls.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "choco-mountain",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Choco_Mountain.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "crown-city",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Crown_City.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "dandelion-depths",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Dandelion_Depths.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "desert-hills",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Desert_Hills.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "dino-dino-jungle",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Dino_Dino_Jungle.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "dk-pass",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_DK_Pass.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "dk-space-port",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_DK_Spaceport.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "dry-bones-burnout",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Dry_Bones_Burnout.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "faraway-oasis",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Faraway_Oasis.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "great-question-block-ruins",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Great_Question_Block_Ruins.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "koopa-troopa-beach",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Koopa_Troopa_Beach.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "mario-bros-circuit",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Mario_Bros_Circuit.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "mario-circuit",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Mario_Circuit.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "moo-moo-meadows",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Moo_Moo_Meadows.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "peach-beach",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Peach_Beach.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "peach-stadium",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Peach_Stadium.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "rainbow-road",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Rainbow_Road.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "salty-salty-speedway",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Salty_Salty_Speedway.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "shy-guy-bazaar",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Shy_Guy_Bazaar.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "sky-high-sundae",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Sky-High_Sundae.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "starview-peak",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Starview_Peak.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "toads-factory",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Toads_Factory.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "wario-shipyard",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Wario_Shipyard.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "wario-stadium",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Wario_Stadium.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    },
+    {
+        id: "whistlestop-summit",
+        iconPath: "/data/maps/mario-kart-world/assets/landmarks/MKWorld_Icon_Whistlestop_Summit.png",
+
+        iconSize: [130, 130],
+        iconAnchor: [65, 65],
+        popupAnchor: [0, -20],
+    }
+]

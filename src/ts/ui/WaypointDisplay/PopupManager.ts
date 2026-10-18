@@ -2,7 +2,7 @@ import * as L from "leaflet";
 
 import { PopupWaypoint } from "../../map/waypoints/Waypoint";
 import { PopupComponent } from "../components/Popup";
-import { iconRegistry } from "../../map/waypoints/IconRegistry";
+import { iconRegistry } from "../../main";
 import { eventBus } from "../../core/EventBus";
 
 /*

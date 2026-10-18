@@ -4,7 +4,7 @@ import { Waypoint } from "../waypoints/Waypoint";
 import { _Map } from "../maps/Map";
 import { LeafletMap } from "../maps/LeafletMap";
 import { loadData } from "../../core/Loader";
-import { iconRegistry } from "../waypoints/IconRegistry";
+import { iconRegistry } from "../../main";
 import { eventBus } from "../../core/EventBus";
 import { ModelMap } from "../maps/ModelMap";
 
