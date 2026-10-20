@@ -33,79 +33,9 @@
             }
         ],
         "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "ck-arcade",
-        "name": "Crazy Kong",
-        "link": "https://www.mariowiki.com/Crazy_Kong",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1981"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Falcon",
-                "name": "Kyoei"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "ckpi-arcade",
-        "name": "Crazy Kong Part II",
-        "link": "https://www.mariowiki.com/Crazy_Kong_Part_II",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/10/1981"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Falcon",
-                "name": "Falcon"
-            }
-        ],
-        "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -145,7 +75,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -181,7 +113,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -217,7 +151,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -253,8 +189,9 @@
             }
         ],
         "tags": [
-            "kart",
-            "mario"
+            "racing",
+            "mario",
+            "3D"
         ]
     },
     {
@@ -290,7 +227,8 @@
             }
         ],
         "tags": [
-            "luigi"
+            "luigi",
+            "3D"
         ]
     },
     {
@@ -330,7 +268,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -366,8 +306,9 @@
             }
         ],
         "tags": [
-            "kart",
-            "mario"
+            "racing",
+            "mario",
+            "3D"
         ]
     },
     {
@@ -407,7 +348,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
 
@@ -450,7 +393,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -487,7 +432,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -528,79 +475,9 @@
             }
         ],
         "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "dkjjsl-nes", //revisit
-        "name": "Donkey Kong Jr. + Jr. Sans\u016b Lesson",
-        "link": "https://www.mariowiki.com/Donkey_Kong_Jr._%2B_Jr._Sans%C5%AB_Lesson",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1983"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sharp",
-                "name": "Sharp"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "dkjm-nes", //revisit
-        "name": "Donkey Kong Jr. Math",
-        "link": "https://www.mariowiki.com/Donkey_Kong_Jr._Math",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "12/12/1983"
-            },
-            {
-                "region": "NA",
-                "date": "18/10/1985"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Research_%26_Development_2",
-                "name": "Nintendo R&D 2"
-            }
-        ],
-        "tags": [
-            "dk"
+            "mario",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -708,7 +585,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -743,7 +622,10 @@
                 "name": "Nintendo R&D 1"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro",
+            "2D"
+        ]
     },
     {
         "id": "smb-nes",
@@ -778,7 +660,10 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -815,7 +700,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -851,7 +738,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -887,7 +776,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1002,7 +893,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -1038,7 +930,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -1116,7 +1009,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro",
+            "2D"
         ]
     },
     {
@@ -1156,7 +1051,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "puzzle"
         ]
     },
     {
@@ -1223,7 +1119,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -1261,7 +1159,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1337,8 +1237,9 @@
             }
         ],
         "tags": [
-            "kart",
-            "mario"
+            "racing",
+            "mario",
+            "2D"
         ]
     },
     {
@@ -1416,7 +1317,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -1453,7 +1355,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1489,7 +1393,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "shooter"
         ]
     },
     {
@@ -1526,7 +1431,8 @@
         ],
         "tags": [
             "mario",
-            "wario"
+            "wario",
+            "puzzle"
         ]
     },
     {
@@ -1571,117 +1477,6 @@
         ]
     },
     {
-        "id": "meyfwn-snes",
-        "name": "Mario's Early Years! Fun with Numbers",
-        "remake": ["meyfwn-msdos"],
-        "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Fun_with_Numbers",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/The_Software_Toolworks",
-                "name": "The Software Toolworks"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "meyfwl-snes",
-        "name": "Mario's Early Years! Fun with Letters",
-        "remake": ["meyfwl-msdos"],
-        "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Fun_with_Letters",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/The_Software_Toolworks",
-                "name": "The Software Toolworks"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "meypf-snes",
-        "name": "Mario's Early Years! Preschool Fun",
-        "remake": ["meypf-msdos"],
-        "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Preschool_Fun",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/The_Software_Toolworks",
-                "name": "The Software Toolworks"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
         "id": "dkc-snes",
         "name": "Donkey Kong Country",
         "link": "https://www.mariowiki.com/Donkey_Kong_Country",
@@ -1714,7 +1509,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1751,7 +1548,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1796,6 +1595,7 @@
     {
         "id": "ww-snes",
         "name": "Wario's Woods",
+        "remake": ["ww-nes"],
         "link": "https://www.mariowiki.com/Wario%27s_Woods_(Super_Nintendo_Entertainment_System)",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -1830,7 +1630,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "puzzle"
         ]
     },
     {
@@ -1867,7 +1668,9 @@
         ],
         "tags": [
             "mario",
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -1903,7 +1706,7 @@
             }
         ],
         "tags": [
-            "mario"
+            "puzzle"
         ]
     },
     {
@@ -1938,7 +1741,9 @@
                 "name": "Intelligent Systems"
             }
         ],
-        "tags": []
+        "tags": [
+            "puzzle"
+        ]
     },
     {
         "id": "dkc2dkq-snes",
@@ -1973,7 +1778,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -2010,7 +1817,7 @@
         ],
         "tags": [
             "rpg",
-            "mario"
+            "mario",
         ]
     },
     {
@@ -2046,7 +1853,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -2161,7 +1970,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -2197,8 +2008,9 @@
             }
         ],
         "tags": [
-            "kart",
-            "mario"
+            "racing",
+            "mario",
+            "3D"
         ]
     },
     {
@@ -2234,7 +2046,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "3D"
         ]
     },
     {
@@ -2270,7 +2083,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -2313,40 +2128,6 @@
             "party",
             "mario"
         ]
-    },
-    {
-        "id": "ssb-n64",
-        "name": "Super Smash Bros.",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros.",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_64",
-            "name": "Nintendo 64"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/01/1999"
-            },
-            {
-                "region": "NA",
-                "date": "26/04/1999"
-            },
-            {
-                "region": "EU",
-                "date": "19/11/1999"
-            },
-            {
-                "region": "AU",
-                "date": "05/01/2000"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/HAL_Laboratory",
-                "name": "HAL Labs"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "mg-n64",
@@ -2419,7 +2200,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -2653,42 +2436,9 @@
             }
         ],
         "tags": [
-            "luigi"
+            "luigi",
+            "3D"
         ]
-    },
-    {
-        "id": "ssbm-gc",
-        "name": "Super Smash Bros. Melee",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros._Melee",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_GameCube",
-            "name": "Nintendo GameCube"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/11/2001"
-            },
-            {
-                "region": "NA",
-                "date": "03/12/2001"
-            },
-            {
-                "region": "EU",
-                "date": "24/05/2002"
-            },
-            {
-                "region": "AU",
-                "date": "31/05/2002"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/HAL_Laboratory",
-                "name": "HAL Labs"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "smss-gc",
@@ -2723,7 +2473,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -2808,7 +2560,9 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "puzzle"
+        ]
     },
     {
         "id": "ww-gc",
@@ -2843,7 +2597,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -2921,8 +2677,8 @@
             }
         ],
         "tags": [
-            "party",
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -2958,7 +2714,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -3036,7 +2792,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "rhythm"
         ]
     },
     {
@@ -3072,7 +2829,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "rhythm"
         ]
     },
     {
@@ -3233,7 +2991,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -3268,7 +3028,10 @@
                 "name": "EA Canada"
             }
         ],
-        "tags": []
+        "tags": [
+            "sport",
+            "basketball"
+        ]
     },
     {
         "id": "dk3-gc",
@@ -3303,7 +3066,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "rhythm"
         ]
     },
     {
@@ -3387,7 +3151,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "sport",
+            "baseball"
         ]
     },
     {
@@ -3422,7 +3188,9 @@
                 "name": "EA Canada"
             }
         ],
-        "tags": []
+        "tags": [
+            "sport"
+        ]
     },
     {
         "id": "mp7-gc",
@@ -3550,7 +3318,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -3719,7 +3488,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "racing"
         ]
     },
     {
@@ -3755,7 +3525,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -3799,62 +3571,10 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
-    },
-    {
-        "id": "ssbb-wii",
-        "name": "Super Smash Bros. Brawl",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros._Brawl",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii",
-            "name": "Wii"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "31/01/2008"
-            },
-            {
-                "region": "NA",
-                "date": "09/03/2008"
-            },
-            {
-                "region": "EU",
-                "date": "27/06/2008"
-            },
-            {
-                "region": "AU",
-                "date": "26/06/2008"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sora_Ltd.",
-                "name": "Sora Ltd."
-            },
-            {
-                "link": "https://www.mariowiki.com/HAL_Laboratory",
-                "name": "HAL Labs"
-            },
-            {
-                "link": "https://www.mariowiki.com/Game_Arts",
-                "name": "Game Arts"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Monolith_Soft",
-                "name": "Monolith Soft"
-            },
-            {
-                "link": "https://www.mariowiki.com/Paon",
-                "name": "Paon"
-            },
-            {
-                "link": "https://www.mariowiki.com/Intelligent_Systems",
-                "name": "Intelligent Systems"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "mkwii-wii",
@@ -3889,7 +3609,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -3930,7 +3650,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "sport",
+            "baseball"
         ]
     },
     {
@@ -3966,7 +3688,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4003,7 +3727,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk", 
+            "2D",
+            "platformer"
         ]
     },
     {
@@ -4120,7 +3846,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -4156,7 +3884,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4192,7 +3922,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -4229,7 +3961,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4266,7 +4000,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -4303,7 +4038,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4343,7 +4080,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4383,7 +4122,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "sport"
         ]
     },
     {
@@ -4427,7 +4167,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -4462,7 +4204,9 @@
                 "name": "Square Enix"
             }
         ],
-        "tags": []
+        "tags": [
+            "party"
+        ]
     },
     {
         "id": "mp9-wii",
@@ -4544,7 +4288,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4584,7 +4330,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "party"
         ]
     },
     {
@@ -4620,7 +4367,9 @@
             }
         ],
         "tags": [
-            "luigi"
+            "luigi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4658,7 +4407,9 @@
         ],
         "tags": [
             "mario",
-            "luigi"
+            "luigi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4698,7 +4449,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -4738,7 +4491,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -4782,7 +4537,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -4822,7 +4579,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -4858,7 +4615,10 @@
                 "name": "Nintendo EAD"
             }
         ],
-        "tags": []
+        "tags": [
+            "toad",
+            "puzzle"
+        ]
     },
     {
         "id": "mvdkts-wiiu",
@@ -4984,7 +4744,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -5020,7 +4782,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -5098,7 +4862,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -5222,7 +4988,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "puzzle"
         ]
     },
 
@@ -5261,7 +5028,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5298,7 +5066,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5333,7 +5102,9 @@
                 "name": "Nintendo R&D1"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "dki-gw",
@@ -5368,7 +5139,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5404,7 +5176,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -5440,7 +5213,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5476,7 +5250,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -5512,7 +5287,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -5549,7 +5325,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5585,7 +5362,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5621,7 +5399,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -5658,7 +5437,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -5694,7 +5475,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -5731,7 +5513,10 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -5806,7 +5591,10 @@
                 "name": "Nintendo R&D 1"
             }
         ],
-        "tags": []
+        "tags": [
+            "sport",
+            "baseball"
+        ]
     },
     {
         "id": "sml-gb",
@@ -5841,7 +5629,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -5876,7 +5666,9 @@
                 "name": "Nintendo"
             }
         ],
-        "tags": []
+        "tags": [
+            "puzzle"
+        ]
     },
     {
         "id": "g-gb",
@@ -5986,7 +5778,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -6022,7 +5815,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6058,7 +5853,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -6094,8 +5890,9 @@
             }
         ],
         "tags": [
-            "mario",
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6243,7 +6040,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6278,7 +6077,9 @@
                 "name": "Nintendo R&D 1"
             }
         ],
-        "tags": []
+        "tags": [
+            "puzzle"
+        ]
     },
     {
         "id": "dkl2-gb",
@@ -6313,7 +6114,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6386,7 +6189,9 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "gwg2-gb",
@@ -6428,7 +6233,9 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "dkli-gb",
@@ -6463,7 +6270,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6499,7 +6308,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -6538,7 +6349,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6582,7 +6395,9 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "smbd-gbc",
@@ -6618,7 +6433,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6653,7 +6470,9 @@
                 "name": "Nintendo EAD"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "mg-gbc",
@@ -6726,7 +6545,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6762,7 +6583,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6837,7 +6660,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6913,7 +6738,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -6949,7 +6776,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -6986,13 +6813,15 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
         "id": "smwsma2-gba",
         "name": "Super Mario World: Super Mario Advance 2",
-        "remake": ["smw-snes"]
+        "remake": ["smw-snes"],
         "link": "https://www.mariowiki.com/Super_Mario_World:_Super_Mario_Advance_2",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -7023,7 +6852,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7061,7 +6892,9 @@
         ],
         "tags": [
             "mario",
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7096,7 +6929,9 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "wwimm-gba",
@@ -7131,7 +6966,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -7168,7 +7004,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7205,7 +7043,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7285,7 +7125,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7322,7 +7164,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -7471,7 +7314,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7546,7 +7391,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7581,7 +7428,10 @@
                 "name": "TOSE"
             }
         ],
-        "tags": []
+        "tags": [
+            "wario",
+            "crossover",
+        ]
     },
     {
         "id": "fmsmb2-gba",
@@ -7617,7 +7467,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7693,7 +7545,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -7729,7 +7582,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -7809,7 +7664,10 @@
                 "name": "Nintendo SPD Group No.4"
             }
         ],
-        "tags": []
+        "tags": [
+            "dk",
+            "puzzle"
+        ]
     },
     {
         "id": "dmpl-gba",
@@ -7929,7 +7787,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -7937,6 +7797,7 @@
     {
         "id": "sm6ds-ds",
         "name": "Super Mario 64 DS",
+        "remake": ["sm64-n64"],
         "link": "https://www.mariowiki.com/Super_Mario_64_DS",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_DS",
@@ -7967,7 +7828,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -8007,7 +7870,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -8043,7 +7907,8 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "puzzle"
         ]
     },
     {
@@ -8153,7 +8018,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -8233,7 +8098,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -8273,7 +8140,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "sport",
+            "basketball"
         ]
     },
     {
@@ -8308,7 +8177,9 @@
                 "name": "Nintendo EAD"
             }
         ],
-        "tags": []
+        "tags": [
+            "retro"
+        ]
     },
     {
         "id": "mvdk2motm-ds",
@@ -8385,7 +8256,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -8421,7 +8294,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -8457,7 +8332,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "racing"
         ]
     },
     {
@@ -8492,7 +8368,9 @@
                 "name": "Armor Project"
             }
         ],
-        "tags": []
+        "tags": [
+            "party"
+        ]
     },
     {
         "id": "djc-ds",
@@ -8530,7 +8408,11 @@
                 "name": "Nintendo SPD Group No.4"
             }
         ],
-        "tags": []
+        "tags": [
+            "dk",
+            "platformer",
+            "2D"
+        ]
     },
     {
         "id": "mpds-ds",
@@ -8614,7 +8496,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -8697,7 +8581,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -8737,7 +8622,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -8893,7 +8780,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -8972,7 +8860,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -9009,7 +8898,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -9049,7 +8939,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
 
@@ -9091,7 +8982,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -9135,7 +9028,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -9176,7 +9069,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -9258,7 +9153,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -9389,7 +9286,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -9435,7 +9334,6 @@
         "tags": [
             "m&l",
             "rpg",
-            "doctor",
             "puzzle",
             "mario",
             "luigi"
@@ -9527,7 +9425,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -9694,7 +9594,6 @@
             }
         ],
         "tags": [
-            "doctor",
             "puzzle",
             "mario"
         ]
@@ -9801,7 +9700,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -9882,7 +9783,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -9919,7 +9822,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -9963,7 +9868,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "sport"
         ]
     },
     {
@@ -10080,7 +9986,10 @@
                 "name": "1-UP Studio"
             }
         ],
-        "tags": []
+        "tags": [
+            "toad",
+            "puzzle"
+        ]
     },
     {
         "id": "wwg-3ds",
@@ -10123,7 +10032,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -10241,7 +10151,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -10360,7 +10271,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "retro"
         ]
     },
     {
@@ -10436,7 +10348,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -10473,7 +10386,8 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "retro"
         ]
     },
     {
@@ -10593,7 +10507,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "puzzle"
         ]
     },
 
@@ -10685,7 +10600,9 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -10723,7 +10640,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -10760,7 +10677,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -10804,7 +10721,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -10841,7 +10758,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "rpg"
         ]
     },
     {
@@ -10881,7 +10800,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -10926,7 +10847,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -10970,7 +10893,7 @@
     {
         "id": "cttt-switch",
         "name": "Captain Toad: Treasure Tracker",
-        "remake": ["cttt-wiiu"]
+        "remake": ["cttt-wiiu"],
         "link": "https://www.mariowiki.com/Captain_Toad:_Treasure_Tracker_(Nintendo_Switch_/_Nintendo_3DS)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -11004,7 +10927,10 @@
                 "name": "1-UP Studio"
             }
         ],
-        "tags": []
+        "tags": [
+            "toad",
+            "puzzle"
+        ]
     },
     {
         "id": "smp-switch",
@@ -11097,7 +11023,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -11133,7 +11061,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -11169,7 +11099,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -11253,7 +11185,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover",
+            "olympics",
         ]
     },
     {
@@ -11332,7 +11266,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -11369,7 +11305,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -11447,7 +11385,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -11578,7 +11517,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover"
         ]
     },
     {
@@ -11614,7 +11554,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -11654,7 +11596,8 @@
             }
         ],
         "tags": [
-            "wario"
+            "wario",
+            "microgames"
         ]
     },
     {
@@ -11956,7 +11899,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -11993,7 +11938,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -12030,7 +11977,8 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "crossover"
         ]
     },
     {
@@ -12066,7 +12014,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -12102,7 +12052,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -12140,7 +12090,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -12177,7 +12129,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "3D"
         ]
     },
 
@@ -12227,7 +12181,7 @@
             }
         ],
         "tags": [
-            "kart",
+            "racing",
             "mario"
         ]
     },
@@ -12264,7 +12218,9 @@
             }
         ],
         "tags": [
-            "dk"
+            "dk",
+            "platformer",
+            "3D"
         ]
     },
     {
@@ -12377,7 +12333,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -12413,7 +12371,9 @@
             }
         ],
         "tags": [
-            "yoshi"
+            "yoshi",
+            "platformer",
+            "2D"
         ]
     },
 
@@ -12451,7 +12411,9 @@
             }
         ],
         "tags": [
-            "mario"
+            "mario",
+            "platformer",
+            "2D"
         ]
     },
     {
@@ -12533,7 +12495,7 @@
         ],
         "tags": [
             "mario",
-            "kart"
+            "racing"
         ]
     },
 ]
