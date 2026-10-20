@@ -19,7 +19,8 @@ const GameDataSchema = z.object({
         link: z.string().optional(),
         name: z.string()
     })).optional(),
-    tags: z.array(z.string()).optional()
+    tags: z.array(z.string()).optional(),
+    remake: z.array(z.string()).optional()
 });
 export type GameData = z.infer<typeof GameDataSchema>;
 
@@ -61,7 +62,7 @@ export class GameRegistry extends Registry<Game> {
     }
 
     static async create(): Promise<GameRegistry> {
-        const data = await loadData<GameData[]>("/data/gsot/games.json5");
+        const data = await loadData<GameData[]>("/data/gsot/games/games.json5");
         const games = data?.map(item => new Game(item)) || [];
         return new GameRegistry(games);
     }

@@ -221,1756 +221,6 @@
         ]
     },
     {
-        "id": "mr-arcade",
-        "name": "Mario Roulette",
-        "link": "https://www.mariowiki.com/Mario_Roulette",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Konami",
-                "name": "Konami"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "pcsmb3-arcade",
-        "name": "Piccadilly Circus: Super Mario Bros. 3",
-        "link": "https://www.mariowiki.com/Piccadilly_Circus:_Super_Mario_Bros._3",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Konami",
-                "name": "Konami"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mw-arcade",
-        "name": "Mario World",
-        "link": "https://www.mariowiki.com/Mario_World_(slot_machine)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mnd-arcade",
-        "name": "Mario no Daib\u014dken",
-        "link": "https://www.mariowiki.com/Mario_no_Daib%C5%8Dken_(arcade)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "ggm-arcade",
-        "name": "Guru Guru Mario",
-        "link": "https://www.mariowiki.com/Guru_Guru_Mario",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "tdsmw-arcade",
-        "name": "Terebi Denwa: Super Mario World",
-        "link": "https://www.mariowiki.com/Terebi_Denwa:_Super_Mario_World",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "ppm-arcade",
-        "name": "Pika Pika Mario",
-        "link": "https://www.mariowiki.com/Pika_Pika_Mario",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smb3-arcade",
-        "name": "Super Mario Bros. 3",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros._3_(Mini_Piccadilly)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Konami",
-                "name": "Konami"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smb-arcade",
-        "name": "Super Mario Bros.",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros._(pinball)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "NA",
-                "date": "25/04/1992"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Gottlieb",
-                "name": "Gottlieb"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smbmw-arcade",
-        "name": "Super Mario Bros. Mushroom World",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros._Mushroom_World",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Gottlieb",
-                "name": "Gottlieb"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "kt-arcade",
-        "name": "Koopa Taiji",
-        "link": "https://www.mariowiki.com/Koopa_Taiji",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "bm-arcade",
-        "name": "B\u016bb\u016b Mario",
-        "link": "https://www.mariowiki.com/B%C5%ABb%C5%AB_Mario",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mu-arcade",
-        "name": "Mario Und\u014dkai",
-        "link": "https://www.mariowiki.com/Mario_Und%C5%8Dkai",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smwp-arcade",
-        "name": "Super Mario World Popcorn",
-        "link": "https://www.mariowiki.com/Super_Mario_World_Popcorn",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smwbvm-arcade",
-        "name": "Super Mario World balloon vending machine",
-        "link": "https://www.mariowiki.com/Super_Mario_World_balloon_vending_machine",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mbuster-arcade",
-        "name": "Mario Buster",
-        "link": "https://www.mariowiki.com/Mario_Buster",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smw-arcade",
-        "name": "Super Mario World",
-        "link": "https://www.mariowiki.com/Super_Mario_World_(arcade)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1993"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Fabtek",
-                "name": "Fabtek"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smkddr-arcade",
-        "name": "Super Mario Kart: Doki Doki Race",
-        "link": "https://www.mariowiki.com/Super_Mario_Kart:_Doki_Doki_Race",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Atlus",
-                "name": "Atlus"
-            }
-        ],
-        "tags": [
-            "kart",
-            "mario"
-        ]
-    },
-    {
-        "id": "ggmc-arcade",
-        "name": "Go! Go! Mario Circuit",
-        "link": "https://www.mariowiki.com/Go!_Go!_Mario_Circuit",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Takara",
-                "name": "Takara"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "wb-arcade",
-        "name": "Wario Busters",
-        "link": "https://www.mariowiki.com/Wario_Busters",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "wario"
-        ]
-    },
-    {
-        "id": "jfsmw-arcade",
-        "name": "Janken Fukubiki: Super Mario World",
-        "link": "https://www.mariowiki.com/Janken_Fukubiki:_Super_Mario_World",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mbowl-arcade",
-        "name": "Mario Bowl",
-        "link": "https://www.mariowiki.com/Mario_Bowl",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1995"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Brunswick_Bowling_%26_Billiards",
-                "name": "Brunswick"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "sdk2snbs-arcade",
-        "name": "Super Donkey Kong 2 Swanky no Bonus Slot",
-        "link": "https://www.mariowiki.com/Super_Donkey_Kong_2_Swanky_no_Bonus_Slot",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sunwise?action=edit&redlink=1",
-                "name": "Sunwise"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "mnmi-arcade",
-        "name": "Mario no Medal Island",
-        "link": "https://www.mariowiki.com/Mario_no_Medal_Island",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sunwise?action=edit&redlink=1",
-                "name": "Sunwise"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "cccsmyi-arcade",
-        "name": "Can Can Club Super Mario Yoshi's Island",
-        "link": "https://www.mariowiki.com/Can_Can_Club_Super_Mario_Yoshi%27s_Island",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario",
-            "yoshi"
-        ]
-    },
-    {
-        "id": "mssmyi-arcade",
-        "name": "Magical Seven Super Mario Yoshi's Island",
-        "link": "https://www.mariowiki.com/Magical_Seven_Super_Mario_Yoshi%27s_Island",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario",
-            "yoshi"
-        ]
-    },
-    {
-        "id": "yirpsm-arcade",
-        "name": "Yoshi's Island rock-paper-scissors machine",
-        "link": "https://www.mariowiki.com/Yoshi%27s_Island_rock-paper-scissors_machine?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "paper",
-            "rpg",
-            "yoshi"
-        ]
-    },
-    {
-        "id": "yim-arcade",
-        "name": "Yoshi's Island machine",
-        "link": "https://www.mariowiki.com/Yoshi%27s_Island_machine?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "yoshi"
-        ]
-    },
-    {
-        "id": "sma-arcade",
-        "name": "Super Mario Attack",
-        "link": "https://www.mariowiki.com/Super_Mario_Attack",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "dkslots-arcade",
-        "name": "Donkey Kong",
-        "link": "https://www.mariowiki.com/Donkey_Kong_(slot_machine)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Maygay",
-                "name": "Maygay"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "mk64-arcade",
-        "name": "Mario Kart 64",
-        "link": "https://www.mariowiki.com/Mario_Kart_64_(slot_machine)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "01/01/1996"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Maygay",
-                "name": "Maygay"
-            }
-        ],
-        "tags": [
-            "kart",
-            "mario"
-        ]
-    },
-    {
-        "id": "sm64-arcade",
-        "name": "Super Mario 64",
-        "link": "https://www.mariowiki.com/Super_Mario_64_(slot_machine)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Maygay",
-                "name": "Maygay"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "sdkod-arcade",
-        "name": "Super Donkey Kong: Ooki Donkey",
-        "link": "https://www.mariowiki.com/Super_Donkey_Kong:_Ooki_Donkey",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "smrlotssag1-arcade",
-        "name": "Super Mario RPG: Legend of the Seven Stars (arcade game 1)",
-        "link": "https://www.mariowiki.com/Super_Mario_RPG:_Legend_of_the_Seven_Stars_(arcade_game_1)?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "rpg",
-            "mario"
-        ]
-    },
-    {
-        "id": "smrlotssag2-arcade",
-        "name": "Super Mario RPG: Legend of the Seven Stars (arcade game 2)",
-        "link": "https://www.mariowiki.com/Super_Mario_RPG:_Legend_of_the_Seven_Stars_(arcade_game_2)?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "rpg",
-            "mario"
-        ]
-    },
-    {
-        "id": "smrlotssag3-arcade",
-        "name": "Super Mario RPG: Legend of the Seven Stars (arcade game 3)",
-        "link": "https://www.mariowiki.com/Super_Mario_RPG:_Legend_of_the_Seven_Stars_(arcade_game_3)?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "rpg",
-            "mario"
-        ]
-    },
-    {
-        "id": "dmc-arcade",
-        "name": "Dokidoki Mario Chance!",
-        "link": "https://www.mariowiki.com/Dokidoki_Mario_Chance!",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2003"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Banpresto",
-                "name": "Banpresto"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smfnjl-arcade",
-        "name": "Super Mario Fushigi no Janjan Land",
-        "link": "https://www.mariowiki.com/Super_Mario_Fushigi_no_Janjan_Land",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2004"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smfnkp-arcade",
-        "name": "Super Mario Fushigi no Korokoro Party",
-        "link": "https://www.mariowiki.com/Super_Mario_Fushigi_no_Korokoro_Party",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2004"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
-        "id": "dkkjb-arcade",
-        "name": "Donkey Kong/Donkey Kong Junior/Mario Bros",
-        "link": "https://www.mariowiki.com/Donkey_Kong/Donkey_Kong_Junior/Mario_Bros",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/2004"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Cosmodog",
-                "name": "Cosmodog"
-            }
-        ],
-        "tags": [
-            "puzzle",
-            "mario",
-            "dk"
-        ]
-    },
-    {
-        "id": "dkjf-arcade",
-        "name": "Donkey Kong: Jungle Fever",
-        "link": "https://www.mariowiki.com/Donkey_Kong:_Jungle_Fever",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2005"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "smfnkp2-arcade",
-        "name": "Super Mario Fushigi no Korokoro Party 2",
-        "link": "https://www.mariowiki.com/Super_Mario_Fushigi_no_Korokoro_Party_2",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2005"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
-        "id": "dkbk-arcade",
-        "name": "Donkey Kong: Banana Kingdom",
-        "link": "https://www.mariowiki.com/Donkey_Kong:_Banana_Kingdom",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "16/11/2006"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "mpfnkc-arcade",
-        "name": "Mario Party Fushigi no Korokoro Catcher",
-        "link": "https://www.mariowiki.com/Mario_Party_Fushigi_no_Korokoro_Catcher",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2009"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
-        "id": "mf-arcade",
-        "name": "Mario Factory",
-        "link": "https://www.mariowiki.com/Mario_Factory_(UFO_Catcher)",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "nsmbwiicw-arcade",
-        "name": "New Super Mario Bros. Wii Coin World",
-        "link": "https://www.mariowiki.com/New_Super_Mario_Bros._Wii_Coin_World",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "23/06/2011"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mpkc-arcade",
-        "name": "Mario Party Kurukuru Carnival",
-        "link": "https://www.mariowiki.com/Mario_Party_Kurukuru_Carnival",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2012"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
-        "id": "mpfnkc2-arcade",
-        "name": "Mario Party Fushigi no Korokoro Catcher 2",
-        "link": "https://www.mariowiki.com/Mario_Party_Fushigi_no_Korokoro_Catcher_2",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2013"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
         "id": "mkagd-arcade",
         "name": "Mario Kart Arcade GP DX",
         "link": "https://www.mariowiki.com/Mario_Kart_Arcade_GP_DX",
@@ -2084,77 +334,6 @@
         ]
     },
     {
-        "id": "mpcw-arcade",
-        "name": "Mario Party Challenge World",
-        "link": "https://www.mariowiki.com/Mario_Party_Challenge_World",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/2016"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Capcom",
-                "name": "Capcom"
-            }
-        ],
-        "tags": [
-            "party",
-            "mario"
-        ]
-    },
-    {
-        "id": "n2soptpw-arcade",
-        "name": "Nintendo's 2017 Summer of Play Tour prize wheel",
-        "link": "https://www.mariowiki.com/Nintendo%27s_2017_Summer_of_Play_Tour_prize_wheel?action=edit&redlink=1",
-        "console": {
-            "link": "",
-            "name": "Arcade"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/2017"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mkagv-arcade",
         "name": "Mario Kart Arcade GP VR",
         "link": "https://www.mariowiki.com/Mario_Kart_Arcade_GP_VR",
@@ -2236,7 +415,7 @@
     {
         "id": "dk-nes",
         "name": "Donkey Kong",
-        "port": true,
+        "remake": ["dk-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_(game)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -2277,7 +456,7 @@
     {
         "id": "dkj-nes",
         "name": "Donkey Kong Jr.",
-        "port": true,
+        "remake": ["dkj-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Jr._(game)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -2314,7 +493,7 @@
     {
         "id": "mb-nes",
         "name": "Mario Bros.",
-        "port": true,
+        "remake": ["mb-arcade"],
         "link": "https://www.mariowiki.com/Mario_Bros.",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -2353,7 +532,7 @@
         ]
     },
     {
-        "id": "dkjjsl-nes",
+        "id": "dkjjsl-nes", //revisit
         "name": "Donkey Kong Jr. + Jr. Sans\u016b Lesson",
         "link": "https://www.mariowiki.com/Donkey_Kong_Jr._%2B_Jr._Sans%C5%AB_Lesson",
         "console": {
@@ -2389,7 +568,7 @@
         ]
     },
     {
-        "id": "dkjm-nes",
+        "id": "dkjm-nes", //revisit
         "name": "Donkey Kong Jr. Math",
         "link": "https://www.mariowiki.com/Donkey_Kong_Jr._Math",
         "console": {
@@ -2498,7 +677,7 @@
     {
         "id": "dk3-nes",
         "name": "Donkey Kong 3",
-        "port": true,
+        "remake": ["dk3-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_3",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -2531,48 +710,6 @@
         "tags": [
             "dk"
         ]
-    },
-    {
-        "id": "fbv-nes",
-        "name": "Family BASIC V3",
-        "link": "https://www.mariowiki.com/Family_BASIC#Family_BASIC_V3",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/02/1985"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hudson_Soft",
-                "name": "Hudson Soft"
-            },
-            {
-                "link": "https://www.mariowiki.com/Sharp",
-                "name": "Sharp"
-            },
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "wc-nes",
@@ -2647,6 +784,7 @@
     {
         "id": "dkc-nes",
         "name": "Donkey Kong Classics",
+        "remake": ["dk-arcade", "dkj-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Classics",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -2753,78 +891,6 @@
         ]
     },
     {
-        "id": "smbh-nes",
-        "name": "Super Mario Bros./Duck Hunt",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros.#Alternate_versions_and_re-releases",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1988"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "smbhctm-nes",
-        "name": "Super Mario Bros./Duck Hunt/World Class Track Meet",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros.#Alternate_versions_and_re-releases",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1988"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
         "id": "dm-nes",
         "name": "Dr. Mario",
         "link": "https://www.mariowiki.com/Dr._Mario_(game)",
@@ -2861,114 +927,6 @@
             "puzzle",
             "mario"
         ]
-    },
-    {
-        "id": "nwc1-nes",
-        "name": "Nintendo World Championships 1990",
-        "link": "https://www.mariowiki.com/Nintendo_World_Championships_1990",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "10/10/1990"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "smbwc-nes",
-        "name": "Super Mario Bros./Tetris/Nintendo World Cup",
-        "link": "https://www.mariowiki.com/Super_Mario_Bros.#Alternate_versions_and_re-releases",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "01/01/1990"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "ncc-nes",
-        "name": "Nintendo Campus Challenge",
-        "link": "https://www.mariowiki.com/Nintendo_Campus_Challenge_(1991)",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
-            "name": "Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1991"
-            },
-            {
-                "region": "EU",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Rare",
-                "name": "Rare"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "notg-nes",
@@ -3086,7 +1044,7 @@
     {
         "id": "mim-nes",
         "name": "Mario is Missing!",
-        "port": true,
+        "remake": ["mim-msdos"],
         "link": "https://www.mariowiki.com/Mario_is_Missing!_(Nintendo_Entertainment_System)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -3127,6 +1085,7 @@
     {
         "id": "mbc-nes",
         "name": "Mario Bros.",
+        "remake": ["mb-arcade"],
         "link": "https://www.mariowiki.com/Mario_Bros._(Classic_Serie)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -3203,7 +1162,7 @@
     {
         "id": "mtm-nes",
         "name": "Mario's Time Machine",
-        "port": true,
+        "remake": ["mtm-msdos"],
         "link": "https://www.mariowiki.com/Mario%27s_Time_Machine_(Nintendo_Entertainment_System)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Entertainment_System",
@@ -3235,6 +1194,32 @@
             {
                 "link": "https://www.mariowiki.com/Radical_Entertainment",
                 "name": "Radical Entertainment"
+            }
+        ],
+        "tags": [
+            "mario"
+        ]
+    },
+
+    // Family Computer Disk System
+    {
+        "id": "smbtll-fcds",
+        "name": "Super Mario Bros.: The Lost Levels",
+        "link": "https://www.mariowiki.com/Super_Mario_Bros.:_The_Lost_Levels",
+        "console": {
+            "link": "https://www.mariowiki.com/Family_Computer_Disk_System",
+            "name": "Family Computer Disk System"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "03/06/1986"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
+                "name": "Nintendo EAD"
             }
         ],
         "tags": [
@@ -3357,43 +1342,9 @@
         ]
     },
     {
-        "id": "ncc-snes",
-        "name": "Nintendo Campus Challenge",
-        "link": "https://www.mariowiki.com/Nintendo_Campus_Challenge_(1992)",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1992"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mim-snes",
         "name": "Mario is Missing!",
-        "port": true,
+        "remake": ["mim-msdos"],
         "link": "https://www.mariowiki.com/Mario_is_Missing!_(Super_Nintendo_Entertainment_System)",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3434,7 +1385,7 @@
     {
         "id": "yc-snes",
         "name": "Yoshi's Cookie",
-        "port": true,
+        "remake": ["yc-msdos"],
         "link": "https://www.mariowiki.com/Yoshi%27s_Cookie",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3471,6 +1422,7 @@
     {
         "id": "smas-snes",
         "name": "Super Mario All-Stars",
+        "remake": ["smb-nes", "smb2-nes", "smb3-nes", "smbtll-fcds"],
         "link": "https://www.mariowiki.com/Super_Mario_All-Stars",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3580,7 +1532,7 @@
     {
         "id": "mtm-snes",
         "name": "Mario's Time Machine",
-        "port": true,
+        "remake": ["mtm-msdos"],
         "link": "https://www.mariowiki.com/Mario%27s_Time_Machine_(Super_Nintendo_Entertainment_System)",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3619,79 +1571,9 @@
         ]
     },
     {
-        "id": "np9-snes",
-        "name": "Nintendo PowerFest '94",
-        "link": "https://www.mariowiki.com/Nintendo_PowerFest_%2794",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "ynckodc-snes",
-        "name": "Yoshi no Cookie: Kuruppon Oven de Cookie",
-        "link": "https://www.mariowiki.com/Yoshi_no_Cookie:_Kuruppon_Oven_de_Cookie",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/01/1994"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/National_(brand)",
-                "name": "National Human Electronics"
-            }
-        ],
-        "tags": [
-            "yoshi"
-        ]
-    },
-    {
         "id": "meyfwn-snes",
         "name": "Mario's Early Years! Fun with Numbers",
-        "port": true,
+        "remake": ["meyfwn-msdos"],
         "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Fun_with_Numbers",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3728,7 +1610,7 @@
     {
         "id": "meyfwl-snes",
         "name": "Mario's Early Years! Fun with Letters",
-        "port": true,
+        "remake": ["meyfwl-msdos"],
         "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Fun_with_Letters",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3765,7 +1647,7 @@
     {
         "id": "meypf-snes",
         "name": "Mario's Early Years! Preschool Fun",
-        "port": true,
+        "remake": ["meypf-msdos"],
         "link": "https://www.mariowiki.com/Mario%27s_Early_Years!_Preschool_Fun",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3836,44 +1718,9 @@
         ]
     },
     {
-        "id": "dkccc-snes",
-        "name": "Donkey Kong Country Competition Cartridge",
-        "link": "https://www.mariowiki.com/Donkey_Kong_Country_Competition_Cartridge",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "21/11/1994"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Rare",
-                "name": "Rareware"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
         "id": "smassmw-snes",
         "name": "Super Mario All-Stars + Super Mario World",
+        "remake": ["smb-nes", "smb2-nes", "smb3-nes", "smbtll-fcds", "smw-snes"],
         "link": "https://www.mariowiki.com/Super_Mario_All-Stars_%2B_Super_Mario_World",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3910,6 +1757,7 @@
     {
         "id": "tdm-snes",
         "name": "Tetris & Dr. Mario",
+        "remake": ["t-nes", "dm-nes"],
         "link": "https://www.mariowiki.com/Tetris_%26_Dr._Mario",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -3986,40 +1834,6 @@
         ]
     },
     {
-        "id": "usg-snes",
-        "name": "UNDAKE30 Same Game",
-        "link": "https://www.mariowiki.com/UNDAKE30_Same_Game",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "16/01/1995"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hudson_Soft",
-                "name": "Hudson"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "smw2yi-snes",
         "name": "Super Mario World 2: Yoshi's Island",
         "link": "https://www.mariowiki.com/Super_Mario_World_2:_Yoshi%27s_Island",
@@ -4093,8 +1907,8 @@
         ]
     },
     {
-        "id": "pdp-snes",
-        "name": "Panel de Pon",
+        "id": "ta-snes",
+        "name": "Tetris Attack",
         "link": "https://www.mariowiki.com/Tetris_Attack#Panel_de_Pon",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -4276,7 +2090,7 @@
     {
         "id": "dm-snes",
         "name": "Dr. Mario",
-        "port": true,
+        "remake": ["dm-nes"],
         "link": "https://www.mariowiki.com/Dr._Mario_(game)",
         "console": {
             "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
@@ -4311,158 +2125,6 @@
             "puzzle",
             "mario"
         ]
-    },
-    {
-        "id": "pnv2-snes",
-        "name": "Picross NP Vol.2",
-        "link": "https://www.mariowiki.com/Picross_NP_Vol.2",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/04/1999"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "pnv6-snes",
-        "name": "Picross NP Vol.6",
-        "link": "https://www.mariowiki.com/Picross_NP_Vol.6",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/02/2000"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "pnv7-snes",
-        "name": "Picross NP Vol.7",
-        "link": "https://www.mariowiki.com/Picross_NP_Vol.7",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/04/2000"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "pnv8-snes",
-        "name": "Picross NP Vol.8",
-        "link": "https://www.mariowiki.com/Picross_NP_Vol.8",
-        "console": {
-            "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System",
-            "name": "Super Nintendo Entertainment System"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/06/2000"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
     },
 
     // N64
@@ -4540,42 +2202,6 @@
         ]
     },
     {
-        "id": "sm6rpcv-n64",
-        "name": "Super Mario 64: Rumble Pak Compatible Version",
-        "link": "https://www.mariowiki.com/Super_Mario_64#Super_Mario_64:_Rumble_Pak_Compatible_Version",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_64",
-            "name": "Nintendo 64"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "18/07/1997"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
         "id": "dkr-n64",
         "name": "Diddy Kong Racing",
         "link": "https://www.mariowiki.com/Diddy_Kong_Racing",
@@ -4645,42 +2271,6 @@
         ],
         "tags": [
             "yoshi"
-        ]
-    },
-    {
-        "id": "mnp-n64",
-        "name": "Mario no Photopi",
-        "link": "https://www.mariowiki.com/Mario_no_Photopi",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_64",
-            "name": "Nintendo 64"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "02/12/1998"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Tokyo_Electron",
-                "name": "Tokyo Electron"
-            }
-        ],
-        "tags": [
-            "mario"
         ]
     },
     {
@@ -5180,6 +2770,7 @@
     {
         "id": "npc-gc",
         "name": "Nintendo Puzzle Collection",
+        "remake": ["dm-n64", "ta-snes", "yc-nes"],
         "link": "https://www.mariowiki.com/Nintendo_Puzzle_Collection",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_GameCube",
@@ -6379,42 +3970,9 @@
         ]
     },
     {
-        "id": "cr-wii",
-        "name": "Captain Rainbow",
-        "link": "https://www.mariowiki.com/Captain_Rainbow",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii",
-            "name": "Wii"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "28/08/2008"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Skip_Ltd.",
-                "name": "Skip Ltd."
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "npcdkjb-wii",
         "name": "New Play Control! Donkey Kong Jungle Beat",
+        "remake": ["dkjb-gc"],
         "link": "https://www.mariowiki.com/New_Play_Control!_Donkey_Kong_Jungle_Beat",
         "console": {
             "link": "https://www.mariowiki.com/Wii",
@@ -6451,6 +4009,7 @@
     {
         "id": "npcmpt-wii",
         "name": "New Play Control! Mario Power Tennis",
+        "remake": ["mpt-gc"],
         "link": "https://www.mariowiki.com/New_Play_Control!_Mario_Power_Tennis",
         "console": {
             "link": "https://www.mariowiki.com/Wii",
@@ -6639,6 +4198,7 @@
     {
         "id": "smasle-wii",
         "name": "Super Mario All-Stars Limited Edition",
+        "remake": ["smas-snes"],
         "link": "https://www.mariowiki.com/Super_Mario_All-Stars_Limited_Edition",
         "console": {
             "link": "https://www.mariowiki.com/Wii",
@@ -6675,6 +4235,7 @@
     {
         "id": "dkoe-wii",
         "name": "Donkey Kong Original Edition",
+        "remake": ["dk-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Original_Edition",
         "console": {
             "link": "https://www.mariowiki.com/Wii",
@@ -6709,8 +4270,9 @@
         ]
     },
     {
-        "id": "2asmb-wii",
+        "id": "25asmb-wii",
         "name": "25th Anniversary SUPER MARIO BROS.",
+        "remake": ["smb-nes"],
         "link": "https://www.mariowiki.com/25th_Anniversary_SUPER_MARIO_BROS.",
         "console": {
             "link": "https://www.mariowiki.com/Wii",
@@ -6823,40 +4385,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "rhf-wii",
-        "name": "Rhythm Heaven Fever",
-        "link": "https://www.mariowiki.com/Rhythm_Heaven_Fever",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii",
-            "name": "Wii"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/07/2011"
-            },
-            {
-                "region": "NA",
-                "date": "13/02/2012"
-            },
-            {
-                "region": "EU",
-                "date": "06/07/2012"
-            },
-            {
-                "region": "AU",
-                "date": "13/09/2012"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "msatl2og-wii",
@@ -6981,40 +4509,6 @@
             "mario"
         ]
     },
-    {
-        "id": "ssr-wii",
-        "name": "Skylanders: SuperChargers Racing",
-        "link": "https://www.mariowiki.com/Skylanders:_SuperChargers",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii",
-            "name": "Wii"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "20/09/2015"
-            },
-            {
-                "region": "EU",
-                "date": "25/09/2015"
-            },
-            {
-                "region": "AU",
-                "date": "23/09/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Beenox",
-                "name": "Beenox"
-            }
-        ],
-        "tags": []
-    },
 
     // Wii U
     {
@@ -7052,40 +4546,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "nl-wiiu",
-        "name": "Nintendo Land",
-        "link": "https://www.mariowiki.com/Nintendo_Land",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "08/12/2012"
-            },
-            {
-                "region": "NA",
-                "date": "18/11/2012"
-            },
-            {
-                "region": "EU",
-                "date": "30/11/2012"
-            },
-            {
-                "region": "AU",
-                "date": "30/11/2012"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "gw-wiiu",
@@ -7164,46 +4624,9 @@
         ]
     },
     {
-        "id": "slw-wiiu",
-        "name": "Sonic Lost World",
-        "link": "https://www.mariowiki.com/Sonic_Lost_World",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "24/10/2013"
-            },
-            {
-                "region": "NA",
-                "date": "29/11/2013"
-            },
-            {
-                "region": "EU",
-                "date": "18/10/2013"
-            },
-            {
-                "region": "AU",
-                "date": "19/10/2013"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Dimps",
-                "name": "Dimps"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Sonic_Team",
-                "name": "Sonic Team"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "nsmbunslu-wiiu",
         "name": "New Super Mario Bros. U + New Super Luigi U",
+        "remake": ["nsmbu-wiiu", "nslu-wiiu"],
         "link": "https://www.mariowiki.com/New_Super_Mario_Bros._U_%2B_New_Super_Luigi_U",
         "console": {
             "link": "https://www.mariowiki.com/Wii_U",
@@ -7363,44 +4786,6 @@
         ]
     },
     {
-        "id": "nrp-wiiu",
-        "name": "NES Remix Pack",
-        "link": "https://www.mariowiki.com/NES_Remix_Pack",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "24/04/2014"
-            },
-            {
-                "region": "NA",
-                "date": "05/12/2014"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Indieszero",
-                "name": "indieszero"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mk8-wiiu",
         "name": "Mario Kart 8",
         "link": "https://www.mariowiki.com/Mario_Kart_8",
@@ -7471,44 +4856,6 @@
             {
                 "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
                 "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "ssbfwiiu-wiiu",
-        "name": "Super Smash Bros. for Wii U",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros._for_Wii_U",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/12/2014"
-            },
-            {
-                "region": "NA",
-                "date": "21/11/2014"
-            },
-            {
-                "region": "EU",
-                "date": "28/11/2014"
-            },
-            {
-                "region": "AU",
-                "date": "29/11/2014"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sora_Ltd.",
-                "name": "Project Sora"
-            },
-            {
-                "link": "https://www.mariowiki.com/Bandai_Namco_Entertainment",
-                "name": "Bandai Namco Entertainment"
             }
         ],
         "tags": []
@@ -7677,40 +5024,6 @@
         ]
     },
     {
-        "id": "ss-wiiu",
-        "name": "Skylanders: SuperChargers",
-        "link": "https://www.mariowiki.com/Skylanders:_SuperChargers",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "20/09/2015"
-            },
-            {
-                "region": "EU",
-                "date": "25/09/2015"
-            },
-            {
-                "region": "AU",
-                "date": "23/09/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Vicarious_Visions",
-                "name": "Vicarious Visions"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mtus-wiiu",
         "name": "Mario Tennis: Ultra Smash",
         "link": "https://www.mariowiki.com/Mario_Tennis:_Ultra_Smash",
@@ -7751,44 +5064,6 @@
             "sport",
             "mario"
         ]
-    },
-    {
-        "id": "mwiiue-wiiu",
-        "name": "Minecraft: Wii U Edition",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Wii_U",
-            "name": "Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "23/06/2016"
-            },
-            {
-                "region": "NA",
-                "date": "17/06/2016"
-            },
-            {
-                "region": "EU",
-                "date": "30/06/2016"
-            },
-            {
-                "region": "AU",
-                "date": "02/07/2016"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/4J_Studios",
-                "name": "4J Studios"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "msatr2og-wiiu",
@@ -7873,80 +5148,6 @@
         ]
     },
     {
-        "id": "nslu-wiiu_eshop",
-        "name": "New Super Luigi U",
-        "link": "https://www.mariowiki.com/New_Super_Luigi_U",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "19/06/2013"
-            },
-            {
-                "region": "NA",
-                "date": "20/06/2013"
-            },
-            {
-                "region": "EU",
-                "date": "20/06/2013"
-            },
-            {
-                "region": "AU",
-                "date": "21/06/2013"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": [
-            "luigi"
-        ]
-    },
-    {
-        "id": "nr-wiiu_eshop",
-        "name": "NES Remix",
-        "link": "https://www.mariowiki.com/NES_Remix",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "19/12/2013"
-            },
-            {
-                "region": "NA",
-                "date": "18/12/2013"
-            },
-            {
-                "region": "EU",
-                "date": "18/12/2013"
-            },
-            {
-                "region": "AU",
-                "date": "18/12/2013"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Indieszero",
-                "name": "indieszero"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "dl-wiiu_eshop",
         "name": "Dr. Luigi",
         "link": "https://www.mariowiki.com/Dr._Luigi",
@@ -7989,158 +5190,6 @@
         ]
     },
     {
-        "id": "nr2-wiiu_eshop",
-        "name": "NES Remix 2",
-        "link": "https://www.mariowiki.com/NES_Remix_2",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "24/04/2014"
-            },
-            {
-                "region": "NA",
-                "date": "25/04/2014"
-            },
-            {
-                "region": "EU",
-                "date": "25/04/2014"
-            },
-            {
-                "region": "AU",
-                "date": "25/04/2014"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Indieszero",
-                "name": "indieszero"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "mvdkts-wiiu_eshop",
-        "name": "Mario vs. Donkey Kong: Tipping Stars",
-        "link": "https://www.mariowiki.com/Mario_vs._Donkey_Kong:_Tipping_Stars",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "19/03/2015"
-            },
-            {
-                "region": "NA",
-                "date": "05/03/2015"
-            },
-            {
-                "region": "EU",
-                "date": "20/03/2015"
-            },
-            {
-                "region": "AU",
-                "date": "21/03/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Technology_Corporation",
-                "name": "NST"
-            }
-        ],
-        "tags": [
-            "puzzle",
-            "mario",
-            "dk"
-        ]
-    },
-    {
-        "id": "atngb-wiiu_eshop",
-        "name": "amiibo tap: Nintendo's Greatest Bits",
-        "link": "https://www.mariowiki.com/Amiibo_tap:_Nintendo%27s_Greatest_Bits",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "23/04/2015"
-            },
-            {
-                "region": "NA",
-                "date": "30/04/2015"
-            },
-            {
-                "region": "EU",
-                "date": "30/04/2015"
-            },
-            {
-                "region": "AU",
-                "date": "01/05/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "mwiiue-wiiu_eshop",
-        "name": "Minecraft: Wii U Edition",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Wii_U",
-            "name": "Nintendo eShop \u00a7 Wii U"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "17/12/2015"
-            },
-            {
-                "region": "NA",
-                "date": "17/12/2015"
-            },
-            {
-                "region": "EU",
-                "date": "17/12/2015"
-            },
-            {
-                "region": "AU",
-                "date": "18/12/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/4J_Studios",
-                "name": "4J Studios"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mmfac-wiiu_eshop",
         "name": "Mini Mario & Friends: amiibo Challenge",
         "link": "https://www.mariowiki.com/Mini_Mario_%26_Friends:_amiibo_Challenge",
@@ -8181,6 +5230,7 @@
     {
         "id": "dk-gw",
         "name": "Donkey Kong",
+        "remake": ["dk-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_(Game_%26_Watch)",
         "console": {
             "link": "https://www.mariowiki.com/Game_%26_Watch",
@@ -8217,6 +5267,7 @@
     {
         "id": "dkjnws-gw",
         "name": "Donkey Kong Jr.",
+        "remake": ["dkj-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Jr._(New_Wide_Screen)",
         "console": {
             "link": "https://www.mariowiki.com/Game_%26_Watch",
@@ -8467,6 +5518,7 @@
     {
         "id": "dk3-gw",
         "name": "Donkey Kong 3",
+        "remake": ["dk3-arcade"],
         "link": "https://www.mariowiki.com/Donkey_Kong_3_(Game_%26_Watch)",
         "console": {
             "link": "https://www.mariowiki.com/Game_%26_Watch",
@@ -8575,6 +5627,7 @@
     {
         "id": "smb-gw",
         "name": "Super Mario Bros.",
+        "remake": ["smb-nes"],
         "link": "https://www.mariowiki.com/Super_Mario_Bros._(Game_%26_Watch)",
         "console": {
             "link": "https://www.mariowiki.com/Game_%26_Watch",
@@ -8647,6 +5700,7 @@
     {
         "id": "gwsmb-gw",
         "name": "Game & Watch: Super Mario Bros.",
+        "remake": ["smb-nes"],
         "link": "https://www.mariowiki.com/Game_%26_Watch:_Super_Mario_Bros.",
         "console": {
             "link": "https://www.mariowiki.com/Game_%26_Watch",
@@ -9006,40 +6060,6 @@
         "tags": [
             "yoshi"
         ]
-    },
-    {
-        "id": "tlozla-gb",
-        "name": "The Legend of Zelda: Link's Awakening",
-        "link": "https://www.mariowiki.com/The_Legend_of_Zelda:_Link%27s_Awakening",
-        "console": {
-            "link": "https://www.mariowiki.com/Game_Boy",
-            "name": "Game Boy"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/06/1993"
-            },
-            {
-                "region": "NA",
-                "date": "06/08/1993"
-            },
-            {
-                "region": "EU",
-                "date": "01/12/1993"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "wlsml3-gb",
@@ -9487,6 +6507,7 @@
     {
         "id": "wli-gbc",
         "name": "Wario Land II",
+        "remake": ["wli-gb"],
         "link": "https://www.mariowiki.com/Wario_Land_II",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Color",
@@ -9523,6 +6544,7 @@
     {
         "id": "gwg2-gbc",
         "name": "Game & Watch Gallery 2",
+        "remake": ["gwg2-gb"],
         "link": "https://www.mariowiki.com/Game_%26_Watch_Gallery_2",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Color",
@@ -9563,42 +6585,9 @@
         "tags": []
     },
     {
-        "id": "tlozlad-gbc",
-        "name": "The Legend of Zelda: Link's Awakening DX",
-        "link": "https://www.mariowiki.com/The_Legend_of_Zelda:_Link%27s_Awakening",
-        "console": {
-            "link": "https://www.mariowiki.com/Game_Boy_Color",
-            "name": "Game Boy Color"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "12/12/1998"
-            },
-            {
-                "region": "NA",
-                "date": "15/12/1998"
-            },
-            {
-                "region": "EU",
-                "date": "01/01/1999"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "smbd-gbc",
         "name": "Super Mario Bros. Deluxe",
+        "remake": ["smbtll-fcds"],
         "link": "https://www.mariowiki.com/Super_Mario_Bros._Deluxe",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Color",
@@ -9817,6 +6806,7 @@
     {
         "id": "dkc-gbc",
         "name": "Donkey Kong Country",
+        "remake": ["dkc-snes"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_(Game_Boy_Color)",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Color",
@@ -9887,47 +6877,12 @@
             "sport"
         ]
     },
-    {
-        "id": "mf-gbc",
-        "name": "Mario Family",
-        "link": "https://www.mariowiki.com/Mario_Family",
-        "console": {
-            "link": "https://www.mariowiki.com/Game_Boy_Color",
-            "name": "Game Boy Color"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "27/08/2001"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Natsume",
-                "name": "Natsume"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
 
     // Game Boy Advance
     {
         "id": "sma-gba",
         "name": "Super Mario Advance",
+        "remake": ["smb2-nes"],
         "link": "https://www.mariowiki.com/Super_Mario_Advance",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10037,6 +6992,7 @@
     {
         "id": "smwsma2-gba",
         "name": "Super Mario World: Super Mario Advance 2",
+        "remake": ["smw-snes"]
         "link": "https://www.mariowiki.com/Super_Mario_World:_Super_Mario_Advance_2",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10073,6 +7029,7 @@
     {
         "id": "yisma3-gba",
         "name": "Yoshi's Island: Super Mario Advance 3",
+        "remake": ["smw2yi-snes"],
         "link": "https://www.mariowiki.com/Yoshi%27s_Island:_Super_Mario_Advance_3",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10180,6 +7137,7 @@
     {
         "id": "dkc-gba",
         "name": "Donkey Kong Country",
+        "remake": ["dkc-snes"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_(Game_Boy_Advance)",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10216,6 +7174,7 @@
     {
         "id": "sma4smb3-gba",
         "name": "Super Mario Advance 4: Super Mario Bros. 3",
+        "remake": ["smb3-nes"],
         "link": "https://www.mariowiki.com/Super_Mario_Advance_4:_Super_Mario_Bros._3",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10295,6 +7254,7 @@
     {
         "id": "cnssmb-gba",
         "name": "Classic NES Series: Super Mario Bros.",
+        "remake": ["smb-nes"],
         "link": "https://www.mariowiki.com/Super_Mario_Bros.",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10332,6 +7292,7 @@
         "id": "cnsdk-gba",
         "name": "Classic NES Series: Donkey Kong",
         "link": "https://www.mariowiki.com/Donkey_Kong_(game)",
+        "remake": ["dk-arcade"],
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
             "name": "Game Boy Advance"
@@ -10405,6 +7366,7 @@
     {
         "id": "cnsdm-gba",
         "name": "Classic NES Series: Dr. Mario",
+        "remake": ["dm-nes"],
         "link": "https://www.mariowiki.com/Dr._Mario_(game)",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10443,6 +7405,7 @@
     {
         "id": "fmwc-gba",
         "name": "Famicom Mini: Wrecking Crew",
+        "remake": ["wc-nes"],
         "link": "https://www.mariowiki.com/Wrecking_Crew",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10477,6 +7440,7 @@
     {
         "id": "fmmb-gba",
         "name": "Famicom Mini: Mario Bros.",
+        "remake": ["mb-arcade"],
         "link": "https://www.mariowiki.com/Mario_Bros.",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10551,6 +7515,7 @@
     {
         "id": "dkc2-gba",
         "name": "Donkey Kong Country 2",
+        "remake": ["dkc2dkq-snes"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_2_(Game_Boy_Advance)",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10621,6 +7586,7 @@
     {
         "id": "fmsmb2-gba",
         "name": "Famicom Mini: Super Mario Bros. 2",
+        "remake": ["smbtll-fcds"],
         "link": "https://www.mariowiki.com/Super_Mario_Bros.:_The_Lost_Levels",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -10932,6 +7898,7 @@
     {
         "id": "dkc3-gba",
         "name": "Donkey Kong Country 3",
+        "remake": ["dkc3dkdt-snes"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_3_(Game_Boy_Advance)",
         "console": {
             "link": "https://www.mariowiki.com/Game_Boy_Advance",
@@ -11234,40 +8201,6 @@
         ]
     },
     {
-        "id": "tds-ds",
-        "name": "Tetris DS",
-        "link": "https://www.mariowiki.com/Tetris_DS",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_DS",
-            "name": "Nintendo DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "27/04/2006"
-            },
-            {
-                "region": "NA",
-                "date": "20/03/2006"
-            },
-            {
-                "region": "EU",
-                "date": "21/04/2006"
-            },
-            {
-                "region": "AU",
-                "date": "13/04/2006"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD Group No.2"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "nsmb-ds",
         "name": "New Super Mario Bros.",
         "link": "https://www.mariowiki.com/New_Super_Mario_Bros.",
@@ -11373,40 +8306,6 @@
             {
                 "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
                 "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "wftyds-ds",
-        "name": "Wi-Fi Tai\u014d Yakuman DS",
-        "link": "https://www.mariowiki.com/Yakuman_DS",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_DS",
-            "name": "Nintendo DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "14/09/2006"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
             }
         ],
         "tags": []
@@ -11884,75 +8783,277 @@
         ]
     },
 
+    // DSi
+    {
+        "id": "bb-dsi",
+        "name": "Bird & Beans",
+        "link": "https://www.mariowiki.com/Bird_%26_Beans",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "24/12/2008"
+            },
+            {
+                "region": "NA",
+                "date": "05/04/2009"
+            },
+            {
+                "region": "EU",
+                "date": "03/04/2009"
+            },
+            {
+                "region": "AU",
+                "date": "02/04/2009"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
+                "name": "Nintendo SPD Group No. 1"
+            }
+        ],
+        "tags": []
+    },
+    {
+        "id": "dme-dsi",
+        "name": "Dr. Mario Express",
+        "link": "https://www.mariowiki.com/Dr._Mario_Express",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "24/12/2008"
+            },
+            {
+                "region": "NA",
+                "date": "20/04/2009"
+            },
+            {
+                "region": "EU",
+                "date": "08/05/2009"
+            },
+            {
+                "region": "AU",
+                "date": "01/05/2009"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Arika",
+                "name": "ARIKA"
+            }
+        ],
+        "tags": [
+            "doctor",
+            "puzzle",
+            "mario"
+        ]
+    },
+    {
+        "id": "wws-dsi",
+        "name": "WarioWare: Snapped!",
+        "link": "https://www.mariowiki.com/WarioWare:_Snapped!",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "24/12/2008"
+            },
+            {
+                "region": "NA",
+                "date": "05/04/2009"
+            },
+            {
+                "region": "EU",
+                "date": "03/04/2009"
+            },
+            {
+                "region": "AU",
+                "date": "02/04/2009"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
+                "name": "Nintendo SPD Group No. 1"
+            },
+            {
+                "link": "https://www.mariowiki.com/Intelligent_Systems",
+                "name": "Intelligent Systems"
+            }
+        ],
+        "tags": [
+            "wario"
+        ]
+    },
+    {
+        "id": "mvdkmma-dsi",
+        "name": "Mario vs. Donkey Kong: Minis March Again!",
+        "link": "https://www.mariowiki.com/Mario_vs._Donkey_Kong:_Minis_March_Again!",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "07/10/2009"
+            },
+            {
+                "region": "NA",
+                "date": "08/06/2009"
+            },
+            {
+                "region": "EU",
+                "date": "21/08/2009"
+            },
+            {
+                "region": "AU",
+                "date": "21/08/2009"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Software_Technology_Corporation",
+                "name": "NST"
+            },
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
+                "name": "Nintendo SPD Group No. 3"
+            }
+        ],
+        "tags": [
+            "puzzle",
+            "mario",
+            "dk"
+        ]
+    },
+    {
+        "id": "gwdkj-dsi",
+        "name": "Game & Watch: Donkey Kong Jr.",
+        "remake": ["dkj-gw"],
+        "link": "https://www.mariowiki.com/Game_%26_Watch:_Donkey_Kong_Jr.",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "19/08/2009"
+            },
+            {
+                "region": "NA",
+                "date": "19/04/2010"
+            },
+            {
+                "region": "EU",
+                "date": "23/04/2010"
+            },
+            {
+                "region": "AU",
+                "date": "Unknown"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
+                "name": "Nintendo EAD"
+            }
+        ],
+        "tags": [
+            "dk"
+        ]
+    },
+    {
+        "id": "gwmcf-dsi",
+        "name": "Game & Watch: Mario's Cement Factory",
+        "remake": ["mcf-gw"],
+        "link": "https://www.mariowiki.com/Game_%26_Watch:_Mario%27s_Cement_Factory",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "19/08/2009"
+            },
+            {
+                "region": "NA",
+                "date": "22/03/2010"
+            },
+            {
+                "region": "EU",
+                "date": "26/03/2010"
+            },
+            {
+                "region": "AU",
+                "date": "26/03/2010"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
+                "name": "Nintendo EAD"
+            }
+        ],
+        "tags": [
+            "mario"
+        ]
+    },
+    {
+        "id": "wwtd-dsi",
+        "name": "WarioWare: Touched! DL",
+        "link": "https://www.mariowiki.com/WarioWare:_Touched!",
+        "console": {
+            "link": "https://www.mariowiki.com/DSiWare",
+            "name": "DSiWare"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "17/03/2016"
+            },
+            {
+                "region": "NA",
+                "date": "31/03/2016"
+            },
+            {
+                "region": "EU",
+                "date": "31/03/2016"
+            },
+            {
+                "region": "AU",
+                "date": "31/03/2016"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Intelligent_Systems",
+                "name": "Intelligent Systems"
+            },
+            {
+                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
+                "name": "Nintendo SPD"
+            }
+        ],
+        "tags": [
+            "wario"
+        ]
+    },
+
     // 3DS
-    {
-        "id": "ag-3ds",
-        "name": "AR Games",
-        "link": "https://www.mariowiki.com/AR_Games",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "26/02/2011"
-            },
-            {
-                "region": "NA",
-                "date": "27/03/2011"
-            },
-            {
-                "region": "EU",
-                "date": "25/03/2011"
-            },
-            {
-                "region": "AU",
-                "date": "31/03/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "smp-3ds",
-        "name": "StreetPass Mii Plaza",
-        "link": "https://www.mariowiki.com/StreetPass_Mii_Plaza",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "26/02/2011"
-            },
-            {
-                "region": "NA",
-                "date": "27/03/2011"
-            },
-            {
-                "region": "EU",
-                "date": "25/03/2011"
-            },
-            {
-                "region": "AU",
-                "date": "31/03/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": []
-    },
     {
         "id": "sm3dl-3ds",
         "name": "Super Mario 3D Land",
@@ -12249,6 +9350,7 @@
     {
         "id": "dkcr3-3ds",
         "name": "Donkey Kong Country Returns 3D",
+        "remake": ["dkcr-wii"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_Returns_3D",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -12471,122 +9573,9 @@
         ]
     },
     {
-        "id": "ssbfn3ds-3ds",
-        "name": "Super Smash Bros. for Nintendo 3DS",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros._for_Nintendo_3DS",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "13/09/2014"
-            },
-            {
-                "region": "NA",
-                "date": "03/10/2014"
-            },
-            {
-                "region": "EU",
-                "date": "03/10/2014"
-            },
-            {
-                "region": "AU",
-                "date": "04/10/2014"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Sora_Ltd.",
-                "name": "Sora"
-            },
-            {
-                "link": "https://www.mariowiki.com/Bandai_Namco_Entertainment",
-                "name": "Bandai Namco Entertainment"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "unr-3ds",
-        "name": "Ultimate NES Remix",
-        "link": "https://www.mariowiki.com/Ultimate_NES_Remix",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "27/08/2015"
-            },
-            {
-                "region": "NA",
-                "date": "05/12/2014"
-            },
-            {
-                "region": "EU",
-                "date": "07/11/2014"
-            },
-            {
-                "region": "AU",
-                "date": "08/11/2014"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Indieszero",
-                "name": "indieszero"
-            },
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "nba-3ds",
-        "name": "Nintendo Badge Arcade",
-        "link": "https://www.mariowiki.com/Nintendo_Badge_Arcade",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "17/12/2014"
-            },
-            {
-                "region": "NA",
-                "date": "10/11/2015"
-            },
-            {
-                "region": "EU",
-                "date": "13/11/2015"
-            },
-            {
-                "region": "AU",
-                "date": "13/11/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Access_Games",
-                "name": "Access Games"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "madkmotmmvdkmma-3ds",
         "name": "Mario and Donkey Kong: Minis on the Move + Mario vs. Donkey Kong: Minis March Again!",
+        "remake": ["madkmotm-3ds_eshop","mvdkmma-dsi"],
         "link": "https://www.mariowiki.com/Mario_and_Donkey_Kong:_Minis_on_the_Move_%2B_Mario_vs._Donkey_Kong:_Minis_March_Again!",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -12709,78 +9698,6 @@
             "puzzle",
             "mario"
         ]
-    },
-    {
-        "id": "rhm-3ds",
-        "name": "Rhythm Heaven Megamix",
-        "link": "https://www.mariowiki.com/Rhythm_Heaven_Megamix",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "11/06/2015"
-            },
-            {
-                "region": "NA",
-                "date": "15/06/2016"
-            },
-            {
-                "region": "EU",
-                "date": "21/10/2016"
-            },
-            {
-                "region": "AU",
-                "date": "22/10/2016"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD Group No.1"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Up-Front_Group",
-                "name": "TNX"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "ssr-3ds",
-        "name": "Skylanders: SuperChargers Racing",
-        "link": "https://www.mariowiki.com/Skylanders:_SuperChargers",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "Unknown"
-            },
-            {
-                "region": "NA",
-                "date": "20/09/2015"
-            },
-            {
-                "region": "EU",
-                "date": "25/09/2015"
-            },
-            {
-                "region": "AU",
-                "date": "23/09/2015"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Beenox",
-                "name": "Beenox"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "mlpj-3ds",
@@ -12971,6 +9888,7 @@
     {
         "id": "pyww-3ds",
         "name": "Poochy & Yoshi's Woolly World",
+        "remake": ["yww-wiiu"],
         "link": "https://www.mariowiki.com/Poochy_%26_Yoshi%27s_Woolly_World",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -13051,6 +9969,7 @@
     {
         "id": "mlssbm-3ds",
         "name": "Mario & Luigi: Superstar Saga + Bowser's Minions",
+        "remake": ["mlss-gba"],
         "link": "https://www.mariowiki.com/Mario_%26_Luigi:_Superstar_Saga_%2B_Bowser%27s_Minions",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -13125,50 +10044,9 @@
         ]
     },
     {
-        "id": "mnn3dse-3ds",
-        "name": "Minecraft: New Nintendo 3DS Edition",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_3DS",
-            "name": "Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "14/09/2017"
-            },
-            {
-                "region": "NA",
-                "date": "13/09/2017"
-            },
-            {
-                "region": "EU",
-                "date": "20/09/2018"
-            },
-            {
-                "region": "AU",
-                "date": "20/09/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/4J_Studios",
-                "name": "4J Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Other_Ocean_Interactive",
-                "name": "Other Ocean Interactive"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "cttt-3ds",
         "name": "Captain Toad: Treasure Tracker",
+        "remake": ["cttt-wiiu"],
         "link": "https://www.mariowiki.com/Captain_Toad:_Treasure_Tracker_(Nintendo_Switch_/_Nintendo_3DS)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -13251,6 +10129,7 @@
     {
         "id": "lm-3ds",
         "name": "Luigi's Mansion",
+        "remake": ["lm-gc"],
         "link": "https://www.mariowiki.com/Luigi%27s_Mansion_(Nintendo_3DS)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -13287,6 +10166,7 @@
     {
         "id": "mlbisbjj-3ds",
         "name": "Mario & Luigi: Bowser's Inside Story + Bowser Jr.'s Journey",
+        "remake": ["mlbis-ds"],
         "link": "https://www.mariowiki.com/Mario_%26_Luigi:_Bowser%27s_Inside_Story_%2B_Bowser_Jr.%27s_Journey",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_3DS",
@@ -13330,6 +10210,7 @@
     {
         "id": "gwdkj-3ds_eshop",
         "name": "Game & Watch: Donkey Kong Jr.",
+        "remake": ["gwdkj-dsi"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Jr._(New_Wide_Screen)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13366,6 +10247,7 @@
     {
         "id": "dme-3ds_eshop",
         "name": "Dr. Mario Express",
+        "remake": ["dme-dsi"],
         "link": "https://www.mariowiki.com/Dr._Mario_Express",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13404,6 +10286,7 @@
     {
         "id": "mvdkmma-3ds_eshop",
         "name": "Mario vs. Donkey Kong: Minis March Again!",
+        "remake": ["mvdkmma-dsi"],
         "link": "https://www.mariowiki.com/Mario_vs._Donkey_Kong:_Minis_March_Again!",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13446,6 +10329,7 @@
     {
         "id": "gwmcf-3ds_eshop",
         "name": "Game & Watch: Mario's Cement Factory",
+        "remake": ["gwmcf-dsi"],
         "link": "https://www.mariowiki.com/Mario%27s_Cement_Factory",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13480,45 +10364,9 @@
         ]
     },
     {
-        "id": "pac-3ds_eshop",
-        "name": "Paper Airplane Chase",
-        "link": "https://www.mariowiki.com/Paper_Airplane_Chase",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "NA",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "EU",
-                "date": "07/07/2011"
-            },
-            {
-                "region": "AU",
-                "date": "06/06/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Planning_%26_Development",
-                "name": "Nintendo SPD"
-            }
-        ],
-        "tags": [
-            "paper",
-            "rpg"
-        ]
-    },
-    {
         "id": "bb-3ds_eshop",
         "name": "Bird & Beans",
+        "remake": ["bb-dsi"],
         "link": "https://www.mariowiki.com/Bird_%26_Beans",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13553,6 +10401,7 @@
     {
         "id": "wws-3ds_eshop",
         "name": "WarioWare: Snapped!",
+        "remake": ["wws-dsi"],
         "link": "https://www.mariowiki.com/WarioWare:_Snapped!",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13591,114 +10440,9 @@
         ]
     },
     {
-        "id": "asp-3ds_eshop",
-        "name": "Art Style: PiCTOBiTS",
-        "link": "https://www.mariowiki.com/Art_Style:_PiCTOBiTS",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "NA",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "EU",
-                "date": "07/07/2011"
-            },
-            {
-                "region": "AU",
-                "date": "06/06/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Skip_Ltd.",
-                "name": "Skip Ltd."
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "mcalc-3ds_eshop",
-        "name": "Mario Calculator",
-        "link": "https://www.mariowiki.com/Mario_Calculator",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "NA",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "EU",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "AU",
-                "date": "06/06/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Technology_Corporation",
-                "name": "NST"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mclock-3ds_eshop",
-        "name": "Mario Clock",
-        "link": "https://www.mariowiki.com/Mario_Clock",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "NA",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "EU",
-                "date": "06/06/2011"
-            },
-            {
-                "region": "AU",
-                "date": "06/06/2011"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Software_Technology_Corporation",
-                "name": "NST"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
         "id": "dkoe-3ds_eshop",
         "name": "Donkey Kong Original Edition",
+        "remake": "dkoe-wii",
         "link": "https://www.mariowiki.com/Donkey_Kong_Original_Edition",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
@@ -13730,76 +10474,6 @@
         ],
         "tags": [
             "dk"
-        ]
-    },
-    {
-        "id": "cnp-3ds_eshop",
-        "name": "Club Nintendo Picross",
-        "link": "https://www.mariowiki.com/Club_Nintendo_Picross",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "13/09/2012"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "pwm-3ds_eshop",
-        "name": "Photos with Mario",
-        "link": "https://www.mariowiki.com/Photos_with_Mario",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "23/04/2013"
-            },
-            {
-                "region": "NA",
-                "date": "18/05/2014"
-            },
-            {
-                "region": "EU",
-                "date": "04/11/2015"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Entertainment_Analysis_%26_Development",
-                "name": "Nintendo EAD"
-            }
-        ],
-        "tags": [
-            "mario"
         ]
     },
     {
@@ -13843,40 +10517,6 @@
             "mario",
             "dk"
         ]
-    },
-    {
-        "id": "cnpp-3ds_eshop",
-        "name": "Club Nintendo Picross+",
-        "link": "https://www.mariowiki.com/Club_Nintendo_Picross%2B",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "09/10/2014"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Jupiter",
-                "name": "Jupiter"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "dmmc-3ds_eshop",
@@ -13955,48 +10595,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "mnn3dse-3ds_eshop",
-        "name": "Minecraft: New Nintendo 3DS Edition",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_3DS",
-            "name": "Nintendo eShop \u00a7 Nintendo 3DS"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "13/09/2017"
-            },
-            {
-                "region": "NA",
-                "date": "14/09/2017"
-            },
-            {
-                "region": "EU",
-                "date": "19/09/2018"
-            },
-            {
-                "region": "AU",
-                "date": "20/09/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/4J_Studios",
-                "name": "4J Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Other_Ocean_Interactive",
-                "name": "Other Ocean Interactive"
-            }
-        ],
-        "tags": []
     },
 
     // Virtual Boy
@@ -14171,6 +10769,7 @@
     {
         "id": "mk8d-switch",
         "name": "Mario Kart 8 Deluxe",
+        "remake": ["mk8-wiiu"],
         "link": "https://www.mariowiki.com/Mario_Kart_8_Deluxe",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -14288,6 +10887,7 @@
     {
         "id": "dkctf-switch",
         "name": "Donkey Kong Country: Tropical Freeze",
+        "remake": ["dkctf-wiiu"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country:_Tropical_Freeze_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -14330,48 +10930,6 @@
         ]
     },
     {
-        "id": "m-switch",
-        "name": "Minecraft",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/06/2018"
-            },
-            {
-                "region": "NA",
-                "date": "21/06/2018"
-            },
-            {
-                "region": "EU",
-                "date": "21/06/2018"
-            },
-            {
-                "region": "AU",
-                "date": "21/06/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Xbox_Game_Studios",
-                "name": "Xbox Game Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/SkyBox_Labs",
-                "name": "SkyBox Labs"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "mta-switch",
         "name": "Mario Tennis Aces",
         "link": "https://www.mariowiki.com/Mario_Tennis_Aces",
@@ -14412,6 +10970,7 @@
     {
         "id": "cttt-switch",
         "name": "Captain Toad: Treasure Tracker",
+        "remake": ["cttt-wiiu"]
         "link": "https://www.mariowiki.com/Captain_Toad:_Treasure_Tracker_(Nintendo_Switch_/_Nintendo_3DS)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -14505,50 +11064,9 @@
         ]
     },
     {
-        "id": "ssbu-switch",
-        "name": "Super Smash Bros. Ultimate",
-        "link": "https://www.mariowiki.com/Super_Smash_Bros._Ultimate",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "07/12/2018"
-            },
-            {
-                "region": "NA",
-                "date": "07/12/2018"
-            },
-            {
-                "region": "EU",
-                "date": "07/12/2018"
-            },
-            {
-                "region": "AU",
-                "date": "07/12/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            },
-            {
-                "link": "https://www.mariowiki.com/Sora_Ltd.",
-                "name": "Sora Ltd."
-            },
-            {
-                "link": "https://www.mariowiki.com/Bandai_Namco_Entertainment",
-                "name": "Bandai Namco Entertainment"
-            }
-        ],
-        "tags": []
-    },
-    {
         "id": "nsmbud-switch",
         "name": "New Super Mario Bros. U Deluxe",
+        "remake": ["nsmbu-wiiu"],
         "link": "https://www.mariowiki.com/New_Super_Mario_Bros._U_Deluxe",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -14653,74 +11171,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "t9-switch",
-        "name": "Tetris 99",
-        "link": "https://www.mariowiki.com/Tetris_99",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "09/08/2019"
-            },
-            {
-                "region": "NA",
-                "date": "09/09/2019"
-            },
-            {
-                "region": "EU",
-                "date": "01/10/2019"
-            },
-            {
-                "region": "AU",
-                "date": "06/09/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Arika",
-                "name": "Arika"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "tlozla-switch",
-        "name": "The Legend of Zelda: Link's Awakening",
-        "link": "https://www.mariowiki.com/The_Legend_of_Zelda:_Link%27s_Awakening",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "20/09/2019"
-            },
-            {
-                "region": "NA",
-                "date": "20/09/2019"
-            },
-            {
-                "region": "EU",
-                "date": "20/09/2019"
-            },
-            {
-                "region": "AU",
-                "date": "20/09/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/GREZZO_Co.,_Ltd.",
-                "name": "Grezzo"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "lm3-switch",
@@ -14851,6 +11301,7 @@
     {
         "id": "sm3das-switch",
         "name": "Super Mario 3D All-Stars",
+        "remake": ["sm64-n64", "smss-gc", "smg-wii"],
         "link": "https://www.mariowiki.com/Super_Mario_3D_All-Stars",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -14887,6 +11338,7 @@
     {
         "id": "sm3dwbf-switch",
         "name": "Super Mario 3D World + Bowser's Fury",
+        "remake": ["sm3dw-wiiu"],
         "link": "https://www.mariowiki.com/Super_Mario_3D_World_%2B_Bowser%27s_Fury",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15208,6 +11660,7 @@
     {
         "id": "smr-switch",
         "name": "Super Mario RPG",
+        "remake": ["smrlotss-snes"],
         "link": "https://www.mariowiki.com/Super_Mario_RPG_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15245,6 +11698,7 @@
     {
         "id": "mvdk-switch",
         "name": "Mario vs. Donkey Kong",
+        "remake": ["mvdk-gba"],
         "link": "https://www.mariowiki.com/Mario_vs._Donkey_Kong_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15319,6 +11773,7 @@
     {
         "id": "pmttyd-switch",
         "name": "Paper Mario: The Thousand-Year Door",
+        "remake": ["pmttyd-gc"],
         "link": "https://www.mariowiki.com/Paper_Mario:_The_Thousand-Year_Door_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15357,6 +11812,7 @@
     {
         "id": "lm2h-switch",
         "name": "Luigi's Mansion 2 HD",
+        "remake": ["lmdm-3ds"],
         "link": "https://www.mariowiki.com/Luigi%27s_Mansion_2_HD",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15389,40 +11845,6 @@
         "tags": [
             "luigi"
         ]
-    },
-    {
-        "id": "nwcne-switch",
-        "name": "Nintendo World Championships: NES Edition",
-        "link": "https://www.mariowiki.com/Nintendo_World_Championships:_NES_Edition",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch",
-            "name": "Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "18/07/2024"
-            },
-            {
-                "region": "NA",
-                "date": "18/07/2024"
-            },
-            {
-                "region": "EU",
-                "date": "18/07/2024"
-            },
-            {
-                "region": "AU",
-                "date": "18/07/2024"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Indieszero",
-                "name": "indieszero"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "smpj-switch",
@@ -15503,6 +11925,7 @@
     {
         "id": "dkcrh-switch",
         "name": "Donkey Kong Country Returns HD",
+        "remake": ["dkcr-wii"],
         "link": "https://www.mariowiki.com/Donkey_Kong_Country_Returns_HD",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15539,6 +11962,7 @@
     {
         "id": "smgsmg2-switch",
         "name": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "remake": ["smg-wii", "smg2-wii"],
         "link": "https://www.mariowiki.com/Super_Mario_Galaxy_%2B_Super_Mario_Galaxy_2",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15575,6 +11999,7 @@
     {
         "id": "mrkbmrsoh-switch",
         "name": "Mario + Rabbids Kingdom Battle / Mario + Rabbids Sparks of Hope",
+        "remake": ["mrkb-switch", "mrsoh-switch"],
         "link": "https://www.mariowiki.com/Mario_%2B_Rabbids_Kingdom_Battle_/_Mario_%2B_Rabbids_Sparks_of_Hope",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch",
@@ -15607,507 +12032,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "mnse-switch_eshop",
-        "name": "Minecraft: Nintendo Switch Edition",
-        "link": "https://www.mariowiki.com/Minecraft",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "12/05/2017"
-            },
-            {
-                "region": "NA",
-                "date": "11/05/2017"
-            },
-            {
-                "region": "EU",
-                "date": "12/05/2017"
-            },
-            {
-                "region": "AU",
-                "date": "12/05/2017"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/4J_Studios",
-                "name": "4J Studios"
-            },
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "aamb-switch_eshop",
-        "name": "Arcade Archives: Mario Bros.",
-        "link": "https://www.mariowiki.com/Mario_Bros.",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "27/09/2017"
-            },
-            {
-                "region": "NA",
-                "date": "27/09/2017"
-            },
-            {
-                "region": "EU",
-                "date": "27/09/2017"
-            },
-            {
-                "region": "AU",
-                "date": "27/09/2017"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "aavsmb-switch_eshop",
-        "name": "Arcade Archives: VS. Super Mario Bros.",
-        "link": "https://www.mariowiki.com/VS._Super_Mario_Bros.",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "22/12/2017"
-            },
-            {
-                "region": "NA",
-                "date": "22/12/2017"
-            },
-            {
-                "region": "EU",
-                "date": "22/12/2017"
-            },
-            {
-                "region": "AU",
-                "date": "23/12/2017"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
-        "id": "mtaotd-switch_eshop",
-        "name": "Mario Tennis Aces: Online Tournament Demo",
-        "link": "https://www.mariowiki.com/Mario_Tennis_Aces:_Online_Tournament_Demo",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "24/05/2018"
-            },
-            {
-                "region": "NA",
-                "date": "24/05/2018"
-            },
-            {
-                "region": "EU",
-                "date": "24/05/2018"
-            },
-            {
-                "region": "AU",
-                "date": "24/05/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "tennis",
-            "sport",
-            "mario"
-        ]
-    },
-    {
-        "id": "aadk-switch_eshop",
-        "name": "Arcade Archives: Donkey Kong",
-        "link": "https://www.mariowiki.com/Donkey_Kong_(game)",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "15/06/2018"
-            },
-            {
-                "region": "NA",
-                "date": "14/06/2018"
-            },
-            {
-                "region": "EU",
-                "date": "15/06/2018"
-            },
-            {
-                "region": "AU",
-                "date": "15/06/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "nesnc-switch_eshop",
-        "name": "Nintendo Entertainment System \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Nintendo_Entertainment_System_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "19/09/2018"
-            },
-            {
-                "region": "NA",
-                "date": "18/09/2018"
-            },
-            {
-                "region": "EU",
-                "date": "19/09/2018"
-            },
-            {
-                "region": "AU",
-                "date": "19/09/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "aadkj-switch_eshop",
-        "name": "Arcade Archives: Donkey Kong Jr.",
-        "link": "https://www.mariowiki.com/Donkey_Kong_Jr._(game)",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "21/12/2018"
-            },
-            {
-                "region": "NA",
-                "date": "21/12/2018"
-            },
-            {
-                "region": "EU",
-                "date": "21/12/2018"
-            },
-            {
-                "region": "AU",
-                "date": "21/12/2018"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "t9-switch_eshop",
-        "name": "Tetris 99",
-        "link": "https://www.mariowiki.com/Tetris_99",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "14/02/2019"
-            },
-            {
-                "region": "NA",
-                "date": "13/02/2019"
-            },
-            {
-                "region": "EU",
-                "date": "14/02/2019"
-            },
-            {
-                "region": "AU",
-                "date": "14/02/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Arika",
-                "name": "Arika"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "aadk3-switch_eshop",
-        "name": "Arcade Archives: Donkey Kong 3",
-        "link": "https://www.mariowiki.com/Donkey_Kong_3",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "05/04/2019"
-            },
-            {
-                "region": "NA",
-                "date": "05/04/2019"
-            },
-            {
-                "region": "EU",
-                "date": "05/04/2019"
-            },
-            {
-                "region": "AU",
-                "date": "05/04/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "dk"
-        ]
-    },
-    {
-        "id": "mtasod-switch_eshop",
-        "name": "Mario Tennis Aces: Special Online Demo",
-        "link": "https://www.mariowiki.com/Mario_Tennis_Aces:_Special_Online_Demo",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "26/04/2019"
-            },
-            {
-                "region": "NA",
-                "date": "26/04/2019"
-            },
-            {
-                "region": "EU",
-                "date": "26/04/2019"
-            },
-            {
-                "region": "AU",
-                "date": "26/04/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "tennis",
-            "sport",
-            "mario"
-        ]
-    },
-    {
-        "id": "aap-switch_eshop",
-        "name": "Arcade Archives: Pinball",
-        "link": "https://www.mariowiki.com/VS._Pinball",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "30/08/2019"
-            },
-            {
-                "region": "NA",
-                "date": "30/08/2019"
-            },
-            {
-                "region": "EU",
-                "date": "30/08/2019"
-            },
-            {
-                "region": "AU",
-                "date": "30/08/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "snesnc-switch_eshop",
-        "name": "Super Nintendo Entertainment System \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Super_Nintendo_Entertainment_System_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "06/09/2019"
-            },
-            {
-                "region": "NA",
-                "date": "05/09/2019"
-            },
-            {
-                "region": "EU",
-                "date": "06/09/2019"
-            },
-            {
-                "region": "AU",
-                "date": "06/09/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "aavg-switch_eshop",
-        "name": "Arcade Archives: VS. Golf",
-        "link": "https://www.mariowiki.com/Stroke_%26_Match_Golf",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "25/10/2019"
-            },
-            {
-                "region": "NA",
-                "date": "25/10/2019"
-            },
-            {
-                "region": "EU",
-                "date": "25/10/2019"
-            },
-            {
-                "region": "AU",
-                "date": "25/10/2019"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": [
-            "golf",
-            "sport"
-        ]
-    },
-    {
-        "id": "aavwc-switch_eshop",
-        "name": "Arcade Archives: VS. Wrecking Crew",
-        "link": "https://www.mariowiki.com/VS._Wrecking_Crew",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "01/05/2020"
-            },
-            {
-                "region": "NA",
-                "date": "01/05/2020"
-            },
-            {
-                "region": "EU",
-                "date": "01/05/2020"
-            },
-            {
-                "region": "AU",
-                "date": "01/05/2020"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Hamster",
-                "name": "Hamster"
-            }
-        ],
-        "tags": []
     },
     {
         "id": "smb3-switch_eshop",
@@ -16183,184 +12107,9 @@
         ]
     },
     {
-        "id": "n6nc-switch_eshop",
-        "name": "Nintendo 64 \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Nintendo_64_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "26/10/2021"
-            },
-            {
-                "region": "NA",
-                "date": "25/10/2021"
-            },
-            {
-                "region": "EU",
-                "date": "26/10/2021"
-            },
-            {
-                "region": "AU",
-                "date": "26/10/2021"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "msblfk-switch_eshop",
-        "name": "Mario Strikers: Battle League First Kick",
-        "link": "https://www.mariowiki.com/Mario_Strikers:_Battle_League_First_Kick",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "27/05/2022"
-            },
-            {
-                "region": "NA",
-                "date": "27/05/2022"
-            },
-            {
-                "region": "EU",
-                "date": "27/05/2022"
-            },
-            {
-                "region": "AU",
-                "date": "27/05/2022"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Next_Level_Games",
-                "name": "Next Level Games"
-            }
-        ],
-        "tags": [
-            "strikers",
-            "sport",
-            "mario"
-        ]
-    },
-    {
-        "id": "gbnc-switch_eshop",
-        "name": "Game Boy \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Game_Boy_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "09/02/2023"
-            },
-            {
-                "region": "NA",
-                "date": "08/02/2023"
-            },
-            {
-                "region": "EU",
-                "date": "09/02/2023"
-            },
-            {
-                "region": "AU",
-                "date": "09/02/2023"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "gbanc-switch_eshop",
-        "name": "Game Boy Advance \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Game_Boy_Advance_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "09/02/2023"
-            },
-            {
-                "region": "NA",
-                "date": "08/02/2023"
-            },
-            {
-                "region": "EU",
-                "date": "09/02/2023"
-            },
-            {
-                "region": "AU",
-                "date": "09/02/2023"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "hm-switch_eshop",
-        "name": "Hello, Mario!",
-        "link": "https://www.mariowiki.com/Hello,_Mario!_(game)",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "26/08/2025"
-            },
-            {
-                "region": "NA",
-                "date": "19/02/2026"
-            },
-            {
-                "region": "EU",
-                "date": "19/02/2026"
-            },
-            {
-                "region": "AU",
-                "date": "01/01/2026"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "mario"
-        ]
-    },
-    {
         "id": "smg-switch_eshop",
         "name": "Super Mario Galaxy",
+        "remake": ["smg-wii"],
         "link": "https://www.mariowiki.com/Super_Mario_Galaxy_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
@@ -16397,6 +12146,7 @@
     {
         "id": "smg2-switch_eshop",
         "name": "Super Mario Galaxy 2",
+        "remake": ["smg-wii"],
         "link": "https://www.mariowiki.com/Super_Mario_Galaxy_2_(Nintendo_Switch)",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
@@ -16429,76 +12179,6 @@
         "tags": [
             "mario"
         ]
-    },
-    {
-        "id": "hy-switch_eshop",
-        "name": "Hello, Yoshi!",
-        "link": "https://www.mariowiki.com/Hello,_Yoshi!",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "18/11/2025"
-            },
-            {
-                "region": "NA",
-                "date": "Unknown"
-            },
-            {
-                "region": "EU",
-                "date": "Unknown"
-            },
-            {
-                "region": "AU",
-                "date": "Unknown"
-            }
-        ],
-        "developers": [
-            {
-                "link": "",
-                "name": "Unknown"
-            }
-        ],
-        "tags": [
-            "yoshi"
-        ]
-    },
-    {
-        "id": "vbnc-switch_eshop",
-        "name": "Virtual Boy \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Virtual_Boy_%E2%80%93_Nintendo_Classics",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "17/02/2026"
-            },
-            {
-                "region": "NA",
-                "date": "17/02/2026"
-            },
-            {
-                "region": "EU",
-                "date": "17/02/2026"
-            },
-            {
-                "region": "AU",
-                "date": "17/02/2026"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://www.mariowiki.com/Nintendo",
-                "name": "Nintendo"
-            }
-        ],
-        "tags": []
     },
 
     // Nintendo Switch 2
@@ -16590,6 +12270,7 @@
     {
         "id": "smpjns2ejt-switch2",
         "name": "Super Mario Party Jamboree \u2013 Nintendo Switch 2 Edition + Jamboree TV",
+        "remake": ["smpj-switch"],
         "link": "https://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch_2",
@@ -16665,6 +12346,7 @@
     {
         "id": "smbwns2emibp-switch2",
         "name": "Super Mario Bros. Wonder \u2013 Nintendo Switch 2 Edition + Meetup in Bellabel Park",
+        "remake": ["smbw-switch"],
         "link": "https://www.mariowiki.com/Super_Mario_Bros._Wonder_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Meetup_in_Bellabel_Park",
         "console": {
             "link": "https://www.mariowiki.com/Nintendo_Switch_2",
@@ -16734,110 +12416,124 @@
             "yoshi"
         ]
     },
+
+    // Mobile
     {
-        "id": "m-switch2",
-        "name": "Minecraft",
-        "link": "https://www.mariowiki.com/Minecraft",
+        "id": "smr-mobile",
+        "name": "Super Mario Run",
+        "link": "https://www.mariowiki.com/Super_Mario_Run",
         "console": {
-            "link": "https://www.mariowiki.com/Nintendo_Switch_2",
-            "name": "Nintendo Switch 2"
+            "link": "",
+            "name": "Mobile"
         },
         "releases": [
             {
                 "region": "JP",
-                "date": "27/10/2026"
+                "date": "15/12/2016"
             },
             {
                 "region": "NA",
-                "date": "27/10/2026"
+                "date": "15/12/2016"
             },
             {
                 "region": "EU",
-                "date": "27/10/2026"
+                "date": "15/12/2016"
             },
             {
                 "region": "AU",
-                "date": "27/10/2026"
-            }
-        ],
-        "developers": [
-            {
-                "link": "https://en.wikipedia.org/wiki/Mojang_Studios",
-                "name": "Mojang Studios"
-            }
-        ],
-        "tags": []
-    },
-    {
-        "id": "ns2wt-switch2_eshop",
-        "name": "Nintendo Switch 2 Welcome Tour",
-        "link": "https://www.mariowiki.com/Nintendo_Switch_2_Welcome_Tour",
-        "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch_2",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch 2"
-        },
-        "releases": [
-            {
-                "region": "JP",
-                "date": "05/06/2025"
-            },
-            {
-                "region": "NA",
-                "date": "05/06/2025"
-            },
-            {
-                "region": "EU",
-                "date": "05/06/2025"
-            },
-            {
-                "region": "AU",
-                "date": "05/06/2025"
+                "date": "15/12/2016"
             }
         ],
         "developers": [
             {
                 "link": "https://www.mariowiki.com/Nintendo_Entertainment_Planning_%26_Development",
                 "name": "Nintendo EPD"
-            },
-            {
-                "link": "https://www.mariowiki.com/Nintendo_Cube",
-                "name": "Nintendo Cube"
             }
         ],
-        "tags": []
+        "tags": [
+            "mario"
+        ]
     },
     {
-        "id": "ngnc-switch2_eshop",
-        "name": "Nintendo GameCube \u2013 Nintendo Classics",
-        "link": "https://www.mariowiki.com/Nintendo_GameCube_%E2%80%93_Nintendo_Classics",
+        "id": "dmw-mobile",
+        "name": "Dr. Mario World",
+        "link": "https://www.mariowiki.com/Dr._Mario_World",
         "console": {
-            "link": "https://www.mariowiki.com/Nintendo_eShop#Nintendo_Switch_2",
-            "name": "Nintendo eShop \u00a7 Nintendo Switch 2"
+            "link": "",
+            "name": "Mobile"
         },
         "releases": [
             {
                 "region": "JP",
-                "date": "05/06/2025"
+                "date": "10/07/2019"
             },
             {
                 "region": "NA",
-                "date": "05/06/2025"
+                "date": "10/07/2019"
             },
             {
                 "region": "EU",
-                "date": "05/06/2025"
+                "date": "10/07/2019"
             },
             {
                 "region": "AU",
-                "date": "05/06/2025"
+                "date": "10/07/2019"
             }
         ],
         "developers": [
             {
                 "link": "https://www.mariowiki.com/Nintendo",
                 "name": "Nintendo"
+            },
+            {
+                "link": "https://www.mariowiki.com/LINE",
+                "name": "LINE"
+            },
+            {
+                "link": "https://en.wikipedia.org/wiki/NHN_Entertainment_Corporation",
+                "name": "NHN Entertainment"
             }
         ],
-        "tags": []
+        "tags": [
+            "mario",
+            "puzzle"
+        ]
+    },
+    {
+        "id": "mkt-mobile",
+        "name": "Mario Kart Tour",
+        "link": "https://www.mariowiki.com/Mario_Kart_Tour",
+        "console": {
+            "link": "",
+            "name": "Mobile"
+        },
+        "releases": [
+            {
+                "region": "JP",
+                "date": "25/09/2019"
+            },
+            {
+                "region": "NA",
+                "date": "25/09/2019"
+            },
+            {
+                "region": "EU",
+                "date": "25/09/2019"
+            },
+            {
+                "region": "AU",
+                "date": "25/09/2019"
+            }
+        ],
+        "developers": [
+            {
+                "link": "https://www.mariowiki.com/Nintendo",
+                "name": "Nintendo"
+            },
+        ],
+        "tags": [
+            "mario",
+            "kart"
+        ]
     },
 ]

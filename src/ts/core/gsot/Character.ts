@@ -59,7 +59,7 @@ export class CharacterRegistry extends Registry<Character> {
     }
 
     static async create(): Promise<CharacterRegistry> {
-        const data = await loadData<CharacterData[]>("/data/gsot/characters.json5");
+        const data = await loadData<CharacterData[]>("/data/gsot/characters/characters.json5");
         const characters = data?.filter(item => item.id !== "").map(item => new Character(item)) || [];
         return new CharacterRegistry(characters);
     }
